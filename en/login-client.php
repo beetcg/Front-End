@@ -104,6 +104,7 @@
 <script type="text/javascript" src="js/portfolio-init.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
+<script src="./../src/app_api/modules/client/controller.js"></script>
 
 </body>
 </html>

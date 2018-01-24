@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en-US" data-ng-app="beetApp">
 <head>
@@ -34,6 +35,7 @@
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
     <script>
         $(document).ready(function () {
             // Add smooth scrolling to all links
@@ -72,43 +74,11 @@
         function changeImage(src) {
             document.getElementById("myImage").src = src;
         }
-
     </script>
 
 </head>
 
 <body class="page">
-<!--<header id="ABdev_main_header" class="clearfix ">-->
-<!--<div class="container clearfix">-->
-<!--<div id="logo">-->
-<!--<a href="index.html">-->
-<!--<img id="main_logo" src="images/logo.png" alt="BEET">-->
-<!--</a>-->
-<!--</div>-->
-<!--<div class="menu_wrapper">-->
-<!--<div class="menu_slide_toggle">-->
-<!--<div class="icon-menu"></div>-->
-<!--</div>-->
-<!--<div id="title_breadcrumbs_bar">-->
-<!--<div class="breadcrumbs">-->
-<!--<a href="index.html">Home</a>-->
-<!--<i class="ci_icon-angle-right"></i> -->
-<!--<span class="current">Home</span>-->
-<!--</div>-->
-<!--</div>-->
-<!--<nav>-->
-<!--<ul>-->
-<!--<li class="current-menu-item"><a href="index.html#"><span>Home</span></a></li>-->
-<!--<li class="scroll"><a href="#aboutus"><span>About Us</span></a></li>-->
-<!--<li class="scroll"><a href="#howitworks"><span>How it Works</span></a></li>-->
-<!--<li class="scroll"><a href="#joinus"><span>Join Us</span></a></li>-->
-<!--<li class="scroll"><a href="#newsevents"><span>News & Events</span></a></li>-->
-<!--<li class="scroll"><a href="#contactus"><span>Contact Us</span></a></li>-->
-<!--</ul>-->
-<!--</nav>-->
-<!--</div>-->
-<!--</div>-->
-<!--</header>-->
 
 <div ng-include="'menu-bar.html'"></div>
 
@@ -211,29 +181,11 @@
 <section class="spiral_section_tc section_with_header">
     <header>
         <div class="spiral_container">
-
             <h3>¿Why we are the <strong>best option</strong> for you?</h3>
         </div>
     </header>
     <div class="spiral_section_content">
         <div class="spiral_container">
-            <!-- <div class="spiral_column_tc_span3 spiral-animo" data-animation="fadeInUp" data-trigger_pt="0" data-duration="1500" data-delay="1000">
-                <span class="clear spacer_11"></span>
-                <h2 class="gray_text">
-
-
-                    <span>We take great<br> pride in our<br> achievements and<br> values</span>
-                </h2>
-                <span class="clear spacer_38"></span>
-                <h4>
-                    <span>
-                        <a class="scroll" href="#">
-                            <strong>Learn more about us   </strong>
-                            <i class="tmf-arrow-down black_icon_down"></i>
-                        </a>
-                    </span>
-                </h4>
-            </div> -->
             <div class="spiral_column_tc_span4 spiral-animo" data-animation="bounceInUp" data-trigger_pt="0"
                  data-duration="2000" data-delay="0">
                 <div class="spiral_service_box spiral_service_box_default ">
@@ -243,14 +195,7 @@
                         </a>
                         <a href="#" target="_self"><h3>PRODUCTIVITY</h3></a>
                     </div>
-                    <p style="color: #821e3b; text-align: center">Missing any lifetime worthwhile moments? You don't
-                        have to miss a thing! We're online 24/7.</p>
-
-                    <!-- <div class="right_aligned learn_more">
-                        <p>
-                            <a href="#">Learn more <i class="ci_icon-arrow-right"></i></a>
-                        </p>
-                    </div> -->
+                    <p style="color: #821e3b; text-align: center">Missing any lifetime worthwhile moments? You don't have to miss a thing! We're online 24/7.</p>
                 </div>
             </div>
             <div class="spiral_column_tc_span4 spiral-animo" data-animation="bounceInUp" data-trigger_pt="0"
@@ -264,16 +209,7 @@
                             <h3>CONNECTIVITY</h3>
                         </a>
                     </div>
-                    <p style="color: #821e3b; text-align: center"><!-- Beet allows you to connect with thousands of customers at
-the time you decide and the easiest way, all through an application. -->BEET lets you connect with thousands of our
-                        users-anytime and everywhere through our app.</p>
-                    <!-- <div class="right_aligned learn_more">
-                        <p>
-                            <a href="#">Learn more
-                                <i class="ci_icon-arrow-right"></i>
-                            </a>
-                        </p>
-                    </div> -->
+                    <p style="color: #821e3b; text-align: center">BEET lets you connect with thousands of our users-anytime and everywhere through our app.</p>
                 </div>
             </div>
 
@@ -286,15 +222,7 @@ the time you decide and the easiest way, all through an application. -->BEET let
                         </a>
                         <a href="#" target="_self"><h3>EFFICIENCY</h3></a>
                     </div>
-                    <p style="color: #821e3b; text-align: center">Just like that in a snap, your technician just arrives
-                        and gets the job done! When it's all fixed up, payment will go securely through our app.</p>
-                    <!-- <div class="right_aligned learn_more">
-                        <p>
-                            <a href="#">Learn more
-                                <i class="ci_icon-arrow-right"></i>
-                            </a>
-                        </p>
-                    </div> -->
+                    <p style="color: #821e3b; text-align: center">Just like that in a snap, your technician just arrives and gets the job done! When it's all fixed up, payment will go securely through our app.</p>
                 </div>
             </div>
         </div>
@@ -306,61 +234,13 @@ the time you decide and the easiest way, all through an application. -->BEET let
         <div class="spiral_container">
             <div class="spiral_column_tc_span12 center_aligned">
                 <blockquote class="spiral_blockquote spiral_blockquote_style4 ">
-                    <p>
-                        Our <strong>same-day service platform</strong> instantly connects you with<br/> <strong>skilled
-                        technician</strong> to repair your devices in record time
-                        <!-- <small><a href="">— Martin Luther King</a> </small> -->
-                    </p>
+                    <p> Our <strong>same-day service platform</strong> instantly connects you with<br/> <strong>skilled technician</strong> to repair your devices in record time </p>
                 </blockquote>
             </div>
         </div>
     </div>
 </section>
 
-
-<!-- 	<section id="who_we_are" class="spiral_section_tc section_with_header no_padding_bottom">
-		<header>
-			<div class="spiral_container">
-				<h3>Who <strong>We</strong>Are</h3>
-			</div>
-			</header>
-			<div class="spiral_section_content">
-				<div class="spiral_container">
-					<div class="spiral_column_tc_span6">
-						<h2 class="gray_text no_margin_top">
-							<span>Lorem ipsum dolor sit amet, consectet–<br> Minima, minus iure  dolores, <br> vero possimus, dolor, voluptatibus minus <br>enim aspernatur.</span>
-						</h2>
-						<span class="clear spacer_25"></span>
-						<div>
-							<p>rem ipsum dolor sit amet, consectetur adipisicing elit. Minima, minus iure accusantium dolores, officiis eveniet architecto error placeat ratione incidunt?</p>
-						</div>
-						<div>
-							<p>rem ipsum dolor sit amet, consectetur adipisicing elit. Minima, minus iure accusantium dolores, officiis eveniet architecto error placeat ratione incidunt?</p>
-						</div>
-					</div>
-					<div class="spiral_column_tc_span6">
-						<div class="spiral-accordion " data-expanded="1">
-							<h3>Vision of Spiral</h3>
-							<div class="spiral-accordion-body">
-								rem ipsum dolor sit amet, consectetur adipisicing elit. Ab vel mollitia dignissimos cupiditate rerum facilis similique vero possimus, dolor, voluptatibus minus enim aspernatur. Vel, molestias aut.
-							</div>
-							<h3>Our Mission</h3>
-							<div class="spiral-accordion-body">
-								rem ipsum dolor sit amet, consectetur adipisicing elit. Ab vel mollitia dignissimos cupiditate rerum facilis similique vero possimus, dolor, voluptatibus minus enim aspernatur. Vel, molestias aut.
-							</div>
-							<h3>Strategic Goals</h3>
-							<div class="spiral-accordion-body">
-								rem ipsum dolor sit amet, consectetur adipisicing elit. Ab vel mollitia dignissimos cupiditate rerum facilis similique vero possimus, dolor, voluptatibus minus enim aspernatur. Vel, molestias aut.
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
- -->
-
-
-<!---->
 <div id="howitworks" name="howitworks"></div>
 <section class="spiral_section_tc">
     <header>
@@ -377,31 +257,6 @@ the time you decide and the easiest way, all through an application. -->BEET let
                      data-delay="200" style="width: 300px">
                     <img id="myImage" src="images/sing1.png">
                 </div>
-                <!--
-
-
-                <div class="spiralt_testimonials_wrapper picture_bottom">
-                    <ul class="spiralt_testimonials_slide" data-play="1" data-fx="fade" data-easing="linear" data-direction="left" data-duration="1000" data-pauseonhover="immediate" data-timeoutduration="5000">
-                        <li class="testimonials_item foto">
-                            <img src="images/sing1.jpg" style="height: 550px">
-                        </li>
-                        <li class="testimonials_item">
-                            <img src="images/donde1.jpg" style="height: 550px">
-                        </li>
-                        <li class="testimonials_item">
-                            <img src="images/cat.png" style="height: 550px">
-                        </li>
-                        <li class="testimonials_item">
-                            <img src="images/howit4.png" style="height: 550px">
-                        </li>
-                        <li class="testimonials_item">
-                            <img src="images/howit5.png" style="height: 550px">
-                        </li>
-                        <li class="testimonials_item">
-                            <img src="images/service.png" style="height: 550px">
-                        </li>
-                    </ul>
-                </div> -->
             </div>
 
             <div class="spiral_column_tc_span5">
@@ -661,7 +516,6 @@ the time you decide and the easiest way, all through an application. -->BEET let
         <div class="spiral_container">
             <div class="spiral_column_tc_span4">
                 <h3 class="gray_text">
-                    <!-- <span>Communication – the<br>human connection<br>– is the key to personal<br>and career success.”</span> -->
                     <span>Contact Us</span>
                 </h3>
                 <span class="clear spacer_30"></span>
@@ -672,7 +526,6 @@ the time you decide and the easiest way, all through an application. -->BEET let
                     </p>
                 </div>
                 <h3 class="gray_text">
-                    <!-- <span>Communication – the<br>human connection<br>– is the key to personal<br>and career success.”</span> -->
                     <span>Follow Us</span>
                 </h3>
                 <div class="spiral_follow_us">

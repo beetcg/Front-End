@@ -1,0 +1,22 @@
+{
+	"create": {
+		"url": "./src/app_api/modules/technician/crud/create.php",
+		"type": "POST"
+	},
+	"confirm" : {
+		"url" : "./src/app_api/modules/technician/crud/confirm.php",
+		"type" : "POST"
+	},
+	"recovery" : {
+		"url" : "./src/app_api/modules/technician/crud/recovery.php",
+		"type" : "POST"
+	},
+	"login" : {
+		"url" : "./src/app_api/modules/technician/crud/login.php",
+		"type" : "POST"
+	},
+	"update_pass" : {
+		"url" : "./src/app_api/modules/technician/crud/update_pass.php",
+		"type" : "POST"
+	}
+}

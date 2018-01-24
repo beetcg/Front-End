@@ -4,7 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Sign Up | BEET</title>
     <meta name="description" content="Spiral HTML5 premium template">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <!--[if lt IE 9]>
@@ -139,6 +138,6 @@
 <script type="text/javascript" src="js/portfolio-init.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
-
+<script src="./../src/app_api/modules/client/controller.js"></script>
 </body>
 </html>

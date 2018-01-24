@@ -2,7 +2,7 @@
 <html lang="en-US" data-ng-app="beetApp">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Sign Up | BEET</title>
+    <title>Login | BEET</title>
     <meta name="description" content="Spiral HTML5 premium template">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,82 +25,48 @@
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
 </head>
 
-<body class="page login animated fadeIn" data-ng-controller="LoginController">
+<body class="page login" data-ng-controller="LoginController">
 
-<div class="logo" style="margin-top: 20px !important;">
+<div class="logo">
     <a href="index.html">
         <img src="../images/logo-black.png" />
     </a>
 </div>
 
-<div class="content" style="margin: 0px auto 10px auto !important;">
-    <form class="login-form animated fadeIn" action="index.html" method="post" data-ng-show="login" id="form_create">
-        <h3 class="form-title font-green">Sign Up To Technician</h3>
-        <div align="center">
-            <p class="step-circle">
-                1
-            </p>
-            <p class="step-1">
-                Register your basic data and our team will contact you
-            </p>
+<div class="content content2" >
+    <form class="login-form animated fadeIn" action="index.html" method="post" data-ng-show="login" id="form_login_tech">
+        <h3 class="form-title font-green">Sign In To Technician</h3>
+        <!--<div class="alert alert-danger display-hide" ng-show="false">-->
+            <!--<button class="close" data-close="alert"></button>-->
+            <!--<span> Enter any username and password. </span>-->
+        <!--</div>-->
+        <div class="form-group">
+            <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Email" name="email" id="email_tech" />
         </div>
-        <div class="rows">
-            <div class="col-sm-12 col-md-6">
-                    <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="First Name" name="fname" id="fname" />
-            </div>
-            <div class="col-sm-12 col-md-6">
-                    <input class="form-control form-control-solid placeholder-no-fix" type="password" placeholder="Last Name" name="lname" id="lname" />
-            </div>
+        <div class="form-group">
+            <input class="form-control form-control-solid placeholder-no-fix" type="password" placeholder="Password" name="pass" id="pass_tech" />
         </div>
-        <div class="rows">
-            <div class="col-sm-12 col-md-6">
-                    <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Email" name="email" id="email" />
-            </div>
-            <div class="col-sm-12 col-md-6">
-                    <input class="form-control form-control-solid placeholder-no-fix" type="password" placeholder="Password" name="pass" id="pass" />
-            </div>
-        </div>
-        <div class="rows">
-            <div class="col-sm-12 col-md-6">
-                    <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Mobile" name="tlf" id="tlf" />
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <div class="form-group">
-                    <input class="form-control form-control-solid placeholder-no-fix" type="password" placeholder="Zip Code" name="zip" id="zip" />
-                </div>
-            </div>
-        </div>
-
-
         <div class="rows">
             <div class="col-sm-12 col-md-6">
                 <label class="rememberme check mt-checkbox mt-checkbox-outline">
-                    <input type="checkbox" name="remember" value="1" />Accept
+                    <input type="checkbox" name="remember" value="1" />Remember
                     <span></span>
                 </label>
             </div>
             <div class="col-sm-12 col-md-6">
-                <!--<a href="javascript:;" id="forget-password" class="forget-password" data-ng-click="selectOption(2)">Forgot Password?</a>-->
+                <a href="javascript:;" id="forget-password" class="forget-password" data-ng-click="selectOption(2)">Forgot Password?</a>
             </div>
         </div>
         <div align="center">
-            <button type="submit" class="btn btn-login uppercase">Sign Up</button>
+            <button type="submit" class="btn btn-login uppercase">Login</button>
         </div>
     </form>
 
-    <form class="forget-form animated fadeIn" action="index.html" method="post" data-ng-show="forgot" data-ng-cloak>
+    <form class="forget-form animated fadeIn" action="index.html" method="post" data-ng-show="forgot" data-ng-cloak id="recovery_form_tech">
         <h3 class="font-green" data-ng-cloak>Forget Password ?</h3>
         <p class="forgot-text" data-ng-cloak> Enter your e-mail address below to reset your password. </p>
         <div class="form-group" style="margin-bottom: 2rem" data-ng-cloak >
-            <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" /> </div>
-        <!--<div class="form-actions">-->
-        <!--<button type="button" id="back-btn" class="btn green btn-outline" data-ng-click="selectOption(1)">-->
-        <!--Back-->
-        <!--</button>-->
-        <!--<button type="submit" class="btn btn-success uppercase pull-right">-->
-        <!--Submit-->
-        <!--</button>-->
-        <!--</div>-->
+            <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" id="emailRT" /> </div>
         <div class="rows" data-ng-cloak>
             <div class="col-sm-12 col-md-6">
                 <a href="javascript:;" class="back-btn btn-submit" data-ng-click="selectOption(1)">
@@ -139,6 +105,7 @@
 <script type="text/javascript" src="js/portfolio-init.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
+<script src="./../src/app_api/modules/technician/controller.js"></script>
 
 </body>
 </html>

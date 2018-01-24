@@ -1,0 +1,22 @@
+{
+	"create": {
+		"url": "./src/app_api/modules/client/crud/create.php",
+		"type": "POST"
+	},
+	"recovery" : {
+		"url" : "./src/app_api/modules/client/crud/recovery.php",
+		"type" : "POST"
+	},
+	"update_pass" : {
+		"url" : "./src/app_api/modules/client/crud/update_pass.php",
+		"type" : "POST"
+	},
+	"login" : {
+		"url" : "./src/app_api/modules/client/crud/login.php",
+		"type" : "POST"
+	},
+	"delete" : {
+		"url" : "",
+		"type" : "DELETE"
+	}
+}
