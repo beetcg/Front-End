@@ -15,17 +15,18 @@
 	$resp = $obj->checkAcount($type ,$id, $salt);
 
 	if (!$resp) {
-		header('Location: http://beetcg.hol.es/');
+		header('Location: http://comiczone.hol.es/');
 	}
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US" data-ng-app="beetApp">
 <head>
-	<meta charset="UTF-8">
-	<title>Form</title>
-	<base href="/">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>BEET | WELCOME</title>
+  <meta name="description" content="Beet ">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
 	<!-- <link rel="stylesheet" href="./../src/assets/css/app.css"> -->
 	<script src="https://use.fontawesome.com/e7cf633633.js"></script>

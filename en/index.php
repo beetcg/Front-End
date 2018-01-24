@@ -80,7 +80,7 @@
 
 <body class="page">
 
-<div ng-include="'menu-bar.html'"></div>
+<div ng-include="'menu-bar.php'"></div>
 
 <section id="ABdev_main_slider">
     <div id="rev_slider_12_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="main_slider"
@@ -133,7 +133,7 @@
                          data-start="500" data-splitin="none" data-splitout="none" data-responsive_offset="on"
                          style="z-index: 8; white-space: nowrap;border-color:rgba(255, 255, 255, 1.00);">
                         <div style="text-align:center;"><strong>GET A SERVICE</strong>
-                            <br><a href="trynow.html" style="color: #ffffff">TRY IT NOW!</a></div>
+                            <br><a href="trynow" style="color: #ffffff">TRY IT NOW!</a></div>
                     </div>
                     <!-- LAYER NR. 5
                     <div class="tp-caption Raleway_small   tp-resizeme" id="slide-38-layer-5" data-x="center" data-y="500" data-width="auto" data-height="auto" data-transform_idle="" data-transform_in="y:bottom;s:1600;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;" data-start="550" data-splitin="none" data-splitout="none" data-responsive_offset="on" data-captionhidden="on" style="z-index: 9; white-space: nowrap;border-color:rgba(255, 255, 255, 1.00);">
@@ -157,7 +157,7 @@
                          data-start="250" data-splitin="none" data-splitout="none" data-responsive_offset="on"
                          data-captionhidden="on"
                          style="z-index: 10; white-space: nowrap;border-color:rgba(255, 255, 255, 1.00);">
-                        <div style="text-align:center; font-size: 100px;"><a href="prices.html"
+                        <div style="text-align:center; font-size: 100px;"><a href="prices"
                                                                              style="color: #ffffff"><img id="main_logo"
                                                                                                          src="images/logo.png"
                                                                                                          alt="BEET"><br>
@@ -331,7 +331,7 @@
                     <span>No more schedules, we have thousands of services available to be attended by you in the time that you want. Find yours and start make money right now.</span>
                 </h3>
                 <span class="clear spacer_100"></span>
-                </span><a href="joinus.html" target="_self"
+                </span><a href="joinus" target="_self"
                           class="spiral-button spiral-button_light spiral-button_rounded spiral-button_medium ripplelink spiral-button_transparent ">Join
                 Us</a>
             </div>
@@ -400,7 +400,7 @@
                                     </div>
                                     <div class="spiral_latest_news_shortcode_content">
                                         <h5>
-                                            <a href="blog-fullwidth.html">Vestibulum scelerisque imperdiet molestie.</a>
+                                            <a href="blog-fullwidth">Vestibulum scelerisque imperdiet molestie.</a>
                                         </h5>
                                         <div class="spiral_posts_author">by
                                             <a href="#">admin</a>
@@ -495,7 +495,7 @@
     <div class="spiral_section_content">
         <div class="spiral_container">
             <div class="spiral_column_tc_span12">
-                <a href="blog-timeline.html" target="_self"
+                <a href="blog-timeline" target="_self"
                    class="spiral-button spiral-button_light spiral-button_rounded spiral-button_medium ripplelink spiral-button_transparent ">More
                     News and Events</a>
             </div>
@@ -522,7 +522,7 @@
                 <div class="gray_text">
                     <p>60th Street <br>Ciudad de Guatemala, Guatemala</p>
                     <p>(01)234 555 -6523<br>
-                        <a href="mailto:">info@beetcg.com</a>
+                        <a href="mailto:">info@comiczone.com</a>
                     </p>
                 </div>
                 <h3 class="gray_text">
@@ -531,7 +531,7 @@
                 <div class="spiral_follow_us">
                     <a class="spiral_tooltip" data-gravity="s" href="http://www.linkedin.com" target="_blank"
                        title="Follow us on Linkedin"><i class="tmf-linkedin"></i></a>
-                    <a class="spiral_tooltip" data-gravity="s" href="http://www.instagram.com/beetcg" target="_blank"
+                    <a class="spiral_tooltip" data-gravity="s" href="http://www.instagram.com/comiczone" target="_blank"
                        title="Follow us on Instagram"><i class="tmf-instagram"></i></a>
                 </div>
             </div>
@@ -605,7 +605,7 @@
             <div class="row">
                 <div class="span4 footer_copyright left_aligned">
                     BEET ©2017. All Rights Reserved
-                    <a href="../es/index.html">
+                    <a href="../es/index">
                         <img src="images/es.svg" width="20px"></a>
                 </div>
                 <div class="span6 right_aligned">

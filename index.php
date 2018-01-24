@@ -45,7 +45,7 @@
  <img src="images/us.svg" title="es" width="60px"    style="margin-top: 42px;" ></img>
 						</div>
 						<h3>
-							<a href="en/index.html" hreflang="en" style="color: #fff">English</a>  
+							<a href="en/index" hreflang="en" style="color: #fff">English</a>  
 						</h3>
 					</div> 
 				</div>
@@ -58,7 +58,7 @@
 <img src="images/es.svg" title="es" width="60px"    style="margin-top: 42px;" ></img>
 						</div>
 						<h3>
-						<a href="es/index.html" hreflang="es" style="color: #fff">Español</a>	
+						<a href="es/index" hreflang="es" style="color: #fff">Español</a>	
 						</h3>
 					</div> 
 				</div>

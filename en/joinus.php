@@ -26,7 +26,7 @@
 
 <body class="page" data-ng-controller="joinUsController">
 
-<div ng-include="'menu-bar.html'"></div>
+<div ng-include="'menu-bar.php'"></div>
 
 <section id="headline_breadcrumbs_bar" class="with_image">
     <div class="headline_image headline_style_image">
@@ -129,9 +129,9 @@
             <div class="spiral_column_tc_span4">
                 <div class="spiral_service_box spiral_service_box_boxed_square service_box_boxed_square_border">
                     <div class="spiral_service_box_header">
-                        <a href="elements-service-boxes.html" target="_self" class="spiral_icon_boxed white_background"><i
+                        <a href="elements-service-boxes" target="_self" class="spiral_icon_boxed white_background"><i
                                 class="tmf-search transparent_background"></i></a>
-                        <a href="elements-service-boxes.html" target="_self">
+                        <a href="elements-service-boxes" target="_self">
                             <h3>
                                 Find Jobs you <br/>love
                             </h3>
@@ -143,9 +143,9 @@
             <div class="spiral_column_tc_span4">
                 <div class="spiral_service_box spiral_service_box_boxed_square service_box_boxed_square_border">
                     <div class="spiral_service_box_header">
-                        <a href="elements-service-boxes.html" target="_self" class="spiral_icon_boxed white_background"><i
+                        <a href="elements-service-boxes" target="_self" class="spiral_icon_boxed white_background"><i
                                 class="tmf-money transparent_background"></i></a>
-                        <a href="elements-service-boxes.html" target="_self">
+                        <a href="elements-service-boxes" target="_self">
                             <h3>
                                 At rates you <br/>choose
                             </h3>
@@ -156,9 +156,9 @@
             <div class="spiral_column_tc_span4">
                 <div class="spiral_service_box spiral_service_box_boxed_square service_box_boxed_square_border">
                     <div class="spiral_service_box_header">
-                        <a href="elements-service-boxes.html" target="_self" class="spiral_icon_boxed white_background"><i
+                        <a href="elements-service-boxes" target="_self" class="spiral_icon_boxed white_background"><i
                                 class="tmf-calendar transparent_background"></i></a>
-                        <a href="elements-service-boxes.html" target="_self">
+                        <a href="elements-service-boxes" target="_self">
                             <h3>
                                 Make a schedule that <br/>fits your life
                             </h3>
@@ -297,7 +297,7 @@
             <div class="row">
                 <div class="span4 footer_copyright left_aligned">
                     BEET ©2017. All Rights Reserved
-                    <a href="../es/index.html">
+                    <a href="../es/index">
                         <img src="images/es.svg" width="20px"></a>
                 </div>
                 <div class="span6 right_aligned">

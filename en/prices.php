@@ -26,7 +26,7 @@
 
 <body class="page">
 
-<div ng-include="'menu-bar.html'"></div>
+<div ng-include="'menu-bar.php'"></div>
 
 <section id="ABdev_main_slider">
     <div id="rev_slider_12_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="main_slider"
@@ -204,7 +204,7 @@
             <div class="row">
                 <div class="span4 footer_copyright left_aligned">
                     BEET ©2017. All Rights Reserved
-                    <a href="../es/index.html">
+                    <a href="../es/index">
                         <img src="images/es.svg" width="20px"></a>
                 </div>
                 <div class="span6 right_aligned">

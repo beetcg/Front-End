@@ -28,13 +28,13 @@
 <body class="page login animated fadeIn" data-ng-controller="LoginController">
 
 <div class="logo" style="margin-top: 20px !important;">
-    <a href="index.html">
+    <a href="index">
         <img src="../images/logo-black.png" />
     </a>
 </div>
 
 <div class="content" style="margin: 0px auto 10px auto !important;">
-    <form class="login-form animated fadeIn" action="index.html" method="post" data-ng-show="login" id="form_create">
+    <form class="login-form animated fadeIn" action="index" method="post" data-ng-show="login" id="form_create">
         <h3 class="form-title font-green">Sign Up To Technician</h3>
         <div align="center">
             <p class="step-circle">
@@ -49,7 +49,7 @@
                     <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="First Name" name="fname" id="fname" />
             </div>
             <div class="col-sm-12 col-md-6">
-                    <input class="form-control form-control-solid placeholder-no-fix" type="password" placeholder="Last Name" name="lname" id="lname" />
+                    <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Last Name" name="lname" id="lname" />
             </div>
         </div>
         <div class="rows">
@@ -66,7 +66,7 @@
             </div>
             <div class="col-sm-12 col-md-6">
                 <div class="form-group">
-                    <input class="form-control form-control-solid placeholder-no-fix" type="password" placeholder="Zip Code" name="zip" id="zip" />
+                    <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Zip Code" name="zip" id="zip" />
                 </div>
             </div>
         </div>
@@ -88,7 +88,7 @@
         </div>
     </form>
 
-    <form class="forget-form animated fadeIn" action="index.html" method="post" data-ng-show="forgot" data-ng-cloak>
+    <form class="forget-form animated fadeIn" action="index" method="post" data-ng-show="forgot" data-ng-cloak>
         <h3 class="font-green" data-ng-cloak>Forget Password ?</h3>
         <p class="forgot-text" data-ng-cloak> Enter your e-mail address below to reset your password. </p>
         <div class="form-group" style="margin-bottom: 2rem" data-ng-cloak >
@@ -119,15 +119,15 @@
 
 <div class="row full-width footer"> BEET ©2017.  <a href="#"><span class="terms">Terms and Conditions</span></a> | <a href="#"><span class="terms">Privacy Policy</span></a></div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
         integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
         crossorigin="anonymous"></script>
+        
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="../js/angular/angular.min.js"></script>
 <script type="text/javascript" src="../js/angular/app.js"></script>

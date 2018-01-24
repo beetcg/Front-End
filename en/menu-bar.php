@@ -18,7 +18,7 @@
 ?>
 
 <nav id="navmenu" class="navbar navbar-expand-lg navbar-light fixed-top" >
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand" href="index">
         <img id="main_logo" src="images/logo.png" alt="Spiral">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -55,16 +55,16 @@
                         <i class="icon-basket" style="font-size: 20px !important;"></i>
                     </a>
                 </li>
-                <?php if ($status) { ?>
+                <?php if (!$status) { ?>
                     <li class="nav-item dropdown"> <!-- SIGN UP --> 
                         <a class="nav-link dropdown-toggle" href="#" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             SIGN UP
                         </a>
                         <div class="dropdown-menu dropdown-menu-right animated bounceIn dropdown-dark" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="./signup-technician.html">Technician</a>
+                            <a class="dropdown-item" href="./signup-technician">Technician</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="./signup-client.html">Client</a>
+                            <a class="dropdown-item" href="./signup-client">Client</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown"> <!-- SIGN IN -->
@@ -73,9 +73,9 @@
                             SIGN IN
                         </a>
                         <div class="dropdown-menu dropdown-menu-right animated bounceIn dropdown-dark" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="./login-technician.html">Technician</a>
+                            <a class="dropdown-item" href="./login-technician">Technician</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="./login-client.html">Client</a>
+                            <a class="dropdown-item" href="./login-client">Client</a>
                             <!--<a class="dropdown-item" href="#">Something else here</a>-->
                         </div>
                     </li>

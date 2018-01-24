@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-US" data-ng-app="beetApp" data-ng-cloak>
 <head>
@@ -30,7 +31,7 @@
     <!---->
 <!--</section>-->
 <div class="logo animated fadeIn" style="margin-top: 20px !important;">
-    <a href="index.html">
+    <a href="index">
         <img src="../images/logo-black.png" />
     </a>
     <h3 class="form-title font-green" style="color: #232323; margin-top: 30px; margin-bottom: 20px; font-size: 28px;">Select category</h3>

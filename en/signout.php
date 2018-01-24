@@ -4,10 +4,10 @@
 
   $obj = new Methods();
   $res = $obj->logout();
-	echo $res;
-  if ($res == '1') {
+  echo $res;
+  if ($res) {
     session_destroy();
-		header("Location: http://beet.hol.es");
+		header("Location: http://comiczone.hol.es/en/index");
   } else {
-		echo "Error en Log Out";
+		echo "Error en Log Out - / ".$_COOKIE['email']." /";
 	}

@@ -26,7 +26,7 @@
 
 <body class="page">
 
-<div ng-include="'menu-bar.html'"></div>
+<div ng-include="'menu-bar.php'"></div>
 
 <section id="headline_breadcrumbs_bar" class="hadline_no_image">
     <div>
@@ -66,7 +66,7 @@
                     <div class="span6">
                         <div class="post_main_inner_wrapper">
                             <h2>
-                                <a href="single-blog-right-sidebar.html">Vitae rutrum libero feugiat eu</a>
+                                <a href="single-blog-right-sidebar">Vitae rutrum libero feugiat eu</a>
                             </h2>
                             <div class="timeline_postmeta">
 									<span class="post_author">
@@ -115,7 +115,7 @@
                     <div class="span6">
                         <div class="post_main_inner_wrapper">
                             <h2>
-                                <a href="single-blog-fullwidth.html">Vitae rutrum libero feugiat eu</a>
+                                <a href="single-blog-fullwidth">Vitae rutrum libero feugiat eu</a>
                             </h2>
                             <div class="timeline_postmeta">
 									<span class="post_author">
@@ -157,7 +157,7 @@
                     <div class="span12">
                         <div class="post_main_inner_wrapper">
                             <h2>
-                                <a href="single-blog-no-sidebar-no-image.html">Regular post without image</a>
+                                <a href="single-blog-no-sidebar-no-image">Regular post without image</a>
                             </h2>
                             <div class="timeline_postmeta">
 									<span class="post_author">
@@ -167,10 +167,10 @@
 										<span>
 											<a href="#" class="scroll comments_link">No comments</a>
 										</span> | 
-										<span class="category"><a href="blog-right-sidebar.html">Events</a>, 
-											<a href="blog-fullwidth.html">Fullwidth Blog</a>, 
-											<a href="blog-left-sidebar.html">Left Sidebar Blog</a>, 
-											<a href="blog-timeline.html">Timeline Blog</a>
+										<span class="category"><a href="blog-right-sidebar">Events</a>, 
+											<a href="blog-fullwidth">Fullwidth Blog</a>, 
+											<a href="blog-left-sidebar">Left Sidebar Blog</a>, 
+											<a href="blog-timeline">Timeline Blog</a>
 										</span>
 									</span>
                             </div>
@@ -205,7 +205,7 @@
                     <div class="span6">
                         <div class="post_main_inner_wrapper">
                             <h2>
-                                <a href="single-blog-fullwidth.html">Another cool Vimeo video</a>
+                                <a href="single-blog-fullwidth">Another cool Vimeo video</a>
                             </h2>
                             <div class="timeline_postmeta">
 									<span class="post_author">
@@ -215,10 +215,10 @@
 										<span>
 											<a href="#" class="scroll comments_link">No comments</a>
 										</span> | 
-										<span class="category"><a href="blog-right-sidebar.html">Events</a>, 
-											<a href="blog-fullwidth.html">Fullwidth Blog</a>, 
-											<a href="blog-left-sidebar.html">Left Sidebar Blog</a>, 
-											<a href="blog-timeline.html">Timeline Blog</a>
+										<span class="category"><a href="blog-right-sidebar">Events</a>, 
+											<a href="blog-fullwidth">Fullwidth Blog</a>, 
+											<a href="blog-left-sidebar">Left Sidebar Blog</a>, 
+											<a href="blog-timeline">Timeline Blog</a>
 										</span>
 									</span>
                             </div>
@@ -250,7 +250,7 @@
                     <div class="span6">
                         <div class="post_main_inner_wrapper">
                             <h2>
-                                <a href="single-blog-fullwidth.html">Audio post example</a>
+                                <a href="single-blog-fullwidth">Audio post example</a>
                             </h2>
                             <div class="timeline_postmeta">
 									<span class="post_author">
@@ -260,10 +260,10 @@
 										<span>
 											<a href="#" class="scroll comments_link">No comments</a>
 										</span> | 
-										<span class="category"><a href="blog-right-sidebar.html">Events</a>, 
-											<a href="blog-fullwidth.html">Fullwidth Blog</a>, 
-											<a href="blog-left-sidebar.html">Left Sidebar Blog</a>, 
-											<a href="blog-timeline.html">Timeline Blog</a>
+										<span class="category"><a href="blog-right-sidebar">Events</a>, 
+											<a href="blog-fullwidth">Fullwidth Blog</a>, 
+											<a href="blog-left-sidebar">Left Sidebar Blog</a>, 
+											<a href="blog-timeline">Timeline Blog</a>
 										</span>
 									</span>
                             </div>
@@ -294,7 +294,7 @@
                     <div class="span6">
                         <div class="post_main_inner_wrapper">
                             <h2>
-                                <a href="single-blog-fullwidth.html">So you want to know more?</a>
+                                <a href="single-blog-fullwidth">So you want to know more?</a>
                             </h2>
                             <div class="timeline_postmeta">
 									<span class="post_author">
@@ -304,10 +304,10 @@
 										<span>
 											<a href="#" class="scroll comments_link">No comments</a>
 										</span> | 
-										<span class="category"><a href="blog-right-sidebar.html">Events</a>, 
-											<a href="blog-fullwidth.html">Fullwidth Blog</a>, 
-											<a href="blog-left-sidebar.html">Left Sidebar Blog</a>, 
-											<a href="blog-timeline.html">Timeline Blog</a>
+										<span class="category"><a href="blog-right-sidebar">Events</a>, 
+											<a href="blog-fullwidth">Fullwidth Blog</a>, 
+											<a href="blog-left-sidebar">Left Sidebar Blog</a>, 
+											<a href="blog-timeline">Timeline Blog</a>
 										</span>
 									</span>
                             </div>
@@ -336,7 +336,7 @@
                     <div class="span12">
                         <div class="post_main_inner_wrapper">
                             <h2>
-                                <a href="single-blog-fullwidth.html">Regular plog post</a>
+                                <a href="single-blog-fullwidth">Regular plog post</a>
                             </h2>
                             <div class="timeline_postmeta">
 									<span class="post_author">
@@ -346,10 +346,10 @@
 										<span>
 											<a href="#" class="scroll comments_link">No comments</a>
 										</span> | 
-										<span class="category"><a href="blog-right-sidebar.html">Events</a>, 
-											<a href="blog-fullwidth.html">Fullwidth Blog</a>, 
-											<a href="blog-left-sidebar.html">Left Sidebar Blog</a>, 
-											<a href="blog-timeline.html">Timeline Blog</a>
+										<span class="category"><a href="blog-right-sidebar">Events</a>, 
+											<a href="blog-fullwidth">Fullwidth Blog</a>, 
+											<a href="blog-left-sidebar">Left Sidebar Blog</a>, 
+											<a href="blog-timeline">Timeline Blog</a>
 										</span>
 									</span>
                             </div>
@@ -381,7 +381,7 @@
                     <div class="span6">
                         <div class="post_main_inner_wrapper">
                             <h2>
-                                <a href="single-blog-fullwidth.html">Post with soundcloud audio</a>
+                                <a href="single-blog-fullwidth">Post with soundcloud audio</a>
                             </h2>
                             <div class="timeline_postmeta">
 									<span class="post_author">
@@ -391,10 +391,10 @@
 										<span>
 											<a href="#" class="scroll comments_link">No comments</a>
 										</span> | 
-										<span class="category"><a href="blog-right-sidebar.html">Events</a>, 
-											<a href="blog-fullwidth.html">Fullwidth Blog</a>, 
-											<a href="blog-left-sidebar.html">Left Sidebar Blog</a>, 
-											<a href="blog-timeline.html">Timeline Blog</a>
+										<span class="category"><a href="blog-right-sidebar">Events</a>, 
+											<a href="blog-fullwidth">Fullwidth Blog</a>, 
+											<a href="blog-left-sidebar">Left Sidebar Blog</a>, 
+											<a href="blog-timeline">Timeline Blog</a>
 										</span>
 									</span>
                             </div>
@@ -426,7 +426,7 @@
                     <div class="span6">
                         <div class="post_main_inner_wrapper">
                             <h2>
-                                <a href="single-blog-fullwidth.html">Spiral is full of surprises</a>
+                                <a href="single-blog-fullwidth">Spiral is full of surprises</a>
                             </h2>
                             <div class="timeline_postmeta">
 									<span class="post_author">
@@ -436,10 +436,10 @@
 										<span>
 											<a href="#" class="scroll comments_link">No comments</a>
 										</span> | 
-										<span class="category"><a href="blog-right-sidebar.html">Events</a>, 
-											<a href="blog-fullwidth.html">Fullwidth Blog</a>, 
-											<a href="blog-left-sidebar.html">Left Sidebar Blog</a>, 
-											<a href="blog-timeline.html">Timeline Blog</a>
+										<span class="category"><a href="blog-right-sidebar">Events</a>, 
+											<a href="blog-fullwidth">Fullwidth Blog</a>, 
+											<a href="blog-left-sidebar">Left Sidebar Blog</a>, 
+											<a href="blog-timeline">Timeline Blog</a>
 										</span>
 									</span>
                             </div>
@@ -467,7 +467,7 @@
                     <div class="span12">
                         <div class="post_main_inner_wrapper">
                             <h2>
-                                <a href="single-blog-fullwidth.html">Only the best post laying around</a>
+                                <a href="single-blog-fullwidth">Only the best post laying around</a>
                             </h2>
                             <div class="timeline_postmeta">
 									<span class="post_author">
@@ -477,10 +477,10 @@
 										<span>
 											<a href="#" class="scroll comments_link">No comments</a>
 										</span> | 
-										<span class="category"><a href="blog-right-sidebar.html">Events</a>, 
-											<a href="blog-fullwidth.html">Fullwidth Blog</a>, 
-											<a href="blog-left-sidebar.html">Left Sidebar Blog</a>, 
-											<a href="blog-timeline.html">Timeline Blog</a>
+										<span class="category"><a href="blog-right-sidebar">Events</a>, 
+											<a href="blog-fullwidth">Fullwidth Blog</a>, 
+											<a href="blog-left-sidebar">Left Sidebar Blog</a>, 
+											<a href="blog-timeline">Timeline Blog</a>
 										</span>
 									</span>
                             </div>
@@ -498,7 +498,7 @@
                 </div>
             </div>
         </div>
-        <div id="timeline_loading" data-ajaxurl="timeline-posts.html" data-noposts="No older posts found">
+        <div id="timeline_loading" data-ajaxurl="timeline-posts" data-noposts="No older posts found">
             No older posts found
         </div>
     </div>
@@ -508,7 +508,7 @@
         <div class="spiral_container">
             <div class="spiral_column_tc_span12">
                 <div class="spiralss_form_wrapper ">
-                    <form id="spiralss_form_1" class="spiralss_form spiralss_inline_form" action="blog-fullwidth.html"
+                    <form id="spiralss_form_1" class="spiralss_form spiralss_inline_form" action="blog-fullwidth"
                           method="post">
                         <p>
                             <input name="spiralss_subscriber_email" class="spiralss_subscriber_email"

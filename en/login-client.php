@@ -27,13 +27,13 @@
 
 <body class="page login animated fadeIn" data-ng-controller="LoginController" >
 <div class="logo">
-    <a href="index.html">
+    <a href="index">
         <img src="../images/logo-black.png" />
     </a>
 </div>
 
 <div class="content">
-    <form class="login-form animated fadeIn" action="index.html" method="post" data-ng-show="login" id="form_login_client">
+    <form class="login-form animated fadeIn" action="index" method="post" data-ng-show="login" id="form_login_client">
         <h3 class="form-title font-green">Sign In To Client</h3>
         <!--<div class="alert alert-danger display-hide" ng-show="false">-->
         <!--<button class="close" data-close="alert"></button>-->
@@ -61,7 +61,7 @@
         </div>
     </form>
 
-    <form class="forget-form animated fadeIn" action="index.html" method="post" data-ng-show="forgot" data-ng-cloak id="recovery_form_client">
+    <form class="forget-form animated fadeIn" action="index" method="post" data-ng-show="forgot" data-ng-cloak id="recovery_form_client">
         <h3 class="font-green">Forget Password ?</h3>
         <p class="forgot-text"> Enter your e-mail address below to reset your password. </p>
         <div class="form-group" style="margin-bottom: 2rem">
@@ -84,9 +84,12 @@
 
 <div class="row full-width footer"> BEET ©2017.  <a href="#"><span class="terms">Terms and Conditions</span></a> | <a href="#"><span class="terms">Privacy Policy</span></a></div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>

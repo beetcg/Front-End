@@ -2,23 +2,27 @@
 if (isset($_COOKIE['email'])) {
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US" data-ng-app="beetApp">
 <head>
-	<meta charset="UTF-8">
-	<title>Form</title>
-	<base href="/">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>BEET | WELCOME</title>
+  <meta name="description" content="Beet ">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
 
 	<script src="https://use.fontawesome.com/e7cf633633.js"></script>
 </head>
 <body>
-<?php require_once 'menu.php'; 
-if ($_SESSION['type'] == 'tech') {
-	$type = "Technician ";
-} else {
-	$type = '';
-}
-?>
+	<div ng-include="'menu-bar.php'"></div>
+
+	<?php 
+		if ($_SESSION['type'] == 'tech') {
+			$type = "Technician ";
+		} else {
+			$type = '';
+		}
+	?>
 
 	<div class="container">
 		<div class="row my-5">
@@ -44,6 +48,6 @@ if ($_SESSION['type'] == 'tech') {
 </html>
 <?php 
 	} else { // Fin del if
-		header('Location: http://beetcg.hol.es');
+		header('Location: http://comiczone.hol.es');
 	}
 ?>

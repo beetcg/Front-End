@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
 	var route = {};
-	$.getJSON("./src/app_api/modules/client/routes.json", function(data) { route = data; });
+	$.getJSON("./../src/app_api/modules/client/routes.json", function(data) { route = data; });
 
 	/** Create Form */
 	$('#form_create').on('submit',function(e){
@@ -27,7 +27,7 @@ $( document ).ready(function() {
 					if (res.save == true) {
 						$('#form_create')[0].reset()
 						$('#sub').html('<i style="color:green;" class="fa fa-floppy-o" aria-hidden="true"></i>')
-						window.location.href = "http://beetcg.hol.es";
+						window.location.href = "http://comiczone.hol.es/en";
 					} else {
 						$('#sub').html('<i style="color:red;" class="fa fa-exclamation-circle" aria-hidden="true"></i>')
 					}
@@ -201,7 +201,7 @@ $( document ).ready(function() {
 						Cookies.set('email', res.data.email , { expires: 7 });
 						Cookies.set('type', 'client' , { expires: 7 });
 
-						window.location.replace("http://beetcg.hol.es/dashboard");
+						window.location.replace("http://comiczone.hol.es/en/dashboard");
 						console.log(res)
 					} else {
 						alert('Usuario y/o contraseña invalida')
