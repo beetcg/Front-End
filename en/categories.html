@@ -22,6 +22,14 @@
     <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/ionicons.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
+    <script>
+        function preview_images() {
+            var total_file = document.getElementById("images").files.length;
+            for (var i = 0; i < total_file; i++) {
+                $('#image_preview').append("<div class='col-md-3'><img class='img-responsive' src='" + URL.createObjectURL(event.target.files[i]) + "'></div>");
+            }
+        }
+    </script>
 </head>
 
 <body class="page login" data-ng-controller="categoriesController">
@@ -33,12 +41,13 @@
     <a href="index.html">
         <img src="../images/logo-black.png"/>
     </a>
-    <h3 class="form-title font-green" style="color: #232323; margin-top: 30px; margin-bottom: 20px; font-size: 28px;">
-        Select category</h3>
     <div align="center">
-        <p class="step-circle">
+        <p class="step-circle" style="margin-top: 30px; margin-bottom: 20px;">
             2
         </p>
+        <h3 class="form-title font-green" style="color: #232323; font-size: 28px;">
+            Select Category
+        </h3>
         <p class="step-1">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit
         </p>
@@ -94,7 +103,7 @@
         </div>
 
         <div class="box3">
-            <div class="categories-box3 animated fadeInUpBig" data-ng-show="computer">
+            <div class="categories-box3 animated fadeIn" data-ng-show="computer">
                 <div>
                     <h2 class="title-cat">Computer Support</h2>
                     <div style="margin-top: 40px; margin-bottom: 40px">
@@ -204,7 +213,7 @@
                 </div>
             </div>
 
-            <div class="categories-box3 animated fadeInUpBig" data-ng-show="smart">
+            <div class="categories-box3 animated fadeIn" data-ng-show="smart">
                 <div>
                     <h2 class="title-cat">Smart Home</h2>
                     <div style="margin-top: 40px; margin-bottom: 40px">
@@ -286,7 +295,7 @@
                 </div>
             </div>
 
-            <div class="categories-box3 animated fadeInUpBig" data-ng-show="television">
+            <div class="categories-box3 animated fadeIn" data-ng-show="television">
                 <div>
                     <h2 class="title-cat">Television</h2>
                     <div style="margin-top: 40px; margin-bottom: 40px">
@@ -338,7 +347,7 @@
                 </div>
             </div>
 
-            <div class="categories-box3 animated fadeInUpBig" data-ng-show="audio">
+            <div class="categories-box3 animated fadeIn" data-ng-show="audio">
                 <div>
                     <h2 class="title-cat">Audio & Video</h2>
                     <div style="margin-top: 40px; margin-bottom: 40px">
@@ -404,7 +413,7 @@
                 </div>
             </div>
 
-            <div class="categories-box3 animated fadeInUpBig" data-ng-show="wifi">
+            <div class="categories-box3 animated fadeIn" data-ng-show="wifi">
                 <div data-ng-show="wifi">
                     <h2 class="title-cat">Wifi & Network</h2>
                     <div style="margin-top: 40px; margin-bottom: 40px">
@@ -470,7 +479,7 @@
                 </div>
             </div>
 
-            <div class="categories-box3 animated fadeInUpBig" data-ng-show="malware">
+            <div class="categories-box3 animated fadeIn" data-ng-show="malware">
                 <div>
                     <h2 class="title-cat">Malware / Virus</h2>
                     <div style="margin-top: 40px; margin-bottom: 40px">
@@ -493,10 +502,54 @@
                     </div>
                 </div>
             </div>
+
+            <div class="logo animated fadeIn" style="margin-top: 20px !important;">
+                <!--<a href="index.html">-->
+                    <!--<img src="../images/logo-black.png"/>-->
+                <!--</a>-->
+
+                <div align="center">
+                    <p class="step-circle" style="margin-top: 30px; margin-bottom: 20px;">
+                        3
+                    </p>
+                    <h3 class="form-title font-green"
+                        style="color: #232323;  font-size: 28px;">
+                        Upload Documents
+                    </h3>
+                    <p class="step-1">
+                        We need some important documents to complete your subscription
+                    </p>
+                </div>
+            </div>
+            <div class="categories-box1" style="margin-top: 30px;">
+                <h2 class="title-cat">Documents</h2>
+                <div class="types">
+                    <p>1. Passport</p>
+                    <p>2. Criminal Record</p>
+                    <p>3. ID</p>
+                    <p>4. Bank Account Information</p>
+                </div>
+                <div class="rows">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" style="height: 38px !important;" readonly>
+                            <label class="input-group-btn">
+                                <span class="btn btn-beet">
+                                    <i class="fa fa-upload"></i> <input type="file" style="display: none;" multiple>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <!--<a href="#" class="send-btn" id="spiralcf-submit" style="position: absolute; bottom: 0">Send</a>-->
-            <button type="submit" class="btn btn-login uppercase animated fadeInUpBig" style="float: right" data-ng-show="buttonSend">
-                Send
-            </button>
+            <div align="center">
+                <button type="submit" class="btn btn-login uppercase">
+                    Send
+                </button>
+            </div>
         </div>
 
     </form>
@@ -536,6 +589,7 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="../js/angular/angular.min.js"></script>
 <script type="text/javascript" src="../js/angular/app.js"></script>
+<script type="text/javascript" src="../js/fileinput.js"></script>
 <script type="text/javascript" src="js/stickymenu.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.tools.min.js"></script>
