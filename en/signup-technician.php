@@ -4,7 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Sign Up | BEET</title>
     <meta name="description" content="Spiral HTML5 premium template">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <!--[if lt IE 9]>
@@ -34,7 +33,7 @@
 </div>
 
 <div class="content" style="margin: 0px auto 10px auto !important;">
-    <form class="login-form animated fadeIn" action="index" method="post" data-ng-show="login" id="form_create">
+    <form class="login-form animated fadeIn" data-ng-show="login" id="form_create">
         <h3 class="form-title font-green">Sign Up To Technician</h3>
         <div align="center">
             <p class="step-circle">

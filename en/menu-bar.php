@@ -80,11 +80,17 @@
                         </div>
                     </li>
                 <?php } else {?>
+                
+                    <li class="nav-item"> <!-- Icon Basket -->
+                        <span class="nav-link">
+                          <?php echo $_SESSION['fname'];?>
+                        </span>
+                    </li>
                     <li class="nav-item"> <!-- Icon Basket -->
                         <a class="nav-link" href="#">DASHBOARD</a>
                     </li>
                     <li class="nav-item"> <!-- Icon Basket -->
-                        <a class="nav-link" href="./signout">SIGN OUT</a>
+                        <a class="nav-link" href="../signout">SIGN OUT</a>
                     </li>
                 <?php }?>
             </ul>

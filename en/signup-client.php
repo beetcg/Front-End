@@ -33,16 +33,8 @@
 </div>
 
 <div class="content" style="margin: 0px auto 10px auto !important;">
-    <form class="login-form animated fadeIn" action="index" method="post" data-ng-show="login" id="form_create">
+    <form class="login-form animated fadeIn" data-ng-show="login" id="form_create">
         <h3 class="form-title font-green">Sign Up To Client</h3>
-        <!--<div align="center">-->
-            <!--<p class="step-circle">-->
-                <!--1-->
-            <!--</p>-->
-            <!--<p class="step-1">-->
-                <!--Register your basic data and our team will contact you-->
-            <!--</p>-->
-        <!--</div>-->
         <div class="rows">
             <div class="col-sm-12 col-md-6">
                 <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="First Name" name="fname" id="fname" />
@@ -92,14 +84,6 @@
         <p class="forgot-text" data-ng-cloak> Enter your e-mail address below to reset your password. </p>
         <div class="form-group" style="margin-bottom: 2rem" data-ng-cloak >
             <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" /> </div>
-        <!--<div class="form-actions">-->
-        <!--<button type="button" id="back-btn" class="btn green btn-outline" data-ng-click="selectOption(1)">-->
-        <!--Back-->
-        <!--</button>-->
-        <!--<button type="submit" class="btn btn-success uppercase pull-right">-->
-        <!--Submit-->
-        <!--</button>-->
-        <!--</div>-->
         <div class="rows" data-ng-cloak>
             <div class="col-sm-12 col-md-6">
                 <a href="javascript:;" class="back-btn btn-submit" data-ng-click="selectOption(1)">
@@ -119,16 +103,13 @@
 <div class="row full-width footer"> BEET ©2017.  <a href="#"><span class="terms">Terms and Conditions</span></a> | <a href="#"><span class="terms">Privacy Policy</span></a></div>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
+<script type="text/javascript" src="js/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-        
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
         integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
         crossorigin="anonymous"></script>
-
-<script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="../js/angular/angular.min.js"></script>
 <script type="text/javascript" src="../js/angular/app.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -140,5 +121,6 @@
 <script type="text/javascript" src="js/scripts.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 <script src="./../src/app_api/modules/client/controller.js"></script>
+
 </body>
 </html>

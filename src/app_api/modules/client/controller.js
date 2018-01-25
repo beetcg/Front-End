@@ -24,14 +24,14 @@ $( document ).ready(function() {
 				data: $('#form_create').serialize(),
 				success: function (resp) {
 					res = JSON.parse(resp)
+					console.log(res)
 					if (res.save == true) {
 						$('#form_create')[0].reset()
 						$('#sub').html('<i style="color:green;" class="fa fa-floppy-o" aria-hidden="true"></i>')
-						window.location.href = "http://comiczone.hol.es/en";
+						window.location.href = "http://comiczone.hol.es/en/index";
 					} else {
 						$('#sub').html('<i style="color:red;" class="fa fa-exclamation-circle" aria-hidden="true"></i>')
 					}
-					console.log(res)
 					$('#form_message').html(
 						'<div class="alert alert-light alert-dismissible fade show" role="alert">'+
 						'		<ul>'+
@@ -201,7 +201,7 @@ $( document ).ready(function() {
 						Cookies.set('email', res.data.email , { expires: 7 });
 						Cookies.set('type', 'client' , { expires: 7 });
 
-						window.location.replace("http://comiczone.hol.es/en/dashboard");
+						window.location.href = "http://comiczone.hol.es/en/dashboard";
 						console.log(res)
 					} else {
 						alert('Usuario y/o contraseña invalida')

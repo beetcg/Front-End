@@ -1,5 +1,5 @@
 <?php
-	require_once "./../src/app_api/modules/methods/common.php";
+	require_once "./src/app_api/modules/methods/common.php";
   session_start();
 
   $obj = new Methods();
