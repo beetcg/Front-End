@@ -18,6 +18,7 @@ $( document ).ready(function() {
 			$.ajax({
 				beforeSend: function (){
 					$('#sub').html('<i class="fa fa-spin fa-circle-o-notch" aria-hidden="true"></i>')
+					$('#sub-btn').prop('disabled', true);
 				},
 				url: route.create.url,
 				type: route.create.type,
@@ -25,24 +26,18 @@ $( document ).ready(function() {
 				success: function (resp) {
 					res = JSON.parse(resp)
 					console.log(res)
+					if (res.found) {
+						alert('El usuario ya esta registrado')
+					}
 					if (res.save == true) {
 						$('#form_create')[0].reset()
-						$('#sub').html('<i style="color:green;" class="fa fa-floppy-o" aria-hidden="true"></i>')
+						$('#sub').html('Submit')
+						alert('Registro exitoso \nMensaje provisional')
 						window.location.href = "http://comiczone.hol.es/en/index";
 					} else {
 						$('#sub').html('<i style="color:red;" class="fa fa-exclamation-circle" aria-hidden="true"></i>')
 					}
-					$('#form_message').html(
-						'<div class="alert alert-light alert-dismissible fade show" role="alert">'+
-						'		<ul>'+
-						'			<li>Connection : '+res.connection+'</li>'+
-						'			<li>Found : '+res.found+'</li>'+
-						'			<li>Save : '+res.save+'</li>'+
-						'		</ul>'+
-						'		<button class="close" data-dismiss="alert" aria-label="Close">'+
-						'			<i class="fa fa-window-close" aria-hidden="true"></i>'+
-						'		</button>'+
-						'</div>' )
+					$('#sub-btn').prop('disabled', false);
 				},
 				error: function (jqXHR,estado,error) {
 					console.log('----------------------')
@@ -53,14 +48,6 @@ $( document ).ready(function() {
 				complete: function (jqXHR,estado) {
 				}
 			})
-		} else {
-			$('#form_message').html(
-						'<div class="alert alert-light alert-dismissible fade show" role="alert">'+
-						'		<h3>Validation problems</h3>'+
-						'		<button class="close" data-dismiss="alert" aria-label="Close">'+
-						'			<i class="fa fa-window-close" aria-hidden="true"></i>'+
-						'		</button>'+
-						'</div>' )
 		}
 	})
 
@@ -73,33 +60,24 @@ $( document ).ready(function() {
 		if (exp) {
 			$.ajax({
 				beforeSend: function (){
-					$('#subRC').html('<i class="fa fa-spin fa-circle-o-notch" aria-hidden="true"></i>')
+					$('#rsub').html('<i class="fa fa-spin fa-circle-o-notch" aria-hidden="true"></i>')
+					$('#rec-btn').prop('disabled', true);
 				},
 				url: route.recovery.url,
 				type: route.recovery.type,
 				data: $('#recovery_form_client').serialize(),
 				success: function (resp) {
 					res = JSON.parse(resp)
+					console.log(res)
 					if (res.send == true) {
 						$('#recovery_form_client')[0].reset()
-						$('#subRC').html('<i style="color:green;" class="fa fa-floppy-o" aria-hidden="true"></i>')
+						$('#rsub').html('EMAIL SENT')
 						alert('Mensaje enviado')
 					} else {
-						$('#subRC').html('<i style="color:red;" class="fa fa-exclamation-circle" aria-hidden="true"></i>')
+						$('#rsub').html('SEND EMAIL')
 						alert('Ups! hubo un problema')
 					}
-					console.log(res)
-					$('#form_message').html(
-						'<div class="alert alert-light alert-dismissible fade show" role="alert">'+
-						'		<ul>'+
-						'			<li>Connection : '+res.connection+'</li>'+
-						'			<li>Found : '+res.found+'</li>'+
-						'			<li>Send : '+res.send+'</li>'+
-						'		</ul>'+
-						'		<button class="close" data-dismiss="alert" aria-label="Close">'+
-						'			<i class="fa fa-window-close" aria-hidden="true"></i>'+
-						'		</button>'+
-						'</div>' )
+					$('#rec-btn').prop('disabled', true);
 				},
 				error: function (jqXHR,estado,error) {
 					console.log('----------------------')
@@ -110,14 +88,6 @@ $( document ).ready(function() {
 				complete: function (jqXHR,estado) {
 				}
 			})
-		} else {
-			$('#form_message').html(
-						'<div class="alert alert-light alert-dismissible fade show" role="alert">'+
-						'		<h3>Validation problems</h3>'+
-						'		<button class="close" data-dismiss="alert" aria-label="Close">'+
-						'			<i class="fa fa-window-close" aria-hidden="true"></i>'+
-						'		</button>'+
-						'</div>' )
 		}
 	})
 
@@ -133,30 +103,23 @@ $( document ).ready(function() {
 			$.ajax({
 				beforeSend: function (){
 					$('#sub').html('<i class="fa fa-spin fa-circle-o-notch" aria-hidden="true"></i>')
+					$('#sub-btn').prop('disabled', true);
 				},
 				url: route.update_pass.url,
 				type: route.update_pass.type,
 				data: $('#new_pass_client').serialize(),
 				success: function (resp) {
 					res = JSON.parse(resp)
+					console.log(res)
 					if (res.update == true) {
 						$('#new_pass_client')[0].reset()
-						$('#sub').html('<i style="color:green;" class="fa fa-exclamation-circle" aria-hidden="true"></i>')
+						$('#sub').html('password changed')
+						window.location.href = "http://comiczone.hol.es/en/login-client";
 					} else {
-						$('#sub').html('<i style="color:red;" class="fa fa-exclamation-circle" aria-hidden="true"></i>')
+						alert("Ups hubo un error")
+						$('#sub').html('change password')
 					}
-					console.log(res)
-					$('#form_message').html(
-						'<div class="alert alert-light alert-dismissible fade show" role="alert">'+
-						'		<ul>'+
-						'			<li>Connection : '+res.connection+'</li>'+
-						'			<li>Found : '+res.found+'</li>'+
-						'			<li>Update : '+res.update+'</li>'+
-						'		</ul>'+
-						'		<button class="close" data-dismiss="alert" aria-label="Close">'+
-						'			<i class="fa fa-window-close" aria-hidden="true"></i>'+
-						'		</button>'+
-						'</div>' )
+					$('#sub-btn').prop('disabled', false);
 				},
 				error: function (jqXHR,estado,error) {
 					console.log('----------------------')
@@ -167,14 +130,6 @@ $( document ).ready(function() {
 				complete: function (jqXHR,estado) {
 				}
 			})
-		} else {
-			$('#form_message').html(
-						'<div class="alert alert-light alert-dismissible fade show" role="alert">'+
-						'		<h3>Validation problems</h3>'+
-						'		<button class="close" data-dismiss="alert" aria-label="Close">'+
-						'			<i class="fa fa-window-close" aria-hidden="true"></i>'+
-						'		</button>'+
-						'</div>' )
 		}
 	})
 
@@ -188,46 +143,36 @@ $( document ).ready(function() {
 		if (exp1 && exp2) {
 			$.ajax({
 				beforeSend: function (){
-					$('#client_sub').html('<i class="fa fa-spin fa-circle-o-notch" aria-hidden="true"></i>')
+					$('#sub').html('<i class="fa fa-spin fa-circle-o-notch" aria-hidden="true"></i>')
+					$('#sub-btn').prop('disabled', true);
 				},
 				url: route.login.url,
 				type: route.login.type,
 				data: $('#form_login_client').serialize(),
 				success: function (resp) {
 					res = JSON.parse(resp)
+					console.log(res)
 					if (res.active) {
 						Cookies.set('fname', res.data.fname , { expires: 7 });
 						Cookies.set('lname', res.data.lname , { expires: 7 });
 						Cookies.set('email', res.data.email , { expires: 7 });
 						Cookies.set('type', 'client' , { expires: 7 });
 
-						window.location.href = "http://comiczone.hol.es/en/dashboard";
-						console.log(res)
+						window.location.href = "http://comiczone.hol.es/en/index";
 					} else {
-						alert('Usuario y/o contraseña invalida')
-						$('#client_sub').html('<i class="fa fa-times" aria-hidden="true"></i>')
+						alert('Usuario y/o contraseña invalida \nVerifique que su cuenta este activa')
 					}
+					$('#sub').html('SIGN IN')
+					$('#sub-btn').prop('disabled', false);
 				},
 				error: function (jqXHR,estado,error) {
 					console.log('----------------------')
 					console.log('Status: Entro en error')
 					console.log(estado)
 					console.log(error)
-				},
-				complete: function (jqXHR,estado) {
-
 				}
 			})
-		} else {
-			$('#form_message_client').html(
-						'<div class="alert alert-light alert-dismissible fade show" role="alert">'+
-						'		<h3>Validation problems</h3>'+
-						'		<button class="close" data-dismiss="alert" aria-label="Close">'+
-						'			<i class="fa fa-window-close" aria-hidden="true"></i>'+
-						'		</button>'+
-						'</div>' )
 		}
-
 	})
 
 });

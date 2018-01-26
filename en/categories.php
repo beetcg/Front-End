@@ -1,3 +1,17 @@
+<?php
+    require_once "../src/app_api/config/connection.php";
+    require_once "../src/app_api/modules/methods/tech.php";
+
+    $id = $_GET["x"];
+    $salt = $_GET["y"];
+
+    $obj = new Methods();
+    $resp = $obj->checkAcount('tech',$id, $salt);
+
+    if ($resp['active'] == '1') {
+        header('Location: http://comiczone.hol.es/');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en-US" data-ng-app="beetApp" data-ng-cloak>
 <head>
@@ -34,6 +48,9 @@
 
 <body class="page login" data-ng-controller="categoriesController">
 
+<!--<section id="headline_breadcrumbs_bar" class="hadline_no_image hadline_no_image2">-->
+<!---->
+<!--</section>-->
 <div class="logo animated fadeIn" style="margin-top: 20px !important;">
     <a href="index">
         <img src="../images/logo-black.png"/>
@@ -46,7 +63,7 @@
             Select Category
         </h3>
         <p class="step-1">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+            <?php echo $resp['fname']; ?>Lorem ipsum dolor sit amet, consectetuer adipiscing elit
         </p>
     </div>
 </div>
@@ -532,7 +549,8 @@
                             <input type="text" class="form-control" style="height: 38px !important;" readonly>
                             <label class="input-group-btn">
                                 <span class="btn btn-beet">
-                                    <i class="fa fa-upload"></i> <input type="file" style="display: none;" multiple>
+                                    <!-- <i class="fa fa-upload"></i> <input type="file" style="display: none;" multiple> -->
+                                    <i class="fa fa-upload"></i> <input type="file" id="id_card" style="display: none;">
                                 </span>
                             </label>
                         </div>
@@ -548,11 +566,11 @@
                 </button>
             </div>
         </div>
-
+        <input type="hidden" id="id" name="id" value="<?php echo $id ?>">
+        <input type="hidden" id="salt" name="salt" value="<?php echo $salt ?>">
     </form>
 </div>
 
-<script type="text/javascript" src="js/jquery.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -560,8 +578,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
         integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
         crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="../js/angular/angular.min.js"></script>
 <script type="text/javascript" src="../js/angular/app.js"></script>
+<script type="text/javascript" src="../js/fileinput.js"></script>
 <script src="./../src/app_api/modules/technician/controller.js"></script>
 
 </body>

@@ -86,9 +86,9 @@
                           <?php echo $_SESSION['fname'];?>
                         </span>
                     </li>
-                    <li class="nav-item"> <!-- Icon Basket -->
-                        <a class="nav-link" href="#">DASHBOARD</a>
-                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="./dashboard">DASHBOARD</a>
+                    </li> -->
                     <li class="nav-item"> <!-- Icon Basket -->
                         <a class="nav-link" href="../signout">SIGN OUT</a>
                     </li>

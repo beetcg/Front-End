@@ -30,11 +30,22 @@
     <a href="index">
         <img src="../images/logo-black.png" />
     </a>
+    <div align="center"> 
+        <p class="step-circle" style="margin-top: 30px; margin-bottom: 20px;"> 
+            1 
+        </p> 
+        <h3 class="form-title font-green" style="color: #232323; font-size: 28px;"> 
+            Sign Up To Technician 
+        </h3> 
+        <p class="step-1"> 
+            Register your basic data and our team will contact you 
+        </p> 
+    </div>
 </div>
 
 <div class="content" style="margin: 0px auto 10px auto !important;">
     <form class="login-form animated fadeIn" data-ng-show="login" id="form_create">
-        <h3 class="form-title font-green">Sign Up To Technician</h3>
+<!--         <h3 class="form-title font-green">Sign Up To Technician</h3>
         <div align="center">
             <p class="step-circle">
                 1
@@ -42,30 +53,53 @@
             <p class="step-1">
                 Register your basic data and our team will contact you
             </p>
-        </div>
+        </div> -->
         <div class="rows">
             <div class="col-sm-12 col-md-6">
                     <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="First Name" name="fname" id="fname" />
+                    <div class="invalid-feedback">
+                        Is invThe FIRST NAME is invalid
+                    </div>
             </div>
             <div class="col-sm-12 col-md-6">
                     <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Last Name" name="lname" id="lname" />
+                    <div class="invalid-feedback">
+                        The LAST NAME is invalid
+                    </div>
             </div>
         </div>
         <div class="rows">
             <div class="col-sm-12 col-md-6">
                     <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Email" name="email" id="email" />
+                    <div class="invalid-feedback">
+                        The EMAIL is invalid
+                    </div>
             </div>
             <div class="col-sm-12 col-md-6">
                     <input class="form-control form-control-solid placeholder-no-fix" type="password" placeholder="Password" name="pass" id="pass" />
+                    <div class="invalid-feedback">
+                        The PASSWORD is invalid
+                        <ul>
+                            <li>at least 8 characters</li>
+                            <li>must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number</li>
+                            <li>Can contain special characters</li>
+                        </ul>
+                    </div>
             </div>
         </div>
         <div class="rows">
             <div class="col-sm-12 col-md-6">
                     <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Mobile" name="tlf" id="tlf" />
+                    <div class="invalid-feedback">
+                        The PHONE is invalid
+                    </div>
             </div>
             <div class="col-sm-12 col-md-6">
                 <div class="form-group">
                     <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Zip Code" name="zip" id="zip" />
+                    <div class="invalid-feedback">
+                        The ZIP CODE is invalid
+                    </div>
                 </div>
             </div>
         </div>
@@ -83,7 +117,7 @@
             </div>
         </div>
         <div align="center">
-            <button type="submit" class="btn btn-login uppercase">Sign Up</button>
+            <button type="submit" id="sub-btn" class="btn btn-login uppercase"><span id="sub">Sigh Up</span></button>
         </div>
     </form>
 

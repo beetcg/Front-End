@@ -1,4 +1,7 @@
 <?php session_start(); ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en-US" data-ng-app="beetApp">
 <head>

@@ -121,7 +121,7 @@
 			$message .= '		</tr>';
 			$message .= '		<tr>';
 			$message .= '			<td colspan="5" align="center" style="text-align:center;padding-left:30px;padding-right:30px;">';
-			$message .= '				<a href="http://comiczone.hol.es/en/recovery.php?x='.$id.'&y='.$salt.'&t=tech"';
+			$message .= '				<a href="http://comiczone.hol.es/en/new-password.php?x='.$id.'&y='.$salt.'&t=tech"';
 			$message .= '				style="text-align: center;white-space: nowrap;vertical-align: middle;font-size: 1rem;';
 			$message .= '				line-height: 1.5;border: 1px solid #840037;padding: 0.375rem 0.75rem;cursor:pointer;color:#840037;';
 			$message .= '				text-decoration:none;';
@@ -160,7 +160,7 @@
 			$message .= "\n";
 			$message .= "Recovery Password Tech";
 			$message .= "\n";
-			$message .= "http://comiczone.hol.es/en/recovery.php?x=".$id."&y=".$salt."&t=tech";
+			$message .= "http://comiczone.hol.es/en/new-password.php?x=".$id."&y=".$salt."&t=tech";
 			$message .= "\n";
 			$message .= "Thanks for enjoy to the Beet Communitiy!";
 			$message .= "Beet Support.";
@@ -352,7 +352,7 @@
 			$message .= '		</tr>';
 			$message .= '		<tr>';
 			$message .= '			<td colspan="5" align="center" style="text-align:center;padding-left:30px;padding-right:30px;">';
-			$message .= '				<a href="http://comiczone.hol.es/en/recovery.php?x='.$id.'&y='.$salt.'&t=client"';
+			$message .= '				<a href="http://comiczone.hol.es/en/new-password.php?x='.$id.'&y='.$salt.'&t=client"';
 			$message .= '				style="text-align: center;white-space: nowrap;vertical-align: middle;font-size: 1rem;';
 			$message .= '				line-height: 1.5;border: 1px solid #840037;padding: 0.375rem 0.75rem;cursor:pointer;color:#840037;';
 			$message .= '				text-decoration:none;';
@@ -391,7 +391,7 @@
 			$message .= "\n";
 			$message .= "Recovery Password Client";
 			$message .= "\n";
-			$message .= "http://comiczone.hol.es/en/recovery.php?x=".$id."&y=".$salt."&t=tech";
+			$message .= "http://comiczone.hol.es/en/new-password.php?x=".$id."&y=".$salt."&t=tech";
 			$message .= "\n";
 			$message .= "Thanks for enjoy to the Beet Communitiy!";
 			$message .= "Beet Support.";

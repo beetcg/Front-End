@@ -38,26 +38,49 @@
         <div class="rows">
             <div class="col-sm-12 col-md-6">
                 <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="First Name" name="fname" id="fname" />
+                <div class="invalid-feedback">
+                    The FIRST NAME is invalid
+                </div>
             </div>
             <div class="col-sm-12 col-md-6">
                 <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Last Name" name="lname" id="lname" />
+                <div class="invalid-feedback">
+                    The LAST NAME is invalid
+                </div>
             </div>
         </div>
         <div class="rows">
             <div class="col-sm-12 col-md-6">
                 <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Email" name="email" id="email" />
+                <div class="invalid-feedback">
+                    The EMAIL is invalid
+                </div>
             </div>
             <div class="col-sm-12 col-md-6">
                 <input class="form-control form-control-solid placeholder-no-fix" type="password" placeholder="Password" name="pass" id="pass" />
+                <div class="invalid-feedback">
+                    The PASSWORD is invalid
+                    <ul>
+                        <li>at least 8 characters</li>
+                        <li>must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number</li>
+                        <li>Can contain special characters</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="rows">
             <div class="col-sm-12 col-md-6">
                 <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Mobile" name="tlf" id="tlf" />
+                <div class="invalid-feedback">
+                    The PHONE is invalid
+                </div>
             </div>
             <div class="col-sm-12 col-md-6">
                 <div class="form-group">
                     <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Zip Code" name="zip" id="zip" />
+                    <div class="invalid-feedback">
+                        The ZIP CODE is invalid
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,11 +98,11 @@
             </div>
         </div>
         <div align="center">
-            <button type="submit" class="btn btn-login uppercase">Sign Up</button>
+            <button type="submit" id="sub-btn" class="btn btn-login uppercase"><span id="sub">Sigh Up</span></button>
         </div>
     </form>
 
-    <form class="forget-form animated fadeIn" action="index" method="post" data-ng-show="forgot" data-ng-cloak>
+<!--     <form class="forget-form animated fadeIn" action="index" method="post" data-ng-show="forgot" data-ng-cloak>
         <h3 class="font-green" data-ng-cloak>Forget Password ?</h3>
         <p class="forgot-text" data-ng-cloak> Enter your e-mail address below to reset your password. </p>
         <div class="form-group" style="margin-bottom: 2rem" data-ng-cloak >
@@ -97,7 +120,7 @@
                 </button>
             </div>
         </div>
-    </form>
+    </form> -->
 </div>
 
 <div class="row full-width footer"> BEET ©2017.  <a href="#"><span class="terms">Terms and Conditions</span></a> | <a href="#"><span class="terms">Privacy Policy</span></a></div>

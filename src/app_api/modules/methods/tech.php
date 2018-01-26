@@ -215,6 +215,7 @@
       } else {
         $res = false;
       }
+      return $res;
     }
 
     // Change Password

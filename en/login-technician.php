@@ -34,7 +34,7 @@
 </div>
 
 <div class="content content2" >
-    <form class="login-form animated fadeIn" action="index" method="post" data-ng-show="login" id="form_login_tech">
+    <form class="login-form animated fadeIn" data-ng-show="login" id="form_login_tech">
         <h3 class="form-title font-green">Sign In To Technician</h3>
         <!--<div class="alert alert-danger display-hide" ng-show="false">-->
             <!--<button class="close" data-close="alert"></button>-->
@@ -42,9 +42,20 @@
         <!--</div>-->
         <div class="form-group">
             <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Email" name="email" id="email_tech" />
+            <div class="invalid-feedback">
+                The EMAIL is invalid
+            </div>
         </div>
         <div class="form-group">
             <input class="form-control form-control-solid placeholder-no-fix" type="password" placeholder="Password" name="pass" id="pass_tech" />
+            <div class="invalid-feedback">
+                The PASSWORD is invalid
+                <ul>
+                    <li>at least 8 characters</li>
+                    <li>must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number</li>
+                    <li>Can contain special characters</li>
+                </ul>
+            </div>
         </div>
         <div class="rows">
             <div class="col-sm-12 col-md-6">
@@ -58,15 +69,21 @@
             </div>
         </div>
         <div align="center">
-            <button type="submit" class="btn btn-login uppercase">Login</button>
+            <button type="submit" id="sub-btn" class="btn btn-login uppercase">
+                <span id="sub">Sign In</span>
+            </button>
         </div>
     </form>
 
-    <form class="forget-form animated fadeIn" action="index" method="post" data-ng-show="forgot" data-ng-cloak id="recovery_form_tech">
+    <form class="forget-form animated fadeIn" data-ng-show="forgot" data-ng-cloak id="recovery_form_tech">
         <h3 class="font-green" data-ng-cloak>Forget Password ?</h3>
         <p class="forgot-text" data-ng-cloak> Enter your e-mail address below to reset your password. </p>
         <div class="form-group" style="margin-bottom: 2rem" data-ng-cloak >
-            <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" id="emailRT" /> </div>
+            <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" id="emailRT" />
+            <div class="invalid-feedback">
+                The EMAIL is invalid
+            </div>
+        </div>
         <div class="rows" data-ng-cloak>
             <div class="col-sm-12 col-md-6">
                 <a href="javascript:;" class="back-btn btn-submit" data-ng-click="selectOption(1)">
@@ -75,8 +92,8 @@
                 </a>
             </div>
             <div class="col-sm-12 col-md-6">
-                <button  class="btn btn-success btn-submit uppercase pull-right">
-                    Submit
+                <button id="rec-btn" class="btn btn-success btn-submit uppercase pull-right">
+                    <span id="rsub">SEND EMAIL</span>
                 </button>
             </div>
         </div>

@@ -1,3 +1,24 @@
+<?php
+    require_once "./../src/app_api/config/connection.php";
+
+    $id = $_GET["x"];
+    $salt = $_GET["y"];
+  $type = $_GET["t"];
+
+    if ($type == 'tech') {
+        require_once "./../src/app_api/modules/methods/tech.php";
+    } else {
+        require_once "./../src/app_api/modules/methods/client.php";
+    }
+
+    $obj = new Methods();
+    $resp = $obj->checkAcount($type ,$id, $salt);
+
+    if (!$resp) {
+        header('Location: http://comiczone.hol.es/');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en-US" data-ng-app="beetApp">
 <head>
@@ -25,28 +46,19 @@
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
 </head>
 
-<body class="page login animated fadeIn" data-ng-controller="LoginController" >
+<body class="page login" data-ng-controller="LoginController">
+
 <div class="logo">
     <a href="index">
         <img src="../images/logo-black.png" />
     </a>
 </div>
 
-<div class="content">
-    <form class="login-form animated fadeIn" action="index" method="post" data-ng-show="login" id="form_login_client">
-        <h3 class="form-title font-green">Sign In To Client</h3>
-        <!--<div class="alert alert-danger display-hide" ng-show="false">-->
-        <!--<button class="close" data-close="alert"></button>-->
-        <!--<span> Enter any username and password. </span>-->
-        <!--</div>-->
+<div class="content content2" >
+    <form class="login-form animated fadeIn" data-ng-show="login" id="new_pass_<?php echo $type ?>">
+        <h3 class="form-title font-green">New Password</h3>
         <div class="form-group">
-            <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Email" name="email" id="email_client" />
-            <div class="invalid-feedback">
-                The EMAIL is invalid
-            </div>
-        </div>
-        <div class="form-group">
-            <input class="form-control form-control-solid placeholder-no-fix" type="password" placeholder="Password" name="pass" id="pass_client" />
+            <input class="form-control form-control-solid placeholder-no-fix" type="password" placeholder="Password" name="pass" id="pass" />
             <div class="invalid-feedback">
                 The PASSWORD is invalid
                 <ul>
@@ -56,54 +68,37 @@
                 </ul>
             </div>
         </div>
-        <div class="rows">
-            <div class="col-sm-12 col-md-6">
-                <label class="rememberme check mt-checkbox mt-checkbox-outline">
-                    <input type="checkbox" name="remember" value="1" />Remember
-                    <span></span>
-                </label>
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <a href="javascript:;" id="forget-password" class="forget-password" data-ng-click="selectOption(2)">Forgot Password?</a>
-            </div>
-        </div>
-        <div align="center">
-            <button type="submit" id="sub-btn" class="btn btn-login uppercase">
-                <span id="sub">Sign In</span>
-            </button>
-        </div>
-    </form>
-
-    <!-- Recovery -->
-    <form class="forget-form animated fadeIn" action="index" method="post" data-ng-show="forgot" data-ng-cloak id="recovery_form_client">
-        <h3 class="font-green">Forget Password ?</h3>
-        <p class="forgot-text"> Enter your e-mail address below to reset your password. </p>
-        <div class="form-group" style="margin-bottom: 2rem">
-            <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" id="emailRC"/> 
+        <div class="form-group">
+            <input class="form-control form-control-solid placeholder-no-fix" type="password" placeholder="Repeat password" name="r_pass" id="r_pass" />
             <div class="invalid-feedback">
-                The EMAIL is invalid
+                The PASSWORD is invalid
+                <ul>
+                    <li>at least 8 characters</li>
+                    <li>must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number</li>
+                    <li>Can contain special characters</li>
+                </ul>
             </div>
         </div>
-        <div class="rows">
-            <div class="col-sm-12 col-md-6">
-                <a href="javascript:;" class="back-btn btn-submit" data-ng-click="selectOption(1)">
-                    <i class="ion-ios-undo"></i>
-                    Back
-                </a>
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <button id="rec-btn" class="btn btn-success btn-submit uppercase pull-right">
-                    <span id="rsub">SEND EMAIL</span>
-                </button>
-            </div>
+
+        <div class="invalid-feedback" id="same">
+            The PASSWORDS are not the same
         </div>
+
+        <div align="center">
+            <button type="submit" class="btn btn-login uppercase" id="sub">Change Password</button>
+        </div>
+        <input type="hidden" name="__id" value="<?php echo $id;?>">
+        <input type="hidden" name="salt" value="<?php echo $salt;?>">
     </form>
 </div>
 
 <div class="row full-width footer"> BEET ©2017.  <a href="#"><span class="terms">Terms and Conditions</span></a> | <a href="#"><span class="terms">Privacy Policy</span></a></div>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script> -->
+    <script src="./../src/app_api/modules/technician/controller.js"></script>
+    <script src="./../src/app_api/modules/client/controller.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
@@ -111,9 +106,9 @@
         integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
         crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="../js/angular/angular.min.js"></script>
 <script type="text/javascript" src="../js/angular/app.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.tools.min.js"></script>
 <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <script type="text/javascript" src="js/prettify.js"></script>
@@ -121,7 +116,12 @@
 <script type="text/javascript" src="js/portfolio-init.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
-<script src="./../src/app_api/modules/client/controller.js"></script>
-
+    
+<!-- <?php if ($type == 'tech') { ?>
+    <script src="../src/app_api/modules/technician/controller.js"></script>
+<?php } else { ?>
+    <script src="../src/app_api/modules/client/controller.js"></script>
+<?php } ?> -->
+    
 </body>
 </html>
