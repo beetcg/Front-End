@@ -315,9 +315,8 @@
 </section>
 
 
-<div id="joinus"><a name="joinus"></a></div>
-<section class="spiral_section_tc spiral-parallax spiral-inversed_text section_body_fullwidth section_bg_image"
-         data-background_image="images/typingbg.jpg" data-parallax="0.1">
+<div id="joinus" name="joinus"></div>
+<section class="spiral_section_tc spiral-parallax spiral-inversed_text section_body_fullwidth section_bg_image" data-background_image="images/typingbg.jpg" data-parallax="0.1">
     <header><span class="clear spacer_100"></span>
         <div class="spiral_container white_text">
             <h3>Join to
@@ -334,14 +333,17 @@
                     <span>No more schedules, we have thousands of services available to be attended by you in the time that you want. Find yours and start make money right now.</span>
                 </h3>
                 <span class="clear spacer_100"></span>
-                </span><a href="joinus" target="_self"
-                          class="spiral-button spiral-button_light spiral-button_rounded spiral-button_medium ripplelink spiral-button_transparent ">Join
-                Us</a>
+
+                <a href="./joinus" target="_self"
+                   class="spiral-button spiral-button_light spiral-button_rounded spiral-button_medium ripplelink spiral-button_transparent ">
+                    Join Us
+                </a>
             </div>
             <span class="clear spacer_100"></span>
         </div>
     </div>
 </section>
+
 <div id="newsevents"></div>
 <section
         class="spiral_section_tc spiral-centered spiral-inversed_text section_body_fullwidth section_with_header section_bg no_padding_bottom">
