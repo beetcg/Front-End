@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/ionicons.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/sweetalert2.css" type="text/css" media="all">
     <script>
         function preview_images() {
             var total_file = document.getElementById("images").files.length;
@@ -656,6 +657,8 @@
 <script type="text/javascript" src="../js/angular/angular.min.js"></script>
 <script type="text/javascript" src="../js/angular/app.js"></script>
 <script type="text/javascript" src="../js/fileinput.js"></script>
+<script type="text/javascript" src="../js/sweetalert2.min.js"></script>
+<script type="text/javascript" src="../js/alerts.js"></script>
 <script src="./../src/app_api/modules/technician/controller.js"></script>
 
 </body>
