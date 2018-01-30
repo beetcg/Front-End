@@ -22,14 +22,16 @@
     <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/ionicons.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
-    <script>
-        function preview_images() {
-            var total_file = document.getElementById("images").files.length;
-            for (var i = 0; i < total_file; i++) {
-                $('#image_preview').append("<div class='col-md-3'><img class='img-responsive' src='" + URL.createObjectURL(event.target.files[i]) + "'></div>");
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="../css/sweetalert2.css" type="text/css" media="all">
+
+    <!--<script>-->
+        <!--function preview_images() {-->
+            <!--var total_file = document.getElementById("images").files.length;-->
+            <!--for (var i = 0; i < total_file; i++) {-->
+                <!--$('#image_preview').append("<div class='col-md-3'><img class='img-responsive' src='" + URL.createObjectURL(event.target.files[i]) + "'></div>");-->
+            <!--}-->
+        <!--}-->
+    <!--</script>-->
 </head>
 
 <body class="page login" data-ng-controller="categoriesController">
@@ -41,16 +43,50 @@
     <a href="index.html">
         <img src="../images/logo-black.png"/>
     </a>
-    <div align="center">
-        <p class="step-circle" style="margin-top: 30px; margin-bottom: 20px;">
-            2
-        </p>
-        <h3 class="form-title font-green" style="color: #232323; font-size: 28px;">
-            Select Category
-        </h3>
-        <p class="step-1">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-        </p>
+    <!--<div align="center">-->
+        <!--<p class="step-circle" style="margin-top: 30px; margin-bottom: 20px;">-->
+            <!--2-->
+        <!--</p>-->
+        <!--<h3 class="form-title font-green" style="color: #232323; font-size: 28px;">-->
+            <!--Select Category-->
+        <!--</h3>-->
+        <!--<p class="step-1">-->
+            <!--Lorem ipsum dolor sit amet, consectetuer adipiscing elit-->
+        <!--</p>-->
+    <!--</div>-->
+
+</div>
+
+<div class="content" style="margin: 0px auto 10px auto !important;">
+    <div class="road-map">
+        <div class="road-line"></div>
+        <div class="road-flex">
+            <p class="step-circle-disable" style="margin-top: 30px; margin-bottom: 20px;">
+                1
+            </p>
+            <p class="step-1">
+                Register your Basic Data
+            </p>
+        </div>
+        <div class="road-flex">
+            <p class="step-circle" style="margin-top: 30px; margin-bottom: 20px;">
+                2
+            </p>
+            <p class="step-1">
+                Select Category
+            </p>
+        </div>
+        <div class="road-flex">
+            <p class="step-circle-disable" style="margin-top: 30px; margin-bottom: 20px;">
+                3
+            </p>
+            <p class="step-1">
+                Upload Documents
+            </p>
+        </div>
+        <!--<h3 class="form-title font-green" style="color: #232323; font-size: 28px;">-->
+        <!--Sign Up To Technician-->
+        <!--</h3>-->
     </div>
 </div>
 
@@ -58,7 +94,10 @@
     <form class="categories-contain" id="form_confirm" enctype="multipart/form-data">
         <div class="box1">
             <div class="categories-box1">
-                <h2 class="title-cat">Categories</h2>
+                <div class="title-cat">
+                    <h2 class="title-cat-text">Categories </h2>
+                    <small class="description-small">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa</small>
+                </div>
                 <div class="rows">
                     <div class="col-sm-12 col-md-4">
                         <div class="category" data-ng-click="selectOption(1)">
@@ -503,34 +542,99 @@
                 </div>
             </div>
 
-            <div class="logo animated fadeIn" style="margin-top: 20px !important;">
-                <!--<a href="index.html">-->
-                    <!--<img src="../images/logo-black.png"/>-->
-                <!--</a>-->
-
-                <div align="center">
-                    <p class="step-circle" style="margin-top: 30px; margin-bottom: 20px;">
-                        3
-                    </p>
-                    <h3 class="form-title font-green"
-                        style="color: #232323;  font-size: 28px;">
-                        Upload Documents
-                    </h3>
-                    <p class="step-1">
-                        We need some important documents to complete your subscription
-                    </p>
+            <div class="content" style="margin: 0px auto 10px auto !important;">
+                <div class="road-map">
+                    <div class="road-line"></div>
+                    <div class="road-flex">
+                        <p class="step-circle-disable" style="margin-top: 30px; margin-bottom: 20px;">
+                            1
+                        </p>
+                        <p class="step-1">
+                            Register your Basic Data
+                        </p>
+                    </div>
+                    <div class="road-flex">
+                        <p class="step-circle-disable" style="margin-top: 30px; margin-bottom: 20px;">
+                            2
+                        </p>
+                        <p class="step-1">
+                            Select Category
+                        </p>
+                    </div>
+                    <div class="road-flex">
+                        <p class="step-circle" style="margin-top: 30px; margin-bottom: 20px;">
+                            3
+                        </p>
+                        <p class="step-1">
+                            Upload Documents
+                        </p>
+                    </div>
+                    <!--<h3 class="form-title font-green" style="color: #232323; font-size: 28px;">-->
+                    <!--Sign Up To Technician-->
+                    <!--</h3>-->
                 </div>
             </div>
             <div class="categories-box1" style="margin-top: 30px;">
-                <h2 class="title-cat">Documents</h2>
-                <div class="types">
-                    <p>1. Passport</p>
-                    <p>2. Criminal Record</p>
-                    <p>3. ID</p>
-                    <p>4. Bank Account Information</p>
+                <div class="title-cat">
+                    <h2 class="title-cat-text">Documents </h2>
+                    <small class="description-small">We need some important documents to complete your subscription</small>
+                </div>
+                <!--<div class="types">-->
+                    <!--<p>1. Passport</p>-->
+                    <!--<p>2. Criminal Record</p>-->
+                    <!--<p>3. ID</p>-->
+                    <!--<p>4. Bank Account Information</p>-->
+                <!--</div>-->
+                <div class="rows">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="types">
+                            <p>1. Passport</p>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" style="height: 38px !important;" readonly>
+                            <label class="input-group-btn">
+                                <span class="btn btn-beet">
+                                    <i class="fa fa-upload"></i> <input type="file" style="display: none;" multiple>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
                 <div class="rows">
-                    <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="types">
+                            <p>2. Criminal Record</p>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" style="height: 38px !important;" readonly>
+                            <label class="input-group-btn">
+                                <span class="btn btn-beet">
+                                    <i class="fa fa-upload"></i> <input type="file" style="display: none;" multiple>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="rows">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="types">
+                            <p>3. ID</p>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" style="height: 38px !important;" readonly>
+                            <label class="input-group-btn">
+                                <span class="btn btn-beet">
+                                    <i class="fa fa-upload"></i> <input type="file" style="display: none;" multiple>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="rows">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="types">
+                            <p>4. Bank Account Information</p>
+                        </div>
                         <div class="input-group">
                             <input type="text" class="form-control" style="height: 38px !important;" readonly>
                             <label class="input-group-btn">
@@ -546,9 +650,11 @@
 
             <!--<a href="#" class="send-btn" id="spiralcf-submit" style="position: absolute; bottom: 0">Send</a>-->
             <div align="center">
-                <button type="submit" class="btn btn-login uppercase">
-                    Send
-                </button>
+                <!--<button type="submit" class="btn btn-login uppercase">-->
+                    <!--Send-->
+                <!--</button>-->
+                <input type="button" class="btn btn-login uppercase" id="successUpload" value="Send">
+
             </div>
         </div>
 
@@ -599,6 +705,8 @@
 <script type="text/javascript" src="js/portfolio-init.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="../js/sweetalert2.min.js"></script>
+<script type="text/javascript" src="../js/alerts.js"></script>
 
 </body>
 </html>

@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/ionicons.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/sweetalert2.css" type="text/css" media="all">
 </head>
 
 <body class="page login" data-ng-controller="LoginController">
@@ -31,54 +32,70 @@
     <a href="index.html">
         <img src="../images/logo-black.png"/>
     </a>
-    <div align="center">
-        <p class="step-circle" style="margin-top: 30px; margin-bottom: 20px;">
-            1
-        </p>
-        <h3 class="form-title font-green" style="color: #232323; font-size: 28px;">
-            Sign Up To Technician
-        </h3>
-        <p class="step-1">
-            Register your basic data and our team will contact you
-        </p>
-    </div>
+
 </div>
 
 <div class="content" style="margin: 0px auto 10px auto !important;">
+    <div class="road-map" style="margin-bottom: 30px;">
+        <div class="road-line"></div>
+        <div class="road-flex">
+            <p class="step-circle" style="margin-top: 30px; margin-bottom: 20px;">
+                1
+            </p>
+            <p class="step-1">
+                Register your Basic Data
+            </p>
+        </div>
+        <div class="road-flex">
+            <p class="step-circle-disable" style="margin-top: 30px; margin-bottom: 20px;">
+                2
+            </p>
+            <p class="step-1">
+                Select Category
+            </p>
+        </div>
+        <div class="road-flex">
+            <p class="step-circle-disable" style="margin-top: 30px; margin-bottom: 20px;">
+                3
+            </p>
+            <p class="step-1">
+                Upload Documents
+            </p>
+        </div>
+        <!--<h3 class="form-title font-green" style="color: #232323; font-size: 28px;">-->
+        <!--Sign Up To Technician-->
+        <!--</h3>-->
+    </div>
     <form class="login-form animated fadeIn" action="index.html" method="post" data-ng-show="login" id="form_create">
-
-        <!--<div align="center">-->
-            <!--<p class="step-circle">-->
-                <!--1-->
-            <!--</p>-->
-            <!--<h3 class="form-title font-green">Sign Up To Technician</h3>-->
-            <!--<p class="step-1">-->
-                <!--Register your basic data and our team will contact you-->
-            <!--</p>-->
-        <!--</div>-->
         <div class="rows">
             <div class="col-sm-12 col-md-6">
-                    <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="First Name" name="fname" id="fname" />
+                <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="First Name"
+                       name="fname" id="fname"/>
             </div>
             <div class="col-sm-12 col-md-6">
-                    <input class="form-control form-control-solid placeholder-no-fix" type="password" placeholder="Last Name" name="lname" id="lname" />
+                <input class="form-control form-control-solid placeholder-no-fix" type="password"
+                       placeholder="Last Name" name="lname" id="lname"/>
             </div>
         </div>
         <div class="rows">
             <div class="col-sm-12 col-md-6">
-                    <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Email" name="email" id="email" />
+                <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Email"
+                       name="email" id="email"/>
             </div>
             <div class="col-sm-12 col-md-6">
-                    <input class="form-control form-control-solid placeholder-no-fix" type="password" placeholder="Password" name="pass" id="pass" />
+                <input class="form-control form-control-solid placeholder-no-fix" type="password" placeholder="Password"
+                       name="pass" id="pass"/>
             </div>
         </div>
         <div class="rows">
             <div class="col-sm-12 col-md-6">
-                    <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Mobile" name="tlf" id="tlf" />
+                <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Mobile"
+                       name="tlf" id="tlf"/>
             </div>
             <div class="col-sm-12 col-md-6">
                 <div class="form-group">
-                    <input class="form-control form-control-solid placeholder-no-fix" type="password" placeholder="Zip Code" name="zip" id="zip" />
+                    <input class="form-control form-control-solid placeholder-no-fix" type="password"
+                           placeholder="Zip Code" name="zip" id="zip"/>
                 </div>
             </div>
         </div>
@@ -87,7 +104,7 @@
         <div class="rows">
             <div class="col-sm-12 col-md-6">
                 <label class="rememberme check mt-checkbox mt-checkbox-outline">
-                    <input type="checkbox" name="remember" value="1" />I accept the Terms and Conditions
+                    <input type="checkbox" name="remember" value="1"/>I accept the Terms and Conditions
                     <span></span>
                 </label>
             </div>
@@ -96,12 +113,13 @@
             </div>
         </div>
         <div align="center">
-            <button type="submit" class="btn btn-login uppercase">Sign Up</button>
+            <input type="button" class="btn btn-login uppercase" id="successSignup" value="Sign Up">
         </div>
     </form>
 </div>
 
-<div class="row full-width footer"> BEET ©2017.  <a href="#"><span class="terms">Terms and Conditions</span></a> | <a href="#"><span class="terms">Privacy Policy</span></a></div>
+<div class="row full-width footer"> BEET ©2017. <a href="#"><span class="terms">Terms and Conditions</span></a> | <a
+        href="#"><span class="terms">Privacy Policy</span></a></div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -123,6 +141,8 @@
 <script type="text/javascript" src="js/portfolio-init.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="../js/sweetalert2.min.js"></script>
+<script type="text/javascript" src="../js/alerts.js"></script>
 
 </body>
 </html>
