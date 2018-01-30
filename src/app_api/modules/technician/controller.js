@@ -67,16 +67,24 @@ $( document ).ready(function() {
 		var formData = new FormData;
 				formData.append('id', $('#id').val())
 				formData.append('salt', $('#salt').val())
+				formData.append('subcat', subcat)
+
 		 		formData.append('id_card', $('#id_card')[0].files[0])
-				formData.append('subcat', subcat)		
+		 		formData.append('passport', $('#passport')[0].files[0])
+		 		formData.append('bank_account', $('#bank_account')[0].files[0])
+		 		formData.append('criminal_record', $('#criminal_record')[0].files[0])
 
 				var exp1 = validateImage('#id_card' , $('#id_card')[0].files[0])
+				var exp1 = validateImage('#passport' , $('#passport')[0].files[0])
+				var exp1 = validateImage('#bank_account' , $('#bank_account')[0].files[0])
+				var exp1 = validateImage('#criminal_record' , $('#criminal_record')[0].files[0])
 				var exp2 = validateCheckbox()
 
 				if (exp1 && exp2) {
 					$.ajax({
 						beforeSend: function (){
 							$('#sub').html('<i class="fa fa-spin fa-circle-o-notch" aria-hidden="true"></i>')
+							$('#sub-btn').prop('disabled', true);
 						},
 						url: route.confirm.url,
 						type: route.confirm.type,
@@ -87,14 +95,15 @@ $( document ).ready(function() {
 						success: function (resp) {
 							var res = JSON.parse(resp)
 							console.log(res)
+							
 							if (res.active == true) {
-								$('#sub').html('<i style="color:green;" class="fa fa-floppy-o" aria-hidden="true"></i>')
-								window.location.href = "http://comiczone.hol.es/en/login-technician.php";
-								alert('Se Activo la cuenta con exito')
+								$('#sub').html('Sent')
+								alert('Registro exitoso \nMensaje provisional')
+								window.location.href = "http://comiczone.hol.es/en/index";
 							} else {
-								$('#sub').html('<i style="color:red;" class="fa fa-exclamation-circle" aria-hidden="true"></i>')
-								alert('HEYY ALGO PASO QUE NO PUDISTE ACTIVAR LA VAINA')
+								$('#sub').html('Send')
 							}
+							$('#sub-btn').prop('disabled', false);
 						},
 						error: function (jqXHR,estado,error) {
 							console.log('----------------------')
@@ -105,14 +114,6 @@ $( document ).ready(function() {
 						complete: function (jqXHR,estado) {
 						}
 					})
-				} else {
-					$('#form_message').html(
-								'<div class="alert alert-light alert-dismissible fade show" role="alert">'+
-								'		<h3>Validation problems</h3>'+
-								'		<button class="close" data-dismiss="alert" aria-label="Close">'+
-								'			<i class="fa fa-window-close" aria-hidden="true"></i>'+
-								'		</button>'+
-								'</div>' )
 				}
 	})
 

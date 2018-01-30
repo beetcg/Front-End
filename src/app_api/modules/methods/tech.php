@@ -75,7 +75,7 @@
 			    $mail->Host = 'smtp.gmail.com';
 			    $mail->SMTPAuth = true;
 			    $mail->Username = 'info@beetcg.com';
-			    $mail->Password = '';
+			    $mail->Password = 'beet!!1379';
 			    $mail->SMTPSecure = 'tls';
     			$mail->Port = 587;
 
@@ -125,6 +125,31 @@
 			$res = false;
 
 			$sql= "INSERT INTO subcat_tech (id_tech, id_subc) VALUES ('$id', '$sub');";
+			
+			if ( mysqli_query($connect, $sql) ) {
+			  $res = true;
+			} else {
+			  $res = false;
+			}
+
+			mysqli_close($connect);
+			return $res;
+		}
+
+		// Save Documents
+		public function saveDocuments($id_tech, $passport, $criminal_record, $id_card, $bank_account){
+			date_default_timezone_set('America/Guatemala');
+
+			$obj = new connect();
+			$connect = $obj->connection();
+			$res = false;
+			$date = date("Y-m-d H:i:s", time());
+			$id = uniqid();
+
+			$sql = "INSERT INTO documents 
+							(__id, passport, criminal_record, id_card, bank_account, id_tech, created_at, update_at) 
+							VALUES 
+							('$id', '$passport', '$criminal_record', '$id_card', '$bank_account', '$id_tech', '$date', '$date');";
 			
 			if ( mysqli_query($connect, $sql) ) {
 			  $res = true;
@@ -194,7 +219,7 @@
           $mail->Host = 'smtp.gmail.com';
           $mail->SMTPAuth = true;
           $mail->Username = 'info@beetcg.com';
-          $mail->Password = '';
+          $mail->Password = 'beet!!1379';
           $mail->SMTPSecure = 'tls';
           $mail->Port = 587;
 
@@ -260,7 +285,7 @@
 			    $mail->Host = 'smtp.gmail.com';
 			    $mail->SMTPAuth = true;
 			    $mail->Username = 'info@beetcg.com';
-			    $mail->Password = '';
+			    $mail->Password = 'beet!!1379';
 			    $mail->SMTPSecure = 'tls';
     			$mail->Port = 587;
 

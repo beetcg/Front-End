@@ -561,8 +561,8 @@
 
             <!--<a href="#" class="send-btn" id="spiralcf-submit" style="position: absolute; bottom: 0">Send</a>-->
             <div align="center">
-                <button type="submit" class="btn btn-login uppercase">
-                    Send
+                <button type="submit" id="sub-btn" class="btn btn-login text-uppercase">
+                    <span id="sub">Send</span>
                 </button>
             </div>
         </div>

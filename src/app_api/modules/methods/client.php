@@ -75,7 +75,7 @@
 			    $mail->Host = 'smtp.gmail.com';
 			    $mail->SMTPAuth = true;
 			    $mail->Username = 'info@beetcg.com';
-			    $mail->Password = '';
+			    $mail->Password = 'beet!!1379';
 			    $mail->SMTPSecure = 'tls';
     			$mail->Port = 587;
 
@@ -175,7 +175,7 @@
           $mail->Host = 'smtp.gmail.com';
           $mail->SMTPAuth = true;
           $mail->Username = 'info@beetcg.com';
-          $mail->Password = '';
+          $mail->Password = 'beet!!1379';
           $mail->SMTPSecure = 'tls';
           $mail->Port = 587;
 
@@ -241,7 +241,7 @@
 			    $mail->Host = 'smtp.gmail.com';
 			    $mail->SMTPAuth = true;
 			    $mail->Username = 'info@beetcg.com';
-			    $mail->Password = '';
+			    $mail->Password = 'beet!!1379';
 			    $mail->SMTPSecure = 'tls';
     			$mail->Port = 587;
 
