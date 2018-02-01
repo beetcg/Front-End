@@ -12,6 +12,7 @@
         header('Location: http://comiczone.hol.es/');
     }
 ?>
+
 <!DOCTYPE html>
 <html lang="en-US" data-ng-app="beetApp" data-ng-cloak>
 <head>
@@ -37,21 +38,17 @@
     <link rel="stylesheet" href="css/ionicons.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
     <link rel="stylesheet" href="../css/sweetalert2.css" type="text/css" media="all">
-    <script>
-        function preview_images() {
-            var total_file = document.getElementById("images").files.length;
-            for (var i = 0; i < total_file; i++) {
-                $('#image_preview').append("<div class='col-md-3'><img class='img-responsive' src='" + URL.createObjectURL(event.target.files[i]) + "'></div>");
-            }
-        }
-    </script>
 </head>
 
 <body class="page login" data-ng-controller="categoriesController">
 
-<!--<section id="headline_breadcrumbs_bar" class="hadline_no_image hadline_no_image2">-->
-<!---->
-<!--</section>-->
+<div class="logo animated fadeIn" style="margin-top: 20px !important;">
+    <a href="index.html">
+        <img src="../images/logo-black.png"/>
+    </a>
+
+</div>
+
 <div class="content" style="margin: 0px auto 10px auto !important;">
     <div class="road-map">
         <div class="road-line"></div>
@@ -79,9 +76,6 @@
                 Upload Documents
             </p>
         </div>
-        <!--<h3 class="form-title font-green" style="color: #232323; font-size: 28px;">-->
-        <!--Sign Up To Technician-->
-        <!--</h3>-->
     </div>
 </div>
 
@@ -89,7 +83,10 @@
     <form class="categories-contain" id="form_confirm" enctype="multipart/form-data">
         <div class="box1">
             <div class="categories-box1">
-                <h2 class="title-cat">Categories</h2>
+                <div class="title-cat">
+                    <h2 class="title-cat-text">Categories </h2>
+                    <small class="description-small">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa</small>
+                </div>
                 <div class="rows">
                     <div class="col-sm-12 col-md-4">
                         <div class="category" data-ng-click="selectOption(1)">
@@ -561,12 +558,8 @@
                             Upload Documents
                         </p>
                     </div>
-                    <!--<h3 class="form-title font-green" style="color: #232323; font-size: 28px;">-->
-                    <!--Sign Up To Technician-->
-                    <!--</h3>-->
                 </div>
             </div>
-
             <div class="categories-box1" style="margin-top: 30px;">
                 <div class="title-cat">
                     <h2 class="title-cat-text">Documents </h2>
@@ -581,7 +574,7 @@
                             <input type="text" class="form-control" style="height: 38px !important;" readonly>
                             <label class="input-group-btn">
                                 <span class="btn btn-beet">
-                                    <i class="fa fa-upload"></i> <input type="file" name="passport" id="passport" style="display: none;" >
+                                    <i class="fa fa-upload"></i> <input type="file" name="passport" id="passport" style="display: none;" multiple>
                                 </span>
                             </label>
                         </div>
@@ -596,7 +589,7 @@
                             <input type="text" class="form-control" style="height: 38px !important;" readonly>
                             <label class="input-group-btn">
                                 <span class="btn btn-beet">
-                                    <i class="fa fa-upload"></i> <input type="file" name="criminal_record" id="criminal_record" style="display: none;" >
+                                    <i class="fa fa-upload"></i> <input type="file" name="criminal_record" id="criminal_record" style="display: none;" multiple>
                                 </span>
                             </label>
                         </div>
@@ -611,7 +604,7 @@
                             <input type="text" class="form-control" style="height: 38px !important;" readonly>
                             <label class="input-group-btn">
                                 <span class="btn btn-beet">
-                                    <i class="fa fa-upload"></i> <input type="file" name="id_card" id="id_card" style="display: none;" >
+                                    <i class="fa fa-upload"></i> <input type="file" name="id_card" id="id_card" style="display: none;" multiple>
                                 </span>
                             </label>
                         </div>
@@ -626,7 +619,7 @@
                             <input type="text" class="form-control" style="height: 38px !important;" readonly>
                             <label class="input-group-btn">
                                 <span class="btn btn-beet">
-                                    <i class="fa fa-upload"></i> <input type="file" name="bank_account" id="bank_account" style="display: none;" >
+                                    <i class="fa fa-upload"></i> <input type="file" name="bank_account" id="bank_account" style="display: none;" multiple>
                                 </span>
                             </label>
                         </div>
@@ -634,15 +627,15 @@
                 </div>
             </div>
 
+            <input type="hidden" id="id" name="id" value="<?php echo $id ?>">
+            <input type="hidden" id="salt" name="salt" value="<?php echo $salt ?>">
+
             <div align="center">
                 <button type="submit" id="sub-btn" class="btn btn-login text-uppercase">
                     <span id="sub">Send</span>
                 </button>
             </div>
         </div>
-
-        <input type="hidden" id="id" name="id" value="<?php echo $id ?>">
-        <input type="hidden" id="salt" name="salt" value="<?php echo $salt ?>">
     </form>
 </div>
 
@@ -657,6 +650,15 @@
 <script type="text/javascript" src="../js/angular/angular.min.js"></script>
 <script type="text/javascript" src="../js/angular/app.js"></script>
 <script type="text/javascript" src="../js/fileinput.js"></script>
+<script type="text/javascript" src="js/stickymenu.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="js/prettify.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="js/portfolio-init.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
 <script type="text/javascript" src="../js/sweetalert2.min.js"></script>
 <script type="text/javascript" src="../js/alerts.js"></script>
 <script src="./../src/app_api/modules/technician/controller.js"></script>

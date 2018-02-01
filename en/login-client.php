@@ -23,22 +23,19 @@
     <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/ionicons.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/sweetalert2.css" type="text/css" media="all">
 </head>
 
-<body class="page login animated fadeIn" data-ng-controller="LoginController" >
+<body class="page login" data-ng-controller="LoginController" >
 <div class="logo">
-    <a href="index">
+    <a href="index.html">
         <img src="../images/logo-black.png" />
     </a>
 </div>
 
-<div class="content">
-    <form class="login-form animated fadeIn" action="index" method="post" data-ng-show="login" id="form_login_client">
+<div class="content content2">
+    <form class="login-form animated fadeIn" data-ng-show="login" id="form_login_client">
         <h3 class="form-title font-green">Sign In To Client</h3>
-        <!--<div class="alert alert-danger display-hide" ng-show="false">-->
-        <!--<button class="close" data-close="alert"></button>-->
-        <!--<span> Enter any username and password. </span>-->
-        <!--</div>-->
         <div class="form-group">
             <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Email" name="email" id="email_client" />
             <div class="invalid-feedback">
@@ -69,21 +66,19 @@
         </div>
         <div align="center">
             <button type="submit" id="sub-btn" class="btn btn-login uppercase">
-                <span id="sub">Sign In</span>
+                <span id="sub">Login</span>
             </button>
         </div>
     </form>
 
-    <!-- Recovery -->
-    <form class="forget-form animated fadeIn" action="index" method="post" data-ng-show="forgot" data-ng-cloak id="recovery_form_client">
+    <form class="forget-form animated fadeIn" action="index.html" method="post" data-ng-show="forgot" data-ng-cloak id="recovery_form_client">
         <h3 class="font-green">Forget Password ?</h3>
         <p class="forgot-text"> Enter your e-mail address below to reset your password. </p>
         <div class="form-group" style="margin-bottom: 2rem">
-            <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" id="emailRC"/> 
+            <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" id="emailRC"/> </div>
             <div class="invalid-feedback">
                 The EMAIL is invalid
             </div>
-        </div>
         <div class="rows">
             <div class="col-sm-12 col-md-6">
                 <a href="javascript:;" class="back-btn btn-submit" data-ng-click="selectOption(1)">
@@ -92,9 +87,7 @@
                 </a>
             </div>
             <div class="col-sm-12 col-md-6">
-                <button id="rec-btn" class="btn btn-success btn-submit uppercase pull-right">
-                    <span id="rsub">SEND EMAIL</span>
-                </button>
+                <input type="button" class="btn btn-success btn-submit uppercase pull-right" id="successRecovery" value="Submit">
             </div>
         </div>
     </form>
@@ -104,6 +97,7 @@
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
@@ -121,6 +115,8 @@
 <script type="text/javascript" src="js/portfolio-init.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="../js/sweetalert2.min.js"></script>
+<script type="text/javascript" src="../js/alerts.js"></script>
 <script src="./../src/app_api/modules/client/controller.js"></script>
 
 </body>

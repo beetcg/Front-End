@@ -22,6 +22,7 @@
 					$res['active'] = true;
 				} else {
 					$res['active'] = false;
+					$res['data'] = $user;
 				}
 			}
 		}

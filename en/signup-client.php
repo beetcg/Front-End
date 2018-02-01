@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Sign Up | BEET</title>
     <meta name="description" content="Spiral HTML5 premium template">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <!--[if lt IE 9]>
@@ -22,18 +23,19 @@
     <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/ionicons.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/sweetalert2.css" type="text/css" media="all">
 </head>
 
 <body class="page login" data-ng-controller="LoginController">
 
 <div class="logo" style="margin-top: 20px !important;">
-    <a href="index">
+    <a href="index.html">
         <img src="../images/logo-black.png" />
     </a>
 </div>
 
 <div class="content" style="margin: 0px auto 10px auto !important;">
-    <form class="login-form animated fadeIn" data-ng-show="login" id="form_create">
+        <form class="login-form animated fadeIn" data-ng-show="login" id="form_create">
         <h3 class="form-title font-green">Sign Up To Client</h3>
         <div class="rows">
             <div class="col-sm-12 col-md-6">
@@ -101,38 +103,18 @@
             <button type="submit" id="sub-btn" class="btn btn-login uppercase"><span id="sub">Sigh Up</span></button>
         </div>
     </form>
-
-<!--     <form class="forget-form animated fadeIn" action="index" method="post" data-ng-show="forgot" data-ng-cloak>
-        <h3 class="font-green" data-ng-cloak>Forget Password ?</h3>
-        <p class="forgot-text" data-ng-cloak> Enter your e-mail address below to reset your password. </p>
-        <div class="form-group" style="margin-bottom: 2rem" data-ng-cloak >
-            <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" /> </div>
-        <div class="rows" data-ng-cloak>
-            <div class="col-sm-12 col-md-6">
-                <a href="javascript:;" class="back-btn btn-submit" data-ng-click="selectOption(1)">
-                    <i class="ion-ios-undo"></i>
-                    Back
-                </a>
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <button  class="btn btn-success btn-submit uppercase pull-right">
-                    Submit
-                </button>
-            </div>
-        </div>
-    </form> -->
 </div>
 
 <div class="row full-width footer"> BEET ©2017.  <a href="#"><span class="terms">Terms and Conditions</span></a> | <a href="#"><span class="terms">Privacy Policy</span></a></div>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
         integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
         crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="../js/angular/angular.min.js"></script>
 <script type="text/javascript" src="../js/angular/app.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -143,6 +125,8 @@
 <script type="text/javascript" src="js/portfolio-init.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="../js/sweetalert2.min.js"></script>
+<script type="text/javascript" src="../js/alerts.js"></script>
 <script src="./../src/app_api/modules/client/controller.js"></script>
 
 </body>

@@ -216,8 +216,8 @@ $( document ).ready(function() {
 				type: route.login.type,
 				data: $('#form_login_tech').serialize(),
 				success: function (resp) {
-					res = JSON.parse(resp)
-					console.log(res)
+					// res = JSON.parse(resp)
+					console.log(resp)
 					if (res.active) {
 						Cookies.set('fname', res.data.fname , { expires: 7 });
 						Cookies.set('lname', res.data.lname , { expires: 7 });

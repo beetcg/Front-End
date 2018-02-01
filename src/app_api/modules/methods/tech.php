@@ -162,7 +162,7 @@
 		}
 
 		// Activate acount
-		public function activateAcount($table, $id, $salt, $id_card){
+		public function activateAcount($table, $id, $salt){
 			$obj = new connect();
 			$connect = $obj->connection();
 			$res = false;
@@ -172,8 +172,7 @@
 
 			  $update = "
 			  UPDATE $table
-			  SET id_card='$id_card',
-			  		active= '1',
+			  SET active= '1',
 			  		update_at='$date'
 			  WHERE __id='$id' AND salt='$salt';
 			  ";

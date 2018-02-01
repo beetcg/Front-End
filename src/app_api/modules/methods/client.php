@@ -284,12 +284,18 @@
 			}
 			mysqli_close($connect);
 
-      if ($res) {
-        if ( password_verify($pass, $res['hash']) ) {
+      if ($row['hash']) {
+
+        if ( password_verify($pass, $row['hash']) ) {
           return $row;
+        } else { 
+        	return $res = false;
         }
+
       } else {
-        return $res;
+
+        return $res = false;
+
       }
     }
   }
