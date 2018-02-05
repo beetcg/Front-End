@@ -1784,22 +1784,23 @@ pre code {
     max-width: 100%;
     margin-bottom: 1rem;
     background-color: transparent;
+    border: 1px solid #dee2e6;
 }
 
 .table th,
 .table td {
     padding: 0.75rem;
     vertical-align: top;
-    border-top: 1px solid #dee2e6;
+    border: 1px solid #dee2e6;
 }
 
 .table thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid #dee2e6;
+    border: 1px solid #dee2e6;
 }
 
 .table tbody + tbody {
-    border-top: 2px solid #dee2e6;
+    border: 1px solid #dee2e6;
 }
 
 .table .table {
@@ -1970,7 +1971,7 @@ pre code {
 
 .table .thead-dark th {
     color: #fff;
-    background-color: #212529;
+    background-color: #232322;
     border-color: #32383e;
 }
 
@@ -3126,19 +3127,19 @@ fieldset[disabled] a.btn {
 
 .btn-link {
     font-weight: 400;
-    color: #007bff;
+    color: #fff;
     background-color: transparent;
 }
 
 .btn-link:hover {
-    color: #0056b3;
-    text-decoration: underline;
+    color: #fff;
+    /*text-decoration: underline;*/
     background-color: transparent;
     border-color: transparent;
 }
 
 .btn-link:focus, .btn-link.focus {
-    text-decoration: underline;
+    /*text-decoration: underline;*/
     border-color: transparent;
     box-shadow: none;
 }
@@ -4586,8 +4587,8 @@ tbody.collapse.show {
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
+    /*border-right: 1px solid #eeeee8;*/
+    /*border-radius: 0.25rem;*/
 }
 
 .card > hr {
@@ -4609,7 +4610,7 @@ tbody.collapse.show {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    padding: 1.25rem;
+    /*padding: 1.25rem;*/
 }
 
 .card-title {
@@ -5348,10 +5349,11 @@ tbody.collapse.show {
 .list-group-item {
     position: relative;
     display: block;
-    padding: 0.75rem 1.25rem;
+    padding: 1.5rem 1.25rem;
     margin-bottom: -1px;
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.125);
+    padding-left: 40px !important;
 }
 
 .list-group-item:first-child {
@@ -10218,6 +10220,10 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     font-size: 1.1rem;
 }
 
+.option-list {
+    font-size: 15px;
+}
+
 @media (max-width: 575px) {
     .option {
         font-size: .8rem;
@@ -10313,6 +10319,30 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     top: 70px;
 }
 
+.h2-headline {
+    text-align: center;
+    /*margin-top: 50px;*/
+    font-size: 50px;
+    color: #fff;
+    line-height: 50px;
+    margin-bottom: 0;
+    font-family: 'Open Sans' ,sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-shadow: 0 0 1px #000;
+}
+
+.banner-tryit {
+    background:url('../rs-plugin/assets/3b1.jpg');
+    min-height:660px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .road-flex {
     display: flex;
     flex: 1;
@@ -10365,4 +10395,49 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     -ms-transform: translate(0px, -1px);
     -o-transform: translate(0px, -1px);
     transform: translate(0px, -1px);
+}
+
+.icon-empty {
+    font-size: 7rem;
+    color: #ccc;
+}
+
+.text-empty {
+    font-size: 2rem;
+    color: #ccc !important;
+    font-weight: lighter;
+}
+
+.button-gnrl {
+    background-color: transparent !important;
+    border-radius: 40px !important;
+    height: 45px !important;
+    border: 2px solid #fff !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+}
+
+.button-gnrl:hover {
+    background-color: #821e3b !important;
+    border-radius: 40px !important;
+    border: 2px solid #821e3b !important;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+    -webkit-transform: translate(0px, -1px);
+    -moz-transform: translate(0px, -1px);
+    -ms-transform: translate(0px, -1px);
+    -o-transform: translate(0px, -1px);
+    transform: translate(0px, -1px);
+}
+
+.rating-icon {
+    font-size: 1.5rem;
+    color: #9b2446
+}
+
+.middle {
+    vertical-align: middle !important;
 }

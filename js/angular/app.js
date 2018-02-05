@@ -1,4 +1,4 @@
-var beetApp = angular.module('beetApp', []);
+var beetApp = angular.module('beetApp', ['ui.calendar','ui.bootstrap']);
 
 beetApp.controller('joinUsController', ['$scope', function ($scope) {
     $scope.greeting = 'Hola!';
