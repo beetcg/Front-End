@@ -2585,7 +2585,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: 0.25rem;
+    /*border-radius: 0.25rem;*/
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -2595,7 +2595,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
 .btn:focus, .btn.focus {
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    /*box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);*/
 }
 
 .btn.disabled, .btn:disabled {
@@ -2617,35 +2617,35 @@ fieldset[disabled] a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #821e3b;
+    border-color: #821e3b;
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
+    background-color: #731b34;
+    border-color: #731b34;
 }
 
 .btn-primary:focus, .btn-primary.focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+    /*box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);*/
 }
 
 .btn-primary.disabled, .btn-primary:disabled {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #731b34;
+    border-color: #731b34;
 }
 
 .btn-primary:not([disabled]):not(.disabled):active, .btn-primary:not([disabled]):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #0062cc;
-    border-color: #005cbf;
+    background-color: #831f3b;
+    border-color: #831f3b;
 }
 
 .btn-primary:not([disabled]):not(.disabled):active:focus, .btn-primary:not([disabled]):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+    /*box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);*/
 }
 
 .btn-secondary {
@@ -2661,7 +2661,7 @@ fieldset[disabled] a.btn {
 }
 
 .btn-secondary:focus, .btn-secondary.focus {
-    box-shadow: 0 0 0 0.2rem rgba(134, 142, 150, 0.5);
+    /*box-shadow: 0 0 0 0.2rem rgba(134, 142, 150, 0.5);*/
 }
 
 .btn-secondary.disabled, .btn-secondary:disabled {
@@ -2678,7 +2678,7 @@ fieldset[disabled] a.btn {
 
 .btn-secondary:not([disabled]):not(.disabled):active:focus, .btn-secondary:not([disabled]):not(.disabled).active:focus,
 .show > .btn-secondary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0.2rem rgba(134, 142, 150, 0.5);
+    /*box-shadow: 0 0 0 0.2rem rgba(134, 142, 150, 0.5);*/
 }
 
 .btn-success {
@@ -5636,6 +5636,7 @@ button.close {
 .modal-open .modal {
     overflow-x: hidden;
     overflow-y: auto;
+    background-color: rgba(0,0,0,0.4);
 }
 
 .modal-dialog {
@@ -5681,8 +5682,8 @@ button.close {
     pointer-events: auto;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 0.3rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 0;
     outline: 0;
 }
 
@@ -5728,6 +5729,7 @@ button.close {
 .modal-title {
     margin-bottom: 0;
     line-height: 1.5;
+    color: #767676;
 }
 
 .modal-body {
@@ -10440,4 +10442,16 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
 
 .middle {
     vertical-align: middle !important;
+}
+
+.link-tec {
+    color: #767676;
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+
+.link-tec:hover {
+    color: #9b2446 !important;
+    text-decoration: underline !important;
+    cursor: pointer;
 }
