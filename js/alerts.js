@@ -1,8 +1,19 @@
 $(document).ready(function () {
     $('#successSignup').on('click', function () {
         swal({
-            title: 'Registro satisfactorio!',
-            text: 'Revisa tu bandeja de entrada para que valides tu cuenta',
+            title: 'You are almost Ready!',
+            text: 'Check your Inbox to complete your registration.',
+            type: 'success',
+            confirmButtonText: 'Cool'
+        })
+    })
+});
+
+$(document).ready(function () {
+    $('#successSignupClient').on('click', function () {
+        swal({
+            title: 'You are almost Ready!',
+            text: 'Check your inbox to validate your account.',
             type: 'success',
             confirmButtonText: 'Cool'
         })
@@ -12,8 +23,8 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('#successRecovery').on('click', function () {
         swal({
-            title: 'Revisa tu bandeja de entrada',
-            text: 'Te hemos enviado las isntrucciones para recuperar tu clave',
+            title: 'Check your inbox',
+            text: 'We send you instructions to recover your password.',
             type: 'success',
             confirmButtonText: 'Cool'
         })
