@@ -1016,11 +1016,11 @@ sup {
     font-size: smaller;
 }
 
-table {
-    line-height: 2;
-    margin: 0 0 40px;
-    width: 100%;
-}
+/*table {*/
+    /*line-height: 2;*/
+    /*margin: 0 0 40px;*/
+    /*width: 100%;*/
+/*}*/
 
 th{
     font-weight: 700;
