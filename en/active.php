@@ -13,18 +13,18 @@ $obj = new Methods();
 $resp = $obj->checkAcount('client',$id, $salt);
 
 if ($resp['active'] == '1') {
-  header('Location: http://comiczone.hol.es/en/login-client');
+  header('Location: /en/login-client');
 } else {
   $obj = new Methods();
   $resp = $obj->confirmAcount('client',$id, $salt);
   if ($resp) {
     echo "Ativated Acount";
     sleep(5);
-    header('Location: http://comiczone.hol.es/en/login-client');
+    header('Location: /en/login-client');
   } else {
     sleep(5);
     echo 'error';
-    header('Location: http://comiczone.hol.es/en/index');
+    header('Location: /en/index');
   }
 
 }

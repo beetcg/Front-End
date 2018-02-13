@@ -15,7 +15,7 @@
     $resp = $obj->checkAcount($type ,$id, $salt);
 
     if (!$resp) {
-        header('Location: http://comiczone.hol.es/');
+        header('Location: /');
     }
 ?>
 

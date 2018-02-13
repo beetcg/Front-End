@@ -9,7 +9,7 @@
     $resp = $obj->checkAcount('tech',$id, $salt);
 
     if ($resp['active'] == '1') {
-        header('Location: http://comiczone.hol.es/');
+        header('Location: /');
     }
 ?>
 

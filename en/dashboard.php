@@ -81,6 +81,6 @@
 </html>
 <?php 
 	} else { // Fin del if
-		header('Location: http://comiczone.hol.es');
+		header('Location: /');
 	}
 ?>

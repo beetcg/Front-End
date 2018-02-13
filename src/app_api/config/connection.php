@@ -4,10 +4,10 @@
 	* To connect With MySQL database
 	*/
 	class connect{
-		private $host = "mysql.hostinger.es";
-		private $user = "u420574110_root";
-		private $pass = "123456789";
-		private $db = "u420574110_beet";
+		private $host = "localhost";
+		private $user = "root";
+		private $pass = "123456";
+		private $db = "beet";
 
 		// private $host = "localhost";
 		// private $user = "root";

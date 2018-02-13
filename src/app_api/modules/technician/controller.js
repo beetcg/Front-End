@@ -33,7 +33,7 @@ $( document ).ready(function() {
 						$('#form_create')[0].reset()
 						$('#sub').html('Submit')
 						alert('Registro exitoso \nMensaje provisional')
-						window.location.href = "http://comiczone.hol.es/en/index";
+						window.location.href = "localhost/en/index";
 					} else {
 						$('#sub').html('SIGN UP')
 					}
@@ -99,7 +99,7 @@ $( document ).ready(function() {
 							if (res.active == true) {
 								$('#sub').html('Sent')
 								alert('Registro exitoso \nMensaje provisional')
-								window.location.href = "http://comiczone.hol.es/en/index";
+								window.location.href = "localhost/en/index";
 							} else {
 								$('#sub').html('Send')
 							}
@@ -180,7 +180,7 @@ $( document ).ready(function() {
 					if (res.update == true) {
 						$('#new_pass_tech')[0].reset()
 						$('#sub').html('password changed')
-						window.location.href = "http://comiczone.hol.es/en/login-technician";
+						window.location.href = "localhost/en/login-technician";
 					} else {
 						alert("Ups hubo un error")
 						$('#sub').html('change password')
@@ -224,7 +224,7 @@ $( document ).ready(function() {
 						Cookies.set('email', res.data.email , { expires: 7 });
 						Cookies.set('type', 'tech' , { expires: 7 });
 
-						window.location.href = "http://comiczone.hol.es/en/index";
+						window.location.href = "localhost/en/index";
 					} else {
 						alert('Usuario y/o contraseña invalida \nVerifique que su cuenta este activa')
 					}

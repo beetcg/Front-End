@@ -8,7 +8,7 @@
   if ($res) {
     // unset($_COOKIE['email']);
     session_destroy();
-		header("Location: http://comiczone.hol.es/en/index");
+		header("Location: /en/index");
   } else {
 		echo "Error en Log Out - / ".$_COOKIE['email']." /";
 	}

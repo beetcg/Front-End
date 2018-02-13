@@ -17,7 +17,7 @@
 			$message .= '	<table align="center" style="border:1px solid #fff;max-width:700px;">';
 			$message .= '		<tr>';
 			$message .= '			<td colspan="5" style="width:100%;text-align:center;vertical-align:middle">';
-			$message .= '				<img style="width:100%" src="http://comiczone.hol.es/images/banner-tech.jpg">';
+			$message .= '				<img style="width:100%" src="beetcg.sytes.net/images/banner-tech.jpg">';
 			$message .= '			</td>';
 			$message .= '		</tr>';
 			$message .= '		<tr>';
@@ -39,7 +39,7 @@
 			$message .= '		</tr>';
 			$message .= '		<tr>';
 			$message .= '			<td colspan="5" align="center" style="text-align:center;padding-left:30px;padding-right:30px;">';
-			$message .= '				<a href="http://comiczone.hol.es/en/categories.php?x='.$id.'&y='.$salt.'"';
+			$message .= '				<a href="beetcg.sytes.net/en/categories.php?x='.$id.'&y='.$salt.'"';
 			$message .= '				style="text-align: center;white-space: nowrap;vertical-align: middle;font-size: 1rem;';
 			$message .= '				line-height: 1.5;border: 1px solid #840037;padding: 0.375rem 0.75rem;cursor:pointer;color:#840037;';
 			$message .= '				text-decoration:none;';
@@ -79,7 +79,7 @@
 			$message .= "Por favor, confirma tu correo electrónico haciendo clic en el link de abajo. ";
 			$message .= "Serás dirigido a la página de verificación de correo.";
 			$message .= "\n";
-			$message .= "http://comiczone.hol.es/en/categories.php?x=".$id."&y=".$salt;
+			$message .= "beetcg.sytes.net/en/categories.php?x=".$id."&y=".$salt;
 			$message .= "\n";
 			$message .= "Gracias por unirte a la comunidad Beet!";
 			$message .= "Soporte Beet.";
@@ -100,7 +100,7 @@
 			$message .= '	<table align="center" style="border:1px solid #fff;max-width:700px;">';
 			$message .= '		<tr>';
 			$message .= '			<td colspan="5" style="width:100%;text-align:center;vertical-align:middle">';
-			$message .= '				<img style="width:100%" src="http://comiczone.hol.es/images/banner-tech.jpg">';
+			$message .= '				<img style="width:100%" src="beetcg.sytes.net/images/banner-tech.jpg">';
 			$message .= '			</td>';
 			$message .= '		</tr>';
 			$message .= '		<tr>';
@@ -121,7 +121,7 @@
 			$message .= '		</tr>';
 			$message .= '		<tr>';
 			$message .= '			<td colspan="5" align="center" style="text-align:center;padding-left:30px;padding-right:30px;">';
-			$message .= '				<a href="http://comiczone.hol.es/en/new-password.php?x='.$id.'&y='.$salt.'&t=tech"';
+			$message .= '				<a href="beetcg.sytes.net/en/new-password.php?x='.$id.'&y='.$salt.'&t=tech"';
 			$message .= '				style="text-align: center;white-space: nowrap;vertical-align: middle;font-size: 1rem;';
 			$message .= '				line-height: 1.5;border: 1px solid #840037;padding: 0.375rem 0.75rem;cursor:pointer;color:#840037;';
 			$message .= '				text-decoration:none;';
@@ -160,7 +160,7 @@
 			$message .= "\n";
 			$message .= "Recovery Password Tech";
 			$message .= "\n";
-			$message .= "http://comiczone.hol.es/en/new-password.php?x=".$id."&y=".$salt."&t=tech";
+			$message .= "beetcg.sytes.net/en/new-password.php?x=".$id."&y=".$salt."&t=tech";
 			$message .= "\n";
 			$message .= "Thanks for enjoy to the Beet Communitiy!";
 			$message .= "Beet Support.";
@@ -181,7 +181,7 @@
 			$message .= '	<table align="center" style="border:1px solid #fff;max-width:700px;">';
 			$message .= '		<tr>';
 			$message .= '			<td colspan="5" style="width:100%;text-align:center;vertical-align:middle">';
-			$message .= '				<img style="width:100%" src="http://comiczone.hol.es/images/banner-tech.jpg">';
+			$message .= '				<img style="width:100%" src="beetcg.sytes.net/images/banner-tech.jpg">';
 			$message .= '			</td>';
 			$message .= '		</tr>';
 			$message .= '		<tr>';
@@ -250,7 +250,7 @@
 			$message .= '	<table align="center" style="border:1px solid #fff;max-width:700px;">';
 			$message .= '		<tr>';
 			$message .= '			<td colspan="5" style="width:100%;text-align:center;vertical-align:middle">';
-			$message .= '				<img style="width:100%" src="http://comiczone.hol.es/images/banner-tech.jpg">';
+			$message .= '				<img style="width:100%" src="beetcg.sytes.net/images/banner-tech.jpg">';
 			$message .= '			</td>';
 			$message .= '		</tr>';
 			$message .= '		<tr>';
@@ -271,7 +271,7 @@
 			$message .= '		</tr>';
 			$message .= '		<tr>';
 			$message .= '			<td colspan="5" align="center" style="text-align:center;padding-left:30px;padding-right:30px;">';
-			$message .= '				<a href="http://comiczone.hol.es/en/active.php?x='.$id.'&y='.$salt.'"';
+			$message .= '				<a href="beetcg.sytes.net/en/active.php?x='.$id.'&y='.$salt.'"';
 			$message .= '				style="text-align: center;white-space: nowrap;vertical-align: middle;font-size: 1rem;';
 			$message .= '				line-height: 1.5;border: 1px solid #840037;padding: 0.375rem 0.75rem;cursor:pointer;color:#840037;';
 			$message .= '				text-decoration:none;';
@@ -310,7 +310,7 @@
 			$message .= "\n";
 			$message .= "Client Acount Confirmation";
 			$message .= "\n";
-			$message .= "http://comiczone.hol.es/en/active.php?x=".$id."&y=".$salt;
+			$message .= "beetcg.sytes.net/en/active.php?x=".$id."&y=".$salt;
 			$message .= "\n";
 			$message .= "Thanks for enjoy to the Beet Communitiy!";
 			$message .= "Beet Support.";
@@ -331,7 +331,7 @@
 			$message .= '	<table align="center" style="border:1px solid #fff;max-width:700px;">';
 			$message .= '		<tr>';
 			$message .= '			<td colspan="5" style="width:100%;text-align:center;vertical-align:middle">';
-			$message .= '				<img style="width:100%" src="http://comiczone.hol.es/images/banner-tech.jpg">';
+			$message .= '				<img style="width:100%" src="beetcg.sytes.net/images/banner-tech.jpg">';
 			$message .= '			</td>';
 			$message .= '		</tr>';
 			$message .= '		<tr>';
@@ -352,7 +352,7 @@
 			$message .= '		</tr>';
 			$message .= '		<tr>';
 			$message .= '			<td colspan="5" align="center" style="text-align:center;padding-left:30px;padding-right:30px;">';
-			$message .= '				<a href="http://comiczone.hol.es/en/new-password.php?x='.$id.'&y='.$salt.'&t=client"';
+			$message .= '				<a href="beetcg.sytes.net/en/new-password.php?x='.$id.'&y='.$salt.'&t=client"';
 			$message .= '				style="text-align: center;white-space: nowrap;vertical-align: middle;font-size: 1rem;';
 			$message .= '				line-height: 1.5;border: 1px solid #840037;padding: 0.375rem 0.75rem;cursor:pointer;color:#840037;';
 			$message .= '				text-decoration:none;';
@@ -391,7 +391,7 @@
 			$message .= "\n";
 			$message .= "Recovery Password Client";
 			$message .= "\n";
-			$message .= "http://comiczone.hol.es/en/new-password.php?x=".$id."&y=".$salt."&t=tech";
+			$message .= "beetcg.sytes.net/en/new-password.php?x=".$id."&y=".$salt."&t=tech";
 			$message .= "\n";
 			$message .= "Thanks for enjoy to the Beet Communitiy!";
 			$message .= "Beet Support.";
@@ -412,7 +412,7 @@
 			$message .= '	<table align="center" style="border:1px solid #fff;max-width:700px;">';
 			$message .= '		<tr>';
 			$message .= '			<td colspan="5" style="width:100%;text-align:center;vertical-align:middle">';
-			$message .= '				<img style="width:100%" src="http://comiczone.hol.es/images/banner-tech.jpg">';
+			$message .= '				<img style="width:100%" src="beetcg.sytes.net/images/banner-tech.jpg">';
 			$message .= '			</td>';
 			$message .= '		</tr>';
 			$message .= '		<tr>';
