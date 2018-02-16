@@ -173,7 +173,7 @@ img {
     -ms-interpolation-mode: bicubic;
 }
 
-input[type="text"],input[type="email"], textarea, select {
+input[type="text"],input[type="email"], textarea {
     width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -203,12 +203,12 @@ input[type="password"]{
     width: 100%;
 }
 
-select{
-    background: transparent url("../images/select.png") no-repeat 95% 50%;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-}
+/*select{*/
+    /*background: transparent url("../images/select.png") no-repeat 95% 50%;*/
+    /*-moz-appearance: none;*/
+    /*-webkit-appearance: none;*/
+    /*appearance: none;*/
+/*}*/
 
 /*-----------------------------------------------------------------*/
 /* 2. Global Styles
@@ -772,26 +772,26 @@ input,textarea{
     background: #fafcfc;
 }
 
-select{
-    font-family: 'Open Sans', sans-serif;
-    color: #777;
-    font-size: 14px;
-    line-height: 22px;
-    border: 0;
-    font-style: italic;
-    border-bottom: 1px solid #d3d7da;
-    position: relative;
-}
+/*select{*/
+    /*font-family: 'Open Sans', sans-serif;*/
+    /*color: #777;*/
+    /*font-size: 14px;*/
+    /*line-height: 22px;*/
+    /*border: 0;*/
+    /*font-style: italic;*/
+    /*border-bottom: 1px solid #d3d7da;*/
+    /*position: relative;*/
+/*}*/
 
-input,
-select{
-    padding: 6px 0 7px 20px;
-    margin-bottom: 12px;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    outline: none;
-}
+/*input,*/
+/*select{*/
+    /*padding: 6px 0 7px 20px;*/
+    /*margin-bottom: 12px;*/
+    /*-webkit-border-radius: 0;*/
+    /*-moz-border-radius: 0;*/
+    /*border-radius: 0;*/
+    /*outline: none;*/
+/*}*/
 
 textarea{
     padding: 8px 0 8px 20px;
@@ -13167,14 +13167,14 @@ footer .widget{
     margin-bottom: 86px;
 }
 
-footer select{
-    border-bottom: 1px solid #5c5c5c;
-    color: #d3d7da;
-}
+/*footer select{*/
+    /*border-bottom: 1px solid #5c5c5c;*/
+    /*color: #d3d7da;*/
+/*}*/
 
-footer select option{
-    color: #777;
-}
+/*footer select option{*/
+    /*color: #777;*/
+/*}*/
 
 /*-------- 11.1.1. RSS and Twitter Follow --------*/
 footer .widget.rss_twitter_follow .rss_container,
