@@ -1,4 +1,4 @@
-var beetApp = angular.module('beetApp', ['ui.calendar', 'ui.bootstrap']);
+var beetApp = angular.module('beetApp', ['ui.calendar', 'ui.bootstrap', 'flow']);
 
 beetApp.controller('joinUsController', ['$scope', function ($scope) {
     $scope.greeting = 'Hola!';
@@ -241,4 +241,64 @@ beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCa
     $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
     $scope.eventSources2 = [$scope.calEventsExt, $scope.eventsF, $scope.events];
 
+}]);
+
+beetApp.controller('registerController', ['$http', '$scope', function ($http, $scope) {
+
+    $scope.vehimag ={};
+    $scope.vehimagv ={};
+
+    $scope.itemEliminar = {id    : "" ,
+        index : ""   };
+
+    $scope.removeImage= function (file){
+//                    console.log(file);
+        if(file.idImage) {
+            file.idImage.remove();
+        }
+        file.cancel();
+    };
+
+    $scope.someHandlerMethod = function( $file, $message, $flow , formName, inputName){
+        $file.idImage = $('<input>').attr({
+            type: 'hidden',
+            id: $message.replace('"','').replace('"',''),
+            name: inputName,
+            value: $message.replace('"','').replace('"','')
+        }).appendTo(formName);
+        $scope.subiendoImgs--;
+        $scope.imgsUp = 1;
+    };
+
+    $scope.subiendoImgs = 0;
+    $scope.added = function(){
+        $scope.subiendoImgs++;
+        $scope.imgsUp = 0;
+    };
+
+    $scope.cerrar = false;
+
+    $scope.formNuevoVehiculoSubmit =  function(form){
+        $scope.formVehiculoSubmit = true;
+        if(form.$valid){
+            $scope.formVehiculoSubmit = false;
+            $('#formNuevoVehiculo').submit()
+        }
+    };
+
+    $scope.limpform = function(){
+        $scope.marca = $scope.marcas[0];;
+        $scope.modelo = {name: "", id: 0};
+        $scope.anio = {name: "", id: 0};
+        $scope.version = {name: "", id: 0};
+        $scope.placa = '';
+        $scope.serialcarroceria = '';
+
+        $scope.removeImage($scope.vehimagv.flowa);
+        $scope.removeImage($scope.vehimagv.flowb);
+        $scope.removeImage($scope.vehimagv.flowc);
+        $scope.removeImage($scope.vehimagv.flowd);
+        $('input[name="fotoVehiculo[]"]').remove();
+
+    };
 }]);

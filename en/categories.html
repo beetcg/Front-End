@@ -32,6 +32,106 @@
             <!--}-->
         <!--}-->
     <!--</script>-->
+
+    <style>
+        .img-add-veh-tp {
+            padding-left: 2px;
+        }
+        .no-space-right {
+            padding-right: 0 !important;
+            margin-right: 0 !important;
+        }
+        .name-input-tp{
+            background-color: #FFFFFF;
+            font-size: 1.55rem;
+            border: none;
+            padding-top: 8px;
+            padding-left: 0;
+            color: #555555;
+            font-weight: normal !important;
+        }
+        .middle-valigner{
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .mini-imagen{
+            position: relative;
+            display: inline-block;
+            background-color: #f7f7f7;
+            border: 2px dashed #b5b5b5;
+            height: 150px;
+            width: 150px;
+            z-index: 1;
+            margin: 4px;
+            cursor: pointer;
+        }
+        .mini-imagen:hover{
+            box-shadow: 0 0 4px #b5b5b5;
+        }
+        .mini-imagen .descartar-obj{
+            background-color: #B40000;
+            z-index: 2;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            border-radius: 30px;
+            width: 15px;
+            height: 15px;
+            font-size: 0.8rem;
+        }
+        .mini-imagen > .middle-valigner > i {
+            color: #bfbfbf;
+        }
+        .mini-imagen > .middle-valigner{
+            position: absolute;
+        }
+        .mini-imagen .descartar-obj .fa-times{
+            color: #FFFFFF;
+        }
+        .mini-imagen .descartar-obj:hover{
+            width: 18px;
+            height: 18px;
+            /*font-size: 0.8rem;*/
+        }
+        .imagenes-subiendo{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            max-height: 150px;
+            min-width: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+        .spin-subiendo{
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #b42952;
+            z-index: 2;
+            width: 100%;
+            font-size: 3rem;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.75);
+            text-align: center;
+            align-items: center;
+            display: flex;
+        }
+        .full-size{
+            width: 100% !important;
+            height: 100% !important;
+        }
+        i{
+            margin:0 auto;
+        }
+        .mini-imagen > .middle-valigner > i,
+        .mini-imagen > .spin-subiendo{
+            font-size: 4rem;
+        }
+
+    </style>
+
 </head>
 
 <body class="page login" data-ng-controller="categoriesController">
@@ -574,77 +674,302 @@
                     <!--</h3>-->
                 </div>
             </div>
-            <div class="categories-box1" style="margin-top: 30px;">
+            <div class="categories-box1" style="margin-top: 30px;" ng-controller="registerController">
                 <div class="title-cat">
                     <h2 class="title-cat-text">Documents </h2>
                     <small class="description-small">We need some important documents to complete your subscription</small>
                 </div>
-                <!--<div class="types">-->
-                    <!--<p>1. Passport</p>-->
-                    <!--<p>2. Criminal Record</p>-->
-                    <!--<p>3. ID</p>-->
-                    <!--<p>4. Bank Account Information</p>-->
-                <!--</div>-->
                 <div class="rows">
-                    <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-sm-12 col-md-3">
                         <div class="types">
                             <p>1. Passport</p>
                         </div>
-                        <div class="input-group">
-                            <input type="text" class="form-control" style="height: 38px !important;" readonly>
-                            <label class="input-group-btn">
-                                <span class="btn btn-beet">
-                                    <i class="fa fa-upload"></i> <input type="file" style="display: none;" multiple>
-                                </span>
-                            </label>
+                        <div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"
+                             flow-init="{target:'/retrieve/1',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
+                             flow-files-submitted="$flow.upload()"
+                             flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"
+                             flow-attrs="{accept:'image/*'}"
+                             flow-name="vehimagv.flowa"
+                             flow-files-added="added($file,$event,$flow)">
+                            <div class="full-size middle-valigner"  flow-btn>
+                                <i class="fa fa-picture-o fa-3x"></i>
+                            </div>
+                            <div ng-show="$flow.files.length" ng-cloak>
+                                <div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">
+                                    <i class="fa  fa-times"></i>
+                                </div>
+                                <span class="spin-subiendo" >
+                                                        <i class="fa fa-spinner fa-spin"></i>
+                                                    </span>
+                                <img class="imagenes-subiendo" flow-img="$flow.files[0]" />
+                            </div>
+                            <input type="hidden" ng-model="fotoveh1" ng-required="$flow.files[0].isUploading()" />
                         </div>
                     </div>
-                </div>
-                <div class="rows">
-                    <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-sm-12 col-md-3">
                         <div class="types">
                             <p>2. Criminal Record</p>
                         </div>
-                        <div class="input-group">
-                            <input type="text" class="form-control" style="height: 38px !important;" readonly>
-                            <label class="input-group-btn">
-                                <span class="btn btn-beet">
-                                    <i class="fa fa-upload"></i> <input type="file" style="display: none;" multiple>
-                                </span>
-                            </label>
+                        <div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"
+                             flow-init="{target:'/retrieve/2',singleFile:true}"
+                             flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
+                             flow-files-submitted="$flow.upload()"
+                             flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"
+                             flow-attrs="{accept:'image/*'}"
+                             flow-name="vehimagv.flowb"
+                             flow-files-added="added($file,$event,$flow)">
+                            <div class="full-size middle-valigner" ng-show="!$flow.files.length" flow-btn>
+                                <i class="fa fa-picture-o fa-3x"></i>
+                            </div>
+                            <div ng-show="$flow.files.length" ng-cloak>
+                                <div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">
+                                    <i class="fa fa-times"></i>
+                                </div>
+                                <span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">
+                                                        <i class="fa fa-spinner fa-spin"></i>
+                                                    </span>
+                                <img class="imagenes-subiendo" flow-img="$flow.files[0]" />
+                            </div>
+                            <input type="hidden" ng-model="fotoveh2" ng-required="$flow.files[0].isUploading()" />
                         </div>
                     </div>
-                </div>
-                <div class="rows">
-                    <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-sm-12 col-md-3">
                         <div class="types">
                             <p>3. ID</p>
                         </div>
-                        <div class="input-group">
-                            <input type="text" class="form-control" style="height: 38px !important;" readonly>
-                            <label class="input-group-btn">
-                                <span class="btn btn-beet">
-                                    <i class="fa fa-upload"></i> <input type="file" style="display: none;" multiple>
-                                </span>
-                            </label>
+                        <div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"
+                             flow-init="{target:'/retrieve/3',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
+                             flow-files-submitted="$flow.upload()"
+                             flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"
+                             flow-attrs="{accept:'image/*'}"
+                             flow-name="vehimagv.flowc"
+                             flow-files-added="added($file,$event,$flow)">
+                            <div class="full-size middle-valigner" ng-show="!$flow.files.length" flow-btn>
+                                <i class="fa fa-picture-o fa-3x"></i>
+                            </div>
+                            <div ng-show="$flow.files.length" ng-cloak>
+                                <div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">
+                                    <i class="fa fa-times"></i>
+                                </div>
+                                <span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">
+                                                        <i class="fa fa-spinner fa-spin"></i>
+                                                    </span>
+                                <img class="imagenes-subiendo" flow-img="$flow.files[0]" />
+                            </div>
+                            <input type="hidden" ng-model="fotoveh3" ng-required="$flow.files[0].isUploading()" />
                         </div>
                     </div>
-                </div>
-                <div class="rows">
-                    <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-sm-12 col-md-3">
                         <div class="types">
                             <p>4. Bank Account Information</p>
                         </div>
-                        <div class="input-group">
-                            <input type="text" class="form-control" style="height: 38px !important;" readonly>
-                            <label class="input-group-btn">
-                                <span class="btn btn-beet">
-                                    <i class="fa fa-upload"></i> <input type="file" style="display: none;" multiple>
-                                </span>
-                            </label>
+                        <div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"
+                             flow-init="{target:'/retrieve/4',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
+                             flow-files-submitted="$flow.upload()"
+                             flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"
+                             flow-attrs="{accept:'image/*'}"
+                             flow-name="vehimagv.flowd"
+                             flow-files-added="added($file,$event,$flow)">
+
+                            <div class="full-size middle-valigner" ng-show="!$flow.files.length" flow-btn>
+                                <i class="fa fa-picture-o fa-3x"></i>
+                            </div>
+                            <div ng-show="$flow.files.length" ng-cloak>
+                                <div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">
+                                    <i class="fa fa-times"></i>
+                                </div>
+                                <span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">
+                                                        <i class="fa fa-spinner fa-spin"></i>
+                                                    </span>
+                                <img class="imagenes-subiendo" flow-img="$flow.files[0]" />
+                            </div>
+                            <input type="hidden" ng-model="fotoveh4" ng-required="$flow.files[0].isUploading()" />
                         </div>
                     </div>
                 </div>
+                <!--<div class="rows">-->
+                    <!--<div class="col-sm-12 col-md-6 col-lg-4">-->
+                        <!--<div class="types">-->
+                            <!--<p>1. Passport</p>-->
+                        <!--</div>-->
+                        <!--<div class="input-group">-->
+                            <!--<input type="text" class="form-control" style="height: 38px !important;" readonly>-->
+                            <!--<label class="input-group-btn">-->
+                                <!--<span class="btn btn-beet">-->
+                                    <!--<i class="fa fa-upload"></i> <input type="file" style="display: none;" multiple>-->
+                                <!--</span>-->
+                            <!--</label>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="rows">-->
+                    <!--<div class="col-sm-12 col-md-6 col-lg-4">-->
+                        <!--<div class="types">-->
+                            <!--<p>2. Criminal Record</p>-->
+                        <!--</div>-->
+                        <!--<div class="input-group">-->
+                            <!--<input type="text" class="form-control" style="height: 38px !important;" readonly>-->
+                            <!--<label class="input-group-btn">-->
+                                <!--<span class="btn btn-beet">-->
+                                    <!--<i class="fa fa-upload"></i> <input type="file" style="display: none;" multiple>-->
+                                <!--</span>-->
+                            <!--</label>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="rows">-->
+                    <!--<div class="col-sm-12 col-md-6 col-lg-4">-->
+                        <!--<div class="types">-->
+                            <!--<p>3. ID</p>-->
+                        <!--</div>-->
+                        <!--<div class="input-group">-->
+                            <!--<input type="text" class="form-control" style="height: 38px !important;" readonly>-->
+                            <!--<label class="input-group-btn">-->
+                                <!--<span class="btn btn-beet">-->
+                                    <!--<i class="fa fa-upload"></i> <input type="file" style="display: none;" multiple>-->
+                                <!--</span>-->
+                            <!--</label>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="rows">-->
+                    <!--<div class="col-sm-12 col-md-6 col-lg-4">-->
+                        <!--<div class="types">-->
+                            <!--<p>4. Bank Account Information</p>-->
+                        <!--</div>-->
+                        <!--<div class="input-group">-->
+                            <!--<input type="text" class="form-control" style="height: 38px !important;" readonly>-->
+                            <!--<label class="input-group-btn">-->
+                                <!--<span class="btn btn-beet">-->
+                                    <!--<i class="fa fa-upload"></i> <input type="file" style="display: none;" multiple>-->
+                                <!--</span>-->
+                            <!--</label>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <form style="margin-top: 0; margin-bottom: 0;"
+                      action="/vehiculo/vehiculo/createasync"
+                      name="formNuevoVehiculo"
+                      method="post"
+                      id="formNuevoVehiculo">
+                    <div class=" ">
+                        <div class="col-xs-12 img-add-veh-tp no-space-right" ng-controller="registerController">
+                            <div class="input-group">
+                                <span class="input-group-addon name-input-tp"> Im&aacute;genes</span>
+                                <div class="container-fluid no-padding">
+                                    <!--<div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"-->
+                                         <!--flow-init="{target:'/retrieve/1',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"-->
+                                         <!--flow-files-submitted="$flow.upload()"-->
+                                         <!--flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"-->
+                                         <!--flow-attrs="{accept:'image/*'}"-->
+                                         <!--flow-name="vehimagv.flowa"-->
+                                         <!--flow-files-added="added($file,$event,$flow)">-->
+                                        <!--<div class="full-size middle-valigner"  flow-btn>-->
+                                            <!--<i class="fa fa-picture-o fa-3x"></i>-->
+                                        <!--</div>-->
+                                        <!--<div ng-show="$flow.files.length" ng-cloak>-->
+                                            <!--<div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">-->
+                                                <!--<i class="fa  fa-times"></i>-->
+                                            <!--</div>-->
+                                            <!--<span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">-->
+                                                        <!--<i class="fa fa-spinner fa-spin"></i>-->
+                                                    <!--</span>-->
+                                            <!--<img class="imagenes-subiendo" flow-img="$flow.files[0]" />-->
+                                        <!--</div>-->
+                                        <!--<input type="hidden" ng-model="fotoveh1" ng-required="$flow.files[0].isUploading()" />-->
+                                    <!--</div>-->
+                                    <!--<div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"-->
+                                         <!--flow-init="{target:'/retrieve/2',singleFile:true}"-->
+                                         <!--flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"-->
+                                         <!--flow-files-submitted="$flow.upload()"-->
+                                         <!--flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"-->
+                                         <!--flow-attrs="{accept:'image/*'}"-->
+                                         <!--flow-name="vehimagv.flowb"-->
+                                         <!--flow-files-added="added($file,$event,$flow)">-->
+                                        <!--<div class="full-size middle-valigner" ng-show="!$flow.files.length" flow-btn>-->
+                                            <!--<i class="fa fa-picture-o fa-3x"></i>-->
+                                        <!--</div>-->
+                                        <!--<div ng-show="$flow.files.length" ng-cloak>-->
+                                            <!--<div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">-->
+                                                <!--<i class="fa fa-lg fa-times"></i>-->
+                                            <!--</div>-->
+                                            <!--<span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">-->
+                                                        <!--<i class="fa fa-spinner fa-spin"></i>-->
+                                                    <!--</span>-->
+                                            <!--<img class="imagenes-subiendo" flow-img="$flow.files[0]" />-->
+                                        <!--</div>-->
+                                        <!--<input type="hidden" ng-model="fotoveh2" ng-required="$flow.files[0].isUploading()" />-->
+                                    <!--</div>-->
+                                    <!--<div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"-->
+                                         <!--flow-init="{target:'/retrieve/3',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"-->
+                                         <!--flow-files-submitted="$flow.upload()"-->
+                                         <!--flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"-->
+                                         <!--flow-attrs="{accept:'image/*'}"-->
+                                         <!--flow-name="vehimagv.flowc"-->
+                                         <!--flow-files-added="added($file,$event,$flow)">-->
+                                        <!--<div class="full-size middle-valigner" ng-show="!$flow.files.length" flow-btn>-->
+                                            <!--<i class="fa fa-picture-o fa-3x"></i>-->
+                                        <!--</div>-->
+                                        <!--<div ng-show="$flow.files.length" ng-cloak>-->
+                                            <!--<div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">-->
+                                                <!--<i class="fa fa-lg fa-times"></i>-->
+                                            <!--</div>-->
+                                            <!--<span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">-->
+                                                        <!--<i class="fa fa-spinner fa-spin"></i>-->
+                                                    <!--</span>-->
+                                            <!--<img class="imagenes-subiendo" flow-img="$flow.files[0]" />-->
+                                        <!--</div>-->
+                                        <!--<input type="hidden" ng-model="fotoveh3" ng-required="$flow.files[0].isUploading()" />-->
+                                    <!--</div>-->
+                                    <!--<div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"-->
+                                         <!--flow-init="{target:'/retrieve/4',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"-->
+                                         <!--flow-files-submitted="$flow.upload()"-->
+                                         <!--flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"-->
+                                         <!--flow-attrs="{accept:'image/*'}"-->
+                                         <!--flow-name="vehimagv.flowd"-->
+                                         <!--flow-files-added="added($file,$event,$flow)">-->
+
+                                        <!--<div class="full-size middle-valigner" ng-show="!$flow.files.length" flow-btn>-->
+                                            <!--<i class="fa fa-picture-o fa-3x"></i>-->
+                                        <!--</div>-->
+                                        <!--<div ng-show="$flow.files.length" ng-cloak>-->
+                                            <!--<div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">-->
+                                                <!--<i class="fa fa-lg fa-times"></i>-->
+                                            <!--</div>-->
+                                            <!--<span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">-->
+                                                        <!--<i class="fa fa-spinner fa-spin"></i>-->
+                                                    <!--</span>-->
+                                            <!--<img class="imagenes-subiendo" flow-img="$flow.files[0]" />-->
+                                        <!--</div>-->
+                                        <!--<input type="hidden" ng-model="fotoveh4" ng-required="$flow.files[0].isUploading()" />-->
+                                    <!--</div>-->
+                                </div>
+                            </div>
+                            <div class="error-formulario" ng-show="subiendoImgs && formVehiculoSubmit" ng-cloak>Espere a que su imagen cargue.</div>
+                            <div class="error-formulario text-success-color" ng-show="imgsUp && formVehiculoSubmit" ng-cloak>Sus imágenes se han cargado correctamente.</div>
+                        </div>
+                    </div>
+                    <div class="container-fluid no-padding">
+                        <div class="col-xs-12 col-md-4 col-lg-3 no-space pull-right">
+                            <button type="button" id="guardar" class="btn btn-lg boton-pw success-color btn-grande-usuariogeneral"
+                                    ng-click="formNuevoVehiculoSubmit(formNuevoVehiculo)">
+                                <div id="boton-guardar">
+                        <span class="icon-btn-grande-usuariogeneral">
+                            <i class="fa fa-plus"></i>
+                            <i class="fa fa-car"></i>
+                        </span>
+                                    <span> Crear Veh&iacute;culo</span>
+                                </div>
+                                <span id="loading-guardar" style="display: none">
+                                            <i class="icon-spinner icon-spin" ></i> Creando
+                                        </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+
             </div>
 
 
@@ -725,6 +1050,7 @@
 <script src="../js/fullcalendar.js"></script>
 <script src="../js/gcal.js"></script>
 <script src="../js/calendar.js"></script>
+<script src="../js/ng-flow-standalone.min.js"></script>
 <script src="../js/angular/app.js"></script>
 
 <script type="text/javascript" src="js/stickymenu.js"></script>
