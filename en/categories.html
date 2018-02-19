@@ -198,787 +198,451 @@
                     <h2 class="title-cat-text">Categories </h2>
                     <small class="description-small">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa</small>
                 </div>
-                <div class="rows">
-                    <div class="col-sm-12 col-md-4">
-                        <div class="category" data-ng-click="selectOption(1)">
-                            <i class="ion-laptop"></i>
-                            <p>Computer Support</p>
+
+                <div class="tabs-categories animated zoomIn" ng-show="tabs">
+                    <div class="tab-categories-selected" data-ng-click="selectOption(1)">
+                        Computer Support
+                    </div>
+                    <div class="tab-categories" data-ng-click="selectOption(2)">
+                        Smart Home
+                    </div>
+                    <div class="tab-categories" data-ng-click="selectOption(3)">
+                        Television
+                    </div>
+                    <div class="tab-categories" data-ng-click="selectOption(4)">
+                        Audio & Video
+                    </div>
+                    <div class="tab-categories" data-ng-click="selectOption(5)">
+                        Wifi & Network
+                    </div>
+                    <div class="tab-categories" data-ng-click="selectOption(6)">
+                        Malware / Virus
+                    </div>
+                </div>
+
+                <div ng-show="categories">
+                    <div class="rows">
+                        <div class="col-sm-12 col-md-4" >
+                            <div class="category" data-ng-click="selectOption(1)">
+                                <i class="ion-laptop"></i>
+                                <p>Computer Support</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="category" data-ng-click="selectOption(2)">
+                                <i class="ion-ios-home-outline"></i>
+                                <p>Smart Home</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="category" data-ng-click="selectOption(3)">
+                                <i class="ion-ios-monitor-outline"></i>
+                                <p>Television</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-4">
-                        <div class="category" data-ng-click="selectOption(2)">
-                            <i class="ion-ios-home-outline"></i>
-                            <p>Smart Home</p>
+                    <div class="rows">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="category" data-ng-click="selectOption(4)">
+                                <i class="ion-ios-videocam-outline"></i>
+                                <p>Audio & Video</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-12 col-md-4">
-                        <div class="category" data-ng-click="selectOption(3)">
-                            <i class="ion-ios-monitor-outline"></i>
-                            <p>Television</p>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="category" data-ng-click="selectOption(5)">
+                                <i class="ion-android-wifi"></i>
+                                <p>Wifi & Network</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="category" data-ng-click="selectOption(6)">
+                                <i class="ion-bug"></i>
+                                <p>Malware / Virus</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="rows">
-                    <div class="col-sm-12 col-md-4">
-                        <div class="category" data-ng-click="selectOption(4)">
-                            <i class="ion-ios-videocam-outline"></i>
-                            <p>Audio & Video</p>
+
+
+                <div style="margin-top: 50px" data-ng-show="computer">
+                    <div class="rows" style="margin-bottom: 30px">
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Computer Repair and Help</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="1" id="1"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Computer Tune Up</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="2" id="2"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Data Back-Up or Transfer</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="3" id="3"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">New Computer Setup</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="4" id="4"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-4">
-                        <div class="category" data-ng-click="selectOption(5)">
-                            <i class="ion-android-wifi"></i>
-                            <p>Wifi & Network</p>
+                    <div class="rows" style="margin-bottom: 30px">
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Software Install or Uninstall</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="5" id="5"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-12 col-md-4">
-                        <div class="category" data-ng-click="selectOption(6)">
-                            <i class="ion-bug"></i>
-                            <p>Malware / Virus</p>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Printer Setup</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="6" id="6"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">OS (Operating System) Install or Re-Install</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="7" id="7"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div style="margin-top: 50px" data-ng-show="smart">
+                    <div class="rows" style="margin-bottom: 30px">
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Smart Security Cam Installation</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="8" id="8"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Smart Hub Installation or Setup</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="9" id="9"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Smart Device Hook-Up</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="10" id="10"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Smart Thermostat Installation</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="11" id="11"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rows" style="margin-bottom: 30px">
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Video Doorbell Installation</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="12" id="12"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 50px" data-ng-show="television">
+                    <div class="rows" style="margin-bottom: 30px">
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Tv Wall Mount Installation</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="13" id="13"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Tv Dismount or Remount</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="14" id="14"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Cable Tv Service</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="15" id="15"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 50px" data-ng-show="audio">
+                    <div class="rows" style="margin-bottom: 30px">
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Home Theater Hook-Up and Setup</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="16" id="16"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Surround Sound System Setup</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="17" id="17"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Tv and Home Theater Support</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="18" id="18"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Streaming Video Device Setup and Support</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="19" id="19"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 50px" data-ng-show="wifi">
+                    <div class="rows" style="margin-bottom: 30px">
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Wifi and Network Connectivity Support</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="20" id="20"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">New Wifi Connection Setup</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="21" id="21"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Wifi Signal Extension</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="22" id="22"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Internet Service Installation</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="23" id="23"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 50px" data-ng-show="malware">
+                    <div class="rows" style="margin-bottom: 30px">
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="rows">
+                                <div class="col-9">
+                                    <span class="option">Virus Removal and Cleanup</span>
+                                </div>
+                                <div class="col-3">
+                                    <label class="rememberme check mt-checkbox mt-checkbox-outline"
+                                           style="vertical-align: middle">
+                                        <input type="checkbox" name="subcat[]" value="24" id="24"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
         <div class="box3">
-            <div class="categories-box3 animated fadeIn" data-ng-show="computer">
-                <div>
-                    <h2 class="title-cat">Computer Support</h2>
-                    <div style="margin-top: 40px; margin-bottom: 40px">
-                        <div class="rows" style="margin-bottom: 30px">
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Computer Repair and Help</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="1" id="1"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Computer Tune Up</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="2" id="2"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Data Back-Up or Transfer</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="3" id="3"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">New Computer Setup</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="4" id="4"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rows" style="margin-bottom: 30px">
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Software Install or Uninstall</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="5" id="5"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Printer Setup</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="6" id="6"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">OS (Operating System) Install or Re-Install</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="7" id="7"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="categories-box3 animated fadeIn" data-ng-show="smart">
-                <div>
-                    <h2 class="title-cat">Smart Home</h2>
-                    <div style="margin-top: 40px; margin-bottom: 40px">
-                        <div class="rows" style="margin-bottom: 30px">
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Smart Security Cam Installation</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="8" id="8"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Smart Hub Installation or Setup</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="9" id="9"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Smart Device Hook-Up</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="10" id="10"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Smart Thermostat Installation</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="11" id="11"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rows" style="margin-bottom: 30px">
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Video Doorbell Installation</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="12" id="12"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="categories-box3 animated fadeIn" data-ng-show="television">
-                <div>
-                    <h2 class="title-cat">Television</h2>
-                    <div style="margin-top: 40px; margin-bottom: 40px">
-                        <div class="rows" style="margin-bottom: 30px">
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Tv Wall Mount Installation</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="13" id="13"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Tv Dismount or Remount</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="14" id="14"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Cable Tv Service</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="15" id="15"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="categories-box3 animated fadeIn" data-ng-show="audio">
-                <div>
-                    <h2 class="title-cat">Audio & Video</h2>
-                    <div style="margin-top: 40px; margin-bottom: 40px">
-                        <div class="rows" style="margin-bottom: 30px">
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Home Theater Hook-Up and Setup</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="16" id="16"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Surround Sound System Setup</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="17" id="17"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Tv and Home Theater Support</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="18" id="18"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Streaming Video Device Setup and Support</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="19" id="19"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="categories-box3 animated fadeIn" data-ng-show="wifi">
-                <div data-ng-show="wifi">
-                    <h2 class="title-cat">Wifi & Network</h2>
-                    <div style="margin-top: 40px; margin-bottom: 40px">
-                        <div class="rows" style="margin-bottom: 30px">
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Wifi and Network Connectivity Support</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="20" id="20"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">New Wifi Connection Setup</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="21" id="21"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Wifi Signal Extension</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="22" id="22"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Internet Service Installation</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="23" id="23"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="categories-box3 animated fadeIn" data-ng-show="malware">
-                <div>
-                    <h2 class="title-cat">Malware / Virus</h2>
-                    <div style="margin-top: 40px; margin-bottom: 40px">
-                        <div class="rows" style="margin-bottom: 30px">
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="rows">
-                                    <div class="col-9">
-                                        <span class="option">Virus Removal and Cleanup</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <label class="rememberme check mt-checkbox mt-checkbox-outline"
-                                               style="vertical-align: middle">
-                                            <input type="checkbox" name="subcat[]" value="24" id="24"/>
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content" style="margin: 0px auto 10px auto !important;">
-                <div class="road-map">
-                    <div class="road-line"></div>
-                    <div class="road-flex">
-                        <p class="step-circle-disable" style="margin-top: 30px; margin-bottom: 20px;">
-                            1
-                        </p>
-                        <p class="step-1">
-                            Register your Basic Data
-                        </p>
-                    </div>
-                    <div class="road-flex">
-                        <p class="step-circle-disable" style="margin-top: 30px; margin-bottom: 20px;">
-                            2
-                        </p>
-                        <p class="step-1">
-                            Select Category
-                        </p>
-                    </div>
-                    <div class="road-flex">
-                        <p class="step-circle" style="margin-top: 30px; margin-bottom: 20px;">
-                            3
-                        </p>
-                        <p class="step-1">
-                            Upload Documents
-                        </p>
-                    </div>
-                    <!--<h3 class="form-title font-green" style="color: #232323; font-size: 28px;">-->
-                    <!--Sign Up To Technician-->
-                    <!--</h3>-->
-                </div>
-            </div>
-            <div class="categories-box1" style="margin-top: 30px;" ng-controller="registerController">
-                <div class="title-cat">
-                    <h2 class="title-cat-text">Documents </h2>
-                    <small class="description-small">We need some important documents to complete your subscription</small>
-                </div>
-                <div class="rows">
-                    <div class="col-sm-12 col-md-3">
-                        <div class="types">
-                            <p>1. Passport</p>
-                        </div>
-                        <div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"
-                             flow-init="{target:'/retrieve/1',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
-                             flow-files-submitted="$flow.upload()"
-                             flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"
-                             flow-attrs="{accept:'image/*'}"
-                             flow-name="vehimagv.flowa"
-                             flow-files-added="added($file,$event,$flow)">
-                            <div class="full-size middle-valigner"  flow-btn>
-                                <i class="fa fa-picture-o fa-3x"></i>
-                            </div>
-                            <div ng-show="$flow.files.length" ng-cloak>
-                                <div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">
-                                    <i class="fa  fa-times"></i>
-                                </div>
-                                <span class="spin-subiendo" >
-                                                        <i class="fa fa-spinner fa-spin"></i>
-                                                    </span>
-                                <img class="imagenes-subiendo" flow-img="$flow.files[0]" />
-                            </div>
-                            <input type="hidden" ng-model="fotoveh1" ng-required="$flow.files[0].isUploading()" />
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-3">
-                        <div class="types">
-                            <p>2. Criminal Record</p>
-                        </div>
-                        <div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"
-                             flow-init="{target:'/retrieve/2',singleFile:true}"
-                             flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
-                             flow-files-submitted="$flow.upload()"
-                             flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"
-                             flow-attrs="{accept:'image/*'}"
-                             flow-name="vehimagv.flowb"
-                             flow-files-added="added($file,$event,$flow)">
-                            <div class="full-size middle-valigner" ng-show="!$flow.files.length" flow-btn>
-                                <i class="fa fa-picture-o fa-3x"></i>
-                            </div>
-                            <div ng-show="$flow.files.length" ng-cloak>
-                                <div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">
-                                    <i class="fa fa-times"></i>
-                                </div>
-                                <span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">
-                                                        <i class="fa fa-spinner fa-spin"></i>
-                                                    </span>
-                                <img class="imagenes-subiendo" flow-img="$flow.files[0]" />
-                            </div>
-                            <input type="hidden" ng-model="fotoveh2" ng-required="$flow.files[0].isUploading()" />
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-3">
-                        <div class="types">
-                            <p>3. ID</p>
-                        </div>
-                        <div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"
-                             flow-init="{target:'/retrieve/3',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
-                             flow-files-submitted="$flow.upload()"
-                             flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"
-                             flow-attrs="{accept:'image/*'}"
-                             flow-name="vehimagv.flowc"
-                             flow-files-added="added($file,$event,$flow)">
-                            <div class="full-size middle-valigner" ng-show="!$flow.files.length" flow-btn>
-                                <i class="fa fa-picture-o fa-3x"></i>
-                            </div>
-                            <div ng-show="$flow.files.length" ng-cloak>
-                                <div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">
-                                    <i class="fa fa-times"></i>
-                                </div>
-                                <span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">
-                                                        <i class="fa fa-spinner fa-spin"></i>
-                                                    </span>
-                                <img class="imagenes-subiendo" flow-img="$flow.files[0]" />
-                            </div>
-                            <input type="hidden" ng-model="fotoveh3" ng-required="$flow.files[0].isUploading()" />
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-3">
-                        <div class="types">
-                            <p>4. Bank Account Information</p>
-                        </div>
-                        <div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"
-                             flow-init="{target:'/retrieve/4',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
-                             flow-files-submitted="$flow.upload()"
-                             flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"
-                             flow-attrs="{accept:'image/*'}"
-                             flow-name="vehimagv.flowd"
-                             flow-files-added="added($file,$event,$flow)">
-
-                            <div class="full-size middle-valigner" ng-show="!$flow.files.length" flow-btn>
-                                <i class="fa fa-picture-o fa-3x"></i>
-                            </div>
-                            <div ng-show="$flow.files.length" ng-cloak>
-                                <div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">
-                                    <i class="fa fa-times"></i>
-                                </div>
-                                <span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">
-                                                        <i class="fa fa-spinner fa-spin"></i>
-                                                    </span>
-                                <img class="imagenes-subiendo" flow-img="$flow.files[0]" />
-                            </div>
-                            <input type="hidden" ng-model="fotoveh4" ng-required="$flow.files[0].isUploading()" />
-                        </div>
-                    </div>
-                </div>
-                <!--<div class="rows">-->
-                    <!--<div class="col-sm-12 col-md-6 col-lg-4">-->
-                        <!--<div class="types">-->
-                            <!--<p>1. Passport</p>-->
-                        <!--</div>-->
-                        <!--<div class="input-group">-->
-                            <!--<input type="text" class="form-control" style="height: 38px !important;" readonly>-->
-                            <!--<label class="input-group-btn">-->
-                                <!--<span class="btn btn-beet">-->
-                                    <!--<i class="fa fa-upload"></i> <input type="file" style="display: none;" multiple>-->
-                                <!--</span>-->
-                            <!--</label>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="rows">-->
-                    <!--<div class="col-sm-12 col-md-6 col-lg-4">-->
-                        <!--<div class="types">-->
-                            <!--<p>2. Criminal Record</p>-->
-                        <!--</div>-->
-                        <!--<div class="input-group">-->
-                            <!--<input type="text" class="form-control" style="height: 38px !important;" readonly>-->
-                            <!--<label class="input-group-btn">-->
-                                <!--<span class="btn btn-beet">-->
-                                    <!--<i class="fa fa-upload"></i> <input type="file" style="display: none;" multiple>-->
-                                <!--</span>-->
-                            <!--</label>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="rows">-->
-                    <!--<div class="col-sm-12 col-md-6 col-lg-4">-->
-                        <!--<div class="types">-->
-                            <!--<p>3. ID</p>-->
-                        <!--</div>-->
-                        <!--<div class="input-group">-->
-                            <!--<input type="text" class="form-control" style="height: 38px !important;" readonly>-->
-                            <!--<label class="input-group-btn">-->
-                                <!--<span class="btn btn-beet">-->
-                                    <!--<i class="fa fa-upload"></i> <input type="file" style="display: none;" multiple>-->
-                                <!--</span>-->
-                            <!--</label>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="rows">-->
-                    <!--<div class="col-sm-12 col-md-6 col-lg-4">-->
-                        <!--<div class="types">-->
-                            <!--<p>4. Bank Account Information</p>-->
-                        <!--</div>-->
-                        <!--<div class="input-group">-->
-                            <!--<input type="text" class="form-control" style="height: 38px !important;" readonly>-->
-                            <!--<label class="input-group-btn">-->
-                                <!--<span class="btn btn-beet">-->
-                                    <!--<i class="fa fa-upload"></i> <input type="file" style="display: none;" multiple>-->
-                                <!--</span>-->
-                            <!--</label>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-
-                <form style="margin-top: 0; margin-bottom: 0;"
-                      action="/vehiculo/vehiculo/createasync"
-                      name="formNuevoVehiculo"
-                      method="post"
-                      id="formNuevoVehiculo">
-                    <div class=" ">
-                        <div class="col-xs-12 img-add-veh-tp no-space-right" ng-controller="registerController">
-                            <div class="input-group">
-                                <span class="input-group-addon name-input-tp"> Im&aacute;genes</span>
-                                <div class="container-fluid no-padding">
-                                    <!--<div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"-->
-                                         <!--flow-init="{target:'/retrieve/1',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"-->
-                                         <!--flow-files-submitted="$flow.upload()"-->
-                                         <!--flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"-->
-                                         <!--flow-attrs="{accept:'image/*'}"-->
-                                         <!--flow-name="vehimagv.flowa"-->
-                                         <!--flow-files-added="added($file,$event,$flow)">-->
-                                        <!--<div class="full-size middle-valigner"  flow-btn>-->
-                                            <!--<i class="fa fa-picture-o fa-3x"></i>-->
-                                        <!--</div>-->
-                                        <!--<div ng-show="$flow.files.length" ng-cloak>-->
-                                            <!--<div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">-->
-                                                <!--<i class="fa  fa-times"></i>-->
-                                            <!--</div>-->
-                                            <!--<span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">-->
-                                                        <!--<i class="fa fa-spinner fa-spin"></i>-->
-                                                    <!--</span>-->
-                                            <!--<img class="imagenes-subiendo" flow-img="$flow.files[0]" />-->
-                                        <!--</div>-->
-                                        <!--<input type="hidden" ng-model="fotoveh1" ng-required="$flow.files[0].isUploading()" />-->
-                                    <!--</div>-->
-                                    <!--<div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"-->
-                                         <!--flow-init="{target:'/retrieve/2',singleFile:true}"-->
-                                         <!--flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"-->
-                                         <!--flow-files-submitted="$flow.upload()"-->
-                                         <!--flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"-->
-                                         <!--flow-attrs="{accept:'image/*'}"-->
-                                         <!--flow-name="vehimagv.flowb"-->
-                                         <!--flow-files-added="added($file,$event,$flow)">-->
-                                        <!--<div class="full-size middle-valigner" ng-show="!$flow.files.length" flow-btn>-->
-                                            <!--<i class="fa fa-picture-o fa-3x"></i>-->
-                                        <!--</div>-->
-                                        <!--<div ng-show="$flow.files.length" ng-cloak>-->
-                                            <!--<div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">-->
-                                                <!--<i class="fa fa-lg fa-times"></i>-->
-                                            <!--</div>-->
-                                            <!--<span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">-->
-                                                        <!--<i class="fa fa-spinner fa-spin"></i>-->
-                                                    <!--</span>-->
-                                            <!--<img class="imagenes-subiendo" flow-img="$flow.files[0]" />-->
-                                        <!--</div>-->
-                                        <!--<input type="hidden" ng-model="fotoveh2" ng-required="$flow.files[0].isUploading()" />-->
-                                    <!--</div>-->
-                                    <!--<div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"-->
-                                         <!--flow-init="{target:'/retrieve/3',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"-->
-                                         <!--flow-files-submitted="$flow.upload()"-->
-                                         <!--flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"-->
-                                         <!--flow-attrs="{accept:'image/*'}"-->
-                                         <!--flow-name="vehimagv.flowc"-->
-                                         <!--flow-files-added="added($file,$event,$flow)">-->
-                                        <!--<div class="full-size middle-valigner" ng-show="!$flow.files.length" flow-btn>-->
-                                            <!--<i class="fa fa-picture-o fa-3x"></i>-->
-                                        <!--</div>-->
-                                        <!--<div ng-show="$flow.files.length" ng-cloak>-->
-                                            <!--<div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">-->
-                                                <!--<i class="fa fa-lg fa-times"></i>-->
-                                            <!--</div>-->
-                                            <!--<span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">-->
-                                                        <!--<i class="fa fa-spinner fa-spin"></i>-->
-                                                    <!--</span>-->
-                                            <!--<img class="imagenes-subiendo" flow-img="$flow.files[0]" />-->
-                                        <!--</div>-->
-                                        <!--<input type="hidden" ng-model="fotoveh3" ng-required="$flow.files[0].isUploading()" />-->
-                                    <!--</div>-->
-                                    <!--<div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"-->
-                                         <!--flow-init="{target:'/retrieve/4',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"-->
-                                         <!--flow-files-submitted="$flow.upload()"-->
-                                         <!--flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"-->
-                                         <!--flow-attrs="{accept:'image/*'}"-->
-                                         <!--flow-name="vehimagv.flowd"-->
-                                         <!--flow-files-added="added($file,$event,$flow)">-->
-
-                                        <!--<div class="full-size middle-valigner" ng-show="!$flow.files.length" flow-btn>-->
-                                            <!--<i class="fa fa-picture-o fa-3x"></i>-->
-                                        <!--</div>-->
-                                        <!--<div ng-show="$flow.files.length" ng-cloak>-->
-                                            <!--<div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">-->
-                                                <!--<i class="fa fa-lg fa-times"></i>-->
-                                            <!--</div>-->
-                                            <!--<span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">-->
-                                                        <!--<i class="fa fa-spinner fa-spin"></i>-->
-                                                    <!--</span>-->
-                                            <!--<img class="imagenes-subiendo" flow-img="$flow.files[0]" />-->
-                                        <!--</div>-->
-                                        <!--<input type="hidden" ng-model="fotoveh4" ng-required="$flow.files[0].isUploading()" />-->
-                                    <!--</div>-->
-                                </div>
-                            </div>
-                            <div class="error-formulario" ng-show="subiendoImgs && formVehiculoSubmit" ng-cloak>Espere a que su imagen cargue.</div>
-                            <div class="error-formulario text-success-color" ng-show="imgsUp && formVehiculoSubmit" ng-cloak>Sus imágenes se han cargado correctamente.</div>
-                        </div>
-                    </div>
-                    <div class="container-fluid no-padding">
-                        <div class="col-xs-12 col-md-4 col-lg-3 no-space pull-right">
-                            <button type="button" id="guardar" class="btn btn-lg boton-pw success-color btn-grande-usuariogeneral"
-                                    ng-click="formNuevoVehiculoSubmit(formNuevoVehiculo)">
-                                <div id="boton-guardar">
-                        <span class="icon-btn-grande-usuariogeneral">
-                            <i class="fa fa-plus"></i>
-                            <i class="fa fa-car"></i>
-                        </span>
-                                    <span> Crear Veh&iacute;culo</span>
-                                </div>
-                                <span id="loading-guardar" style="display: none">
-                                            <i class="icon-spinner icon-spin" ></i> Creando
-                                        </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-
-
-            </div>
-
-
             <!--<a href="#" class="send-btn" id="spiralcf-submit" style="position: absolute; bottom: 0">Send</a>-->
             <div align="center">
                 <!--<button type="submit" class="btn btn-login uppercase">-->
                     <!--Send-->
                 <!--</button>-->
-                <input type="button" class="btn btn-login uppercase" id="successUpload" value="Send">
+                <input type="button" class="btn btn-login uppercase" id="successUpload" value="Next">
 
             </div>
         </div>

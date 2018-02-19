@@ -31,6 +31,8 @@ beetApp.controller('categoriesController', ['$scope', function ($scope) {
     $scope.wifi = false;
     $scope.malware = false;
     $scope.buttonSend = false;
+    $scope.categories = true;
+    $scope.tabs = false;
 
     $scope.selectOption = function (opc) {
         switch (opc) {
@@ -42,6 +44,8 @@ beetApp.controller('categoriesController', ['$scope', function ($scope) {
                 $scope.wifi = false;
                 $scope.malware = false;
                 $scope.buttonSend = true;
+                $scope.categories = false;
+                $scope.tabs = true;
                 break;
             case 2:
                 $scope.computer = false;
@@ -51,6 +55,8 @@ beetApp.controller('categoriesController', ['$scope', function ($scope) {
                 $scope.wifi = false;
                 $scope.malware = false;
                 $scope.buttonSend = true;
+                $scope.categories = false;
+                $scope.tabs = true;
                 break;
             case 3:
                 $scope.computer = false;
@@ -60,6 +66,8 @@ beetApp.controller('categoriesController', ['$scope', function ($scope) {
                 $scope.wifi = false;
                 $scope.malware = false;
                 $scope.buttonSend = true;
+                $scope.categories = false;
+                $scope.tabs = true;
                 break;
             case 4:
                 $scope.computer = false;
@@ -69,6 +77,8 @@ beetApp.controller('categoriesController', ['$scope', function ($scope) {
                 $scope.wifi = false;
                 $scope.malware = false;
                 $scope.buttonSend = true;
+                $scope.categories = false;
+                $scope.tabs = true;
                 break;
             case 5:
                 $scope.computer = false;
@@ -78,6 +88,8 @@ beetApp.controller('categoriesController', ['$scope', function ($scope) {
                 $scope.wifi = true;
                 $scope.malware = false;
                 $scope.buttonSend = true;
+                $scope.categories = false;
+                $scope.tabs = true;
                 break;
             case 6:
                 $scope.computer = false;
@@ -87,6 +99,7 @@ beetApp.controller('categoriesController', ['$scope', function ($scope) {
                 $scope.wifi = false;
                 $scope.malware = true;
                 $scope.buttonSend = true;
+                $scope.categories = false;
                 break;
         }
         $scope.isVisible = !$scope.isVisible;
