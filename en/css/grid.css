@@ -9841,6 +9841,46 @@ a.text-dark:focus, a.text-dark:hover {
     color: #fff;
 }
 
+.btn-login:hover {
+    background-color: #821e3b;
+    /*width: 100%;*/
+    border-radius: 40px;
+    padding: 1.1rem 5rem;
+    margin-top: 1.8rem;
+    box-shadow: 0 5px 10px 2px rgba(152, 22, 244, .19) !important;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.btn-register {
+    background-color: #821e3b;
+    /*width: 100%;*/
+    border-radius: 40px;
+    padding: 1.1rem 5rem;
+    margin-top: 1rem;
+    box-shadow: 0 5px 10px 2px rgba(152, 22, 244, .19) !important;
+    font-size: 1rem;
+    /*margin-bottom: 3rem;*/
+    color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn-register:hover {
+    background-color: #821e3b;
+    /*width: 100%;*/
+    border-radius: 40px;
+    padding: 1.1rem 5rem;
+    margin-top: 1rem;
+    box-shadow: 0 5px 10px 2px rgba(152, 22, 244, .19) !important;
+    font-size: 1rem;
+    /*margin-bottom: 3rem;*/
+    color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .link-p p {
     color: #821e3b !important;
 }
