@@ -10355,6 +10355,20 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     font-weight: normal !important;
 }
 
+@media (max-width: 600px) {
+    .step-1 {
+        font-size: 12px;
+
+    }
+}
+
+@media (max-width: 320px) {
+    .step-1 {
+        font-size: 11px;
+
+    }
+}
+
 .road-map {
     display: flex;
     flex-direction: row;
@@ -10363,7 +10377,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
 }
 
 .road-line {
-    width: 60%;
+    width: 70%;
     height: 3px;
     background: #e5e4e8;
     position: absolute;
@@ -10615,13 +10629,13 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     /*height: 200px !important;*/
     /*margin-top: -80px*/
     position: absolute;
-    top: 80px
+    top: 90px
 }
 
 .image-tech img {
     text-align: center;
-    max-width: 150px !important;
-    height: 150px !important;
+    max-width: 120px !important;
+    height: 120px !important;
     /*margin: 0 auto !important;*/
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -10764,7 +10778,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
 }
 
 .info-payment {
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .price-text {
@@ -11175,4 +11189,156 @@ button {
     font-weight: normal;
     justify-content: center;
     padding-bottom: 10px;
+}
+
+.img-add-veh-tp {
+    padding-left: 2px;
+}
+.no-space-right {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+}
+.name-input-tp{
+    background-color: #FFFFFF;
+    font-size: 1.55rem;
+    border: none;
+    padding-top: 8px;
+    padding-left: 0;
+    color: #555555;
+    font-weight: normal !important;
+}
+.middle-valigner{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.mini-imagen{
+    position: relative;
+    display: inline-block;
+    background-color: #f7f7f7;
+    border: 2px dashed #b5b5b5;
+    height: 150px;
+    width: 150px;
+    z-index: 1;
+    margin: 4px;
+    cursor: pointer;
+}
+.mini-imagen:hover{
+    box-shadow: 0 0 4px #b5b5b5;
+}
+
+.mini-imagen-circle{
+    position: relative;
+    display: inline-block;
+    background-color: #f7f7f7;
+    border: 2px dashed #b5b5b5;
+    height: 150px;
+    width: 150px;
+    z-index: 1;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+.mini-imagen-circle:hover{
+    box-shadow: 0 0 4px #b5b5b5;
+}
+.mini-imagen .descartar-obj{
+    background-color: #B40000;
+    z-index: 2;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 30px;
+    width: 15px;
+    height: 15px;
+    font-size: 0.8rem;
+}
+
+.mini-imagen-circle .descartar-obj{
+    background-color: #B40000;
+    z-index: 2;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    border-radius: 30px;
+    width: 15px;
+    height: 15px;
+    font-size: 0.8rem;
+}
+.mini-imagen > .middle-valigner > i {
+    color: #bfbfbf;
+}
+.mini-imagen > .middle-valigner{
+    position: absolute;
+}
+.mini-imagen .descartar-obj .fa-times{
+    color: #FFFFFF;
+}
+.mini-imagen .descartar-obj:hover{
+    width: 18px;
+    height: 18px;
+    /*font-size: 0.8rem;*/
+}
+
+.mini-imagen-circle > .middle-valigner > i {
+    color: #bfbfbf;
+}
+.mini-imagen-circle > .middle-valigner{
+    position: absolute;
+}
+.mini-imagen-circle .descartar-obj .fa-times{
+    color: #FFFFFF;
+}
+.mini-imagen-circle .descartar-obj:hover{
+    width: 18px;
+    height: 18px;
+    /*font-size: 0.8rem;*/
+}
+.imagenes-subiendo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    max-height: 150px;
+    min-width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 100%;
+}
+.spin-subiendo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #b42952;
+    z-index: 2;
+    width: 100%;
+    font-size: 3rem;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+.full-size{
+    width: 100% !important;
+    height: 100% !important;
+}
+i{
+    margin:0 auto;
+}
+.mini-imagen > .middle-valigner > i,
+.mini-imagen > .spin-subiendo{
+    font-size: 4rem;
+}
+.mini-imagen-circle > .middle-valigner > i,
+.mini-imagen-circle > .spin-subiendo{
+    font-size: 4rem;
+}
+
+.upload-text {
+    color: #919191;
+    font-size: 16px;
+
+    /*font-weight: bold;*/
+
 }

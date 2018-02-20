@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en-US" data-ng-app="beetApp" data-ng-cloak>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Categories - BEET</title>
+    <meta name="description" content="Spiral HTML5 premium template">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet"
+          href="http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400italic%2C300%2C700%7CRaleway%3A400%2C200%2C600%2C700&amp;ver=4.2.6"
+          type="text/css" media="all">
+    <link rel="stylesheet" href="rs-plugin/css/settings.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/icons/icons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/core-icons/core_style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/scripts.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/animate.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/ionicons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/sweetalert2.css" type="text/css" media="all">
+
+    <!--<script>-->
+    <!--function preview_images() {-->
+    <!--var total_file = document.getElementById("images").files.length;-->
+    <!--for (var i = 0; i < total_file; i++) {-->
+    <!--$('#image_preview').append("<div class='col-md-3'><img class='img-responsive' src='" + URL.createObjectURL(event.target.files[i]) + "'></div>");-->
+    <!--}-->
+    <!--}-->
+    <!--</script>-->
+
+    <style>
+        .img-add-veh-tp {
+            padding-left: 2px;
+        }
+        .no-space-right {
+            padding-right: 0 !important;
+            margin-right: 0 !important;
+        }
+        .name-input-tp{
+            background-color: #FFFFFF;
+            font-size: 1.55rem;
+            border: none;
+            padding-top: 8px;
+            padding-left: 0;
+            color: #555555;
+            font-weight: normal !important;
+        }
+        .middle-valigner{
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .mini-imagen{
+            position: relative;
+            display: inline-block;
+            background-color: #f7f7f7;
+            border: 2px dashed #b5b5b5;
+            height: 150px;
+            width: 150px;
+            z-index: 1;
+            margin: 4px;
+            cursor: pointer;
+        }
+        .mini-imagen:hover{
+            box-shadow: 0 0 4px #b5b5b5;
+        }
+        .mini-imagen .descartar-obj{
+            background-color: #B40000;
+            z-index: 2;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            border-radius: 30px;
+            width: 15px;
+            height: 15px;
+            font-size: 0.8rem;
+        }
+        .mini-imagen > .middle-valigner > i {
+            color: #bfbfbf;
+        }
+        .mini-imagen > .middle-valigner{
+            position: absolute;
+        }
+        .mini-imagen .descartar-obj .fa-times{
+            color: #FFFFFF;
+        }
+        .mini-imagen .descartar-obj:hover{
+            width: 18px;
+            height: 18px;
+            /*font-size: 0.8rem;*/
+        }
+        .imagenes-subiendo{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            max-height: 150px;
+            min-width: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+        .spin-subiendo{
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #b42952;
+            z-index: 2;
+            width: 100%;
+            font-size: 3rem;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.75);
+            text-align: center;
+            align-items: center;
+            display: flex;
+        }
+        .full-size{
+            width: 100% !important;
+            height: 100% !important;
+        }
+        i{
+            margin:0 auto;
+        }
+        .mini-imagen > .middle-valigner > i,
+        .mini-imagen > .spin-subiendo{
+            font-size: 4rem;
+        }
+
+    </style>
+
+</head>
+
+<body class="page login" data-ng-controller="categoriesController">
+
+<!--<section id="headline_breadcrumbs_bar" class="hadline_no_image hadline_no_image2">-->
+<!---->
+<!--</section>-->
+<div class="logo animated fadeIn" style="margin-top: 20px !important;">
+    <a href="index.html">
+        <img src="../images/logo-black.png"/>
+    </a>
+</div>
+
+<div class="content" style="margin: 0px auto 10px auto !important;">
+    <div class="road-map">
+        <div class="road-line"></div>
+        <div class="road-flex">
+            <p class="step-circle-disable" style="margin-top: 30px; margin-bottom: 20px;">
+                1
+            </p>
+            <p class="step-1">
+                Register your Basic Data
+            </p>
+        </div>
+        <div class="road-flex">
+            <p class="step-circle" style="margin-top: 30px; margin-bottom: 20px;">
+                2
+            </p>
+            <p class="step-1">
+                Complete Data
+            </p>
+        </div>
+        <div class="road-flex">
+            <p class="step-circle-disable" style="margin-top: 30px; margin-bottom: 20px;">
+                3
+            </p>
+            <p class="step-1">
+                Select Category
+            </p>
+        </div>
+        <div class="road-flex">
+            <p class="step-circle-disable" style="margin-top: 30px; margin-bottom: 20px;">
+                4
+            </p>
+            <p class="step-1">
+                Upload Documents
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid animated fadeIn content">
+    <form class="categories-contain" id="form_confirm" enctype="multipart/form-data">
+        <div align="center">
+            <div class="rows">
+                <div class="col-sm-12 col-md-4">
+                    <div style="margin-bottom: 20px">
+                        <div class="upload-text">Upload a current</div>
+                        <div class="upload-text">headshot of yourself</div>
+                    </div>
+                    <div class="mini-imagen-circle" data-toggle="tooltip" title="Haga clic para subir una imagen"
+                         flow-init="{target:'/retrieve/1',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
+                         flow-files-submitted="$flow.upload()"
+                         flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"
+                         flow-attrs="{accept:'image/*'}"
+                         flow-name="vehimagv.flowa"
+                         flow-files-added="added($file,$event,$flow)">
+                        <div class="full-size middle-valigner"  flow-btn>
+                            <i class="fa fa-picture-o fa-3x"></i>
+                        </div>
+                        <div ng-show="$flow.files.length" ng-cloak>
+                            <div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">
+                                <i class="fa  fa-times"></i>
+                            </div>
+                            <span class="spin-subiendo" >
+                                                            <i class="fa fa-spinner fa-spin"></i>
+                                                        </span>
+                            <img class="imagenes-subiendo" flow-img="$flow.files[0]" />
+                        </div>
+                        <input type="hidden" ng-model="fotoveh1" ng-required="$flow.files[0].isUploading()" />
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-8">
+                    <div class="form-group">
+                        <div class="upload-text">Cuentanos sobre ti.</div>
+                        <div class="upload-text">Escribe una breve descripcion</div>
+                        <textarea class="form-control form-control-solid placeholder-no-fix" style="border-radius: 0 !important; -webkit-box-shadow: 0px 2px 6px 0px rgba(217,214,217,1);
+-moz-box-shadow: 0px 2px 6px 0px rgba(217,214,217,1);
+box-shadow: 0px 2px 6px 0px rgba(217,214,217,1);" rows="7" id="comment" placeholder="Type here"></textarea>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="box3">
+            <!--<a href="#" class="send-btn" id="spiralcf-submit" style="position: absolute; bottom: 0">Send</a>-->
+            <div align="center">
+                <!--<button type="submit" class="btn btn-login uppercase">-->
+                <!--Send-->
+                <!--</button>-->
+                <a href="#" class="btn btn-register uppercase">Next <i class="ion-forward"></i></a>
+
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<!--<div class="row full-width footer"> BEET ©2017.  <a href="#"><span class="terms">Terms and Conditions</span></a> | <a href="#"><span class="terms">Privacy Policy</span></a></div>-->
+
+<!--<footer id="ABdev_main_footer">-->
+<!--<div id="footer_copyright">-->
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--<div class="span4 footer_copyright left_aligned">-->
+<!--© 2016. All Rights Reserved-->
+<!--</div>-->
+<!--<div class="span4 center_aligned">-->
+<!--<a href="#" id="back_to_top" title="Back to top">-->
+<!--<i class="ci_icon-angle-up"></i>-->
+<!--</a>-->
+<!--</div>-->
+<!--<div class="span4 footer_credits right_aligned">-->
+<!--Developed By Koffeeion-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</footer>-->
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery.slim.min.js" ></script>
+<script type="text/javascript" src="../js/angular/angular.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+
+<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
+
+<script src="../js/moment.js"></script>
+<script src="../js/fullcalendar.js"></script>
+<script src="../js/gcal.js"></script>
+<script src="../js/calendar.js"></script>
+<script src="../js/ng-flow-standalone.min.js"></script>
+<script src="../js/angular/app.js"></script>
+
+<script type="text/javascript" src="js/stickymenu.js"></script>
+<!--<script type="text/javascript" src="js/jquery-ui.min.js"></script>-->
+<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="js/prettify.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="js/portfolio-init.js"></script>
+<script type="text/javascript" src="../js/sweetalert2.min.js"></script>
+<script type="text/javascript" src="../js/alerts.js"></script>
+<!--<script type="text/javascript" src="js/scripts.js"></script>-->
+<!--<script type="text/javascript" src="js/custom.js"></script>-->
+
+<script src="js/index.js"></script>
+
+</body>
+</html>

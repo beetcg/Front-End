@@ -33,104 +33,10 @@
     <!--}-->
     <!--</script>-->
 
-    <style>
-        .img-add-veh-tp {
-            padding-left: 2px;
-        }
-        .no-space-right {
-            padding-right: 0 !important;
-            margin-right: 0 !important;
-        }
-        .name-input-tp{
-            background-color: #FFFFFF;
-            font-size: 1.55rem;
-            border: none;
-            padding-top: 8px;
-            padding-left: 0;
-            color: #555555;
-            font-weight: normal !important;
-        }
-        .middle-valigner{
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        .mini-imagen{
-            position: relative;
-            display: inline-block;
-            background-color: #f7f7f7;
-            border: 2px dashed #b5b5b5;
-            height: 150px;
-            width: 150px;
-            z-index: 1;
-            margin: 4px;
-            cursor: pointer;
-        }
-        .mini-imagen:hover{
-            box-shadow: 0 0 4px #b5b5b5;
-        }
-        .mini-imagen .descartar-obj{
-            background-color: #B40000;
-            z-index: 2;
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            border-radius: 30px;
-            width: 15px;
-            height: 15px;
-            font-size: 0.8rem;
-        }
-        .mini-imagen > .middle-valigner > i {
-            color: #bfbfbf;
-        }
-        .mini-imagen > .middle-valigner{
-            position: absolute;
-        }
-        .mini-imagen .descartar-obj .fa-times{
-            color: #FFFFFF;
-        }
-        .mini-imagen .descartar-obj:hover{
-            width: 18px;
-            height: 18px;
-            /*font-size: 0.8rem;*/
-        }
-        .imagenes-subiendo{
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            max-height: 150px;
-            min-width: 100%;
-            object-fit: cover;
-            object-position: center center;
-        }
-        .spin-subiendo{
-            position: absolute;
-            top: 0;
-            left: 0;
-            color: #b42952;
-            z-index: 2;
-            width: 100%;
-            font-size: 3rem;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.75);
-            text-align: center;
-            align-items: center;
-            display: flex;
-        }
-        .full-size{
-            width: 100% !important;
-            height: 100% !important;
-        }
-        i{
-            margin:0 auto;
-        }
-        .mini-imagen > .middle-valigner > i,
-        .mini-imagen > .spin-subiendo{
-            font-size: 4rem;
-        }
+    <!--<style>-->
+        <!---->
 
-    </style>
+    <!--</style>-->
 
 </head>
 
@@ -157,41 +63,47 @@
 
 </div>
 
+<div class="content" style="margin: 0px auto 10px auto !important;">
+    <div class="road-map">
+        <div class="road-line"></div>
+        <div class="road-flex">
+            <p class="step-circle-disable" style="margin-top: 30px; margin-bottom: 20px;">
+                1
+            </p>
+            <p class="step-1">
+                Register your Basic Data
+            </p>
+        </div>
+        <div class="road-flex">
+            <p class="step-circle-disable" style="margin-top: 30px; margin-bottom: 20px;">
+                2
+            </p>
+            <p class="step-1">
+                Complete Data
+            </p>
+        </div>
+        <div class="road-flex">
+            <p class="step-circle-disable" style="margin-top: 30px; margin-bottom: 20px;">
+                3
+            </p>
+            <p class="step-1">
+                Select Category
+            </p>
+        </div>
+        <div class="road-flex">
+            <p class="step-circle" style="margin-top: 30px; margin-bottom: 20px;">
+                4
+            </p>
+            <p class="step-1">
+                Upload Documents
+            </p>
+        </div>
+    </div>
+</div>
+
 <div class="container-fluid animated fadeIn" style="margin-bottom: 50px">
     <form class="categories-contain" id="form_confirm" enctype="multipart/form-data">
-        <div class="box3">
-            <div class="content" style="margin: 0px auto 10px auto !important;">
-                <div class="road-map">
-                    <div class="road-line"></div>
-                    <div class="road-flex">
-                        <p class="step-circle-disable" style="margin-top: 30px; margin-bottom: 20px;">
-                            1
-                        </p>
-                        <p class="step-1">
-                            Register your Basic Data
-                        </p>
-                    </div>
-                    <div class="road-flex">
-                        <p class="step-circle-disable" style="margin-top: 30px; margin-bottom: 20px;">
-                            2
-                        </p>
-                        <p class="step-1">
-                            Select Category
-                        </p>
-                    </div>
-                    <div class="road-flex">
-                        <p class="step-circle" style="margin-top: 30px; margin-bottom: 20px;">
-                            3
-                        </p>
-                        <p class="step-1">
-                            Upload Documents
-                        </p>
-                    </div>
-                    <!--<h3 class="form-title font-green" style="color: #232323; font-size: 28px;">-->
-                    <!--Sign Up To Technician-->
-                    <!--</h3>-->
-                </div>
-            </div>
+        <div class="box1">
                 <div class="categories-box1" style="margin-top: 30px;" ng-controller="registerController">
                     <div class="title-cat">
                         <h2 class="title-cat-text">Documents </h2>
