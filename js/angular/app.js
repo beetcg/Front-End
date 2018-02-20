@@ -7,6 +7,8 @@ beetApp.controller('joinUsController', ['$scope', function ($scope) {
 beetApp.controller('LoginController', ['$scope', function ($scope) {
     $scope.login = true;
     $scope.forgot = false;
+    $scope.activeEye = false;
+    $scope.inputType = 'password';
 
     $scope.selectOption = function (opc) {
         switch (opc) {
@@ -20,7 +22,17 @@ beetApp.controller('LoginController', ['$scope', function ($scope) {
                 break;
         }
         $scope.isVisible = !$scope.isVisible;
-    }
+    };
+
+    $scope.hideShowPassword = function(){
+        $scope.activeEye = !$scope.activeEye;
+
+        if ($scope.inputType == 'password') {
+            $scope.inputType = 'text';
+        }
+        else
+            $scope.inputType = 'password';
+    };
 }]);
 
 beetApp.controller('categoriesController', ['$scope', function ($scope) {

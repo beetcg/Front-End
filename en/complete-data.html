@@ -23,122 +23,48 @@
     <link rel="stylesheet" href="css/ionicons.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
     <link rel="stylesheet" href="../css/sweetalert2.css" type="text/css" media="all">
-
-    <!--<script>-->
-    <!--function preview_images() {-->
-    <!--var total_file = document.getElementById("images").files.length;-->
-    <!--for (var i = 0; i < total_file; i++) {-->
-    <!--$('#image_preview').append("<div class='col-md-3'><img class='img-responsive' src='" + URL.createObjectURL(event.target.files[i]) + "'></div>");-->
-    <!--}-->
-    <!--}-->
-    <!--</script>-->
-
-    <style>
-        .img-add-veh-tp {
-            padding-left: 2px;
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
         }
-        .no-space-right {
-            padding-right: 0 !important;
-            margin-right: 0 !important;
+        * {
+            box-sizing: border-box;
         }
-        .name-input-tp{
-            background-color: #FFFFFF;
-            font-size: 1.55rem;
-            border: none;
-            padding-top: 8px;
-            padding-left: 0;
-            color: #555555;
-            font-weight: normal !important;
+        .slider {
+            width: 50%;
+            margin: 100px auto;
         }
-        .middle-valigner{
-            display: flex;
-            align-items: center;
-            position: relative;
+        .slick-slide {
+            margin: 0px 20px;
         }
-        .mini-imagen{
-            position: relative;
-            display: inline-block;
-            background-color: #f7f7f7;
-            border: 2px dashed #b5b5b5;
-            height: 150px;
-            width: 150px;
-            z-index: 1;
-            margin: 4px;
-            cursor: pointer;
-        }
-        .mini-imagen:hover{
-            box-shadow: 0 0 4px #b5b5b5;
-        }
-        .mini-imagen .descartar-obj{
-            background-color: #B40000;
-            z-index: 2;
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            border-radius: 30px;
-            width: 15px;
-            height: 15px;
-            font-size: 0.8rem;
-        }
-        .mini-imagen > .middle-valigner > i {
-            color: #bfbfbf;
-        }
-        .mini-imagen > .middle-valigner{
-            position: absolute;
-        }
-        .mini-imagen .descartar-obj .fa-times{
-            color: #FFFFFF;
-        }
-        .mini-imagen .descartar-obj:hover{
-            width: 18px;
-            height: 18px;
-            /*font-size: 0.8rem;*/
-        }
-        .imagenes-subiendo{
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            max-height: 150px;
-            min-width: 100%;
-            object-fit: cover;
-            object-position: center center;
-        }
-        .spin-subiendo{
-            position: absolute;
-            top: 0;
-            left: 0;
-            color: #b42952;
-            z-index: 2;
+        .slick-slide img {
             width: 100%;
-            font-size: 3rem;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.75);
-            text-align: center;
-            align-items: center;
-            display: flex;
         }
-        .full-size{
-            width: 100% !important;
-            height: 100% !important;
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
         }
-        i{
-            margin:0 auto;
-        }
-        .mini-imagen > .middle-valigner > i,
-        .mini-imagen > .spin-subiendo{
-            font-size: 4rem;
+        .slick-slide {
+            transition: all ease-in-out .3s;
+            opacity: .2;
         }
 
+        .slick-active {
+            opacity: .5;
+        }
+        .slick-current {
+            opacity: 1;
+        }
     </style>
-
 </head>
 
 <body class="page login" data-ng-controller="categoriesController">
 
-<!--<section id="headline_breadcrumbs_bar" class="hadline_no_image hadline_no_image2">-->
-<!---->
-<!--</section>-->
 <div class="logo animated fadeIn" style="margin-top: 20px !important;">
     <a href="index.html">
         <img src="../images/logo-black.png"/>
@@ -181,64 +107,369 @@
             </p>
         </div>
     </div>
-</div>
 
-<div class="container-fluid animated fadeIn content">
-    <form class="categories-contain" id="form_confirm" enctype="multipart/form-data">
+
+    <form class="login-form animated fadeIn" action="index.html" method="post">
         <div align="center">
-            <div class="rows">
-                <div class="col-sm-12 col-md-4">
-                    <div style="margin-bottom: 20px">
-                        <div class="upload-text">Upload a current</div>
-                        <div class="upload-text">headshot of yourself</div>
+            <!--<div style="margin-bottom: 20px">-->
+                <!--<div class="upload-text">Upload a current</div>-->
+                <!--<div class="upload-text">headshot of yourself</div>-->
+            <!--</div>-->
+            <div class="mini-imagen-circle" data-toggle="tooltip" title="Haga clic para subir una imagen"
+                 flow-init="{target:'/retrieve/1',singleFile:true}"
+                 flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
+                 flow-files-submitted="$flow.upload()"
+                 flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"
+                 flow-attrs="{accept:'image/*'}"
+                 flow-name="vehimagv.flowa"
+                 flow-files-added="added($file,$event,$flow)">
+                <div class="full-size middle-valigner" flow-btn>
+                    <i class="fa ion-ios-camera fa-3x"></i>
+                </div>
+                <div ng-show="$flow.files.length" ng-cloak>
+                    <div class="middle-valigner descartar-obj" ng-show="$flow.files.length"
+                         ng-click="removeImage($flow.files[0])">
+                        <i class="fa  fa-times"></i>
                     </div>
-                    <div class="mini-imagen-circle" data-toggle="tooltip" title="Haga clic para subir una imagen"
-                         flow-init="{target:'/retrieve/1',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
-                         flow-files-submitted="$flow.upload()"
-                         flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"
-                         flow-attrs="{accept:'image/*'}"
-                         flow-name="vehimagv.flowa"
-                         flow-files-added="added($file,$event,$flow)">
-                        <div class="full-size middle-valigner"  flow-btn>
-                            <i class="fa fa-picture-o fa-3x"></i>
-                        </div>
-                        <div ng-show="$flow.files.length" ng-cloak>
-                            <div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">
-                                <i class="fa  fa-times"></i>
-                            </div>
-                            <span class="spin-subiendo" >
+                    <span class="spin-subiendo">
                                                             <i class="fa fa-spinner fa-spin"></i>
                                                         </span>
-                            <img class="imagenes-subiendo" flow-img="$flow.files[0]" />
-                        </div>
-                        <input type="hidden" ng-model="fotoveh1" ng-required="$flow.files[0].isUploading()" />
-                    </div>
+                    <img class="imagenes-subiendo-circle" flow-img="$flow.files[0]"/>
                 </div>
-                <div class="col-sm-12 col-md-8">
-                    <div class="form-group">
-                        <div class="upload-text">Cuentanos sobre ti.</div>
-                        <div class="upload-text">Escribe una breve descripcion</div>
-                        <textarea class="form-control form-control-solid placeholder-no-fix" style="border-radius: 0 !important; -webkit-box-shadow: 0px 2px 6px 0px rgba(217,214,217,1);
--moz-box-shadow: 0px 2px 6px 0px rgba(217,214,217,1);
-box-shadow: 0px 2px 6px 0px rgba(217,214,217,1);" rows="7" id="comment" placeholder="Type here"></textarea>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="box3">
-            <!--<a href="#" class="send-btn" id="spiralcf-submit" style="position: absolute; bottom: 0">Send</a>-->
-            <div align="center">
-                <!--<button type="submit" class="btn btn-login uppercase">-->
-                <!--Send-->
-                <!--</button>-->
-                <a href="#" class="btn btn-register uppercase">Next <i class="ion-forward"></i></a>
-
+                <input type="hidden" ng-model="fotoveh1" ng-required="$flow.files[0].isUploading()"/>
             </div>
         </div>
-
+        <div class="rows">
+            <div class="col-sm-12 col-md-4">
+                <select class="form-control">
+                    <option>Sexo</option>
+                    <option>F</option>
+                    <option>M</option>
+                </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <input class="form-control form-control-solid placeholder-no-fix" type="text"
+                       placeholder="Mobile"
+                       name="tlf" id="tlf"/>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <input class="form-control form-control-solid placeholder-no-fix" type="text"
+                           placeholder="Zip Code" name="zip" id="zip"/>
+                </div>
+            </div>
+        </div>
+        <div class="rows">
+            <div class="col-sm-12 col-md-4">
+                <select class="form-control">
+                    <option>Country</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <select class="form-control">
+                    <option>State</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <select class="form-control">
+                    <option>City</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+            </div>
+        </div>
+        <div align="center" style="margin-top: 3rem;">
+            <a href="#" class="btn btn-register uppercase">Next <i class="ion-forward"></i></a>
+        </div>
     </form>
+
+    <section class="vertical-center-4 slider">
+        <div>
+            <img src="http://placehold.it/350x100?text=1">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=2">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=3">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=4">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=5">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=6">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=7">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=8">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=9">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=10">
+        </div>
+    </section>
+    <section class="vertical-center-3 slider">
+        <div>
+            <img src="http://placehold.it/350x100?text=1">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=2">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=3">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=4">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=5">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=6">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=7">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=8">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=9">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=10">
+        </div>
+    </section>
+
+    <section class="vertical-center-2 slider">
+        <div>
+            <img src="http://placehold.it/350x100?text=1">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=2">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=3">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=4">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=5">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=6">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=7">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=8">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=9">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=10">
+        </div>
+    </section>
+
+    <section class="vertical-center slider">
+        <div>
+            <img src="http://placehold.it/350x100?text=1">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=2">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=3">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=4">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=5">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=6">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=7">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=8">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=9">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=10">
+        </div>
+    </section>
+
+    <section class="vertical slider">
+        <div>
+            <img src="http://placehold.it/350x100?text=1">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=2">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=3">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=4">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=5">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=6">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=7">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=8">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=9">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=10">
+        </div>
+    </section>
+    <section class="regular slider">
+        <div>
+            <img src="http://placehold.it/350x300?text=1">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x300?text=2">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x300?text=3">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x300?text=4">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x300?text=5">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x300?text=6">
+        </div>
+    </section>
+
+    <section class="center slider">
+        <div>
+            <img src="http://placehold.it/350x300?text=1">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x300?text=2">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x300?text=3">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x300?text=4">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x300?text=5">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x300?text=6">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x300?text=7">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x300?text=8">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x300?text=9">
+        </div>
+    </section>
+
+    <section class="variable slider">
+        <div>
+            <img src="http://placehold.it/350x300?text=1">
+        </div>
+        <div>
+            <img src="http://placehold.it/200x300?text=2">
+        </div>
+        <div>
+            <img src="http://placehold.it/100x300?text=3">
+        </div>
+        <div>
+            <img src="http://placehold.it/200x300?text=4">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x300?text=5">
+        </div>
+        <div>
+            <img src="http://placehold.it/300x300?text=6">
+        </div>
+    </section>
+
+    <section class="lazy slider" data-sizes="50vw">
+        <div>
+            <img data-lazy="http://placehold.it/350x300?text=1-350w" data-srcset="http://placehold.it/650x300?text=1-650w 650w, http://placehold.it/960x300?text=1-960w 960w" data-sizes="100vw">
+        </div>
+        <div>
+            <img data-lazy="http://placehold.it/350x300?text=2-350w" data-srcset="http://placehold.it/650x300?text=2-650w 650w, http://placehold.it/960x300?text=2-960w 960w" data-sizes="100vw">
+        </div>
+        <div>
+            <img data-lazy="http://placehold.it/350x300?text=3-350w"  data-srcset="http://placehold.it/650x300?text=3-650w 650w, http://placehold.it/960x300?text=3-960w 960w" data-sizes="100vw">
+        </div>
+        <div>
+            <img data-lazy="http://placehold.it/350x300?text=4-350w"  data-srcset="http://placehold.it/650x300?text=4-650w 650w, http://placehold.it/960x300?text=4-960w 960w" data-sizes="100vw">
+        </div>
+        <div>
+            <img data-lazy="http://placehold.it/350x300?text=5-350w"  data-srcset="http://placehold.it/650x300?text=5-650w 650w, http://placehold.it/960x300?text=5-960w 960w" data-sizes="100vw">
+        </div>
+        <div>
+            <!-- this slide should inherit the sizes attr from the parent slider -->
+            <img data-lazy="http://placehold.it/350x300?text=6-350w"  data-srcset="http://placehold.it/650x300?text=6-650w 650w, http://placehold.it/960x300?text=6-960w 960w">
+        </div>
+    </section>
 </div>
 
 <!--<div class="row full-width footer"> BEET ©2017.  <a href="#"><span class="terms">Terms and Conditions</span></a> | <a href="#"><span class="terms">Privacy Policy</span></a></div>-->
@@ -264,7 +495,9 @@ box-shadow: 0px 2px 6px 0px rgba(217,214,217,1);" rows="7" id="comment" placehol
 <!--</footer>-->
 
 <script type="text/javascript" src="../js/jquery.js"></script>
-<script type="text/javascript" src="../js/jquery.slim.min.js" ></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+
+<script type="text/javascript" src="../js/jquery.slim.min.js"></script>
 <script type="text/javascript" src="../js/angular/angular.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
@@ -295,7 +528,64 @@ box-shadow: 0px 2px 6px 0px rgba(217,214,217,1);" rows="7" id="comment" placehol
 <script type="text/javascript" src="../js/alerts.js"></script>
 <!--<script type="text/javascript" src="js/scripts.js"></script>-->
 <!--<script type="text/javascript" src="js/custom.js"></script>-->
-
+<script type="text/javascript">
+    $(document).on('ready', function() {
+        $(".vertical-center-4").slick({
+            dots: true,
+            vertical: true,
+            centerMode: true,
+            slidesToShow: 4,
+            slidesToScroll: 2
+        });
+        $(".vertical-center-3").slick({
+            dots: true,
+            vertical: true,
+            centerMode: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
+        });
+        $(".vertical-center-2").slick({
+            dots: true,
+            vertical: true,
+            centerMode: true,
+            slidesToShow: 2,
+            slidesToScroll: 2
+        });
+        $(".vertical-center").slick({
+            dots: true,
+            vertical: true,
+            centerMode: true,
+        });
+        $(".vertical").slick({
+            dots: true,
+            vertical: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
+        });
+        $(".regular").slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
+        });
+        $(".center").slick({
+            dots: true,
+            infinite: true,
+            centerMode: true,
+            slidesToShow: 5,
+            slidesToScroll: 3
+        });
+        $(".variable").slick({
+            dots: true,
+            infinite: true,
+            variableWidth: true
+        });
+        $(".lazy").slick({
+            lazyLoad: 'ondemand', // ondemand progressive anticipated
+            infinite: true
+        });
+    });
+</script>
 <script src="js/index.js"></script>
 
 </body>

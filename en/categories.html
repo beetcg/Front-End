@@ -25,136 +25,21 @@
     <link rel="stylesheet" href="../css/sweetalert2.css" type="text/css" media="all">
 
     <!--<script>-->
-        <!--function preview_images() {-->
-            <!--var total_file = document.getElementById("images").files.length;-->
-            <!--for (var i = 0; i < total_file; i++) {-->
-                <!--$('#image_preview').append("<div class='col-md-3'><img class='img-responsive' src='" + URL.createObjectURL(event.target.files[i]) + "'></div>");-->
-            <!--}-->
-        <!--}-->
+    <!--function preview_images() {-->
+    <!--var total_file = document.getElementById("images").files.length;-->
+    <!--for (var i = 0; i < total_file; i++) {-->
+    <!--$('#image_preview').append("<div class='col-md-3'><img class='img-responsive' src='" + URL.createObjectURL(event.target.files[i]) + "'></div>");-->
+    <!--}-->
+    <!--}-->
     <!--</script>-->
-
-    <style>
-        .img-add-veh-tp {
-            padding-left: 2px;
-        }
-        .no-space-right {
-            padding-right: 0 !important;
-            margin-right: 0 !important;
-        }
-        .name-input-tp{
-            background-color: #FFFFFF;
-            font-size: 1.55rem;
-            border: none;
-            padding-top: 8px;
-            padding-left: 0;
-            color: #555555;
-            font-weight: normal !important;
-        }
-        .middle-valigner{
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        .mini-imagen{
-            position: relative;
-            display: inline-block;
-            background-color: #f7f7f7;
-            border: 2px dashed #b5b5b5;
-            height: 150px;
-            width: 150px;
-            z-index: 1;
-            margin: 4px;
-            cursor: pointer;
-        }
-        .mini-imagen:hover{
-            box-shadow: 0 0 4px #b5b5b5;
-        }
-        .mini-imagen .descartar-obj{
-            background-color: #B40000;
-            z-index: 2;
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            border-radius: 30px;
-            width: 15px;
-            height: 15px;
-            font-size: 0.8rem;
-        }
-        .mini-imagen > .middle-valigner > i {
-            color: #bfbfbf;
-        }
-        .mini-imagen > .middle-valigner{
-            position: absolute;
-        }
-        .mini-imagen .descartar-obj .fa-times{
-            color: #FFFFFF;
-        }
-        .mini-imagen .descartar-obj:hover{
-            width: 18px;
-            height: 18px;
-            /*font-size: 0.8rem;*/
-        }
-        .imagenes-subiendo{
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            max-height: 150px;
-            min-width: 100%;
-            object-fit: cover;
-            object-position: center center;
-        }
-        .spin-subiendo{
-            position: absolute;
-            top: 0;
-            left: 0;
-            color: #b42952;
-            z-index: 2;
-            width: 100%;
-            font-size: 3rem;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.75);
-            text-align: center;
-            align-items: center;
-            display: flex;
-        }
-        .full-size{
-            width: 100% !important;
-            height: 100% !important;
-        }
-        i{
-            margin:0 auto;
-        }
-        .mini-imagen > .middle-valigner > i,
-        .mini-imagen > .spin-subiendo{
-            font-size: 4rem;
-        }
-
-    </style>
-
 </head>
 
 <body class="page login" data-ng-controller="categoriesController">
 
-<!--<section id="headline_breadcrumbs_bar" class="hadline_no_image hadline_no_image2">-->
-<!---->
-<!--</section>-->
 <div class="logo animated fadeIn" style="margin-top: 20px !important;">
     <a href="index.html">
         <img src="../images/logo-black.png"/>
     </a>
-    <!--<div align="center">-->
-        <!--<p class="step-circle" style="margin-top: 30px; margin-bottom: 20px;">-->
-            <!--2-->
-        <!--</p>-->
-        <!--<h3 class="form-title font-green" style="color: #232323; font-size: 28px;">-->
-            <!--Select Category-->
-        <!--</h3>-->
-        <!--<p class="step-1">-->
-            <!--Lorem ipsum dolor sit amet, consectetuer adipiscing elit-->
-        <!--</p>-->
-    <!--</div>-->
-
 </div>
 
 <div class="content" style="margin: 0px auto 10px auto !important;">
@@ -192,9 +77,6 @@
                 Upload Documents
             </p>
         </div>
-        <!--<h3 class="form-title font-green" style="color: #232323; font-size: 28px;">-->
-        <!--Sign Up To Technician-->
-        <!--</h3>-->
     </div>
 </div>
 
@@ -204,72 +86,74 @@
             <div class="categories-box1">
                 <div class="title-cat">
                     <h2 class="title-cat-text">Categories </h2>
-                    <small class="description-small">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa</small>
+                    <small class="description-small">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Aenean
+                        commodo ligula eget dolor. Aenean massa
+                    </small>
                 </div>
 
-                <div class="tabs-categories animated zoomIn" ng-show="tabs">
-                    <div class="tab-categories-selected" data-ng-click="selectOption(1)">
-                        Computer Support
+                <div class="tabs-categories ">
+                    <div class="tab-categories-selected animated zoomIn" data-ng-click="selectOption(1)">
+                        <span class="tab-text"><i class="ion-laptop tab-i"></i> Computer Support</span>
                     </div>
-                    <div class="tab-categories" data-ng-click="selectOption(2)">
-                        Smart Home
+                    <div class="tab-categories animated zoomIn" data-ng-click="selectOption(2)">
+                        <span class="tab-text"><i class="ion-ios-home-outline tab-i"></i> Smart Home</span>
                     </div>
-                    <div class="tab-categories" data-ng-click="selectOption(3)">
-                        Television
+                    <div class="tab-categories animated zoomIn" data-ng-click="selectOption(3)">
+                        <span class="tab-text"><i class="ion-ios-monitor-outline tab-i"></i> Television</span>
                     </div>
-                    <div class="tab-categories" data-ng-click="selectOption(4)">
-                        Audio & Video
+                    <div class="tab-categories animated zoomIn" data-ng-click="selectOption(4)">
+                        <span class="tab-text"><i class="ion-ios-videocam-outline tab-i"></i> Audio & Video</span>
                     </div>
-                    <div class="tab-categories" data-ng-click="selectOption(5)">
-                        Wifi & Network
+                    <div class="tab-categories animated zoomIn" data-ng-click="selectOption(5)">
+                        <span class="tab-text"><i class="ion-android-wifi tab-i"></i> Wifi & Network</span>
                     </div>
-                    <div class="tab-categories" data-ng-click="selectOption(6)">
-                        Malware / Virus
+                    <div class="tab-categories animated zoomIn" data-ng-click="selectOption(6)">
+                        <span class="tab-text"><i class="ion-bug tab-i"></i> Malware / Virus</span>
                     </div>
                 </div>
 
-                <div ng-show="categories">
-                    <div class="rows">
-                        <div class="col-sm-12 col-md-4" >
-                            <div class="category" data-ng-click="selectOption(1)">
-                                <i class="ion-laptop"></i>
-                                <p>Computer Support</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4">
-                            <div class="category" data-ng-click="selectOption(2)">
-                                <i class="ion-ios-home-outline"></i>
-                                <p>Smart Home</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4">
-                            <div class="category" data-ng-click="selectOption(3)">
-                                <i class="ion-ios-monitor-outline"></i>
-                                <p>Television</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rows">
-                        <div class="col-sm-12 col-md-4">
-                            <div class="category" data-ng-click="selectOption(4)">
-                                <i class="ion-ios-videocam-outline"></i>
-                                <p>Audio & Video</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4">
-                            <div class="category" data-ng-click="selectOption(5)">
-                                <i class="ion-android-wifi"></i>
-                                <p>Wifi & Network</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4">
-                            <div class="category" data-ng-click="selectOption(6)">
-                                <i class="ion-bug"></i>
-                                <p>Malware / Virus</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!--<div ng-show="categories">-->
+                    <!--<div class="rows">-->
+                        <!--<div class="col-sm-12 col-md-4">-->
+                            <!--<div class="category" data-ng-click="selectOption(1)">-->
+                                <!--<i class="ion-laptop"></i>-->
+                                <!--<p>Computer Support</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-sm-12 col-md-4">-->
+                            <!--<div class="category" data-ng-click="selectOption(2)">-->
+                                <!--<i class="ion-ios-home-outline"></i>-->
+                                <!--<p>Smart Home</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-sm-12 col-md-4">-->
+                            <!--<div class="category" data-ng-click="selectOption(3)">-->
+                                <!--<i class="ion-ios-monitor-outline"></i>-->
+                                <!--<p>Television</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="rows">-->
+                        <!--<div class="col-sm-12 col-md-4">-->
+                            <!--<div class="category" data-ng-click="selectOption(4)">-->
+                                <!--<i class="ion-ios-videocam-outline"></i>-->
+                                <!--<p>Audio & Video</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-sm-12 col-md-4">-->
+                            <!--<div class="category" data-ng-click="selectOption(5)">-->
+                                <!--<i class="ion-android-wifi"></i>-->
+                                <!--<p>Wifi & Network</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-sm-12 col-md-4">-->
+                            <!--<div class="category" data-ng-click="selectOption(6)">-->
+                                <!--<i class="ion-bug"></i>-->
+                                <!--<p>Malware / Virus</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
 
 
                 <div style="margin-top: 50px" data-ng-show="computer">
@@ -648,7 +532,7 @@
             <!--<a href="#" class="send-btn" id="spiralcf-submit" style="position: absolute; bottom: 0">Send</a>-->
             <div align="center">
                 <!--<button type="submit" class="btn btn-login uppercase">-->
-                    <!--Send-->
+                <!--Send-->
                 <!--</button>-->
                 <a href="#" class="btn btn-register uppercase"><i class="ion-reply"></i> Back</a>
                 <a href="#" class="btn btn-register uppercase">Next <i class="ion-forward"></i></a>
@@ -682,14 +566,14 @@
 <!--</footer>-->
 
 <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"-->
-        <!--integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"-->
-        <!--crossorigin="anonymous"></script>-->
+<!--integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"-->
+<!--crossorigin="anonymous"></script>-->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"-->
-        <!--integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"-->
-        <!--crossorigin="anonymous"></script>-->
+<!--integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"-->
+<!--crossorigin="anonymous"></script>-->
 <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"-->
-        <!--integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"-->
-        <!--crossorigin="anonymous"></script>-->
+<!--integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"-->
+<!--crossorigin="anonymous"></script>-->
 <!--<script type="text/javascript" src="js/jquery.js"></script>-->
 <!--<script type="text/javascript" src="../js/angular/angular.min.js"></script>-->
 <!--<script type="text/javascript" src="../js/angular/app.js"></script>-->
@@ -706,7 +590,7 @@
 
 
 <script type="text/javascript" src="../js/jquery.js"></script>
-<script type="text/javascript" src="../js/jquery.slim.min.js" ></script>
+<script type="text/javascript" src="../js/jquery.slim.min.js"></script>
 <script type="text/javascript" src="../js/angular/angular.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
