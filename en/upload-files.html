@@ -114,9 +114,9 @@
                                         <div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">
                                             <i class="fa  fa-times"></i>
                                         </div>
-                                        <span class="spin-subiendo" >
-                                                            <i class="fa fa-spinner fa-spin"></i>
-                                                        </span>
+                                        <span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">
+                                            <i class="fa fa-spinner fa-spin"></i>
+                                        </span>
                                         <img class="imagenes-subiendo" flow-img="$flow.files[0]" />
                                     </div>
                                     <input type="hidden" ng-model="fotoveh1" ng-required="$flow.files[0].isUploading()" />
@@ -144,8 +144,8 @@
                                             <i class="fa fa-times"></i>
                                         </div>
                                         <span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">
-                                                                <i class="fa fa-spinner fa-spin"></i>
-                                                            </span>
+                                            <i class="fa fa-spinner fa-spin"></i>
+                                        </span>
                                         <img class="imagenes-subiendo" flow-img="$flow.files[0]" />
                                     </div>
                                     <input type="hidden" ng-model="fotoveh2" ng-required="$flow.files[0].isUploading()" />
@@ -172,8 +172,8 @@
                                             <i class="fa fa-times"></i>
                                         </div>
                                         <span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">
-                                                                <i class="fa fa-spinner fa-spin"></i>
-                                                            </span>
+                                            <i class="fa fa-spinner fa-spin"></i>
+                                        </span>
                                         <img class="imagenes-subiendo" flow-img="$flow.files[0]" />
                                     </div>
                                     <input type="hidden" ng-model="fotoveh3" ng-required="$flow.files[0].isUploading()" />
@@ -201,8 +201,8 @@
                                             <i class="fa fa-times"></i>
                                         </div>
                                         <span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">
-                                                                <i class="fa fa-spinner fa-spin"></i>
-                                                            </span>
+                                            <i class="fa fa-spinner fa-spin"></i>
+                                        </span>
                                         <img class="imagenes-subiendo" flow-img="$flow.files[0]" />
                                     </div>
                                     <input type="hidden" ng-model="fotoveh4" ng-required="$flow.files[0].isUploading()" />
