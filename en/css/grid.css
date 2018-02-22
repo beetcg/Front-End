@@ -11384,3 +11384,35 @@ i{
     color: #8290a3;
     /*color: #b42952;*/
 }
+
+.margin-vertical-btn {
+    margin-top: 40px !important;
+    margin-bottom: 20px !important;
+}
+
+.text-signup {
+    text-align: center;
+    line-height: 19px;
+    font-size: 14px;
+    color: #697484;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.text-signup div{
+    margin-top: 12px;
+}
+
+.text-signup a{
+    color: #952244;
+    font-weight: bold;
+}
+
+.errores {
+    font-size: 12px;
+    margin-left: 30px;
+    color: #952244;
+}

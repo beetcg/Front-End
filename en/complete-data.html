@@ -109,7 +109,7 @@
     </div>
 
 
-    <form class="login-form animated fadeIn" action="index.html" method="post">
+    <form class="login-form animated fadeIn" name="completeForm" action="index.html" method="post">
         <div align="center">
             <!--<div style="margin-bottom: 20px">-->
                 <!--<div class="upload-text">Upload a current</div>-->
@@ -149,13 +149,16 @@
             </div>
             <div class="col-sm-12 col-md-4">
                 <input class="form-control form-control-solid placeholder-no-fix" type="text"
-                       placeholder="Mobile"
-                       name="tlf" id="tlf"/>
+                       placeholder="Mobile" mask="(999) 999-9999"
+                       name="tlf" id="tlf" required ng-model="tlf" />
+                <span class="errores" ng-show="completeForm.tlf.$touched && completeForm.tlf.$error.required">Required field *</span>
             </div>
             <div class="col-sm-12 col-md-4">
                 <div class="form-group">
-                    <input class="form-control form-control-solid placeholder-no-fix" type="text"
-                           placeholder="Zip Code" name="zip" id="zip"/>
+                    <input class="form-control form-control-solid placeholder-no-fix" type="text" maxlength="5"
+                           placeholder="Zip Code" name="zip" id="zip" required ng-model="zip" data-ng-pattern="/^[0-9]*$/"/>
+                    <span class="errores" ng-show="completeForm.zip.$touched && completeForm.zip.$error.required">Required field *</span>
+                    <span class="errores" ng-show="completeForm.zip.$touched && completeForm.zip.$error.pattern">Invalid field (only numbers)</span>
                 </div>
             </div>
         </div>
@@ -209,8 +212,8 @@
                 </select>
             </div>
         </div>
-        <div align="center" style="margin-top: 3rem;">
-            <a href="#" class="btn btn-register uppercase">Next <i class="ion-forward"></i></a>
+        <div align="center" >
+            <a href="#" class="btn btn-register uppercase margin-vertical-btn">Next <i class="ion-forward"></i></a>
         </div>
     </form>
 
@@ -499,6 +502,8 @@
 
 <script type="text/javascript" src="../js/jquery.slim.min.js"></script>
 <script type="text/javascript" src="../js/angular/angular.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-messages.js"></script>
+<script type="text/javascript" src="../js/ngMask.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"

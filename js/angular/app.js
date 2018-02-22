@@ -1,4 +1,4 @@
-var beetApp = angular.module('beetApp', ['ui.calendar', 'ui.bootstrap', 'flow']);
+var beetApp = angular.module('beetApp', ['ui.calendar', 'ui.bootstrap', 'flow','ngMask']);
 
 beetApp.controller('joinUsController', ['$scope', function ($scope) {
     $scope.greeting = 'Hola!';
@@ -36,7 +36,7 @@ beetApp.controller('LoginController', ['$scope', function ($scope) {
 }]);
 
 beetApp.controller('categoriesController', ['$scope', function ($scope) {
-    $scope.computer = false;
+    $scope.computer = true;
     $scope.smart = false;
     $scope.television = false;
     $scope.audio = false;

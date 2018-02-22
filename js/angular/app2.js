@@ -24,7 +24,7 @@ beetApp.controller('LoginController', ['$scope', function ($scope) {
 }]);
 
 beetApp.controller('categoriesController', ['$scope', function ($scope) {
-    $scope.computer = false;
+    $scope.computer = true;
     $scope.smart = false;
     $scope.television = false;
     $scope.audio = false;

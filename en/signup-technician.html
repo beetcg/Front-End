@@ -71,45 +71,56 @@
             </p>
         </div>
     </div>
-    <form class="login-form animated fadeIn" action="index.html" method="post" data-ng-show="login" id="form_create">
+    <form class="login-form animated fadeIn" name="signupForm" action="index.html" method="post" data-ng-show="login" id="form_create">
         <div class="rows">
             <div class="col-sm-12 col-md-6">
-                <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="First Name"
-                       name="fname" id="fname"/>
+                <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="First Name" maxlength="20"
+                       name="fname" id="fname" required ng-model="fname" data-ng-pattern="/^[a-zA-Z\sáéíóúÁÉÍÓÚåüñÑ' ]{1,25}$/"/>
+                <span class="errores" ng-show="signupForm.fname.$touched && signupForm.fname.$error.required">Required field *</span>
+                <span class="errores" ng-show="signupForm.fname.$touched && signupForm.fname.$error.pattern">Invalid field (only letters)</span>
             </div>
             <div class="col-sm-12 col-md-6">
-                <input class="form-control form-control-solid placeholder-no-fix" type="text"
-                       placeholder="Last Name" name="lname" id="lname"/>
+                <input class="form-control form-control-solid placeholder-no-fix" type="text" maxlength="20"
+                       placeholder="Last Name" name="lname" id="lname" required ng-model="lname" data-ng-pattern="/^[a-zA-Z\sáéíóúÁÉÍÓÚåüñÑ' ]{1,25}$/"/>
+                <span class="errores" ng-show="signupForm.lname.$touched && signupForm.lname.$error.required">Required field *</span>
+                <span class="errores" ng-show="signupForm.lname.$touched && signupForm.lname.$error.pattern">Invalid field (only letters)</span>
             </div>
         </div>
         <div class="rows">
             <div class="col-sm-12 col-md-6">
-                <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Email"
-                       name="email" id="email"/>
+                <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Email" maxlength="50"
+                       name="email" id="email" required ng-model="email" data-ng-pattern="/[^@]+@[^@]+\.[^@]+/"/>
+                <span class="errores" ng-show="signupForm.email.$touched && signupForm.email.$error.required">Required field *</span>
+                <span class="errores" ng-show="signupForm.email.$touched && signupForm.email.$error.pattern">Invalid field (e.g.: name@mail.com)</span>
             </div>
             <div class="col-sm-12 col-md-6">
-                <input class="form-control form-control-solid placeholder-no-fix" placeholder="Password"
-                       name="pass" id="pass" type="{{inputType}}" ng-model="passwordCheckbox"/>
+                <input class="form-control form-control-solid placeholder-no-fix" placeholder="Password" maxlength="20"
+                       name="pass" id="pass" type="{{inputType}}" ng-model="passwordCheckbox" required/>
                 <div class="view-pass" ng-click="hideShowPassword()">
                     <i ng-class="{'fa fa-eye view-pass-i' : activeEye, 'fa fa-eye view-pass-i-off' : !activeEye}"  >
                     </i>
                 </div>
+                <span class="errores" ng-show="signupForm.pass.$touched && signupForm.pass.$error.required">Required field *</span>
             </div>
         </div>
-        <div class="rows" style="margin-top: 20px">
-            <div class="col-sm-12 col-md-6">
-                <label class="rememberme check mt-checkbox mt-checkbox-outline">
-                    <input type="checkbox" name="remember" value="1"/>I accept the Terms and Conditions
-                    <span></span>
-                </label>
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <!--<a href="javascript:;" id="forget-password" class="forget-password" data-ng-click="selectOption(2)">Forgot Password?</a>-->
-            </div>
-        </div>
+
         <div align="center">
-            <input type="button" class="btn btn-login uppercase" id="successSignup" value="Sign Up">
+            <!--<input type="button" class="btn btn-login uppercase" id="successSignup" value="Sign Up">-->
+            <a href="#" class="btn btn-register uppercase margin-vertical-btn">Sign Up</a>
         </div>
+
+        <!--<div class="rows" style="margin-top: 20px">-->
+        <!--<div class="col-sm-12 col-md-6">-->
+            <!--<label class="rememberme check mt-checkbox mt-checkbox-outline">-->
+                <!--<input type="checkbox" name="remember" value="1"/>I accept the Terms and Conditions-->
+                <!--<span></span>-->
+            <!--</label>-->
+        <!--</div>-->
+            <div class="text-signup">
+                <div>Already have an account? <a href="#">Login here</a></div>
+                <div>By clicking ‘Sign up’, I agree to Beet’s <a href="#">Terms of Service</a></div>
+            </div>
+        <!--</div>-->
     </form>
 </div>
 
@@ -119,6 +130,8 @@
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript" src="../js/jquery.slim.min.js" ></script>
 <script type="text/javascript" src="../js/angular/angular.min.js"></script>
+<script type="text/javascript" src=//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-messages.js"></script>
+<script type="text/javascript" src="../js/ngMask.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
