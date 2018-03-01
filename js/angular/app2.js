@@ -1,4 +1,4 @@
-var beetApp = angular.module('beetApp', []);
+var beetApp = angular.module('beetApp', ['ui.bootstrap']);
 
 beetApp.controller('joinUsController', ['$scope', function ($scope) {
     $scope.greeting = 'Hola!';
@@ -20,6 +20,15 @@ beetApp.controller('LoginController', ['$scope', function ($scope) {
                 break;
         }
         $scope.isVisible = !$scope.isVisible;
+    }
+}]);
+
+beetApp.controller('indexCtrl', ['$scope','$timeout', function ($scope,$timeout) {
+    console.log('dfsd')
+    $scope.initCarousel = function () {
+        $timeout(function () {
+            $('.carousel').carousel()
+        });
     }
 }]);
 

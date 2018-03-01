@@ -6078,6 +6078,8 @@ button.close {
 
 .carousel {
     position: relative;
+    /*height: 100vh;*/
+
 }
 
 .carousel-inner {
@@ -6093,6 +6095,7 @@ button.close {
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
+    height: 100vh;
     transition: -webkit-transform 0.6s ease;
     transition: transform 0.6s ease;
     transition: transform 0.6s ease, -webkit-transform 0.6s ease;
@@ -6100,6 +6103,39 @@ button.close {
     backface-visibility: hidden;
     -webkit-perspective: 1000px;
     perspective: 1000px;
+}
+
+.item-1 {
+    background-color: #fff !important;
+    background-image: url("../images/home-2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+
+.item-2 {
+    background-color: #fff !important;
+    background-image: url("../images/tryit2-black.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+
+.item-3 {
+    background-color: #fff !important;
+    background-image: url("../rs-plugin/assets/2bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
 }
 
 .carousel-item.active,
@@ -6176,6 +6212,16 @@ button.close {
     opacity: 0.5;
 }
 
+.icon-carousel {
+    font-size: 5rem;
+}
+
+@media (max-width: 440px) {
+    .icon-carousel {
+        font-size: 1rem;
+    }
+}
+
 .carousel-control-prev:focus, .carousel-control-prev:hover,
 .carousel-control-next:focus,
 .carousel-control-next:hover {
@@ -6213,7 +6259,7 @@ button.close {
 .carousel-indicators {
     position: absolute;
     right: 0;
-    bottom: 10px;
+    bottom: 30px;
     left: 0;
     z-index: 15;
     display: -webkit-box;
@@ -6233,10 +6279,10 @@ button.close {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
-    width: 30px;
-    height: 3px;
-    margin-right: 3px;
-    margin-left: 3px;
+    width: 50px;
+    height: 1px;
+    margin-right: 15px;
+    margin-left: 15px;
     text-indent: -999px;
     background-color: rgba(255, 255, 255, 0.5);
 }
@@ -6267,14 +6313,76 @@ button.close {
 
 .carousel-caption {
     position: absolute;
-    right: 15%;
-    bottom: 20px;
-    left: 15%;
+    right: 0;
+    top: 42%;
+    left: 0;
     z-index: 10;
     padding-top: 20px;
     padding-bottom: 20px;
     color: #fff;
     text-align: center;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*flex-direc*/
+}
+
+.title-index {
+    font-size: 4rem;
+    font-weight: lighter;
+    text-shadow: -1px 0 #656565, 0 1px #656565, 1px 0 #656565, 0 -1px #656565;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 1380px) {
+    .carousel-caption {
+        top: 45%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .carousel-caption {
+        top: 44%;
+
+    }
+    .title-index-1 {
+        font-size: 3rem;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+    .title-index-1 {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel-caption {
+        top: 45%;
+
+    }
+    .title-index {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 440px) {
+    .carousel-caption {
+        top: 45%;
+
+    }
+    .title-index {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+    .title-index-1 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
 }
 
 .align-baseline {
@@ -7757,6 +7865,8 @@ button.bg-dark:hover {
 
 .w-100 {
     width: 100% !important;
+    height: 100vh;
+
 }
 
 .h-25 {
@@ -10160,6 +10270,13 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     /*-webkit-flex-wrap: wrap;*/
 }
 
+@media (max-width: 991px) {
+    .categories-contain {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
 .box1 {
     display: flex;
     flex-direction: column;
@@ -11173,7 +11290,7 @@ button {
 
 .tabs-categories {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
     border-bottom: 1px solid #e6e8ed;
@@ -11190,13 +11307,36 @@ button {
 }
 
 .tab-categories-selected {
-    display: flex; flex: 1;
+    display: flex;
+    flex: 1;
     cursor: pointer;
     border-bottom: 2px solid #9b2446;
     color: #9b2446;
     font-weight: normal;
     justify-content: center;
     padding-bottom: 10px;
+    /*background-color: black;*/
+}
+
+@media (max-width: 991px) {
+    .tabs-categories {
+        overflow: scroll;
+    }
+    .tab-categories {
+        min-width: 180px;
+    }
+    .tab-categories-selected {
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 440px) {
+    .tab-categories {
+        min-width: 170px;
+    }
+    .tab-categories-selected {
+        min-width: 170px;
+    }
 }
 
 .check-mark {
@@ -11223,9 +11363,45 @@ button {
     color: #9b2446;
 }
 
+@media (max-width: 991px) {
+    .tab-text {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1327px) {
+    .tab-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1165px) {
+    .tab-text {
+        font-size: 14px;
+    }
+}
+
 .tab-i {
     margin-right: 10px;
     font-size: 20px;
+}
+
+@media (max-width: 991px) {
+    .tab-i {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1327px) {
+    .tab-i {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1165px) {
+    .tab-i {
+        font-size: 14px;
+    }
 }
 
 .item-subcategory {
@@ -11240,6 +11416,7 @@ button {
     align-items: center;
     /*justify-content: center;*/
     cursor: pointer;
+    flex-wrap: nowrap !important;
 }
 
 .item-subcategory:hover {
@@ -11260,6 +11437,8 @@ button {
     -webkit-box-shadow: 0px 0px 10px 0px rgba(130, 30, 59, 0.6);
     -moz-box-shadow:    0px 0px 10px 0px rgba(130, 30, 59, 0.6);
     box-shadow:         0px 0px 10px 0px rgba(130, 30, 59, 0.6);
+    flex-wrap: nowrap !important;
+
 }
 
 .title-register {
@@ -11545,6 +11724,10 @@ i{
     color: #bdcfd6;
 }
 
+.icon-404 {
+    font-size: 8rem
+}
+
 .errorNumber500 {
     font-size: 10rem;
     text-align: center;
@@ -11573,4 +11756,22 @@ i{
     height: 8rem;
     margin-left: 50px;
     margin-right: 50px;
+}
+
+@media (max-width: 991px) {
+    .errorNumber {
+        font-size: 6rem;
+    }
+    .icon-404 {
+        font-size: 5rem;
+    }
+    .errorNumber500 {
+        font-size: 6rem;
+    }
+    .errorImg {
+        width: 4.5rem;
+        height: 4.5rem;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
 }
