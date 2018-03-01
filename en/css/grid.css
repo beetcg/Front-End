@@ -6335,6 +6335,11 @@ button.close {
     margin-bottom: 60px;
 }
 
+.img-index {
+    margin-bottom: 30px;
+    margin-top: -20px;
+}
+
 @media (max-width: 1380px) {
     .carousel-caption {
         top: 45%;
@@ -6382,6 +6387,10 @@ button.close {
     .title-index-1 {
         font-size: 1rem;
         margin-bottom: 5px;
+    }
+    .img-index {
+        width: 100px;
+        margin-bottom: 10px;
     }
 }
 
