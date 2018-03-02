@@ -10531,9 +10531,10 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
 }
 
 .banner-tryit {
-    background:url('../rs-plugin/assets/3b1.jpg');
-    min-height:660px;
+    background:url('../images/128094-OR4JMO-25.jpg');
+    min-height:500px;
     background-size:cover;
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
