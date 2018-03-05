@@ -120,6 +120,25 @@ beetApp.controller('categoriesController', ['$scope', function ($scope) {
 
 beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCalendarConfig',
     function($scope, $compile, $timeout, uiCalendarConfig) {
+        $scope.productos =
+            [
+                {img : "https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg", descripcion : 'Suéter "House Targaryen"', precio : 12000, color : "Gris"},
+                {img : "https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg", descripcion : 'Suéter "Deathly Hallows"', precio : 12000, color : "Negro"},
+                {img : "https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg", descripcion : 'Suéter "Winter is coming"', precio : 12000, color : "Gris"},
+            ];
+
+        $scope.initHoverdir = function(){
+            $timeout(function () {
+                $(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
+            });
+        };
+
+
+
+
+
+
+
     $scope.calendar = true;
     $scope.schedule = false;
 
