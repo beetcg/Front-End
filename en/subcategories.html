@@ -38,61 +38,69 @@
 
 <body class="page" data-ng-controller="TryNowController">
 <div>
-    <div ng-include="'menu-bar.html'"></div>
+    <div ng-include="'menu-bar-dark.html'"></div>
 
-    <div class="banner-tryit" >
-        <!--<h2 class="center_aligned h2-headline">Try one of our services!</h2>-->
-        <!--<h3 class="white_text spiral-animo" data-animation="fadeInDown" data-trigger_pt="0"-->
-        <!--data-duration="1000" data-delay="300" style="text-align: center;">-->
-        <!--This is a short description of this page.-->
-        <!--</h3>-->
-    </div>
-
-    <div class="container-fluid" ng-init="initHoverdir()">
+    <div class="container-fluid" ng-init="initHoverdir()" style="margin-top: 80px; margin-bottom: 80px">
         <div class="title-trynow animated tada">
-            <p class="title-trynow-text"><span class="bold">Try </span> one of our services!</p>
+            <p class="title-trynow-text"><span class="bold">Cool! </span> You're almost done</p>
         </div>
         <div class="steps">
             <p class="step-circle-try">
-                1
+                2
             </p>
             <p class="step-text-try">
-                Choose one of our categories
+                Choose a subcategory or service on
             </p>
+            <p class="step-text-try bold">CATEGORY SELECTED</p>
             <i class="ion-chevron-down animated infinite slideInDown step-text-try-i"></i>
         </div>
 
         <div style="display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; justify-content: center; margin-bottom: 30px;">
             <!--<div ng-repeat="producto in productos" >-->
             <div style="display: flex; margin-right: 20px" align="center">
-                <ul id="da-thumbs" class="da-thumbs">
+                <ul id="da-thumbs" class="da-thumbs-subcategory">
                     <li>
-                        <a href="http://dribbble.com/shots/505046-Menu">
-                            <img class="catalogo-fancy img-responsive"
-                                 src="images/853.jpg">
-                            <div><span>Computer Support</span></div>
+                        <a href="#">
+                            <p>
+                                Computer Repair and Help
+                            </p>
+                            <div><span><i class="icon-check"></i></span></div>
                         </a>
                     </li>
                 </ul>
             </div>
             <div style="display: flex; margin-right: 20px" align="center">
-                <ul id="da-thumbs" class="da-thumbs">
+                <ul id="da-thumbs" class="da-thumbs-subcategory">
                     <li>
-                        <a href="http://dribbble.com/shots/505046-Menu">
-                            <img class="catalogo-fancy img-responsive"
-                                 src="images/shutterstock_421740331.jpg">
-                            <div><span>Smart Home</span></div>
+                        <a href="#">
+                            <p>
+                                Computer Tune Up
+                            </p>
+                            <div><span><i class="icon-check"></i></span></div>
                         </a>
                     </li>
                 </ul>
             </div>
             <div style="display: flex; margin-right: 20px" align="center">
-                <ul id="da-thumbs" class="da-thumbs">
+                <ul id="da-thumbs" class="da-thumbs-subcategory">
                     <li>
-                        <a href="http://dribbble.com/shots/505046-Menu">
-                            <img class="catalogo-fancy img-responsive"
-                                 src="images/1420683627253.jpeg">
-                            <div><span>Television</span></div>
+                        <a href="#">
+                            <p>
+                                Data Back-Up or Transfer
+                            </p>
+                            <div><span><i class="icon-check"></i></span></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div style="display: flex; margin-right: 20px" align="center">
+                <ul id="da-thumbs" class="da-thumbs-subcategory">
+                    <li>
+                        <a href="#">
+                            <p>
+                                New Computer Setup
+                            </p>
+                            <div><span><i class="icon-check"></i></span></div>
                         </a>
                     </li>
                 </ul>
@@ -102,67 +110,75 @@
         <div style="display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; justify-content: center; margin-bottom: 30px;">
             <!--<div ng-repeat="producto in productos" >-->
             <div style="display: flex; margin-right: 20px" align="center">
-                <ul id="da-thumbs" class="da-thumbs">
+                <ul id="da-thumbs" class="da-thumbs-subcategory">
                     <li>
-                        <a href="http://dribbble.com/shots/505046-Menu">
-                            <img class="catalogo-fancy img-responsive"
-                                 src="images/home-theater-4-620x412.jpg">
-                            <div><span>Audio & Video</span></div>
+                        <a href="#">
+                            <p>
+                                Software Install or Uninstall
+                            </p>
+                            <div><span><i class="icon-check"></i></span></div>
                         </a>
                     </li>
                 </ul>
             </div>
             <div style="display: flex; margin-right: 20px" align="center">
-                <ul id="da-thumbs" class="da-thumbs">
+                <ul id="da-thumbs" class="da-thumbs-subcategory">
                     <li>
-                        <a href="http://dribbble.com/shots/505046-Menu">
-                            <img class="catalogo-fancy img-responsive"
-                                 src="images/wifi.jpg">
-                            <div><span>Wifi & Network</span></div>
+                        <a href="#">
+                            <p>
+                                Printer Setup
+                            </p>
+                            <div><span><i class="icon-check"></i></span></div>
                         </a>
                     </li>
                 </ul>
-            </div>
-            <div style="display: flex; margin-right: 20px" align="center">
-                <ul id="da-thumbs" class="da-thumbs">
+            </div><div style="display: flex; margin-right: 20px" align="center">
+                <ul id="da-thumbs" class="da-thumbs-subcategory">
                     <li>
-                        <a href="http://dribbble.com/shots/505046-Menu">
-                            <img class="catalogo-fancy img-responsive"
-                                 src="images/OF8OWI0.jpg">
-                            <div><span>Malware / Virus</span></div>
+                        <a href="#">
+                            <p>
+                                OS (Operating System) Install or Re-Install
+                            </p>
+                            <div><span><i class="icon-check"></i></span></div>
                         </a>
                     </li>
                 </ul>
             </div>
             <!--</div>-->
         </div>
+
+        <div align="center">
+            <button class="btn-next">
+                NEXT <i class="ion-ios-arrow-right" style="margin-left: 5px"></i>
+            </button>
+        </div>
     </div>
 
 
-    <footer id="ABdev_main_footer">
-        <div id="footer_copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="span4 footer_copyright left_aligned">
-                        BEET ©2017. All Rights Reserved
-                        <a href="../es/index.html">
-                            <img src="images/es.svg" width="20px"></a>
-                    </div>
-                    <div class="span6 right_aligned">
+    <!--<footer id="ABdev_main_footer">-->
+        <!--<div id="footer_copyright">-->
+            <!--<div class="container">-->
+                <!--<div class="row">-->
+                    <!--<div class="span4 footer_copyright left_aligned">-->
+                        <!--BEET ©2017. All Rights Reserved-->
+                        <!--<a href="../es/index.html">-->
+                            <!--<img src="images/es.svg" width="20px"></a>-->
+                    <!--</div>-->
+                    <!--<div class="span6 right_aligned">-->
 
 
-                        <a href="#"><img src="images/google-play-badge.svg" width="135"></a>
-                        <a href="#"><img src="images/Download_on_the_App_Store_Badge_US-UK_135x40.svg"></a>
-                    </div>
-                    <div class="span2 center_aligned">
-                        <a href="#" id="back_to_top" title="Back to top">
-                            <i class="ci_icon-angle-up"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+                        <!--<a href="#"><img src="images/google-play-badge.svg" width="135"></a>-->
+                        <!--<a href="#"><img src="images/Download_on_the_App_Store_Badge_US-UK_135x40.svg"></a>-->
+                    <!--</div>-->
+                    <!--<div class="span2 center_aligned">-->
+                        <!--<a href="#" id="back_to_top" title="Back to top">-->
+                            <!--<i class="ci_icon-angle-up"></i>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</footer>-->
 </div>
 
 <script type="text/javascript" src="../js/jquery.js"></script>
