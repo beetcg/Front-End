@@ -55,103 +55,106 @@
             <i class="ion-chevron-down animated infinite slideInDown step-text-try-i"></i>
         </div>
 
-        <div style="display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; justify-content: center; margin-bottom: 30px;">
-            <!--<div ng-repeat="producto in productos" >-->
-            <div style="display: flex; margin-right: 20px" align="center">
-                <ul id="da-thumbs" class="da-thumbs-subcategory">
-                    <li>
-                        <a href="#">
-                            <p>
-                                Computer Repair and Help
-                            </p>
-                            <div><span><i class="icon-check"></i></span></div>
-                        </a>
-                    </li>
-                </ul>
+        <div class="list-categories">
+            <div ng-repeat="producto in productos" >
+            <div class="subcategory-cont" align="center">
+                <span>{{producto.name}}</span>
+                <div id="icon" style="display: none;" class="icon-hidden">
+                    <i class="icon-check icon-select-sub"></i>
+                </div>
             </div>
-            <div style="display: flex; margin-right: 20px" align="center">
-                <ul id="da-thumbs" class="da-thumbs-subcategory">
-                    <li>
-                        <a href="#">
-                            <p>
-                                Computer Tune Up
-                            </p>
-                            <div><span><i class="icon-check"></i></span></div>
-                        </a>
-                    </li>
-                </ul>
             </div>
-            <div style="display: flex; margin-right: 20px" align="center">
-                <ul id="da-thumbs" class="da-thumbs-subcategory">
-                    <li>
-                        <a href="#">
-                            <p>
-                                Data Back-Up or Transfer
-                            </p>
-                            <div><span><i class="icon-check"></i></span></div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div style="display: flex; margin-right: 20px" align="center">
-                <ul id="da-thumbs" class="da-thumbs-subcategory">
-                    <li>
-                        <a href="#">
-                            <p>
-                                New Computer Setup
-                            </p>
-                            <div><span><i class="icon-check"></i></span></div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!--</div>-->
-        </div>
-        <div style="display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; justify-content: center; margin-bottom: 30px;">
-            <!--<div ng-repeat="producto in productos" >-->
-            <div style="display: flex; margin-right: 20px" align="center">
-                <ul id="da-thumbs" class="da-thumbs-subcategory">
-                    <li>
-                        <a href="#">
-                            <p>
-                                Software Install or Uninstall
-                            </p>
-                            <div><span><i class="icon-check"></i></span></div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div style="display: flex; margin-right: 20px" align="center">
-                <ul id="da-thumbs" class="da-thumbs-subcategory">
-                    <li>
-                        <a href="#">
-                            <p>
-                                Printer Setup
-                            </p>
-                            <div><span><i class="icon-check"></i></span></div>
-                        </a>
-                    </li>
-                </ul>
-            </div><div style="display: flex; margin-right: 20px" align="center">
-                <ul id="da-thumbs" class="da-thumbs-subcategory">
-                    <li>
-                        <a href="#">
-                            <p>
-                                OS (Operating System) Install or Re-Install
-                            </p>
-                            <div><span><i class="icon-check"></i></span></div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!--</div>-->
-        </div>
 
-        <div align="center">
-            <button class="btn-next">
-                NEXT <i class="ion-ios-arrow-right" style="margin-left: 5px"></i>
-            </button>
+            <!--<div ng-repeat="producto in productos" >-->
+            <!--<div style="display: flex; margin-right: 20px" align="center">-->
+                <!--<ul id="da-thumbs" class="da-thumbs-subcategory">-->
+                    <!--<li>-->
+                        <!--<a href="#">-->
+                            <!--<p>-->
+                                <!--Computer Repair and Help-->
+                            <!--</p>-->
+                            <!--<div><span><i class="icon-check"></i></span></div>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div style="display: flex; margin-right: 20px" align="center">-->
+                <!--<ul id="da-thumbs" class="da-thumbs-subcategory">-->
+                    <!--<li>-->
+                        <!--<a href="#">-->
+                            <!--<p>-->
+                                <!--Computer Tune Up-->
+                            <!--</p>-->
+                            <!--<div><span><i class="icon-check"></i></span></div>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div style="display: flex; margin-right: 20px" align="center">-->
+                <!--<ul id="da-thumbs" class="da-thumbs-subcategory">-->
+                    <!--<li>-->
+                        <!--<a href="#">-->
+                            <!--<p>-->
+                                <!--Data Back-Up or Transfer-->
+                            <!--</p>-->
+                            <!--<div><span><i class="icon-check"></i></span></div>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div style="display: flex; margin-right: 20px" align="center">-->
+                <!--<ul id="da-thumbs" class="da-thumbs-subcategory">-->
+                    <!--<li>-->
+                        <!--<a href="#">-->
+                            <!--<p>-->
+                                <!--New Computer Setup-->
+                            <!--</p>-->
+                            <!--<div><span><i class="icon-check"></i></span></div>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--</div>-->
         </div>
+        <!--<div style="display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; justify-content: center; margin-bottom: 30px;">-->
+            <!--&lt;!&ndash;<div ng-repeat="producto in productos" >&ndash;&gt;-->
+            <!--<div style="display: flex; margin-right: 20px" align="center">-->
+                <!--<ul id="da-thumbs" class="da-thumbs-subcategory">-->
+                    <!--<li>-->
+                        <!--<a href="#">-->
+                            <!--<p>-->
+                                <!--Software Install or Uninstall-->
+                            <!--</p>-->
+                            <!--<div><span><i class="icon-check"></i></span></div>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div style="display: flex; margin-right: 20px" align="center">-->
+                <!--<ul id="da-thumbs" class="da-thumbs-subcategory">-->
+                    <!--<li>-->
+                        <!--<a href="#">-->
+                            <!--<p>-->
+                                <!--Printer Setup-->
+                            <!--</p>-->
+                            <!--<div><span><i class="icon-check"></i></span></div>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div><div style="display: flex; margin-right: 20px" align="center">-->
+                <!--<ul id="da-thumbs" class="da-thumbs-subcategory">-->
+                    <!--<li>-->
+                        <!--<a href="#">-->
+                            <!--<p>-->
+                                <!--OS (Operating System) Install or Re-Install-->
+                            <!--</p>-->
+                            <!--<div><span><i class="icon-check"></i></span></div>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</div>-->
     </div>
 
 
@@ -216,6 +219,15 @@
 <script type="text/javascript" src="../js/portfolio-init.js"></script>
 <script type="text/javascript" src="../js/sweetalert2.min.js"></script>
 <script type="text/javascript" src="../js/alerts.js"></script>
-
+<script>
+    $(document).ready(function() {
+        $('.subcategory-cont').hover(function(){
+               $(this).find('#icon').fadeIn().css("display", "flex");
+            },
+            function(){
+                $(this).find('#icon').fadeOut();
+            });
+    });
+</script>
 </body>
 </html>

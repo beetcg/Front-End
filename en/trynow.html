@@ -38,17 +38,17 @@
 
 <body class="page" data-ng-controller="TryNowController">
 <div>
-    <div ng-include="'menu-bar.html'"></div>
+    <div ng-include="'menu-bar-dark.html'"></div>
 
-    <div class="banner-tryit" >
+    <!--<div class="banner-tryit" >-->
         <!--<h2 class="center_aligned h2-headline">Try one of our services!</h2>-->
         <!--<h3 class="white_text spiral-animo" data-animation="fadeInDown" data-trigger_pt="0"-->
         <!--data-duration="1000" data-delay="300" style="text-align: center;">-->
         <!--This is a short description of this page.-->
         <!--</h3>-->
-    </div>
+    <!--</div>-->
 
-    <div class="container-fluid" ng-init="initHoverdir()">
+    <div class="container-fluid" ng-init="initHoverdir()" style="margin-top: 80px; margin-bottom: 80px">
         <div class="title-trynow animated tada">
             <p class="title-trynow-text"><span class="bold">Try </span> one of our services!</p>
         </div>
@@ -62,11 +62,13 @@
             <i class="ion-chevron-down animated infinite slideInDown step-text-try-i"></i>
         </div>
 
-        <div style="display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; justify-content: center; margin-bottom: 30px;">
-            <!--<div ng-repeat="producto in productos" >-->
+        <div class="list-categories">
             <div style="display: flex; margin-right: 20px" align="center">
                 <ul id="da-thumbs" class="da-thumbs">
                     <li>
+                        <p class="name-category" id="category">
+                            Computer Support
+                        </p>
                         <a href="http://dribbble.com/shots/505046-Menu">
                             <img class="catalogo-fancy img-responsive"
                                  src="images/853.jpg">
@@ -78,6 +80,9 @@
             <div style="display: flex; margin-right: 20px" align="center">
                 <ul id="da-thumbs" class="da-thumbs">
                     <li>
+                        <p class="name-category" id="category">
+                            Smart Home
+                        </p>
                         <a href="http://dribbble.com/shots/505046-Menu">
                             <img class="catalogo-fancy img-responsive"
                                  src="images/shutterstock_421740331.jpg">
@@ -89,6 +94,9 @@
             <div style="display: flex; margin-right: 20px" align="center">
                 <ul id="da-thumbs" class="da-thumbs">
                     <li>
+                        <p class="name-category" id="category">
+                            Television
+                        </p>
                         <a href="http://dribbble.com/shots/505046-Menu">
                             <img class="catalogo-fancy img-responsive"
                                  src="images/1420683627253.jpeg">
@@ -97,13 +105,14 @@
                     </li>
                 </ul>
             </div>
-            <!--</div>-->
         </div>
-        <div style="display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; justify-content: center; margin-bottom: 30px;">
-            <!--<div ng-repeat="producto in productos" >-->
+        <div class="list-categories">
             <div style="display: flex; margin-right: 20px" align="center">
                 <ul id="da-thumbs" class="da-thumbs">
                     <li>
+                        <p class="name-category" id="category">
+                            Audio & Video
+                        </p>
                         <a href="http://dribbble.com/shots/505046-Menu">
                             <img class="catalogo-fancy img-responsive"
                                  src="images/home-theater-4-620x412.jpg">
@@ -115,6 +124,9 @@
             <div style="display: flex; margin-right: 20px" align="center">
                 <ul id="da-thumbs" class="da-thumbs">
                     <li>
+                        <p class="name-category" id="category">
+                            Wifi & Network
+                        </p>
                         <a href="http://dribbble.com/shots/505046-Menu">
                             <img class="catalogo-fancy img-responsive"
                                  src="images/wifi.jpg">
@@ -126,6 +138,9 @@
             <div style="display: flex; margin-right: 20px" align="center">
                 <ul id="da-thumbs" class="da-thumbs">
                     <li>
+                        <p class="name-category" id="category">
+                            Malware / Virus
+                        </p>
                         <a href="http://dribbble.com/shots/505046-Menu">
                             <img class="catalogo-fancy img-responsive"
                                  src="images/OF8OWI0.jpg">
@@ -134,7 +149,6 @@
                     </li>
                 </ul>
             </div>
-            <!--</div>-->
         </div>
     </div>
 
@@ -200,6 +214,15 @@
 <script type="text/javascript" src="../js/portfolio-init.js"></script>
 <script type="text/javascript" src="../js/sweetalert2.min.js"></script>
 <script type="text/javascript" src="../js/alerts.js"></script>
-
+<script>
+    $(document).ready(function() {
+        $('.da-thumbs').hover(function(){
+                $(this).find('#category').css("display","none");
+            },
+            function(){
+                $(this).find('#category').css("display","block");
+            });
+    });
+</script>
 </body>
 </html>

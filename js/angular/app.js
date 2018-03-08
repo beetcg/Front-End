@@ -122,9 +122,13 @@ beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCa
     function($scope, $compile, $timeout, uiCalendarConfig) {
         $scope.productos =
             [
-                {img : "https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg", descripcion : 'Suéter "House Targaryen"', precio : 12000, color : "Gris"},
-                {img : "https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg", descripcion : 'Suéter "Deathly Hallows"', precio : 12000, color : "Negro"},
-                {img : "https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg", descripcion : 'Suéter "Winter is coming"', precio : 12000, color : "Gris"},
+                {name : 'Computer Repair and Help'},
+                {name : 'Computer Tune Up'},
+                {name : 'Data Back-Up or Transfer'},
+                {name : 'New Computer Setup'},
+                {name : 'Software Install or Uninstall'},
+                {name : 'Printer Setup'},
+                {name : 'OS (Operating System) Install or Re-Install'},
             ];
 
         $scope.initHoverdir = function(){
