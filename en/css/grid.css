@@ -12026,3 +12026,33 @@ i{
     border: 2px solid rgba(149, 34, 68, 0.64);
     background-color: #fff;
 }
+
+.calendar-schedule {
+    border: 1px solid #e8e3f0 !important;
+    padding: 30px !important;
+}
+
+.margin-calendar {
+    margin-top: 20px;
+}
+
+#field {
+    line-height: 37px;
+    text-align: center;
+    padding-top: 30px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.sui-listbox-item:hover, .sui-listbox-item-active {
+    background-color: #fff;
+    color: #FFF;
+    border-right:3px solid #952244;
+    border-left:3px solid #952244;
+}
+
+.title-picktime {
+    color: #fff;
+    font-weight: 900;
+    font-size: 17px;
+    opacity: 1;
+}

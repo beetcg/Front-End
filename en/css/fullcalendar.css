@@ -30,7 +30,7 @@ body .fc { /* extra precedence to overcome jqui */
 .fc-unthemed .fc-row,
 .fc-unthemed .fc-content, /* for gutter border */
 .fc-unthemed .fc-popover {
-	border-color: #ebedf2;
+	border-color: #fff;
 }
 
 .fc-unthemed .fc-popover {
@@ -47,7 +47,10 @@ body .fc { /* extra precedence to overcome jqui */
 }
 
 .fc-unthemed .fc-today {
-	background: rgba(155, 36, 70, 0.09);
+	/*background: rgba(155, 36, 70, 0.09);*/
+	font-weight: bold !important;
+	color: #000 !important;
+	/*font-size: 1rem;*/
 }
 
 .fc-highlight { /* when user is selecting cells */
@@ -376,7 +379,7 @@ hr.fc-divider {
 	table-layout: fixed;
 	border-collapse: collapse;
 	border-spacing: 0;
-	font-size: 1em; /* normalize cross-browser */
+	font-size: 0.9em; /* normalize cross-browser */
 }
 
 .fc th {
@@ -387,7 +390,7 @@ hr.fc-divider {
 .fc th,
 .fc td {
 	border-style: solid;
-	border-width: 1px;
+	/*border-width: 1px;*/
 	/*padding: 0;*/
 	vertical-align: top;
 	color: #898b96 !important;
@@ -479,10 +482,11 @@ temporary rendered events).
 	/* see-through to the background below */
 	background: none; /* in case <td>s are globally styled */
 	border-color: transparent;
+	cursor: pointer;
 
 	/* don't put a border between events and/or the day number */
 	border-bottom: 0;
-	height: 40px;
+	height: 30px;
 }
 
 .fc-row .fc-content-skeleton tbody td, /* cells with events inside (so NOT the day number cell) */
@@ -497,6 +501,7 @@ temporary rendered events).
 
 .fc-scroller {
 	-webkit-overflow-scrolling: touch;
+	/*overflow: hidden !important;*/
 }
 
 /* TODO: move to agenda/basic */
@@ -504,6 +509,10 @@ temporary rendered events).
 .fc-scroller > .fc-time-grid {
 	position: relative; /* re-scope all positions */
 	width: 100%; /* hack to force re-sizing this inner element when scrollbars appear/disappear */
+}
+
+.fc-day-grid-container {
+	height: 100% !important;
 }
 
 
@@ -830,7 +839,7 @@ a.fc-more:hover {
 
 .fc-toolbar h2 {
 	margin: 0;
-}
+	color: #333;  }
 
 /* button layering (for border precedence) */
 
@@ -935,6 +944,10 @@ a.fc-more:hover {
 
 .fc-rtl .fc-basic-view .fc-day-number {
 	text-align: left;
+}
+
+.fc-ltr .fc-basic-view .fc-day-number:hover {
+	background-color: #f6ecef;
 }
 
 .fc-day-number.fc-other-month {

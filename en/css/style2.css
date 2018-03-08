@@ -21,7 +21,7 @@ html,
 body {
   @import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
   font-family: 'Open Sans', helvetica, calibri, arial;
-  height: 100%;
+  /*height: 100%;*/
 }
 /*a {
   color: white;

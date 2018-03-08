@@ -2,7 +2,7 @@
 <html lang="en-US" data-ng-app="beetApp" data-ng-cloak>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Payment Gateway | BEET</title>
+    <title>Try Now | BEET</title>
     <meta name="description" content="Spiral HTML5 premium template">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
@@ -14,107 +14,64 @@
           type="text/css" media="all">
     <link rel="stylesheet" href="rs-plugin/css/settings.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/icons/icons.css" type="text/css" media="all">
-    <link rel="stylesheet" href="css/core-icons/core_style.css" type="text/css" media="all">
-    <link rel="stylesheet" href="css/scripts.css" type="text/css" media="all">
+    <!--<link rel="stylesheet" href="css/core-icons/core_style.css" type="text/css" media="all">-->
+    <!--<link rel="stylesheet" href="css/scripts.css" type="text/css" media="all">-->
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-    <link rel="stylesheet" href="css/style2.css">
-    <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
+    <!--<link rel="stylesheet" href="css/style2.css">-->
     <!--<link rel="stylesheet" href="css/components.css" type="text/css" media="all">-->
     <link rel="stylesheet" href="css/animate.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/ionicons.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/fullcalendar.css" type="text/css" media="all">
-    <link rel="stylesheet" href="css/demo.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
+    <link id="themecss" rel="stylesheet" type="text/css" href="css/timepicker.css" />
+
+    <!--<link rel="stylesheet" href="css/demo.css" type="text/css" media="all">-->
     <!-- Latest compiled and minified CSS Bootstrap
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
 
     <link href="css/style2.css" rel="stylesheet" media="screen">
     <!-- Jquery -->
     <!--<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
-
 </head>
 
-<body class="page" style="background-color: #f7f7f7; height: auto !important;">
-<div class="container-fluid contenedor--div"  data-ng-controller="TryNowController">
-
+<body class="page" data-ng-controller="TryNowController">
+<div>
     <div ng-include="'menu-bar-dark.html'"></div>
 
-    <div class="container-fluid" style="margin-top: 160px">
-        <div class="categories-box1">
-            <div class="center">
-                <div class="image-tech">
-                    <img src="images/team1.jpg">
+    <div class="container-fluid" ng-init="initHoverdir()" style="margin-top: 80px;margin-bottom: 100px">
+        <div class="title-trynow animated tada">
+            <p class="title-trynow-text"><span class="bold">Cool! </span> You're almost done</p>
+        </div>
+        <div class="steps">
+            <p class="step-circle-try">
+                3
+            </p>
+            <p class="step-text-try">
+                Choose a subcategory or service on
+            </p>
+            <p class="step-text-try bold">CATEGORY SELECTED</p>
+            <i class="ion-chevron-down animated infinite slideInDown step-text-try-i"></i>
+        </div>
+
+        <div class="containers margin-calendar">
+            <div class="rows">
+                <div class="col-sm-9" style="padding: 0 !important">
+                    <div class="calendar calendar-schedule" ng-model="eventSources" data-ng-show="calendar"
+                         calendar="myCalendar" ui-calendar="uiConfig.calendar">
+                    </div>
                 </div>
-                <div class="info-payment">
-                    <div class="category-tech-text">
-                        Category selected
-                    </div>
-                    <div class="name-tech-text">
-                        Alex Reinhold
-                    </div>
-                    <div class="little-line"></div>
-                    <div class="price-text">
-                        Monto del servicio
-                    </div>
-                    <div class="price-number-text">
-                        0000.00
-                    </div>
-                    <div class="info-card">
-                        Por favor ingrese los datos de su Tarjeta de Credito
-                    </div>
-                    <div class="info-contain">
-                        <input class="form-control form-control-solid input-info" type="text" placeholder="Nombre del titular *" name="pass"/>
-                    </div>
-                    <div class="info-contain">
-                        <input class="form-control form-control-solid input-info" type="text" placeholder="Numero de tarjeta *" name="pass"/>
-                    </div>
-                    <div class="info-contain">
-                        <input class="form-control form-control-solid input-info" type="text" placeholder="CVV *" name="pass"/>
-                        <img src="images/icon_tdc_back.png" style="margin-top: -27px; width: 30px; height: 20px; float: right; margin-right: 5px">
-                    </div>
-                    <div class="info-card" style="text-align: left; margin-bottom: 5px">
-                        Fecha de vencimiento de tarjeta:
-                    </div>
-                    <div class="info-contain rows">
-                        <div class="col-sm-5" style="margin-bottom: 15px">
-                            <select class="form-control" style="height: 33px !important; font-size: 13px">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
-                                <option>10</option>
-                                <option>11</option>
-                                <option>12</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-7">
-                            <select class="form-control" id="exampleFormControlSelect1" style="height: 33px !important; font-size: 13px">
-                                <option>2018</option>
-                                <option>2019</option>
-                                <option>2020</option>
-                                <option>2021</option>
-                                <option>2022</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div align="center">
-                        <button class="btn button-pay collapsed" aria-expanded="false">
-                            Pagar
-                        </button>
-                    </div>
-                    <div class="message-card">
-                        * Por su seguridad, la informacion de su metodo de pago no sera almacenada en el sistema. *
+                <div class="col-sm-3" style="background-color: #333">
+                    <div id="field">
+                        <span class="title-picktime">Pick a time:</span><br />
+                        <input id="timepicker" readonly />
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <footer id="ABdev_main_footer">
         <div id="footer_copyright">
@@ -149,6 +106,7 @@
 <script type="text/javascript" src="../js/ngMask.min.js"></script>
 <script type="text/javascript" src="../js/jquery.hoverdir.js"></script>
 <script type="text/javascript" src="../js/modernizr.custom.97074.js"></script>
+<script type="text/javascript" src="../js/timepicker.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -177,14 +135,10 @@
 <script type="text/javascript" src="../js/portfolio-init.js"></script>
 <script type="text/javascript" src="../js/sweetalert2.min.js"></script>
 <script type="text/javascript" src="../js/alerts.js"></script>
-<!--<script>-->
-<!--$('.ui.calendar')-->
-<!--.calendar({-->
-<!--popupOptions: {-->
-<!--observeChanges: false-->
-<!--}-->
-<!--}-->
-<!--);-->
-<!--</script>-->
+<script type="text/javascript">
+    jQuery(function ($) {
+        $("#timepicker").shieldTimePicker();
+    });
+</script>
 </body>
 </html>
