@@ -3213,9 +3213,9 @@ tbody.collapse.show {
 .dropdown {
     position: relative;
 }
-
+/*AQUI*/
 .dropdown-toggle::after {
-    display: inline-block;
+    display: none;
     width: 0;
     height: 0;
     margin-left: 0.255em;
@@ -11009,11 +11009,11 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     height: 130px;
     margin: 0 auto;
 }
-
-button {
-    cursor: pointer;
-    margin-left: 15px;
-}
+/*AQUI*/
+/*button {*/
+    /*cursor: pointer;*/
+    /*margin-left: 15px;*/
+/*}*/
 
 .hide{
     display:none;
@@ -11792,7 +11792,7 @@ i{
     align-items: center;
     justify-content: center;
     padding-top: 50px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     font-size: 2rem;
 }
 
@@ -11830,6 +11830,12 @@ i{
     text-align: center;
 }
 
+.step-text-try-small {
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+}
+
 .step-text-try-i {
     color: #333;
     font-size: 1.3rem;
@@ -11842,7 +11848,8 @@ i{
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 0px;
+    margin-bottom: 0;
+    margin-top: 20px;
 }
 
 .subcategory-cont {
@@ -12055,4 +12062,75 @@ i{
     font-weight: 900;
     font-size: 17px;
     opacity: 1;
+}
+
+.back-button {
+    font-size: 17px;
+    display: inline-block;
+    /*margin-top: 10px; */
+    color: #952244;
+    vertical-align: middle;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.back-button:hover {
+    font-size: 20px;
+    display: inline-block;
+    /*margin-top: 10px; */
+    color: #aa274e;
+    vertical-align: middle;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.btn-showmore {
+    width: 50px;
+    height: 50px;
+    background-color: #952244;
+    color: #fff;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    margin-left: 0 !important;
+    padding: 0 19px !important;
+}
+
+.btn-showmore:hover {
+    background-color: #aa274e;
+    color: #fff;
+    margin-left: 0 !important;
+    padding: 0 19px !important;
+}
+
+.filter-tech {
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.filter-show {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .filter-tech {
+        width: 0 !important;
+    }
+    .filter-hide {
+        display: none;
+    }
+    .filter-show {
+        display: block;
+        flex: 1;
+        justify-content: flex-end;
+        text-align: right;
+    }
+}
+
+.btn-filter-tech {
+    background: transparent;
+    color: #952244;
+    font-size: 1.5rem;
+    padding: 0 !important;
+    border: none !important;
 }

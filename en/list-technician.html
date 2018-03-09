@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/fullcalendar.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
-    <link id="themecss" rel="stylesheet" type="text/css" href="css/timepicker.css" />
+    <link id="themecss" rel="stylesheet" type="text/css" href="css/timepicker.css"/>
 
     <!--<link rel="stylesheet" href="css/demo.css" type="text/css" media="all">-->
     <!-- Latest compiled and minified CSS Bootstrap
@@ -42,31 +42,105 @@
 
     <div class="container-fluid" ng-init="initHoverdir()" style="margin-top: 80px;margin-bottom: 100px">
         <div class="title-trynow animated tada">
-            <p class="title-trynow-text"><span class="bold">Cool! </span> What is your available time?</p>
+            <p class="title-trynow-text"><span class="bold">Nice! </span> Here it's our best choice for you</p>
         </div>
         <div class="steps">
             <p class="step-circle-try">
-                3
+                4
             </p>
-            <p class="step-text-try">
-                Choose ...
+            <p class="step-text-try-small">
+                We find this technician that can help you please select one of them
             </p>
             <p class="step-text-try bold">CATEGORY SELECTED</p>
             <i class="ion-chevron-down animated infinite slideInDown step-text-try-i"></i>
         </div>
 
         <div class="containers margin-calendar">
-            <div class="rows">
-                <div class="col-sm-9" style="padding: 0 !important">
-                    <div class="calendar calendar-schedule" ng-model="eventSources" data-ng-show="calendar"
-                         calendar="myCalendar" ui-calendar="uiConfig.calendar">
+            <div class="categories-box1">
+                <div class="title-cat">
+                    <div class="col-sm-12 col-lg-8" style="display: flex; flex-direction: row; align-items: center; flex-wrap: nowrap">
+                        <h3 class="title-cat-text bold">
+                            Technicians
+                        </h3>
+                        <div class="btn-group filter-show">
+                            <button type="button" class="btn-filter-tech dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="ion-ios-settings-strong"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+                                <button class="dropdown-item" type="button">Featured</button>
+                                <button class="dropdown-item" type="button">Rating</button>
+                                <button class="dropdown-item" type="button">Nearest</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-4 rows filter-tech">
+                        <div class="filter-hide">
+                            <a class="btn btn-filter">
+                                Featured
+                            </a>
+                            <a class="btn link-filter">
+                                Rating
+                            </a>
+                            <a class="btn link-filter">
+                                Nearest
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-3" style="background-color: #333">
-                    <div id="field">
-                        <span class="title-picktime">Pick a time:</span><br />
-                        <input id="timepicker" readonly />
+                <div ng-repeat="producto in productos | limitTo: limit">
+                    <div class="tech-list-item rows animated fadeIn">
+                        <div class="col-sm-12 col-md-5 rows">
+                            <img src="images/team1.jpg" class="item-img">
+                            <div>
+                                <p class="item-text bold">
+                                    Technician's name
+                                </p>
+                                <p class="item-cat">
+                                    Category | Category | Category
+                                </p>
+                                <a href="technician-details.html" class="link-item">
+                                    View more
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-7 rows">
+                            <div class="col-sm-4" align="center">
+                                <p class="item-text bold">
+                                    Rating
+                                </p>
+                                <p>
+                                    <i class="ion-ios-star rating-icon"></i>
+                                    <i class="ion-ios-star rating-icon"></i>
+                                    <i class="ion-ios-star rating-icon"></i>
+                                    <i class="ion-android-star-outline rating-icon"></i>
+                                    <i class="ion-android-star-outline rating-icon"></i>
+                                </p>
+                            </div>
+                            <div class="col-sm-4" align="center">
+                                <p class="item-text bold">
+                                    Completed services
+                                </p>
+                                <p class="item-services-completed">
+                                    60
+                                </p>
+                            </div>
+                            <div class="col-sm-4" align="center">
+                                <p class="item-text bold">
+                                    Available schedule
+                                </p>
+                                <a ng-click="renderCalender('myCalendar')" href="#" data-toggle="modal"
+                                   data-target="#exampleModalCenter" class="link-item-schedule">
+                                    View
+                                </a>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <i class="fa fa-spinner" ng-show="loading"></i>
+                <div align="center">
+                    <button class="btn-showmore" ng-click="showMore()">
+                        <i class="ion-plus"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -142,9 +216,18 @@
 <script type="text/javascript" src="../js/portfolio-init.js"></script>
 <script type="text/javascript" src="../js/sweetalert2.min.js"></script>
 <script type="text/javascript" src="../js/alerts.js"></script>
-<script type="text/javascript">
-    jQuery(function ($) {
-        $("#timepicker").shieldTimePicker();
+<script>
+    $(document).ready(function(){
+        $(".btn-group").hover(
+            function() {
+                $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideDown(300);
+                $(this).toggleClass('open');
+            },
+            function() {
+                $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideUp(300);
+                $(this).toggleClass('open');
+            }
+        );
     });
 </script>
 </body>

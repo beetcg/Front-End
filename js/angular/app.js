@@ -120,6 +120,13 @@ beetApp.controller('categoriesController', ['$scope', function ($scope) {
 
 beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCalendarConfig',
     function($scope, $compile, $timeout, uiCalendarConfig) {
+        $scope.limit = 3;
+        $scope.loading = false;
+
+        $scope.showMore = function(){
+            $scope.limit = $scope.limit + 3;
+        };
+
         $scope.productos =
             [
                 {name : 'Computer Repair and Help'},
