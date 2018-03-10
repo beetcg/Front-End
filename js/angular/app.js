@@ -144,12 +144,6 @@ beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCa
             });
         };
 
-
-
-
-
-
-
     $scope.calendar = true;
     $scope.schedule = false;
 
