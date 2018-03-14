@@ -118,8 +118,8 @@ beetApp.controller('categoriesController', ['$scope', function ($scope) {
     }
 }]);
 
-beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCalendarConfig',
-    function($scope, $compile, $timeout, uiCalendarConfig) {
+beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCalendarConfig', '$log',
+    function($scope, $compile, $timeout, uiCalendarConfig, $log) {
         $scope.limit = 3;
         $scope.loading = false;
 
@@ -144,7 +144,21 @@ beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCa
             });
         };
 
+    //PAGINATION
+        $scope.totalItems = 64;
+        $scope.currentPage = 4;
 
+        $scope.setPage = function (pageNo) {
+            $scope.currentPage = pageNo;
+        };
+
+        $scope.pageChanged = function() {
+            $log.log('Page changed to: ' + $scope.currentPage);
+        };
+
+        $scope.maxSize = 3;
+        $scope.bigTotalItems = 175;
+        $scope.bigCurrentPage = 1;
 
 
 
