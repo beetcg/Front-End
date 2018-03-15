@@ -2144,7 +2144,6 @@ select.form-control:focus::-ms-value {
     width: 100%;
 }
 
-
 .col-form-label {
     padding-top: calc(1.8rem + 1px);
     padding-bottom: calc(0.375rem + 1px);
@@ -9598,7 +9597,6 @@ button.bg-dark:hover {
 
 .text-beet {
     color: #821e3b !important;
-
 }
 
 a.text-primary:focus, a.text-primary:hover {
@@ -10848,7 +10846,6 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     margin-bottom: 20px;
     justify-content: flex-end;
     flex-wrap: nowrap;
-
 }
 
 .title-comment {
@@ -10893,7 +10890,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     flex-direction: column;
     margin-bottom: 20px;
 }
-
+/*AQUI*/
 .comment-name {
     font-size: 0.8rem !important;
     font-weight: bold;
@@ -10926,6 +10923,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     padding-bottom: 5px;
 
 }
+
 .icon-category {
     color: #bdbbcc !important;
     font-size: 1.6rem;
@@ -11397,7 +11395,6 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     /*top: 10px;*/
     /*right: 18%;*/
 }
-/*AQUI*/
 .icon-filled {
     color: #00dc94 !important;
     position: absolute;

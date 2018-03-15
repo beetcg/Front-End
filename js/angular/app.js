@@ -160,10 +160,6 @@ beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCa
         $scope.bigTotalItems = 175;
         $scope.bigCurrentPage = 1;
 
-
-
-
-
     $scope.calendar = true;
     $scope.schedule = false;
 
