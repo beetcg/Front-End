@@ -91,61 +91,64 @@
                     </div>
                 </div>
                 <div ng-repeat="producto in productos | limitTo: limit">
-                    <div class="tech-list-item rows animated fadeIn">
-                        <div class="col-sm-12 col-md-5 rows" style="margin-bottom: 10px;">
-                            <img src="images/team1.jpg" class="item-img">
-                            <div>
-                                <p class="item-text bold">
-                                    Technician's name
-                                </p>
-                                <p class="item-cat">
-                                    Category | Category | Category
-                                </p>
-                                <a href="technician-details.html" class="link-item">
-                                    View more
-                                </a>
+                    <a href="trynow.html">
+                    <div class="tech-list-item rows animated fadeIn" style="cursor: pointer;" ng-click="">
+                            <div class="col-sm-12 col-md-5 rows" style="margin-bottom: 10px;">
+                                <img src="images/team1.jpg" class="item-img">
+                                <div>
+                                    <p class="item-text bold">
+                                        Technician's name
+                                    </p>
+                                    <p class="item-cat">
+                                        Category | Category | Category
+                                    </p>
+                                    <!--<a href="technician-details.html" class="link-item">-->
+                                        <!--View more-->
+                                    <!--</a>-->
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-sm-12 col-md-7 rows">
-                            <div class="col-sm-4" align="center">
-                                <p class="item-text bold">
-                                    Rating
-                                </p>
-                                <p>
-                                    <i class="ion-ios-star rating-icon"></i>
-                                    <i class="ion-ios-star rating-icon"></i>
-                                    <i class="ion-ios-star rating-icon"></i>
-                                    <i class="ion-android-star-outline rating-icon"></i>
-                                    <i class="ion-android-star-outline rating-icon"></i>
-                                </p>
+                            <div class="col-sm-12 col-md-7 rows">
+                                <div class="col-sm-4" align="center">
+                                    <p class="item-text bold">
+                                        Rating
+                                    </p>
+                                    <p>
+                                        <i class="ion-ios-star rating-icon"></i>
+                                        <i class="ion-ios-star rating-icon"></i>
+                                        <i class="ion-ios-star rating-icon"></i>
+                                        <i class="ion-android-star-outline rating-icon"></i>
+                                        <i class="ion-android-star-outline rating-icon"></i>
+                                    </p>
+                                </div>
+                                <div class="col-sm-4" align="center">
+                                    <p class="item-text bold">
+                                        Completed services
+                                    </p>
+                                    <p class="item-services-completed">
+                                        60
+                                    </p>
+                                </div>
+                                <div class="col-sm-4" align="center">
+                                    <p class="item-text bold">
+                                        Available scheduleF
+                                    </p>
+                                    <p ng-click="renderCalender('myCalendar')" data-toggle="modal"
+                                       data-target="#exampleModalCenter" class="link-item-schedule">
+                                        View
+                                    </p>
+                                </div>
                             </div>
-                            <div class="col-sm-4" align="center">
-                                <p class="item-text bold">
-                                    Completed services
-                                </p>
-                                <p class="item-services-completed">
-                                    60
-                                </p>
-                            </div>
-                            <div class="col-sm-4" align="center">
-                                <p class="item-text bold">
-                                    Available schedule
-                                </p>
-                                <a ng-click="renderCalender('myCalendar')" href="#" data-toggle="modal"
-                                   data-target="#exampleModalCenter" class="link-item-schedule">
-                                    View
-                                </a>
-                            </div>
-                        </div>
+
                     </div>
+                    </a>
                 </div>
                 <i class="fa fa-spinner" ng-show="loading"></i>
                 <div align="center">
-                    <!--<button class="btn-showmore" ng-click="showMore()">-->
-                    <!--<i class="ion-plus"></i>-->
-                    <!--</button>-->
-                    <ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize"
-                        class="pagination-sm" boundary-links="true" force-ellipses="true"></ul>
+                    <button class="btn-showmore" ng-click="showMore()">
+                        <i class="ion-plus"></i>
+                    </button>
+                    <!--<ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize"-->
+                        <!--class="pagination-sm" boundary-links="true" force-ellipses="true"></ul>-->
                 </div>
             </div>
         </div>
