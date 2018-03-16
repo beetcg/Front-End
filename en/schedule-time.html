@@ -2,7 +2,7 @@
 <html lang="en-US" data-ng-app="beetApp" data-ng-cloak>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Technician | BEET</title>
+    <title>Try Now | BEET</title>
     <meta name="description" content="Spiral HTML5 premium template">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
@@ -40,7 +40,7 @@
 
     <div ng-include="'menu-bar-dark.html'"></div>
 
-    <div class="container-fluid" style="margin-top: 100px">
+    <div class="container-fluid" style="margin-top: 80px;margin-bottom: 120px">
         <div class="title-trynow animated tada">
             <p class="title-trynow-text"><span class="bold">Great! </span> You're almost done!</p>
         </div>
@@ -49,17 +49,14 @@
                 5
             </p>
             <p class="step-text-try-small">
-                We find this technician that can help you please select one of them
+                Choose your available time
             </p>
             <p class="step-text-try bold">CATEGORY SELECTED</p>
-            <div class="day-selected">
-                03/15/2018
-            </div>
             <i class="ion-chevron-down animated infinite slideInDown step-text-try-i"></i>
         </div>
 
         <div class="rows margin-calendar">
-            <div class="col-sm-12 col-md-12 col-lg-3">
+            <div class="col-sm-12 col-md-4 col-lg-3">
                 <div class="categories-box1">
                     <div class="border-bottom-gray box-center">
                         <div class="profile-picture">
@@ -79,18 +76,18 @@
                         <div class="text-category">
                             <i class="ion-ios-home-outline icon-category"></i> <span class="category-name-text">Smart Home</span>
                         </div>
-                        <div class="text-category">
-                            <i class="ion-ios-monitor-outline icon-category"></i> <span class="category-name-text">Television</span>
-                        </div>
-                        <div class="text-category">
-                            <i class="ion-ios-videocam-outline icon-category"></i> <span class="category-name-text">Audio & Video</span>
-                        </div>
-                        <div class="text-category">
-                            <i class="ion-android-wifi icon-category"></i> <span class="category-name-text">Wifi & Network</span>
-                        </div>
-                        <div class="text-category">
-                            <i class="ion-bug icon-category"></i> <span class="category-name-text">Malware / Virus</span>
-                        </div>
+                        <!--<div class="text-category">-->
+                            <!--<i class="ion-ios-monitor-outline icon-category"></i> <span class="category-name-text">Television</span>-->
+                        <!--</div>-->
+                        <!--<div class="text-category">-->
+                            <!--<i class="ion-ios-videocam-outline icon-category"></i> <span class="category-name-text">Audio & Video</span>-->
+                        <!--</div>-->
+                        <!--<div class="text-category">-->
+                            <!--<i class="ion-android-wifi icon-category"></i> <span class="category-name-text">Wifi & Network</span>-->
+                        <!--</div>-->
+                        <!--<div class="text-category">-->
+                            <!--<i class="ion-bug icon-category"></i> <span class="category-name-text">Malware / Virus</span>-->
+                        <!--</div>-->
                     </div>
                     <div class="info-tech">
                         <div class="row-custom item-tech">
@@ -136,78 +133,49 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-9">
-                <div class="rows">
-                    <div class="col-sm-12 col-md-12 col-lg-4">
-                        <div class="categories-box1">
-                            <div class="border-bottom-gray">
-                                <div class="title-time">
-                                    <i class="ion-android-time"></i> Horario de atencion
-                                </div>
-                            </div>
-                            <div class="time-cont">
-                                <p class="time-days">
-                                    <i class="ion-android-done"></i> Midweek:
-                                </p>
-                                <p class="time-hour">
-                                    06:00 AM - 12:00 PM and 01:00 PM - 05:00 PM
-                                </p>
-
-                                <p class="time-days">
-                                    <i class="ion-android-done"></i> Weekend:
-                                </p>
-                                <p class="time-hour">
-                                    06:00 AM - 12:00 PM
-                                </p>
-
-                                <p class="time-days">
-                                    <i class="ion-android-done"></i> Holidays:
-                                </p>
-                                <p class="time-hour">
-                                    06:00 AM - 12:00 PM and 01:00 PM - 05:00 PM
-                                </p>
-                            </div>
+            <div class="col-sm-12 col-md-8 col-lg-9">
+                <div class="categories-box1">
+                    <div class="row-calendar" style="margin-bottom: 50px">
+                        <div class="day-calendar">
+                            <div class="day-calendar-text">16</div>
+                            <div class="day-week-calendar">Fri</div>
                         </div>
+                        <span class="month-text">
+                            March
+                        </span>
                     </div>
-                    <div class="col-sm-12 col-md-12 col-lg-4">
-                        <div class="categories-box1">
-                            <div class="border-bottom-gray">
-                                <div class="title-time">
-                                    <i class="ion-android-time clock-unavailable"></i> Unavailable time
+                    <div data-ng-repeat="hour in hours">
+                        <div class="row-calendar" style="align-items: center">
+                            <div class="col-hour">
+                                <div class="time-hour">
+                                    {{ hour.name }}
                                 </div>
                             </div>
-                            <div class="time-cont">
-                                <p class="day-unavailable">
-                                    06:00 AM - 12:00 PM
-                                </p><p class="day-unavailable">
-                                    06:00 AM - 12:00 PM
-                                </p><p class="day-unavailable">
-                                    06:00 AM - 12:00 PM
-                                </p><p class="day-unavailable">
-                                    06:00 AM - 12:00 PM
-                                </p><p class="day-unavailable">
-                                    06:00 AM - 12:00 PM
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-4">
-                        <div class="categories-box1">
-                            <div class="border-bottom-gray">
-                                <div class="title-time">
-                                    <i class="ion-android-time clock-available"></i> Pick available time
-                                </div>
-                            </div>
-                            <div class="time-cont">
-                                <div id="timeavailable">
-                                    <!--<span class="title-picktime">Pick a time:</span><br />-->
-                                    <input id="timepicker" readonly />
+                            <div class="col-event">
+                                <div id="event" class="event-calendar-available" style="display: none;">
+                                    Alex Reinhold
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="categories-box1">
+                    <div class="form-group">
+                        <label for="descrip" class="time-hour">
+                            Please, describe your request:
+                        </label>
+                        <textarea class="form-control" id="descrip" rows="3"></textarea>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div align="center">
+            <a href="#" class="btn btn-register uppercase">Next <i class="ion-ios-redo"></i></a>
+            <br>
+            <a href="javascript:;" class="back-button btn-submit" style="margin-top: 1rem" data-ng-click="selectOption(1)">
+                <i class="ion-ios-undo"></i>
+                Back
+            </a>
         </div>
     </div>
 
@@ -336,9 +304,14 @@
 <script type="text/javascript" src="../js/sweetalert2.min.js"></script>
 <script type="text/javascript" src="../js/alerts.js"></script>
 
-<script type="text/javascript">
-    jQuery(function ($) {
-        $("#timepicker").shieldTimePicker();
+<script>
+    $(document).ready(function() {
+        $('.row-calendar').hover(function(){
+                $(this).find('#event').fadeIn().css("display", "block");
+            },
+            function(){
+                $(this).find('#event').fadeOut(100);
+            });
     });
 </script>
 </body>

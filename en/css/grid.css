@@ -12274,10 +12274,14 @@ i{
     font-size: 14px;
     font-weight: bold;
 }
-
+/*AQUI*/
 .time-hour {
     color: #333;
     font-size: 15px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
 }
 
 .day-selected {
@@ -12304,4 +12308,85 @@ i{
 .day-unavailable {
     color: #ff6363;
     font-size: 14px;
+}
+/*16/03/2018*/
+.row-calendar{
+    display: flex;
+    flex-direction: row;
+    /*align-items: center;*/
+    border-bottom: 1px solid #e6e8ed;
+    cursor: pointer;
+}
+
+.day-calendar{
+    /*padding-bottom: 10px;*/
+    margin-bottom: 10px;
+    padding-right: 20px;
+    margin-right: 20px;
+    border-right: 1px solid #e6e8ed;
+}
+
+.day-calendar-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+
+.day-week-calendar {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.month-text {
+    display: flex;
+    align-items: flex-end;
+    color: #333;
+    font-weight: bold;
+    padding-bottom: 5px;
+    font-size: 1.8rem;
+}
+
+.col-hour {
+    display: flex;
+    flex: 1;
+    z-index: 1000;
+}
+
+.col-event {
+    display: flex;
+    flex: 10;
+}
+
+.event-calendar-unavailable {
+    border: 2px solid #ff6363;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+    border-radius: 40px;
+    /*width: 100%;*/
+    text-align: center;
+    color: #ff6363;
+}
+
+.event-calendar-available {
+    border: 2px solid #00dc94;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+    border-radius: 40px;
+    /*width: 100%;*/
+    text-align: center;
+    color: #00dc94;
+
 }

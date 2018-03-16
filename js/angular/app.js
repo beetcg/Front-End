@@ -138,6 +138,20 @@ beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCa
                 {name : 'OS (Operating System) Install or Re-Install'},
             ];
 
+        $scope.hours =
+            [
+                {name : '08:00 AM'},
+                {name : '09:00 AM'},
+                {name : '10:00 AM'},
+                {name : '11:00 AM'},
+                {name : '12:00 PM'},
+                {name : '01:00 PM'},
+                {name : '02:00 PM'},
+                {name : '03:00 PM'},
+                {name : '04:00 PM'},
+                {name : '05:00 PM'}
+            ];
+
         $scope.initHoverdir = function(){
             $timeout(function () {
                 $(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );

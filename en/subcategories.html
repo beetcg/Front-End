@@ -56,13 +56,13 @@
         </div>
 
         <div class="list-categories">
-            <div ng-repeat="producto in productos" >
-            <div class="subcategory-cont" align="center">
-                <span>{{producto.name}}</span>
-                <div id="icon" style="display: none;" class="icon-hidden">
-                    <i class="icon-check icon-select-sub"></i>
+            <div ng-repeat="producto in productos">
+                <div class="subcategory-cont" align="center">
+                    <span>{{producto.name}}</span>
+                    <div id="icon" style="display: none;" class="icon-hidden">
+                        <i class="icon-check icon-select-sub"></i>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
 
@@ -137,11 +137,11 @@
 <script type="text/javascript" src="../js/sweetalert2.min.js"></script>
 <script type="text/javascript" src="../js/alerts.js"></script>
 <script>
-    $(document).ready(function() {
-        $('.subcategory-cont').hover(function(){
-               $(this).find('#icon').fadeIn().css("display", "flex");
+    $(document).ready(function () {
+        $('.subcategory-cont').hover(function () {
+                $(this).find('#icon').fadeIn().css("display", "flex");
             },
-            function(){
+            function () {
                 $(this).find('#icon').fadeOut();
             });
     });
