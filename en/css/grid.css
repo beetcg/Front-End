@@ -10789,7 +10789,6 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     border-radius: 100%;
 }
 
-/*AQUI*/
 .profile-picture img {
     text-align: center;
     max-width: 80px !important;
@@ -10801,7 +10800,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     -o-border-radius: 100%;
     border-radius: 100%;
 }
-/*AQUI*/
+
 .image-tech {
     border: 2px solid #e7e8eb;
     padding: 8px;
@@ -10820,7 +10819,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     background: #fff;
 }
 
-/*AQUI*/
+
 .image-tech img {
     text-align: center;
     max-width: 100px !important;
@@ -10832,7 +10831,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     -o-border-radius: 100%;
     border-radius: 100%;
 }
-/*AQUI*/
+
 .profile-name {
     color: #1b1c1e;
     padding: 0 0 0 0;
@@ -10878,7 +10877,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     font-size: 1.2rem;
     font-weight: bold;
 }
-/*AQUI*/
+
 .tab-comment {
     display: flex;
     margin-left: 25px;
@@ -10886,7 +10885,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     font-size: 1.2rem;
     font-weight: lighter;
 }
-/*AQUI*/
+
 .tab-comment-selected {
     display: flex;
     margin-left: 25px;
@@ -10897,7 +10896,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     font-size: 1.2rem;
     font-weight: normal;
 }
-/*AQUI*/
+
 .tab-comment:hover {
     display: flex;
     margin-left: 25px;
@@ -10913,7 +10912,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     flex-direction: column;
     margin-bottom: 20px;
 }
-/*AQUI*/
+
 .comment-name {
     font-size: 0.8rem !important;
     font-weight: bold;
@@ -10924,7 +10923,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     margin-top: -10px !important;
 
 }
-/*AQUI*/
+
 @media (max-width: 440px) {
     .comment-name {
         font-size: 0.7rem !important;
@@ -10972,14 +10971,13 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     font-size: 0.9rem;
 }
 
-/*AQUI*/
 .center {
     align-items: center;
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
 }
-/*AQUI*/
+
 .info-payment {
     margin-top: 30px;
 }
@@ -10998,21 +10996,21 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     text-align: center;
     padding-bottom: 10px;
 }
-/*AQUI*/
+
 .little-line {
     height: 2px;
     background-color: #505050;
     width: 280px;
     margin-bottom: 10px;
 }
-/*AQUI*/
+
 .category-tech-text {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
     color: #333;
 }
-/*AQUI*/
+
 .subcategory-tech-text {
     font-size: 16px;
     /*font-weight: lighter;*/
@@ -11020,7 +11018,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     color: #555;
     margin-bottom: 10px;
 }
-/*AQUI*/
+
 .price-number-text {
     font-size: 30px;
     font-weight: bold;
@@ -11028,7 +11026,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     color: #333333;
     margin-bottom: 10px;
 }
-/*AQUI*/
+
 .info-card {
     font-size: 13px;
     font-weight: bold;
@@ -11044,7 +11042,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
 .input-info {
     font-size: 13px !important;
 }
-/*AQUI*/
+
 .button-pay {
     background-color: transparent !important;
     border-radius: 40px !important;
@@ -11058,7 +11056,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     margin-top: 30px;
     color: #821e3b !important;
 }
-/*AQUI*/
+
 .button-pay:hover {
     background-color: #952244 !important;
     border-radius: 40px !important;
@@ -12257,11 +12255,9 @@ i{
     .tabs-flex-comment {
         flex: 2;
     }
-    /*AQUI*/
     .tab-comment-selected {
         font-size: 0.7rem;
     }
-    /*AQUI*/
     .tab-comment {
         font-size: 0.7rem;
     }
@@ -12279,8 +12275,6 @@ i{
     left: 0px;
     will-change: transform;
 }
-
-/*15/03/2018*/
 
 .title-time {
     font-size: 0.8rem;
@@ -12308,7 +12302,7 @@ i{
     font-size: 14px;
     font-weight: bold;
 }
-/*AQUI*/
+
 .time-hour {
     color: #333;
     font-size: 15px;
@@ -12343,7 +12337,7 @@ i{
     color: #ff6363;
     font-size: 14px;
 }
-/*16/03/2018*/
+
 .row-calendar{
     display: flex;
     flex-direction: row;
@@ -12425,7 +12419,6 @@ i{
 
 }
 
-/*20/03/2018*/
 .section-options {
     margin-top: 0px;
 }
