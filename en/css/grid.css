@@ -12492,16 +12492,23 @@ i{
 .option-wallet:hover {
     background-color: #952244;
     color: #fff;
-}
-
-.option-wallet:focus {
-    background-color: #952244;
-    color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+    -webkit-transform: translate(0px, -1px);
+    -moz-transform: translate(0px, -1px);
+    -ms-transform: translate(0px, -1px);
+    -o-transform: translate(0px, -1px);
+    transform: translate(0px, -1px);
 }
 
 .option-tdc:hover {
     background-color: #952244;
     color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+    -webkit-transform: translate(0px, -1px);
+    -moz-transform: translate(0px, -1px);
+    -ms-transform: translate(0px, -1px);
+    -o-transform: translate(0px, -1px);
+    transform: translate(0px, -1px);
 }
 
 .option-icon {
