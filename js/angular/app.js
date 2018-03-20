@@ -158,6 +158,9 @@ beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCa
             });
         };
 
+    //PAYMENT GATEWAY
+        $scope.tdc = false;
+
     //PAGINATION
         $scope.totalItems = 64;
         $scope.currentPage = 4;

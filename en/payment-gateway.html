@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/fullcalendar.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/demo.css" type="text/css" media="all">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Latest compiled and minified CSS Bootstrap
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
 
@@ -35,111 +36,137 @@
 
 </head>
 
-<body class="page" >
+<body class="page login" style="background: none;">
 <div class="container-fluid contenedor--div"  data-ng-controller="TryNowController">
 
     <div ng-include="'menu-bar-dark.html'"></div>
 
-    <div class="container-fluid" style="margin-top: 160px">
+    <div class="content" style="margin-top: 0px">
         <!--<div class="categories-box1">-->
-            <div class="center">
-                <div class="image-tech">
-                    <img src="images/team1.jpg">
+            <div class="hourly-form" style="margin-top: 160px">
+                <div class="center bottom-30">
+                    <div class="image-tech">
+                        <img src="images/team1.jpg">
+                    </div>
                 </div>
                 <div class="info-payment">
                     <div class="category-tech-text">
                         Category selected
                     </div>
+                    <div class="subcategory-tech-text">
+                        Subcategory selected
+                    </div>
                     <div class="name-tech-text">
                         Alex Reinhold
                     </div>
-                    <div class="little-line"></div>
+                    <div class="center bottom-10">
+                        <div class="little-line"></div>
+                    </div>
                     <div class="price-text">
-                        Monto del servicio
+                        Service amount:
                     </div>
                     <div class="price-number-text">
-                        0000.00
+                        500 USD
                     </div>
-                    <div class="info-card">
-                        Por favor ingrese los datos de su Tarjeta de Credito
-                    </div>
-                    <div class="info-contain">
-                        <input class="form-control form-control-solid input-info" type="text" placeholder="Nombre del titular *" name="pass"/>
-                    </div>
-                    <div class="info-contain">
-                        <input class="form-control form-control-solid input-info" type="text" placeholder="Numero de tarjeta *" name="pass"/>
-                    </div>
-                    <div class="info-contain">
-                        <input class="form-control form-control-solid input-info" type="text" placeholder="CVV *" name="pass"/>
-                        <img src="images/icon_tdc_back.png" style="margin-top: -27px; width: 30px; height: 20px; float: right; margin-right: 5px">
-                    </div>
-                    <div class="info-card" style="text-align: left; margin-bottom: 5px">
-                        Fecha de vencimiento de tarjeta:
-                    </div>
-                    <div class="info-contain rows">
-                        <div class="col-sm-5" style="margin-bottom: 15px">
-                            <select class="form-control" style="height: 33px !important; font-size: 13px">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
-                                <option>10</option>
-                                <option>11</option>
-                                <option>12</option>
-                            </select>
+
+                    <div class="section-options">
+                        <div class="options-title price-text">
+                            Choose payment method:
                         </div>
-                        <div class="col-sm-7">
-                            <select class="form-control" id="exampleFormControlSelect1" style="height: 33px !important; font-size: 13px">
-                                <option>2018</option>
-                                <option>2019</option>
-                                <option>2020</option>
-                                <option>2021</option>
-                                <option>2022</option>
-                            </select>
+                        <div class="payment-options">
+                            <div class="option-wallet">
+                                <i class="material-icons option-icon">account_balance_wallet</i>
+                                <span class="option-text">Wallet</span>
+                            </div>
+                            <div class="option-tdc">
+                                <i class="material-icons option-icon">credit_card</i>
+                                <span class="option-text">Credit Card</span>
+                            </div>
                         </div>
                     </div>
-                    <div align="center">
-                        <button class="btn button-pay collapsed" aria-expanded="false">
-                            Pagar
-                        </button>
-                    </div>
-                    <div class="message-card">
-                        * Por su seguridad, la informacion de su metodo de pago no sera almacenada en el sistema. *
+
+                    <div data-ng-show="tdc">
+                        <div class="info-card">
+                            Por favor ingrese los datos de su Tarjeta de Credito
+                        </div>
+                        <div class="info-contain">
+                            <input class="form-control form-control-solid input-info" type="text" placeholder="Nombre del titular *" name="pass"/>
+                        </div>
+                        <div class="info-contain">
+                            <input class="form-control form-control-solid input-info" type="text" placeholder="Numero de tarjeta *" name="pass"/>
+                        </div>
+                        <div class="info-contain">
+                            <input class="form-control form-control-solid input-info" type="text" placeholder="CVV *" name="pass"/>
+                            <img src="images/icon_tdc_back.png" style="margin-top: -27px; width: 30px; height: 20px; float: right; margin-right: 5px">
+                        </div>
+                        <div class="info-card" style="text-align: left; margin-bottom: 5px">
+                            Fecha de vencimiento de tarjeta:
+                        </div>
+                        <div class="info-contain rows">
+                            <div class="col-sm-5" style="margin-bottom: 15px">
+                                <select class="form-control" style="height: 33px !important; font-size: 13px">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-7">
+                                <select class="form-control" id="exampleFormControlSelect1" style="height: 33px !important; font-size: 13px">
+                                    <option>2018</option>
+                                    <option>2019</option>
+                                    <option>2020</option>
+                                    <option>2021</option>
+                                    <option>2022</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div align="center">
+                            <button class="btn button-pay collapsed" aria-expanded="false">
+                                Pagar
+                            </button>
+                        </div>
+                        <div class="message-card">
+                            * Por su seguridad, la informacion de su metodo de pago no sera almacenada en el sistema. *
+                        </div>
                     </div>
                 </div>
             </div>
         <!--</div>-->
     </div>
 
-    <footer id="ABdev_main_footer">
-        <div id="footer_copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="span4 footer_copyright left_aligned">
-                        BEET ©2017. All Rights Reserved
-                        <a href="../es/index.html">
-                            <img src="images/es.svg" width="20px"></a>
-                    </div>
-                    <div class="span6 right_aligned">
+    <!--<footer id="ABdev_main_footer">-->
+        <!--<div id="footer_copyright">-->
+            <!--<div class="container">-->
+                <!--<div class="row">-->
+                    <!--<div class="span4 footer_copyright left_aligned">-->
+                        <!--BEET ©2017. All Rights Reserved-->
+                        <!--<a href="../es/index.html">-->
+                            <!--<img src="images/es.svg" width="20px"></a>-->
+                    <!--</div>-->
+                    <!--<div class="span6 right_aligned">-->
 
 
-                        <a href="#"><img src="images/google-play-badge.svg" width="135"></a>
-                        <a href="#"><img src="images/Download_on_the_App_Store_Badge_US-UK_135x40.svg"></a>
-                    </div>
-                    <div class="span2 center_aligned">
-                        <a href="#" id="back_to_top" title="Back to top">
-                            <i class="ci_icon-angle-up"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+                        <!--<a href="#"><img src="images/google-play-badge.svg" width="135"></a>-->
+                        <!--<a href="#"><img src="images/Download_on_the_App_Store_Badge_US-UK_135x40.svg"></a>-->
+                    <!--</div>-->
+                    <!--<div class="span2 center_aligned">-->
+                        <!--<a href="#" id="back_to_top" title="Back to top">-->
+                            <!--<i class="ci_icon-angle-up"></i>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</footer>-->
 </div>
 
 <script type="text/javascript" src="../js/jquery.js"></script>

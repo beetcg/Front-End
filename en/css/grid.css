@@ -10770,10 +10770,11 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     border-radius: 100%;
 }
 
+/*AQUI*/
 .profile-picture img {
     text-align: center;
-    max-width: 100px !important;
-    height: 100px !important;
+    max-width: 80px !important;
+    height: 80px !important;
     margin: 0 auto !important;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -10781,6 +10782,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     -o-border-radius: 100%;
     border-radius: 100%;
 }
+/*AQUI*/
 .image-tech {
     border: 2px solid #e7e8eb;
     padding: 8px;
@@ -10795,13 +10797,14 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     /*height: 200px !important;*/
     /*margin-top: -80px*/
     position: absolute;
-    top: 90px
+    top: 100px
 }
 
+/*AQUI*/
 .image-tech img {
     text-align: center;
-    max-width: 120px !important;
-    height: 120px !important;
+    max-width: 100px !important;
+    height: 100px !important;
     /*margin: 0 auto !important;*/
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -10948,15 +10951,16 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     font-weight: bold;
     font-size: 0.9rem;
 }
+
+/*AQUI*/
 .center {
     align-items: center;
     display: flex;
     justify-content: center;
-    padding-bottom: 30px;
 }
-
+/*AQUI*/
 .info-payment {
-    margin-top: 80px;
+    margin-top: 20px;
 }
 
 .price-text {
@@ -10973,27 +10977,37 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     text-align: center;
     padding-bottom: 10px;
 }
-
+/*AQUI*/
 .little-line {
     height: 2px;
     background-color: #505050;
-    margin-left: 100px;
-    margin-right: 100px;
+    /*margin-left: 100px;*/
+    /*margin-right: 100px;*/
+    width: 280px;
     margin-bottom: 10px;
 }
-
+/*AQUI*/
 .category-tech-text {
     font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+/*AQUI*/
+.subcategory-tech-text {
+    font-size: 15px;
     font-weight: lighter;
     text-align: center;
+    color: #555;
+    margin-bottom: 10px;
 }
-
+/*AQUI*/
 .price-number-text {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
     color: #333333;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .info-card {
@@ -12389,4 +12403,84 @@ i{
     text-align: center;
     color: #00dc94;
 
+}
+
+/*20/03/2018*/
+.section-options {
+    margin-top: 0px;
+}
+
+.options-title {
+    /*font-family: 'Raleway', sans-serif;*/
+    margin-bottom: 15px;
+    /*color: #333;*/
+    /*font-size: 15px;*/
+    /*text-align: center;*/
+    /*font-weight: bold;*/
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.option-wallet {
+    display: flex;
+    flex: 1;
+    border-radius: 4px;
+    border: 1px solid #952244;
+    flex-direction: row;
+    align-items: center;
+    color: #952244;
+    cursor: pointer;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-right: 5px;
+}
+
+.option-tdc {
+    display: flex;
+    flex: 1;
+    border-radius: 4px;
+    border: 1px solid #952244;
+    flex-direction: row;
+    align-items: center;
+    color: #952244;
+    cursor: pointer;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 5px;
+}
+
+.option-wallet:hover {
+    background-color: #952244;
+    color: #fff;
+}
+
+.option-tdc:hover {
+    background-color: #952244;
+    color: #fff;
+}
+
+.option-icon {
+    font-size: 20px !important;
+    margin: 0 !important;
+    margin-right: 10px !important;
+}
+
+.option-text {
+    font-size: 15px;
+    /*font-weight: bold;*/
+
+}
+
+.bottom-10 {
+    padding-bottom: 10px;
+}
+
+.bottom-30 {
+    padding-bottom: 30px;
 }
