@@ -160,6 +160,21 @@ beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCa
 
     //PAYMENT GATEWAY
         $scope.tdc = false;
+        $scope.options = true;
+
+        $scope.selectMethod = function (opc) {
+            switch (opc) {
+                case 1:
+                    $scope.tdc = true;
+                    $scope.options = false;
+                    break;
+                case 2:
+                    $scope.tdc = false;
+                    $scope.options = true;
+                    break;
+            }
+            $scope.isVisible = !$scope.isVisible;
+        }
 
     //PAGINATION
         $scope.totalItems = 64;

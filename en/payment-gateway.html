@@ -36,12 +36,12 @@
 
 </head>
 
-<body class="page login" style="background: none;">
+<body class="page">
 <div class="container-fluid contenedor--div"  data-ng-controller="TryNowController">
 
     <div ng-include="'menu-bar-dark.html'"></div>
 
-    <div class="content" style="margin-top: 0px">
+    <div class="content4">
         <!--<div class="categories-box1">-->
             <div class="hourly-form" style="margin-top: 160px">
                 <div class="center bottom-30">
@@ -50,18 +50,28 @@
                     </div>
                 </div>
                 <div class="info-payment">
-                    <div class="category-tech-text">
-                        Category selected
-                    </div>
-                    <div class="subcategory-tech-text">
-                        Subcategory selected
-                    </div>
                     <div class="name-tech-text">
                         Alex Reinhold
                     </div>
-                    <div class="center bottom-10">
+                    <div class="center" style="margin-bottom: 5px !important;">
                         <div class="little-line"></div>
                     </div>
+                    <div class="category-tech-text">
+                        Computer Repair and Help
+                    </div>
+                    <div class="subcategory-tech-text">
+                        Computer Tune Up
+                    </div>
+                    <div class="date">
+                        <div class="subcategory-tech-text">
+                            <i class="ion-calendar"></i> 06/20/2018
+                        </div>
+                        <div class="separator-vertical"></div>
+                        <div class="subcategory-tech-text">
+                            <i class="ion-android-time"></i> 09:00 AM
+                        </div>
+                    </div>
+
                     <div class="price-text">
                         Service amount:
                     </div>
@@ -69,38 +79,52 @@
                         500 USD
                     </div>
 
-                    <div class="section-options">
+                    <div class="section-options" data-ng-show="options">
                         <div class="options-title price-text">
                             Choose payment method:
                         </div>
                         <div class="payment-options">
-                            <div class="option-wallet">
+                            <div class="option-wallet" data-toggle="modal" data-target="#wallet">
                                 <i class="material-icons option-icon">account_balance_wallet</i>
-                                <span class="option-text">Wallet</span>
+                                <div class="option-column">
+                                    <span class="option-text">Wallet</span>
+                                    <div class="credits-available">
+                                        Available: 800 USD
+                                    </div>
+                                </div>
+
                             </div>
-                            <div class="option-tdc">
+                            <div class="option-tdc" data-ng-click="selectMethod(1)">
                                 <i class="material-icons option-icon">credit_card</i>
                                 <span class="option-text">Credit Card</span>
                             </div>
                         </div>
                     </div>
 
-                    <div data-ng-show="tdc">
-                        <div class="info-card">
-                            Por favor ingrese los datos de su Tarjeta de Credito
+                    <div data-ng-show="tdc" class="animated bounceInUp">
+                        <div class="option-row">
+                            <div class="flex-back">
+                                <i class="ion-android-arrow-back ic-back" style="margin:0 !important;" data-ng-click="selectMethod(2)"></i>
+                            </div>
+                            <div class="flex-center">
+                                <div class="info-card">
+                                    Please enter your Credit Card details:
+                                </div>
+                            </div>
+                            <div class="flex-back"></div>
                         </div>
                         <div class="info-contain">
-                            <input class="form-control form-control-solid input-info" type="text" placeholder="Nombre del titular *" name="pass"/>
+                            <input class="form-control form-control-solid input-info" type="text" placeholder="Cardholder's name *" name="pass"/>
                         </div>
                         <div class="info-contain">
-                            <input class="form-control form-control-solid input-info" type="text" placeholder="Numero de tarjeta *" name="pass"/>
+                            <input class="form-control form-control-solid input-info" type="text" placeholder="Cardholder's lastname *" name="pass"/>
                         </div>
                         <div class="info-contain">
                             <input class="form-control form-control-solid input-info" type="text" placeholder="CVV *" name="pass"/>
                             <img src="images/icon_tdc_back.png" style="margin-top: -27px; width: 30px; height: 20px; float: right; margin-right: 5px">
                         </div>
                         <div class="info-card" style="text-align: left; margin-bottom: 5px">
-                            Fecha de vencimiento de tarjeta:
+                            Card expiration date:
                         </div>
                         <div class="info-contain rows">
                             <div class="col-sm-5" style="margin-bottom: 15px">
@@ -130,17 +154,59 @@
                             </div>
                         </div>
                         <div align="center">
-                            <button class="btn button-pay collapsed" aria-expanded="false">
-                                Pagar
+                            <button class="btn button-pay collapsed" aria-expanded="false" data-toggle="modal" data-target="#tdc">
+                                Ready
                             </button>
                         </div>
                         <div class="message-card">
-                            * Por su seguridad, la informacion de su metodo de pago no sera almacenada en el sistema. *
+                            * For your security, your payment method information will not be stored in the system. *
                         </div>
                     </div>
                 </div>
             </div>
         <!--</div>-->
+    </div>
+
+    <!-- Modal WALLET-->
+    <div class="modal fade" id="wallet" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-title title-modal">
+                        Available: 800 USD
+                    </div>
+                    <div class="message-modal">
+                        Are you sure you want to do this?
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="" class="link-cancel" data-dismiss="modal">Cancel</a>
+                    <a href="" class="link-confirm">Confirm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal TDC-->
+    <div class="modal fade" id="tdc" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-title title-modal">
+                        Credit Card
+                    </div>
+                    <div class="message-modal">
+                        Are you sure you want to do this?
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="" class="link-cancel" data-dismiss="modal">Cancel</a>
+                    <a href="" class="link-confirm">Confirm</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!--<footer id="ABdev_main_footer">-->
