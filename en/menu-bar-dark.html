@@ -31,36 +31,141 @@
         </ul>
         <div class="">
             <ul class="navbar-nav mr-auto" align="center">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="icon-basket" style="font-size: 20px !important;"></i>
+                <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" href="#">-->
+                        <!--&lt;!&ndash;<i class="ion-android-notifications-none" style="font-size: 20px !important;"></i>&ndash;&gt;-->
+                        <!--<i class="material-icons">notifications_none</i>-->
+                    <!--</a>-->
+                <!--</li>-->
+                <li class="nav-item dropdown option-none">
+                    <a class="nav-link dropdown-toggle" href="#" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="material-icons">notifications_none</i>
+                        <div class="point-notif"></div>
                     </a>
+                    <div class="dropdown-menu dropdown-menu-right arrow-color dropdown-dark drop-notif" aria-labelledby="navbarDropdown">
+                        <div class="header-notif">
+                            <span> 4 New </span>
+                            <span style="font-size: 1rem;font-family: 'Raleway', sans-serif;"> Notifications </span>
+                        </div>
+                        <div class=" list-notif">
+                            <div class="left-notif">
+                                12 new users registered
+                            </div>
+                            <div class="right-notif">
+                                3 min
+                            </div>
+                        </div>
+                        <div class="list-notif">
+                            <div class="left-notif">
+                                New invoice received
+                            </div>
+                            <div class="right-notif">
+                                3 min
+                            </div>
+                        </div>
+                        <div class="list-notif">
+                            <div class="left-notif">
+                                New order received
+                            </div>
+                            <div class="right-notif">
+                                3 min
+                            </div>
+                        </div>
+                        <div class="list-notif">
+                            <div class="left-notif">
+                                New order received
+                            </div>
+                            <div class="right-notif">
+                                3 min
+                            </div>
+                        </div>
+                        <div class="view-all-notif">
+                            <a href="">View all</a>
+                        </div>
+                    </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown option-none">
                     <a class="nav-link dropdown-toggle" href="#" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         SIGN UP
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right animated bounceIn dropdown-dark" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu dropdown-menu-right animated fadeInUp dropdown-dark" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="./signup-technician.html">Technician</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="./signup-client.html">Client</a>
                         <!--<a class="dropdown-item" href="#">Something else here</a>-->
                     </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown option-none">
                     <a class="nav-link dropdown-toggle" href="#" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         SIGN IN
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right animated bounceIn dropdown-dark" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu dropdown-menu-right animated fadeInUp dropdown-dark" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="./login-technician.html">Technician</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="./login-client.html">Client</a>
-                        <!--<a class="dropdown-item" href="#">Something else here</a>-->
                     </div>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
+<div class="bar-options">
+    <div class="btn-group">
+        <a href="" class="btn-filter-tech icon-bar">
+            <i class="material-icons" style="font-size: 1.7rem;">person_outline</i>
+            <!--<div class="point-color-notif"></div>-->
+        </a>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn-filter-tech icon-bar dropdown-toggle dropdown-toggle2"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="material-icons">notifications_none</i>
+            <div class="point-color-notif"></div>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right arrow-color dropdown-dark drop-notif" aria-labelledby="navbarDropdown">
+            <div class="header-notif">
+                <span> 4 New </span>
+                <span style="font-size: 1rem;font-family: 'Raleway', sans-serif;"> Notifications </span>
+            </div>
+            <div class=" list-notif">
+                <div class="left-notif">
+                    12 new users registered
+                </div>
+                <div class="right-notif">
+                    3 min
+                </div>
+            </div>
+            <div class="list-notif">
+                <div class="left-notif">
+                    New invoice received
+                </div>
+                <div class="right-notif">
+                    3 min
+                </div>
+            </div>
+            <div class="list-notif">
+                <div class="left-notif">
+                    New order received
+                </div>
+                <div class="right-notif">
+                    3 min
+                </div>
+            </div>
+            <div class="list-notif">
+                <div class="left-notif">
+                    New order received
+                </div>
+                <div class="right-notif">
+                    3 min
+                </div>
+            </div>
+            <div class="view-all-notif">
+                <a href="">View all</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -5,12 +5,12 @@ body, h1, h2, h3, h4, h5, h6 {
 .bold.btn, .sbold.btn {
     letter-spacing: 0
 }
-
-a, button, code, div, img, input, label, li, p, pre, select, span, svg, table, td, textarea, th, ul {
-    -webkit-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
-    border-radius: 0 !important
-}
+/*AQUI*/
+/*a, button, code, div, img, input, label, li, p, pre, select, span, svg, table, td, textarea, th, ul {*/
+    /*-webkit-border-radius: 0 !important;*/
+    /*-moz-border-radius: 0 !important;*/
+    /*border-radius: 0 !important*/
+/*}*/
 
 .img-circle {
     border-radius: 50% !important
@@ -6022,7 +6022,7 @@ li [class*=" fa-"].icon-large, li [class*=" glyphicon-"].icon-large, li [class*=
 }
 
 .dropdown-menu {
-    box-shadow: 5px 5px rgba(102, 102, 102, .1);
+    /*box-shadow: 5px 5px rgba(102, 102, 102, .1);*/
     left: 0;
     min-width: 175px;
     position: absolute;
@@ -6111,29 +6111,31 @@ li [class*=" fa-"].icon-large, li [class*=" glyphicon-"].icon-large, li [class*=
 .btn-group > .dropdown-menu, .dropdown-toggle > .dropdown-menu, .dropdown > .dropdown-menu {
     margin-top: 10px
 }
-
-.btn-group > .dropdown-menu:before, .dropdown-toggle > .dropdown-menu:before, .dropdown > .dropdown-menu:before {
+/*AQUI*/
+.btn-group > .dropdown-menu-right:before, .dropdown-toggle > .dropdown-menu-right:before, .dropdown > .dropdown-menu-right:before {
     position: absolute;
     top: -8px;
-    left: 9px;
-    right: auto;
+    left: auto;
+    right: 9px;
     display: inline-block !important;
     border-right: 8px solid transparent;
     border-bottom: 8px solid #e0e0e0;
     border-left: 8px solid transparent;
-    content: ''
+    content: '';
+    /*display: none !important;*/
 }
-
-.btn-group > .dropdown-menu:after, .dropdown-toggle > .dropdown-menu:after, .dropdown > .dropdown-menu:after {
+/*AQUI*/
+.btn-group > .dropdown-menu-right:after, .dropdown-toggle > .dropdown-menu-right:after, .dropdown > .dropdown-menu-right:after {
     position: absolute;
     top: -7px;
-    left: 10px;
-    right: auto;
+    left: auto;
+    right: 10px;
     display: inline-block !important;
     border-right: 7px solid transparent;
     border-bottom: 7px solid #fff;
     border-left: 7px solid transparent;
-    content: ''
+    content: '';
+    /*display: none !important;*/
 }
 
 .btn-group > .dropdown-menu.pull-left:before, .dropdown-toggle > .dropdown-menu.pull-left:before, .dropdown > .dropdown-menu.pull-left:before {
