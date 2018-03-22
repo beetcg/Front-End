@@ -12760,3 +12760,20 @@ i{
 .icon-bar:hover {
     color: #952244;
 }
+
+/*22/03/2018*/
+.row-time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-bottom: 50px;
+}
+
+.col-time {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+}

@@ -74,44 +74,17 @@
     </div>
     <form class="login-form animated fadeIn hourly-form" name="signupForm" action="index.html" method="post" data-ng-show="login" id="form_create">
         <div>
-            <h3 style="margin-bottom: 30px; margin-top: 30px">
-                Midweek:
+            <h3 style="margin-bottom: 50px; margin-top: 30px">
+                Work schedule:
             </h3>
-            <div class="rows" style="flex-wrap: nowrap">
-                <div class="col-sm-1"></div>
-                <div class="col-sm-2">
-                    <div class="rows center-check">
+            <div class="row-time">
+                <div class="col-time">
+                    <div class=" center-check">
                     <span class="text-day">
-                        L
+                        Mon
                     </span>
                     </div>
-                    <div class="rows center-check">
-                        <label class="check mt-checkbox mt-checkbox-outline">
-                            <input type="checkbox" name="remember" value="1"/>
-                            <span></span>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="rows center-check">
-                    <span class="text-day">
-                        M
-                    </span>
-                    </div>
-                    <div class="rows center-check">
-                        <label class="check mt-checkbox mt-checkbox-outline">
-                            <input type="checkbox" name="remember" value="1"/>
-                            <span></span>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="rows center-check">
-                    <span class="text-day">
-                        X
-                    </span>
-                    </div>
-                    <div class="rows center-check">
+                    <div class=" center-check">
                         <label class="check mt-checkbox mt-checkbox-outline">
                             <input type="checkbox" name="remember" value="1"/>
                             <span></span>
@@ -119,34 +92,121 @@
                     </div>
                 </div>
 
-                <div class="col-sm-2">
-                    <div class="rows center-check">
+                <div class="col-time">
+                    <div class=" center-check">
                     <span class="text-day">
-                        J
+                        Tue
                     </span>
                     </div>
-                    <div class="rows center-check">
+                    <div class=" center-check">
                         <label class="check mt-checkbox mt-checkbox-outline">
                             <input type="checkbox" name="remember" value="1"/>
                             <span></span>
                         </label>
                     </div>
                 </div>
-                <div class="col-sm-2">
-                    <div class="rows center-check">
+
+                <div class="col-time">
+                    <div class=" center-check">
                     <span class="text-day">
-                        V
+                        Wed
                     </span>
                     </div>
-                    <div class="rows center-check">
+                    <div class=" center-check">
                         <label class="check mt-checkbox mt-checkbox-outline">
                             <input type="checkbox" name="remember" value="1"/>
                             <span></span>
                         </label>
                     </div>
                 </div>
-                <div class="col-sm-1"></div>
+
+                <div class="col-time">
+                    <div class=" center-check">
+                    <span class="text-day">
+                        Thu
+                    </span>
+                    </div>
+                    <div class=" center-check">
+                        <label class="check mt-checkbox mt-checkbox-outline">
+                            <input type="checkbox" name="remember" value="1"/>
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-time">
+                    <div class=" center-check">
+                    <span class="text-day">
+                        Fri
+                    </span>
+                    </div>
+                    <div class=" center-check">
+                        <label class="check mt-checkbox mt-checkbox-outline">
+                            <input type="checkbox" name="remember" value="1"/>
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-time">
+                    <div class=" center-check">
+                            <span class="text-day">
+                                Sat
+                            </span>
+                    </div>
+                    <div class=" center-check">
+                        <label class="check mt-checkbox mt-checkbox-outline">
+                            <input type="checkbox" name="remember" value="1"/>
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-time">
+                    <div class=" center-check">
+                            <span class="text-day">
+                                Sun
+                            </span>
+                    </div>
+                    <div class=" center-check">
+                        <label class="check mt-checkbox mt-checkbox-outline">
+                            <input type="checkbox" name="remember" value="1"/>
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
             </div>
+            <!--<div class="rows" style="flex-wrap: nowrap;margin-bottom: 30px;">-->
+                <!--<div class="col-sm-4"></div>-->
+                <!--<div class="col-sm-2">-->
+                    <!--<div class="rows center-check">-->
+                            <!--<span class="text-day">-->
+                                <!--Sat-->
+                            <!--</span>-->
+                    <!--</div>-->
+                    <!--<div class="rows center-check">-->
+                        <!--<label class="check mt-checkbox mt-checkbox-outline">-->
+                            <!--<input type="checkbox" name="remember" value="1"/>-->
+                            <!--<span></span>-->
+                        <!--</label>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-sm-2">-->
+                    <!--<div class="rows center-check">-->
+                            <!--<span class="text-day">-->
+                                <!--Sun-->
+                            <!--</span>-->
+                    <!--</div>-->
+                    <!--<div class="rows center-check">-->
+                        <!--<label class="check mt-checkbox mt-checkbox-outline">-->
+                            <!--<input type="checkbox" name="remember" value="1"/>-->
+                            <!--<span></span>-->
+                        <!--</label>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-sm-4"></div>-->
+
+            <!--</div>-->
             <div class="form-group rows" style="display: flex;align-items: center;">
                 <label for="week-from" class="col-sm-1 col-form-label">From:</label>
                 <div class="col-sm-2">
@@ -179,137 +239,6 @@
                 <div class="col-sm-2">
                     <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
                         <input type="text" class="form-control" value="06:00 AM" id="week-to-2">
-                        <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-time"></span>
-                    </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <h3 style="margin-bottom: 30px; margin-top: 30px">
-                Weekend:
-            </h3>
-            <div class="rows" style="flex-wrap: nowrap; justify-content: center;">
-                <div class="col-sm-2">
-                    <div class="rows center-check">
-                        <span class="text-day">
-                            S
-                        </span>
-                    </div>
-                    <div class="rows center-check">
-                        <label class="check mt-checkbox mt-checkbox-outline">
-                            <input type="checkbox" name="remember" value="1"/>
-                            <span></span>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="rows center-check">
-                        <span class="text-day">
-                            D
-                        </span>
-                    </div>
-                    <div class="rows center-check">
-                        <label class="check mt-checkbox mt-checkbox-outline">
-                            <input type="checkbox" name="remember" value="1"/>
-                            <span></span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group rows" style="display: flex;align-items: center;">
-                <label for="weekend-from" class="col-sm-1 col-form-label">From:</label>
-                <div class="col-sm-2">
-                    <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                        <input type="text" class="form-control" value="06:00 AM" id="weekend-from">
-                        <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-time"></span>
-                    </span>
-                    </div>
-                </div>
-                <label for="weekend-to" class="col-sm-1 col-form-label">To:</label>
-                <div class="col-sm-2">
-                    <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                        <input type="text" class="form-control" value="06:00 AM" id="weekend-to">
-                        <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-time"></span>
-                    </span>
-                    </div>
-                </div>
-                <label for="weekend-from-2" class="col-sm-1 col-form-label">And from:</label>
-                <div class="col-sm-2">
-                    <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                        <input type="text" class="form-control" value="06:00 AM" id="weekend-from-2">
-                        <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-time"></span>
-                    </span>
-                    </div>
-                </div>
-                <label for="weekend-to-2" class="col-sm-1 col-form-label">To:</label>
-                <div class="col-sm-2">
-                    <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                        <input type="text" class="form-control" value="06:00 AM" id="weekend-to-2">
-                        <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-time"></span>
-                    </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <h3 style="margin-bottom: 30px; margin-top: 30px">
-                Holidays:
-            </h3>
-            <div class="rows" style="flex-wrap: nowrap; justify-content: center;">
-                <div class="col-sm-2">
-                    <!--<div class="rows center-check">-->
-                    <!--<span class="text-day">-->
-                        <!--S-->
-                    <!--</span>-->
-                    <!--</div>-->
-                    <div class="rows center-check">
-                        <label class="check mt-checkbox mt-checkbox-outline">
-                            <input type="checkbox" name="remember" value="1"/>
-                            <span></span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group rows" style="display: flex;align-items: center;">
-                <label for="holiday-from" class="col-sm-1 col-form-label">From:</label>
-                <div class="col-sm-2">
-                    <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                        <input type="text" class="form-control" value="06:00 AM" id="holiday-from">
-                        <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-time"></span>
-                    </span>
-                    </div>
-                </div>
-                <label for="holiday-to" class="col-sm-1 col-form-label">To:</label>
-                <div class="col-sm-2">
-                    <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                        <input type="text" class="form-control" value="06:00 AM" id="holiday-to">
-                        <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-time"></span>
-                    </span>
-                    </div>
-                </div>
-                <label for="holiday-from-2" class="col-sm-1 col-form-label">And from:</label>
-                <div class="col-sm-2">
-                    <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                        <input type="text" class="form-control" value="06:00 AM" id="holiday-from-2">
-                        <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-time"></span>
-                    </span>
-                    </div>
-                </div>
-                <label for="holiday-to-2" class="col-sm-1 col-form-label">To:</label>
-                <div class="col-sm-2">
-                    <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                        <input type="text" class="form-control" value="06:00 AM" id="holiday-to-2">
                         <span class="input-group-addon">
                         <span class="glyphicon glyphicon-time"></span>
                     </span>
