@@ -9846,6 +9846,21 @@ a.text-dark:focus, a.text-dark:hover {
     overflow: hidden;
     position: relative;
 }
+/*AQUI*/
+.content5 {
+    background-color: transparent;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    width: 800px;
+    margin: 40px auto 10px auto;
+    padding: 30px;
+    padding-top: 10px;
+    overflow: hidden;
+    position: relative;
+}
 
 .login .content h3 {
     color: #232323;
@@ -10149,6 +10164,11 @@ a.text-dark:focus, a.text-dark:hover {
         font-size: 13px;
     }
     .content4 {
+        width: 100%;
+        margin-top: 10px;
+    }
+    /*AQUI*/
+    .content5 {
         width: 100%;
         margin-top: 10px;
     }
@@ -12710,6 +12730,26 @@ i{
     flex-direction: row;
     align-items: center;
 }
+/*AQUI*/
+.list-notif-bold {
+    padding: 10px;
+    /*padding-bottom: 10px;*/
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.list-notif:hover {
+    color: #952244;
+}
+/*AQUI*/
+.list-notif-bold:hover {
+    color: #952244;
+}
 
 .left-notif {
     display: flex;
@@ -12785,4 +12825,107 @@ i{
     flex: 1;
     justify-content: center;
     flex-direction: column;
+}
+
+/*23/03/2018*/
+.notifications {
+    margin-top: 30px;
+}
+
+.notification {
+    padding: 10px;
+    border-left: 1px solid #dedede;
+    /*border-bottom: 1px solid #dedede;*/
+    position: relative;
+    padding-left: 20px !important;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.notif-col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.notif-delete {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /*background-color: black*/
+}
+
+
+.notif-title-cont {
+}
+
+.notif-row {
+    display: flex;
+    align-items: center;
+}
+
+.notif-point {
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: #dedede;
+    position: absolute;
+    left: -4px;
+    top: 50%;
+    margin-top: -4px;
+}
+
+.notif-icon {
+    margin-left: 0 !important;
+    font-size: 1.1rem !important;
+    margin-right: 10px;
+    color: #555 !important;
+}
+
+.notif-title {
+    color: #555;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.notif-time {
+    color: #555;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    line-height: 30px;
+}
+
+.notif-icon-delete {
+    color: #ff6363;
+    font-size: 14px;
+}
+
+.notif-icon-delete:hover {
+    font-size: 16px;
+}
+
+.user-ic {
+    color: #952244 !important;
+}
+
+.system-ic {
+    color: #979797 !important;
+}
+
+.newreq-ic {
+    color: #dec024 !important;
+}
+
+.turndown-ic {
+    color: #ff6363 !important;
+}
+
+.accept-ic {
+    color: #00dc94 !important;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #dedede;
 }
