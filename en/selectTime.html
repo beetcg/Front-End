@@ -74,9 +74,13 @@
     </div>
     <form class="login-form animated fadeIn hourly-form" name="signupForm" action="index.html" method="post" data-ng-show="login" id="form_create">
         <div>
-            <h3 style="margin-bottom: 50px; margin-top: 30px">
-                Work schedule:
-            </h3>
+            <div class="title-cat">
+                <h2 class="title-cat-text">Work schedule </h2>
+                <small class="description-small" style="margin-top: 0 !important;">This work schedule is a reference for the system to show your available time to your future clients. You can manage this work shcedule later in your technician panel.</small>
+            </div>
+            <!--<h3 style="margin-bottom: 50px; margin-top: 30px">-->
+                <!--Work schedule:-->
+            <!--</h3>-->
             <div class="row-time">
                 <div class="col-time">
                     <div class=" center-check">
@@ -208,7 +212,7 @@
 
             <!--</div>-->
             <div class="form-group rows" style="display: flex;align-items: center;">
-                <label for="week-from" class="col-sm-1 col-form-label">From:</label>
+                <label style="text-align:right !important;" for="week-from" class="col-sm-1 col-form-label">From:</label>
                 <div class="col-sm-2">
                     <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
                         <input type="text" class="form-control" value="06:00 AM" id="week-from">
@@ -217,7 +221,7 @@
                     </span>
                     </div>
                 </div>
-                <label for="week-to" class="col-sm-1 col-form-label">To:</label>
+                <label style="text-align:right !important;" for="week-to" class="col-sm-1 col-form-label">To:</label>
                 <div class="col-sm-2">
                     <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
                         <input type="text" class="form-control" value="06:00 AM" id="week-to">
@@ -226,7 +230,7 @@
                     </span>
                     </div>
                 </div>
-                <label for="week-from-2" class="col-sm-1 col-form-label">And from:</label>
+                <label style="text-align:right !important;" for="week-from-2" class="col-sm-1 col-form-label">And from:</label>
                 <div class="col-sm-2">
                     <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
                         <input type="text" class="form-control" value="06:00 AM" id="week-from-2">
@@ -235,7 +239,7 @@
                     </span>
                     </div>
                 </div>
-                <label for="week-to-2" class="col-sm-1 col-form-label">To:</label>
+                <label style="text-align:right !important;" for="week-to-2" class="col-sm-1 col-form-label">To:</label>
                 <div class="col-sm-2">
                     <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
                         <input type="text" class="form-control" value="06:00 AM" id="week-to-2">

@@ -10442,8 +10442,13 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
-
+/*AQUI*/
 .title-cat-text {
+    color: #821e3b !important;
+    margin-right: 20px;
+}
+/*AQUI*/
+.title-cat-text2 {
     color: #821e3b !important;
     margin-right: 20px;
     display: flex;
@@ -10456,6 +10461,9 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     margin-bottom: 10px !important;
     font-size: 14px !important;
     margin-left: 10px;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
 }
 
 .category i {
@@ -12769,6 +12777,7 @@ i{
     justify-content: center;
     flex-wrap: nowrap;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .col-time {
