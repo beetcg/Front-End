@@ -12844,6 +12844,19 @@ i{
     flex-wrap: nowrap;
 }
 
+.notification-unread {
+    padding: 10px;
+    border-left: 1px solid #dedede;
+    /*border-bottom: 1px solid #dedede;*/
+    position: relative;
+    padding-left: 20px !important;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: rgba(149,34,68,0.06);
+}
+
 .notif-col {
     display: flex;
     flex-direction: column;
@@ -12886,7 +12899,7 @@ i{
 
 .notif-title {
     color: #555;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bolder;
 }
 
@@ -12928,4 +12941,21 @@ i{
 
 .border-bottom {
     border-bottom: 1px solid #dedede;
+}
+
+/*26/03/2018*/
+.input-search {
+    border-radius: 40px;
+}
+
+.prepend-search {
+    border-bottom-right-radius: 40px !important;
+    border-top-right-radius: 40px !important;
+    color: #fff;
+    background-color: #333;
+    border: none !important;
+}
+
+.search {
+    margin-bottom: 20px;
 }
