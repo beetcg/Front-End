@@ -5873,7 +5873,7 @@ button.close {
 .bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] .arrow::before {
     top: 0;
     border-width: 0.4rem 0.4rem 0;
-    border-top-color: #000;
+    border-top-color: #232322;
 }
 
 .bs-tooltip-right, .bs-tooltip-auto[x-placement^="right"] {
@@ -5889,7 +5889,7 @@ button.close {
 .bs-tooltip-right .arrow::before, .bs-tooltip-auto[x-placement^="right"] .arrow::before {
     right: 0;
     border-width: 0.4rem 0.4rem 0.4rem 0;
-    border-right-color: #000;
+    border-right-color: #232322;
 }
 
 .bs-tooltip-bottom, .bs-tooltip-auto[x-placement^="bottom"] {
@@ -5903,7 +5903,7 @@ button.close {
 .bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
     bottom: 0;
     border-width: 0 0.4rem 0.4rem;
-    border-bottom-color: #000;
+    border-bottom-color: #232322;
 }
 
 .bs-tooltip-left, .bs-tooltip-auto[x-placement^="left"] {
@@ -5919,7 +5919,7 @@ button.close {
 .bs-tooltip-left .arrow::before, .bs-tooltip-auto[x-placement^="left"] .arrow::before {
     left: 0;
     border-width: 0.4rem 0 0.4rem 0.4rem;
-    border-left-color: #000;
+    border-left-color: #232322;
 }
 
 .tooltip-inner {
@@ -5927,7 +5927,7 @@ button.close {
     padding: 0.25rem 0.5rem;
     color: #fff;
     text-align: center;
-    background-color: #000;
+    background-color: #232322;
     border-radius: 0.25rem;
 }
 
@@ -12705,9 +12705,9 @@ i{
         width: 300px;
     }
 }
-
+/*AQUI*/
 .header-notif {
-    height: 90px;
+    height: 112px;
     background-color: #821e3b;
     margin-bottom: 10px;
     display: flex;
@@ -12760,6 +12760,7 @@ i{
     display: flex;
     flex: 1;
     justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .view-all-notif {
@@ -12834,7 +12835,7 @@ i{
 
 .notification {
     padding: 10px;
-    border-left: 1px solid #dedede;
+    border-left: 2px solid #dedede;
     /*border-bottom: 1px solid #dedede;*/
     position: relative;
     padding-left: 20px !important;
@@ -12846,7 +12847,7 @@ i{
 
 .notification-unread {
     padding: 10px;
-    border-left: 1px solid #dedede;
+    border-left: 2px solid #952244;
     /*border-bottom: 1px solid #dedede;*/
     position: relative;
     padding-left: 20px !important;
@@ -12855,6 +12856,28 @@ i{
     flex-direction: row;
     flex-wrap: nowrap;
     background-color: rgba(149,34,68,0.06);
+}
+
+.notif-point {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #dedede;
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    margin-top: -8px;
+}
+
+.notif-point-unread {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #952244;
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    margin-top: -8px;
 }
 
 .notif-col {
@@ -12877,17 +12900,6 @@ i{
 .notif-row {
     display: flex;
     align-items: center;
-}
-
-.notif-point {
-    width: 7px;
-    height: 7px;
-    border-radius: 100%;
-    background-color: #dedede;
-    position: absolute;
-    left: -4px;
-    top: 50%;
-    margin-top: -4px;
 }
 
 .notif-icon {
@@ -12958,4 +12970,80 @@ i{
 
 .search {
     margin-bottom: 20px;
+}
+
+.notif-options {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.filter-search {
+    background: transparent;
+    border: none;
+}
+
+.btn-read {
+    background: transparent;
+    color: #952244;
+    font-size: 1.5rem;
+    padding: 0 !important;
+    border: none !important;
+    margin-right: 20px;
+}
+
+.ic-read {
+    font-size: 2rem !important;
+    line-height: 0 !important;
+}
+
+.header-profile {
+    min-height: 112px;
+    background-color: #821e3b;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+
+}
+
+.header-picture {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 100%;
+    margin-bottom: 5px;
+
+}
+
+.header-profile-name {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.header-picture img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.list-profile {
+    padding: 10px;
+    /*padding-bottom: 10px;*/
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: #888;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.list-profile:hover {
+    color: #952244;
 }
