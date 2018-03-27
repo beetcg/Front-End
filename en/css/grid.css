@@ -10401,6 +10401,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     /*background-color: #000;*/
     /*width: 100%;*/
     border: 2px solid #e6e8ed;
+    position: relative;
 }
 
 .title-register {
@@ -10779,13 +10780,18 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
 .link-filter:hover {
     color: #9b2446 !important;
 }
-
+/*AQUI*/
 .tech-list-item {
     border-bottom: 1px dashed #e6e8ed;
     padding-bottom: 20px;
     margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 25px;
+    /*margin-right: 10px;*/
+    /*margin-bottom: 25px;*/
+    padding-top: 25px;
+}
+/*AQUI*/
+.tech-list-item:hover {
+    background-color: rgba(142,142,142,0.06);
 }
 
 .item-img {
@@ -12231,6 +12237,12 @@ i{
 .filter-show {
     display: none;
 }
+/*AQUI*/
+.order-by-date {
+    position: absolute;
+    right: 5px;
+    top: 25px;
+}
 
 @media (max-width: 992px) {
     .filter-tech {
@@ -12244,6 +12256,10 @@ i{
         /*flex: 1;*/
         justify-content: flex-end;
         text-align: right;
+    }
+    /*AQUI*/
+    .order-by-date {
+        display: none;
     }
 }
 
@@ -12845,6 +12861,10 @@ i{
     flex-wrap: nowrap;
 }
 
+.notification:hover {
+    background-color: rgba(142,142,142,0.06);
+}
+
 .notification-unread {
     padding: 10px;
     border-left: 2px solid #952244;
@@ -13046,4 +13066,47 @@ i{
 
 .list-profile:hover {
     color: #952244;
+}
+
+/*27/03/2018*/
+.m-bottom {
+    margin-bottom: 10px;
+}
+
+.date-text-schedule {
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.badge-status-pending {
+    background: #dec024;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bolder;
+    max-width: 68px !important;
+}
+
+.badge-status-rejected {
+    background: #ff6363;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bolder;
+    max-width: 68px !important;
+}
+
+.badge-status-completed {
+    background: #00dc94;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bolder;
+    max-width: 78px !important;
 }
