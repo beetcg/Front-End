@@ -4,6 +4,9 @@
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+* {
+    /*font-family: 'Open Sans' !important;*/
+}
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -13109,4 +13112,105 @@ i{
     font-size: 11px;
     font-weight: bolder;
     max-width: 78px !important;
+}
+/*02/04/2018*/
+.request-cont {
+    border-bottom: 1px dashed #e6e8ed;
+    padding-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 25px;
+    padding-left: 20px;
+}
+
+.request-cont:hover {
+    background-color: rgba(142,142,142,0.06);
+}
+
+.title-cat-request {
+    border-bottom: 1px solid #e6e8ed;
+    padding-bottom: 10px !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px !important;
+    margin: 20px;
+}
+
+.card-options {
+    background-color: #232322;
+    color: #fff !important;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-option {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-info-icon {
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+    line-height: normal !important;
+}
+
+.option-pointer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: red;*/
+    flex-direction: column;
+    cursor: pointer;
+    color: #fff !important;
+}
+
+.description-service {
+    padding-bottom: 20px;
+    text-align: justify;
+    color: #333;
+    font-size: 13px;
+}
+
+.request-empty {
+    display: flex;
+    padding-top: 80px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.request-empty-icon {
+    font-size: 4rem;
+    color: #888;
+    padding-bottom: 40px;
+    line-height: 0 !important;
+}
+
+.techlist-empty-icon {
+    font-size: 4rem;
+    color: #888;
+    padding-bottom: 70px;
+    line-height: 0 !important;
+}
+
+.request-empty-text {
+    font-size: 1.3rem;
+    color: #888;
+    text-align: center;
+    /*padding-bottom: 20px;*/
+}
+
+.p-20 {
+    padding: 20px
 }

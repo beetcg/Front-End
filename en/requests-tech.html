@@ -45,12 +45,12 @@
 
     <div class="container-fluid" ng-init="initHoverdir()" style="margin-top: 80px;margin-bottom: 100px">
         <div class="title-trynow">
-            <p class="title-trynow-text"> Requests </p>
+            <p class="title-trynow-text"> Incoming Requests </p>
         </div>
 
         <div class="containers margin-calendar">
-            <div class="categories-box1">
-                <div class="title-cat">
+            <div class="categories-box1" style="padding:0">
+                <div class="title-cat-request">
                     <div class="col-sm-12 col-lg-7"
                          style="display: flex; flex-direction: row; align-items: center; flex-wrap: nowrap">
                         <h3 class="title-cat-text2 bold">
@@ -84,6 +84,9 @@
                             <a class="btn link-filter">
                                 Completed
                             </a>
+                            <!--<a class="btn link-filter">-->
+                                <!--<i class="fa fa-calendar-check-o" style="font-size: 1.5rem"></i>-->
+                            <!--</a>-->
                         </div>
                     </div>
                 </div>
@@ -93,8 +96,8 @@
                     </a>
                 </div>
                 <div ng-repeat="producto in productos | limitTo: limit">
-                    <a href="trynow.html">
-                        <div class="tech-list-item rows animated fadeIn" style="cursor: pointer;" ng-click="">
+                    <a data-toggle="collapse" href="#collapse-info{{$index}}" role="button">
+                        <div class="request-cont rows animated fadeIn" style="cursor: pointer;" ng-click="">
                             <div class="col-sm-12 col-md-4 rows" style="margin-bottom: 10px;   align-items: center;">
                                 <img src="images/team1.jpg" class="item-img">
                                 <div>
@@ -150,14 +153,52 @@
 
                         </div>
                     </a>
+                    <div class="collapse" id="collapse-info{{$index}}">
+                        <div class="card card-body card-options">
+                            <div class="card-option">
+                                <div class="option-pointer">
+                                    <i class="icon-check card-info-icon"></i>
+                                    <span>Accept</span>
+                                </div>
+                            </div>
+
+                            <div class="card-option">
+                                <a href="request-tech-details.html" target="_blank">
+                                    <div class="option-pointer">
+                                        <i class="icon-info card-info-icon"></i>
+                                        <span>View details</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="card-option">
+                                <div class="option-pointer">
+                                    <i class="icon-close card-info-icon"></i>
+                                    <span>Reject</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!--<i class="fa fa-spinner" ng-show="loading"></i>-->
-                <!--<div align="center">-->
-                    <!--<button class="btn-showmore" ng-click="showMore()">-->
-                        <!--<i class="ion-plus"></i>-->
-                    <!--</button>-->
-                    <!--&lt;!&ndash;<ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize"&ndash;&gt;-->
-                    <!--&lt;!&ndash;class="pagination-sm" boundary-links="true" force-ellipses="true"></ul>&ndash;&gt;-->
+
+                <i class="fa fa-spinner" ng-show="loading"></i>
+                <div align="center" class="p-20">
+                    <button class="btn-showmore" ng-click="showMore()">
+                        <i class="ion-plus"></i>
+                    </button>
+                    <!--<ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize"-->
+                    <!--class="pagination-sm" boundary-links="true" force-ellipses="true"></ul>-->
+                </div>
+
+                <!--EMPTY STATE-->
+                <!--<div class="request-empty">-->
+                <!--<i class="ion-flag request-empty-icon"></i>-->
+                <!--<span class="request-empty-text">-->
+                <!--IT LOOKS LIKE YOU HAVEN'T RECEIVED-->
+                <!--</span>-->
+                <!--<span class="request-empty-text">-->
+                <!--ANY NEW REQUESTS-->
+                <!--</span>-->
                 <!--</div>-->
             </div>
         </div>
@@ -235,7 +276,10 @@
 <script type="text/javascript" src="../js/alerts.js"></script>
 <script>
     $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="tooltip"]').tooltip();
+
+//        $(this).find('#collapse-info').$('.collapse').collapse();
+
     });
 </script>
 </body>
