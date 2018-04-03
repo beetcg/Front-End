@@ -7843,7 +7843,7 @@ button.bg-dark:hover {
     position: -webkit-sticky !important;
     position: sticky !important;
 }
-/*AQUI*/
+
 .fixed-top {
     position: fixed;
     top: 0;
@@ -9850,7 +9850,7 @@ a.text-dark:focus, a.text-dark:hover {
     overflow: hidden;
     position: relative;
 }
-/*AQUI*/
+
 .content5 {
     background-color: transparent;
     -webkit-border-radius: 7px;
@@ -10171,7 +10171,6 @@ a.text-dark:focus, a.text-dark:hover {
         width: 100%;
         margin-top: 10px;
     }
-    /*AQUI*/
     .content5 {
         width: 100%;
         margin-top: 10px;
@@ -10467,12 +10466,12 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
-/*AQUI*/
+
 .title-cat-text {
     color: #821e3b !important;
     margin-right: 20px;
 }
-/*AQUI*/
+
 .title-cat-text2 {
     color: #821e3b !important;
     margin-right: 20px;
@@ -10784,7 +10783,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
 .link-filter:hover {
     color: #9b2446 !important;
 }
-/*AQUI*/
+
 .tech-list-item {
     border-bottom: 1px dashed #e6e8ed;
     padding-bottom: 20px;
@@ -10793,7 +10792,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     /*margin-bottom: 25px;*/
     padding-top: 25px;
 }
-/*AQUI*/
+
 .tech-list-item:hover {
     background-color: rgba(142,142,142,0.06);
 }
@@ -12241,7 +12240,7 @@ i{
 .filter-show {
     display: none;
 }
-/*AQUI*/
+
 .order-by-date {
     position: absolute;
     right: 5px;
@@ -12261,7 +12260,6 @@ i{
         justify-content: flex-end;
         text-align: right;
     }
-    /*AQUI*/
     .order-by-date {
         display: none;
     }
@@ -12666,7 +12664,6 @@ i{
     padding: 20px
 }
 
-/*21/03/2018*/
 .btn-group > .arrow-color:after, .dropdown-toggle > .arrow-color:after, .dropdown > .arrow-color:after {
     position: absolute;
     top: -7px;
@@ -12725,7 +12722,7 @@ i{
         width: 300px;
     }
 }
-/*AQUI*/
+
 .header-notif {
     height: 112px;
     background-color: #821e3b;
@@ -12750,7 +12747,7 @@ i{
     flex-direction: row;
     align-items: center;
 }
-/*AQUI*/
+
 .list-notif-bold {
     padding: 10px;
     /*padding-bottom: 10px;*/
@@ -12766,7 +12763,7 @@ i{
 .list-notif:hover {
     color: #952244;
 }
-/*AQUI*/
+
 .list-notif-bold:hover {
     color: #952244;
 }
@@ -12830,7 +12827,6 @@ i{
     color: #952244;
 }
 
-/*22/03/2018*/
 .row-time {
     display: flex;
     flex-direction: row;
@@ -12848,7 +12844,6 @@ i{
     flex-direction: column;
 }
 
-/*23/03/2018*/
 .notifications {
     margin-top: 30px;
 }
@@ -12979,7 +12974,7 @@ i{
     border-bottom: 1px solid #dedede;
 }
 
-/*26/03/2018*/
+
 .input-search {
     border-radius: 40px;
 }
@@ -13072,7 +13067,7 @@ i{
     color: #952244;
 }
 
-/*27/03/2018*/
+
 .m-bottom {
     margin-bottom: 10px;
 }
@@ -13114,7 +13109,7 @@ i{
     font-weight: bolder;
     max-width: 78px !important;
 }
-/*02/04/2018*/
+
 .request-cont {
     border-bottom: 1px dashed #e6e8ed;
     padding-bottom: 20px;
