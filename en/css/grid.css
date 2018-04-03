@@ -6087,10 +6087,11 @@ button.close {
     right: 1px;
     border-left-color: #fff;
 }
-
+/*AQUI*/
 .popover-header {
     padding: 0.5rem 0.75rem;
     margin-bottom: 0;
+    margin-top: 0;
     font-size: 1rem;
     color: inherit;
     background-color: #f7f7f7;
