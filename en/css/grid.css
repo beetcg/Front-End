@@ -13264,6 +13264,7 @@ i{
     flex-wrap: wrap;
     border-bottom: 1px solid #e6e8ed;
     padding-bottom: 20px;
+    justify-content: center;
 }
 
 .card-user-picture {
