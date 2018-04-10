@@ -6087,7 +6087,7 @@ button.close {
     right: 1px;
     border-left-color: #fff;
 }
-/*AQUI*/
+
 .popover-header {
     padding: 0.5rem 0.75rem;
     margin-bottom: 0;
@@ -6103,7 +6103,7 @@ button.close {
 .popover-header:empty {
     display: none;
 }
-/*AQUI*/
+
 .popover-body {
     padding: 0.5rem 0.75rem;
     color: #212529;
@@ -10479,7 +10479,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     display: flex;
     flex: 1;
 }
-/*AQUI*/
+
 .title-cat-text3 {
     color: #821e3b !important;
     margin-right: 20px;
@@ -12731,7 +12731,7 @@ i{
         width: 300px;
     }
 }
-/*AQUI*/
+
 .header-notif {
     min-height: 80px;
     /*background-color: #821e3b;*/
@@ -12786,7 +12786,7 @@ i{
     flex: 3;
     align-items: center;
 }
-/*AQUI*/
+
 .badge-req {
     background-color: #dec024;
     padding: 10px;
@@ -12823,7 +12823,7 @@ i{
     justify-content: flex-end;
     align-items: flex-end;
 }
-/*AQUI*/
+
 .ic-box-profile {
     margin-left: 0 !important;
     margin-right: 10px;
@@ -13067,7 +13067,7 @@ i{
     font-size: 2rem !important;
     line-height: 0 !important;
 }
-/*AQUI*/
+
 .header-profile {
     min-height: 112px;
     /*background-color: #821e3b;*/
@@ -13087,7 +13087,7 @@ i{
     background-position: center;
 
 }
-/*AQUI*/
+
 .header-picture {
     border: 2px solid white;
     padding: 4px;
@@ -13095,22 +13095,22 @@ i{
     margin-right: 15px;
 
 }
-/*AQUI*/
+
 .header-profile-info {
     display: flex;
     flex-direction: column;
 }
-/*AQUI*/
+
 .header-profile-name {
     font-size: 1.2rem;
     color: #fff;
 }
-/*AQUI*/
+
 .header-profile-email {
     font-size: 0.75rem;
     color: #fff;
 }
-/*AQUI*/
+
 .header-picture {
     width: 60px;
     height: 60px;
@@ -13254,7 +13254,7 @@ i{
     padding-left: 20px;
     padding-right: 20px;
 }
-/*AQUI*/
+
 .request-empty-icon {
     font-size: 4rem !important;
     color: #888 !important;
