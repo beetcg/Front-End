@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-US" data-ng-app="beetApp" data-ng-cloak>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Try Now | BEET</title>
+    <meta name="description" content="Spiral HTML5 premium template">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet"
+          href="http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400italic%2C300%2C700%7CRaleway%3A400%2C200%2C600%2C700&amp;ver=4.2.6"
+          type="text/css" media="all">
+    <link rel="stylesheet" href="rs-plugin/css/settings.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/icons/icons.css" type="text/css" media="all">
+    <!--<link rel="stylesheet" href="css/core-icons/core_style.css" type="text/css" media="all">-->
+    <!--<link rel="stylesheet" href="css/scripts.css" type="text/css" media="all">-->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <!--<link rel="stylesheet" href="css/style2.css">-->
+    <!--<link rel="stylesheet" href="css/components.css" type="text/css" media="all">-->
+    <link rel="stylesheet" href="css/animate.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/ionicons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/fullcalendar.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/pagination.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/components.min.css" type="text/css" media="all">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link id="themecss" rel="stylesheet" type="text/css" href="css/timepicker.css"/>
+
+    <!--<link rel="stylesheet" href="css/demo.css" type="text/css" media="all">-->
+    <!-- Latest compiled and minified CSS Bootstrap
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+
+    <link href="css/style2.css" rel="stylesheet" media="screen">
+    <!-- Jquery -->
+    <!--<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+</head>
+
+<body class="page" data-ng-controller="TryNowController">
+<div>
+    <div ng-include="'menu-bar-dark.html'"></div>
+
+    <div class="dash">
+        <a href="javascript:void(0)" onclick="cascade();mostrar();" style="position: absolute;top:200px">
+            <i class="icon-menu">MOSTRAR</i>
+        </a>
+        <div id="sidebar" class="sidebar-beet">
+            <div class="boton-cerrar" onclick="ocultar()">
+                <i class="ion-chevron-left"></i>
+            </div>
+            <ul class="menu" id="cascade">
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">Users</a>
+                </li>
+                <li>
+                    <a href="">Request</a>
+                </li>
+                <li>
+                    <a href="">Categories</a>
+                </li>
+                <li>
+                    <a href="">Subcategories</a>
+                </li>
+            </ul>
+        </div>
+        <div class="container-fluid" ng-init="initHoverdir()" style="margin-bottom: 100px; display: flex; flex-direction: column">
+            <div class=" mt-120">
+                <div class="rows">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="categories-box1">
+                            <span class="cant-text">50</span>
+                            <span class="title-cant">TECHNICIANS</span>
+
+                            <i class="icon-wrench icon-cant"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="categories-box1">
+                            <span class="cant-text">150</span>
+                            <span class="title-cant">CUSTOMERS</span>
+
+                            <i class="icon-user icon-cant"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="categories-box1">
+                            <span class="cant-text">213</span>
+                            <span class="title-cant">REQUESTS</span>
+
+                            <i class="icon-layers icon-cant"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="categories-box1">
+                            <span class="cant-text">0</span>
+                            <span class="title-cant">TEST</span>
+
+                            <i class="icon-emotsmile icon-cant"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="rows">
+                    <div class="col-sm-12 col-md-6 col-lg-8">
+                        <div class="categories-box1" style="padding:0">
+                            <div class="title-cat-request">
+                                <div class="col-sm-12 col-lg-7"
+                                     style="display: flex; flex-direction: row; align-items: center; flex-wrap: nowrap">
+                                    <h3 class="title-cat-text3 bold">
+                                        Requests chart
+                                    </h3>
+                                    <div class="btn-group filter-show">
+                                        <button type="button" id="filter" class="btn-filter-tech dropdown-toggle dropdown-toggle2"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="ion-ios-settings-strong"></i>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+                                            <button class="dropdown-item" type="button">All</button>
+                                            <button class="dropdown-item" type="button">Pending</button>
+                                            <button class="dropdown-item" type="button">Rejected</button>
+                                            <button class="dropdown-item" type="button">Completed</button>
+                                            <button class="dropdown-item" type="button">Order by date</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-lg-5 rows filter-tech">
+                                    <div class="filter-hide">
+                                        <!--<a class="btn btn-filter">-->
+                                            <!--All-->
+                                        <!--</a>-->
+                                        <!--<a class="btn link-filter">-->
+                                            <!--Technicians-->
+                                        <!--</a>-->
+                                        <!--<a class="btn link-filter">-->
+                                            <!--Customers-->
+                                        <!--</a>-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div >
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="categories-box1" style="padding:0">
+                            <div class="title-cat-request">
+                                <div class="col-sm-12 col-lg-7"
+                                     style="display: flex; flex-direction: row; align-items: center; flex-wrap: nowrap">
+                                    <h3 class="title-cat-text3 bold">
+                                        Last registered users
+                                    </h3>
+                                    <!--<div class="btn-group filter-show">-->
+                                        <!--<button type="button" id="filter" class="btn-filter-tech dropdown-toggle dropdown-toggle2"-->
+                                                <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                                            <!--<i class="ion-ios-settings-strong"></i>-->
+                                        <!--</button>-->
+                                        <!--<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">-->
+                                            <!--<button class="dropdown-item" type="button">All</button>-->
+                                            <!--<button class="dropdown-item" type="button">Pending</button>-->
+                                            <!--<button class="dropdown-item" type="button">Rejected</button>-->
+                                            <!--<button class="dropdown-item" type="button">Completed</button>-->
+                                            <!--<button class="dropdown-item" type="button">Order by date</button>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                </div>
+                                <div class="col-sm-12 col-lg-5 filter-dash">
+                                    <div class="btn-group">
+                                        <button type="button" id="filter" class="btn-filter-tech dropdown-toggle dropdown-toggle2"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="ion-ios-settings-strong"></i>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+                                            <button class="dropdown-item" type="button">All</button>
+                                            <button class="dropdown-item" type="button">Technicians</button>
+                                            <button class="dropdown-item" type="button">Customers</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div >
+                                <!--EMPTY STATE-->
+                                <!--<div class="request-empty">-->
+                                    <!--<i class="icon-ghost request-empty-icon-dash"></i>-->
+                                    <!--<span class="request-empty-text-dash">-->
+                                        <!--NO NEW USERS REGISTERED-->
+                                    <!--</span>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer id="ABdev_main_footer">
+        <div id="footer_copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="span4 footer_copyright left_aligned">
+                        BEET ©2017. All Rights Reserved
+                        <a href="../es/index.html">
+                            <img src="images/es.svg" width="20px"></a>
+                    </div>
+                    <div class="span6 right_aligned">
+
+
+                        <a href="#"><img src="images/google-play-badge.svg" width="135"></a>
+                        <a href="#"><img src="images/Download_on_the_App_Store_Badge_US-UK_135x40.svg"></a>
+                    </div>
+                    <div class="span2 center_aligned">
+                        <a href="#" id="back_to_top" title="Back to top">
+                            <i class="ci_icon-angle-up"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<!--<script type="text/javascript" src="../js/jquery.slim.min.js" ></script>-->
+<script type="text/javascript" src="../js/angular/angular.min.js"></script>
+<script type="text/javascript" src=//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-messages.js"></script>
+<script type="text/javascript" src="../js/ngMask.min.js"></script>
+<script type="text/javascript" src="../js/jquery.hoverdir.js"></script>
+<script type="text/javascript" src="../js/modernizr.custom.97074.js"></script>
+<script type="text/javascript" src="../js/timepicker.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+
+<script src="../js/ui-bootstrap.js"></script>
+
+<script src="../js/moment.js"></script>
+<script src="../js/fullcalendar.js"></script>
+<script src="../js/gcal.js"></script>
+<script src="../js/calendar.js"></script>
+<script src="../js/ng-flow-standalone.min.js"></script>
+<script src="../js/angular/app.js"></script>
+
+
+<script type="text/javascript" src="js/stickymenu.js"></script>
+<!--<script type="text/javascript" src="js/jquery-ui.min.js"></script>-->
+<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="../js/prettify.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="../js/portfolio-init.js"></script>
+<script type="text/javascript" src="../js/sweetalert2.min.js"></script>
+<script type="text/javascript" src="../js/alerts.js"></script>
+<script type="text/javascript" src="../js/functions.js"></script>
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+
+//        $(this).find('#collapse-info').$('.collapse').collapse();
+
+    });
+</script>
+</body>
+</html>
+
