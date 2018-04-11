@@ -138,87 +138,102 @@
                         </div>
                     </div>
                 </li>
-                <li class="nav-item dropdown option-none">
-                    <a class="nav-link dropdown-toggle" href="#" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        SIGN UP
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right animated fadeInUp dropdown-dark" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="./signup-technician.html">Technician</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="./signup-client.html">Client</a>
-                        <!--<a class="dropdown-item" href="#">Something else here</a>-->
-                    </div>
-                </li>
-                <li class="nav-item dropdown option-none">
-                    <a class="nav-link dropdown-toggle" href="#" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        SIGN IN
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right animated fadeInUp dropdown-dark" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="./login-technician.html">Technician</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="./login-client.html">Client</a>
-                    </div>
-                </li>
+                <!--<li class="nav-item dropdown option-none">-->
+                    <!--<a class="nav-link dropdown-toggle" href="#" role="button"-->
+                       <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                        <!--SIGN UP-->
+                    <!--</a>-->
+                    <!--<div class="dropdown-menu dropdown-menu-right animated fadeInUp dropdown-dark" aria-labelledby="navbarDropdown">-->
+                        <!--<a class="dropdown-item" href="./signup-technician.html">Technician</a>-->
+                        <!--<div class="dropdown-divider"></div>-->
+                        <!--<a class="dropdown-item" href="./signup-client.html">Client</a>-->
+                        <!--&lt;!&ndash;<a class="dropdown-item" href="#">Something else here</a>&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</li>-->
+                <!--<li class="nav-item dropdown option-none">-->
+                    <!--<a class="nav-link dropdown-toggle" href="#" role="button"-->
+                       <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                        <!--SIGN IN-->
+                    <!--</a>-->
+                    <!--<div class="dropdown-menu dropdown-menu-right animated fadeInUp dropdown-dark" aria-labelledby="navbarDropdown">-->
+                        <!--<a class="dropdown-item" href="./login-technician.html">Technician</a>-->
+                        <!--<div class="dropdown-divider"></div>-->
+                        <!--<a class="dropdown-item" href="./login-client.html">Client</a>-->
+                    <!--</div>-->
+                <!--</li>-->
             </ul>
         </div>
     </div>
 </nav>
 
 <div class="bar-options">
-    <div class="btn-group">
-        <a href="" class="btn-filter-tech icon-bar">
-            <i class="material-icons" style="font-size: 1.7rem;">person_outline</i>
-            <!--<div class="point-color-notif"></div>-->
-        </a>
+    <div class="bar-options-left">
+        <div class="btn-group" id="hide" style="display: none;">
+            <a href="" class="btn-filter-tech icon-bar" style="margin-left:0;" onclick="menuHide();">
+                <i class="material-icons" style="font-size: 1.7rem;">menu</i>
+            </a>
+        </div>
+        <div class="btn-group" id="show">
+            <a href="" class="btn-filter-tech icon-bar" style="margin-left:0;" onclick="cascade();menuShow();">
+                <i class="material-icons" style="font-size: 1.7rem;">menu</i>
+            </a>
+        </div>
     </div>
-    <div class="btn-group">
-        <button type="button" class="btn-filter-tech icon-bar dropdown-toggle dropdown-toggle2"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="material-icons">notifications_none</i>
-            <div class="point-color-notif animated infinite flash"></div>
-        </button>
-        <div class="dropdown-menu dropdown-menu-right arrow-color dropdown-dark drop-notif" aria-labelledby="navbarDropdown">
-            <div class="header-notif">
-                <span> 4 New </span>
-                <span style="font-size: 1rem;font-family: 'Raleway', sans-serif;"> Notifications </span>
-            </div>
-            <a href="" class="list-notif-bold">
-                <div class="left-notif">
-                    12 new users registered
-                </div>
-                <div class="right-notif">
-                    3 min
-                </div>
+    <div class="bar-options-right">
+        <div class="btn-group">
+            <a href="" class="btn-filter-tech icon-bar">
+                <i class="material-icons" style="font-size: 1.7rem;">person_outline</i>
             </a>
-            <a href="" class="list-notif">
-                <div class="left-notif">
-                    New invoice received
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn-filter-tech icon-bar dropdown-toggle dropdown-toggle2"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="material-icons">notifications_none</i>
+                <div class="point-color-notif animated infinite flash"></div>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right arrow-color dropdown-dark drop-notif" aria-labelledby="navbarDropdown">
+                <div class="header-notif">
+                    <span> 4 New </span>
+                    <span style="font-size: 1rem;font-family: 'Raleway', sans-serif;"> Notifications </span>
                 </div>
-                <div class="right-notif">
-                    3 min
+                <a href="" class="list-notif-bold">
+                    <div class="left-notif">
+                        12 new users registered
+                    </div>
+                    <div class="right-notif">
+                        3 min
+                    </div>
+                </a>
+                <a href="" class="list-notif">
+                    <div class="left-notif">
+                        New invoice received
+                    </div>
+                    <div class="right-notif">
+                        3 min
+                    </div>
+                </a>
+                <a href="" class="list-notif">
+                    <div class="left-notif">
+                        New order received
+                    </div>
+                    <div class="right-notif">
+                        3 min
+                    </div>
+                </a>
+                <a href="" class="list-notif">
+                    <div class="left-notif">
+                        New order received
+                    </div>
+                    <div class="right-notif">
+                        3 min
+                    </div>
+                </a>
+                <div class="view-all-notif">
+                    <a href="">View all</a>
                 </div>
-            </a>
-            <a href="" class="list-notif">
-                <div class="left-notif">
-                    New order received
-                </div>
-                <div class="right-notif">
-                    3 min
-                </div>
-            </a>
-            <a href="" class="list-notif">
-                <div class="left-notif">
-                    New order received
-                </div>
-                <div class="right-notif">
-                    3 min
-                </div>
-            </a>
-            <div class="view-all-notif">
-                <a href="">View all</a>
             </div>
         </div>
     </div>
+
+
 </div>

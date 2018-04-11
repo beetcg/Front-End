@@ -40,191 +40,337 @@
 </head>
 
 <body class="page" data-ng-controller="TryNowController">
-<div>
+<div class="dash">
     <div ng-include="'menu-bar-dark.html'"></div>
+    <div ng-include="'sidebar.html'" style="background-color: #2f2f2e;box-shadow: 3px -5px 10px -2px rgba(125,121,125,1);"></div>
 
-    <div class="dash">
-        <a href="javascript:void(0)" onclick="cascade();mostrar();" style="position: absolute;top:200px">
-            <i class="icon-menu">MOSTRAR</i>
-        </a>
-        <div id="sidebar" class="sidebar-beet">
-            <div class="boton-cerrar" onclick="ocultar()">
-                <i class="ion-chevron-left"></i>
+    <a href="javascript:void(0)" onclick="cascade();mostrar();" class="expand-menu">
+        <i class="ion-chevron-right"></i>
+    </a>
+
+    <div class="container-fluid" ng-init="initHoverdir()" style="margin-bottom: 100px; display: flex; flex-direction: column">
+        <div class="mt-120">
+            <div class="rows">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="dash-box-items">
+                        <span class="cant-text">50</span>
+                        <span class="title-cant">TECHNICIANS</span>
+
+                        <i class="icon-wrench icon-cant"></i>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="dash-box-items">
+                        <span class="cant-text">150</span>
+                        <span class="title-cant">CUSTOMERS</span>
+
+                        <i class="icon-user icon-cant"></i>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="dash-box-items">
+                        <span class="cant-text">213</span>
+                        <span class="title-cant">REQUESTS</span>
+
+                        <i class="icon-layers icon-cant"></i>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="dash-box-items">
+                        <span class="cant-text">0</span>
+                        <span class="title-cant">TEST</span>
+
+                        <i class="icon-emotsmile icon-cant"></i>
+                    </div>
+                </div>
             </div>
-            <ul class="menu" id="cascade">
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">Users</a>
-                </li>
-                <li>
-                    <a href="">Request</a>
-                </li>
-                <li>
-                    <a href="">Categories</a>
-                </li>
-                <li>
-                    <a href="">Subcategories</a>
-                </li>
-            </ul>
-        </div>
-        <div class="container-fluid" ng-init="initHoverdir()" style="margin-bottom: 100px; display: flex; flex-direction: column">
-            <div class=" mt-120">
-                <div class="rows">
-                    <div class="col-sm-12 col-md-6 col-lg-3">
-                        <div class="categories-box1">
-                            <span class="cant-text">50</span>
-                            <span class="title-cant">TECHNICIANS</span>
-
-                            <i class="icon-wrench icon-cant"></i>
+            <div class="rows">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="categories-box1" style="padding:0">
+                        <div class="title-cat-request">
+                            <div class="col-sm-12 col-lg-7"
+                                 style="display: flex; flex-direction: row; align-items: center; flex-wrap: nowrap">
+                                <h3 class="title-cat-text3 bold">
+                                    Summary
+                                </h3>
+                                <div class="btn-group filter-show">
+                                    <button type="button" id="filter" class="btn-filter-tech dropdown-toggle dropdown-toggle2"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="ion-ios-settings-strong"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+                                        <button class="dropdown-item" type="button">All</button>
+                                        <button class="dropdown-item" type="button">Pending</button>
+                                        <button class="dropdown-item" type="button">Rejected</button>
+                                        <button class="dropdown-item" type="button">Completed</button>
+                                        <button class="dropdown-item" type="button">Order by date</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-5 rows filter-tech">
+                                <div class="filter-hide">
+                                    <!--<a class="btn btn-filter">-->
+                                        <!--All-->
+                                    <!--</a>-->
+                                    <!--<a class="btn link-filter">-->
+                                        <!--Technicians-->
+                                    <!--</a>-->
+                                    <!--<a class="btn link-filter">-->
+                                        <!--Customers-->
+                                    <!--</a>-->
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-3">
-                        <div class="categories-box1">
-                            <span class="cant-text">150</span>
-                            <span class="title-cant">CUSTOMERS</span>
-
-                            <i class="icon-user icon-cant"></i>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-3">
-                        <div class="categories-box1">
-                            <span class="cant-text">213</span>
-                            <span class="title-cant">REQUESTS</span>
-
-                            <i class="icon-layers icon-cant"></i>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-3">
-                        <div class="categories-box1">
-                            <span class="cant-text">0</span>
-                            <span class="title-cant">TEST</span>
-
-                            <i class="icon-emotsmile icon-cant"></i>
+                        <div >
+                            <!--EMPTY STATE-->
+                            <div class="request-empty">
+                                <i class="icon-ghost request-empty-icon-dash"></i>
+                                <span class="request-empty-text-dash">
+                                    NO NEWS REGISTERED
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="rows">
-                    <div class="col-sm-12 col-md-6 col-lg-8">
-                        <div class="categories-box1" style="padding:0">
-                            <div class="title-cat-request">
-                                <div class="col-sm-12 col-lg-7"
-                                     style="display: flex; flex-direction: row; align-items: center; flex-wrap: nowrap">
-                                    <h3 class="title-cat-text3 bold">
-                                        Requests chart
-                                    </h3>
-                                    <div class="btn-group filter-show">
-                                        <button type="button" id="filter" class="btn-filter-tech dropdown-toggle dropdown-toggle2"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="ion-ios-settings-strong"></i>
-                                        </button>
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
-                                            <button class="dropdown-item" type="button">All</button>
-                                            <button class="dropdown-item" type="button">Pending</button>
-                                            <button class="dropdown-item" type="button">Rejected</button>
-                                            <button class="dropdown-item" type="button">Completed</button>
-                                            <button class="dropdown-item" type="button">Order by date</button>
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="categories-box1" style="padding:0">
+                        <div class="title-cat-request">
+                            <div class="col-12" style="display: flex; flex-direction: row; align-items: center; flex-wrap: nowrap">
+                                <h3 class="title-cat-text3 bold">
+                                    Last request
+                                </h3>
+                                <div class="btn-group filter-dash">
+                                    <button type="button" class="btn-filter-tech"
+                                            data-toggle="tooltip" data-placement="bottom" title="View all">
+                                        <i class="material-icons">call_made</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-cont">
+                            <div ng-repeat="producto in productos | limitTo: 4">
+                                <a href="">
+                                    <div class="rows row-dash card-last-request">
+                                        <div class="col-sm-4 col-md-6 col-lg-4 row-dash" style="margin-bottom: 10px;align-items: center;">
+                                            <img src="images/team1.jpg" class="item-img-dash">
+                                            <div class="col-mobile">
+                                                <div class="item-cat bold">
+                                                    Customer's name
+                                                </div>
+                                                <span class="item-date-dash mb-2">
+                                                    <i class="ion-calendar"></i> 04/11/2018
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8 col-md-6 col-lg-8 rows">
+                                            <div class="col-sm-4 col-md-4 mb-2 column-box" >
+                                            <span class="item-cat mb-2 bold">
+                                                Category
+                                            </span>
+                                                <span class="item-cat-dash mb-2">
+                                                    Computer Support
+                                                </span>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4 mb-2 column-box" >
+                                            <span class="item-cat mb-2 bold">
+                                                Technician
+                                            </span>
+                                                <span class="item-cat-dash mb-2">
+                                                    Alex Reinhold
+                                                </span>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4 mb-2 column-box" >
+                                            <span class="item-cat mb-2 bold">
+                                                Status
+                                            </span>
+                                                <span class="badge-pending-approv">
+                                                    Pending
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!--EMPTY STATE-->
+                            <!--<div class="request-empty">-->
+                                <!--<i class="icon-ghost request-empty-icon-dash"></i>-->
+                                <!--<span class="request-empty-text-dash">-->
+                                    <!--NO NEW USERS REGISTERED-->
+                                <!--</span>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rows">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="categories-box1" style="padding:0">
+                        <div class="title-cat-request">
+                            <div class="col-12" style="display: flex; flex-direction: row; align-items: center; flex-wrap: nowrap">
+                                <h3 class="title-cat-text3 bold">
+                                    Last registered Technicians
+                                </h3>
+                                <div class="btn-group filter-dash">
+                                    <button type="button" class="btn-filter-tech"
+                                            data-toggle="tooltip" data-placement="bottom" title="View all">
+                                        <i class="material-icons">call_made</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-cont">
+                            <div ng-repeat="producto in productos | limitTo: 4">
+                                <div class="rows row-dash card-last-user">
+                                    <div class="col-sm-4 col-md-6 col-lg-4 row-dash" style="margin-bottom: 10px;align-items: center;">
+                                        <img src="images/team1.jpg" class="item-img-dash">
+                                        <div class="col-mobile">
+                                            <div class="item-cat mb-2 bold">
+                                                Technician's name
+                                            </div>
+                                            <span class="item-register-dash mb-2">
+                                                11 Apr, 5:23 PM
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8 col-md-6 col-lg-8 rows">
+                                        <div class="col-sm-4 col-md-4 mb-2 column-box" >
+                                            <span class="item-cat mb-2 bold">
+                                                Category
+                                            </span>
+                                            <span class="item-cat-dash mb-2">
+                                                Computer Support
+                                            </span>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 mb-2 column-box" >
+                                            <span class="item-cat mb-2 bold">
+                                                Status
+                                            </span>
+                                            <span class="badge-pending-approv mb-2">
+                                                Pending
+                                            </span>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 mb-2 column-box" >
+                                            <span class="item-cat mb-2 bold">
+                                                Option
+                                            </span>
+                                            <div class="row-box">
+                                                <button type="button" class="btn-dash-option-approve">Approve</button>
+                                                <button type="button" class="btn-dash-option-reject">Reject</button>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-12 col-lg-5 rows filter-tech">
-                                    <div class="filter-hide">
-                                        <!--<a class="btn btn-filter">-->
-                                            <!--All-->
-                                        <!--</a>-->
-                                        <!--<a class="btn link-filter">-->
-                                            <!--Technicians-->
-                                        <!--</a>-->
-                                        <!--<a class="btn link-filter">-->
-                                            <!--Customers-->
-                                        <!--</a>-->
-                                    </div>
-                                </div>
                             </div>
-                            <div >
 
-                            </div>
+                            <!--EMPTY STATE-->
+                            <!--<div class="request-empty">-->
+                            <!--<i class="icon-ghost request-empty-icon-dash"></i>-->
+                            <!--<span class="request-empty-text-dash">-->
+                            <!--NO NEW USERS REGISTERED-->
+                            <!--</span>-->
+                            <!--</div>-->
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="categories-box1" style="padding:0">
-                            <div class="title-cat-request">
-                                <div class="col-sm-12 col-lg-7"
-                                     style="display: flex; flex-direction: row; align-items: center; flex-wrap: nowrap">
-                                    <h3 class="title-cat-text3 bold">
-                                        Last registered users
-                                    </h3>
-                                    <!--<div class="btn-group filter-show">-->
-                                        <!--<button type="button" id="filter" class="btn-filter-tech dropdown-toggle dropdown-toggle2"-->
-                                                <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-                                            <!--<i class="ion-ios-settings-strong"></i>-->
-                                        <!--</button>-->
-                                        <!--<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">-->
-                                            <!--<button class="dropdown-item" type="button">All</button>-->
-                                            <!--<button class="dropdown-item" type="button">Pending</button>-->
-                                            <!--<button class="dropdown-item" type="button">Rejected</button>-->
-                                            <!--<button class="dropdown-item" type="button">Completed</button>-->
-                                            <!--<button class="dropdown-item" type="button">Order by date</button>-->
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="categories-box1" style="padding:0">
+                        <div class="title-cat-request">
+                            <div class="col-12" style="display: flex; flex-direction: row; align-items: center; flex-wrap: nowrap">
+                                <h3 class="title-cat-text3 bold">
+                                    Last registered Customers
+                                </h3>
+                                <div class="btn-group filter-dash">
+                                    <button type="button" class="btn-filter-tech"
+                                            data-toggle="tooltip" data-placement="bottom" title="View all">
+                                        <i class="material-icons">call_made</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-cont">
+                            <div ng-repeat="producto in productos | limitTo: 4">
+                                <div class="rows row-dash card-last-user">
+                                    <div class="col-sm-4 col-md-6 col-lg-4 row-dash" style="margin-bottom: 10px;align-items: center;">
+                                        <img src="images/team1.jpg" class="item-img-dash">
+                                        <div class="col-mobile">
+                                            <div class="item-cat mb-2 bold">
+                                                Customer's name
+                                            </div>
+                                            <span class="item-register-dash">
+                                                11 Apr, 5:23 PM
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8 col-md-6 col-lg-8 rows">
+                                        <!--<div class="col-sm-4 col-md-4 mb-2 column-box" >-->
+                                            <!--<span class="item-cat mb-1 bold">-->
+                                                <!--Category-->
+                                            <!--</span>-->
+                                            <!--<span class="item-cat-dash">-->
+                                                <!--Computer Support-->
+                                            <!--</span>-->
                                         <!--</div>-->
-                                    <!--</div>-->
-                                </div>
-                                <div class="col-sm-12 col-lg-5 filter-dash">
-                                    <div class="btn-group">
-                                        <button type="button" id="filter" class="btn-filter-tech dropdown-toggle dropdown-toggle2"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="ion-ios-settings-strong"></i>
-                                        </button>
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
-                                            <button class="dropdown-item" type="button">All</button>
-                                            <button class="dropdown-item" type="button">Technicians</button>
-                                            <button class="dropdown-item" type="button">Customers</button>
-                                        </div>
+                                        <!--<div class="col-sm-4 col-md-4 mb-2 column-box" >-->
+                                            <!--<span class="item-cat mb-2 bold">-->
+                                                <!--Status-->
+                                            <!--</span>-->
+                                            <!--<span class="badge-pending-approv mb-2">-->
+                                                <!--Pending-->
+                                            <!--</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="col-sm-4 col-md-4 mb-2 column-box" >-->
+                                            <!--<span class="item-cat mb-2 bold">-->
+                                                <!--Option-->
+                                            <!--</span>-->
+                                            <!--<div class="row-box">-->
+                                                <!--<button type="button" class="btn-dash-option-approve">Approve</button>-->
+                                                <!--<button type="button" class="btn-dash-option-reject">Reject</button>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
                                     </div>
                                 </div>
                             </div>
-                            <div >
-                                <!--EMPTY STATE-->
-                                <!--<div class="request-empty">-->
-                                    <!--<i class="icon-ghost request-empty-icon-dash"></i>-->
-                                    <!--<span class="request-empty-text-dash">-->
-                                        <!--NO NEW USERS REGISTERED-->
-                                    <!--</span>-->
-                                <!--</div>-->
-                            </div>
+
+                            <!--EMPTY STATE-->
+                            <!--<div class="request-empty">-->
+                                <!--<i class="icon-ghost request-empty-icon-dash"></i>-->
+                                <!--<span class="request-empty-text-dash">-->
+                                    <!--NO NEW USERS REGISTERED-->
+                                <!--</span>-->
+                            <!--</div>-->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+</div>
+<footer id="ABdev_main_footer">
+    <div id="footer_copyright">
+        <div class="container">
+            <div class="row">
+                <div class="span4 footer_copyright left_aligned">
+                    BEET ©2017. All Rights Reserved
+                    <a href="../es/index.html">
+                        <img src="images/es.svg" width="20px"></a>
+                </div>
+                <div class="span6 right_aligned">
 
-    <footer id="ABdev_main_footer">
-        <div id="footer_copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="span4 footer_copyright left_aligned">
-                        BEET ©2017. All Rights Reserved
-                        <a href="../es/index.html">
-                            <img src="images/es.svg" width="20px"></a>
-                    </div>
-                    <div class="span6 right_aligned">
 
-
-                        <a href="#"><img src="images/google-play-badge.svg" width="135"></a>
-                        <a href="#"><img src="images/Download_on_the_App_Store_Badge_US-UK_135x40.svg"></a>
-                    </div>
-                    <div class="span2 center_aligned">
-                        <a href="#" id="back_to_top" title="Back to top">
-                            <i class="ci_icon-angle-up"></i>
-                        </a>
-                    </div>
+                    <a href="#"><img src="images/google-play-badge.svg" width="135"></a>
+                    <a href="#"><img src="images/Download_on_the_App_Store_Badge_US-UK_135x40.svg"></a>
+                </div>
+                <div class="span2 center_aligned">
+                    <a href="#" id="back_to_top" title="Back to top">
+                        <i class="ci_icon-angle-up"></i>
+                    </a>
                 </div>
             </div>
         </div>
-    </footer>
-</div>
+    </div>
+</footer>
 
 <script type="text/javascript" src="../js/jquery.js"></script>
 <!--<script type="text/javascript" src="../js/jquery.slim.min.js" ></script>-->
