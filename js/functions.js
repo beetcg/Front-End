@@ -1,5 +1,5 @@
 function mostrar() {
-    document.getElementById("sidebar").style.width = "300px";
+    document.getElementById("sidebar").style.width = "200px";
 }
 
 function ocultar() {

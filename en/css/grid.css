@@ -13417,7 +13417,7 @@ i{
 .sidebar-beet {
     /*position: fixed;*/
     /*height: 100%;*/
-    width: 250px;
+    width: 200px;
     /*top: 0;*/
     /*left: 0;*/
     z-index: 1001;
@@ -13628,7 +13628,7 @@ i{
     color: #5a5a5a;
     font-size: 12px;
     text-align: center;
-    padding-left: 10px;
+    /*padding-left: 10px;*/
 }
 
 .item-register-dash {
@@ -13672,7 +13672,7 @@ i{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /*justify-content: center;*/
 }
 
 .row-box {
@@ -13738,10 +13738,10 @@ i{
     color: #00dc94;
     border: 1px solid #00dc94;
     margin: 0 !important;
-    padding: 5px;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    font-size: 13px;
+    padding: 3px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    font-size: 12px;
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
     font-weight:normal;
@@ -13757,10 +13757,10 @@ i{
     color: #ff6363;
     border: 1px solid #ff6363;
     margin: 0 !important;
-    padding: 5px;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    font-size: 13px;
+    padding: 3px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    font-size: 12px;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
     font-weight:normal;
