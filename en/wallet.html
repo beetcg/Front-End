@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-US" data-ng-app="beetApp" data-ng-cloak>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Details | BEET</title>
+    <meta name="description" content="Spiral HTML5 premium template">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet"
+          href="http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400italic%2C300%2C700%7CRaleway%3A400%2C200%2C600%2C700&amp;ver=4.2.6"
+          type="text/css" media="all">
+    <link rel="stylesheet" href="rs-plugin/css/settings.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/icons/icons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/core-icons/core_style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/scripts.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
+    <!--<link rel="stylesheet" href="css/components.css" type="text/css" media="all">-->
+    <link rel="stylesheet" href="css/animate.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/ionicons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/fullcalendar.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/demo.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/components.min.css" type="text/css" media="all">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Latest compiled and minified CSS Bootstrap
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+
+    <link href="css/style2.css" rel="stylesheet" media="screen">
+    <!-- Jquery -->
+    <!--<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+
+</head>
+
+<body class="page">
+<div class="dash"  data-ng-controller="TryNowController">
+
+    <div ng-include="'menu-bar-dark.html'"></div>
+    <div ng-include="'sidebar.html'" style="background-color: #2f2f2e;box-shadow: 3px -5px 10px -2px rgba(125,121,125,1);"></div>
+
+    <a href="javascript:void(0)" onclick="cascade();mostrar();" class="expand-menu">
+        <i class="ion-chevron-right"></i>
+    </a>
+
+    <div class="content4">
+        <!--<div class="categories-box1">-->
+        <div class="hourly-form mt-160">
+            <div class="center bottom-30">
+                <div class="image-tech">
+                    <img src="images/testim2.jpg">
+                </div>
+            </div>
+            <div class="info-payment" align="center">
+                <div class="name-tech-text">
+                    Your Wallet
+                </div>
+                <div class="center" style="margin-bottom: 5px !important;">
+                    <div class="little-line"></div>
+                </div>
+                <div class="category-tech-text">
+                    Available:
+                </div>
+                <!--<div class="subcategory-tech-text">-->
+                    <!--Computer Tune Up-->
+                <!--</div>-->
+
+
+                <!--<div class="price-text">-->
+                    <!--Service amount:-->
+                <!--</div>-->
+                <div class="price-number-text mb-3">
+                    260 USD
+                </div>
+
+                <div class="section-options" data-ng-show="options">
+                    <div class="options-title price-text">
+                        How much do you want to add?
+                    </div>
+                    <div class="info-contain">
+                        <input class="form-control form-control-solid input-info" type="text" placeholder="Amount to add (USD) *" name="amount" style="width:200px"/>
+                    </div>
+                    <!--<div class="payment-options">-->
+                        <a href="" class="add-wallet">
+                            <i class="ion-plus-circled option-icon"></i>
+                            <span class="option-text">Add amount</span>
+                        </a>
+                        <!--<div class="option-tdc">-->
+                            <!--<i class="ion-close-circled option-icon"></i>-->
+                            <!--<span class="option-text">Reject</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                </div>
+
+                <div data-ng-show="tdc" class="animated bounceInUp">
+                    <div class="option-row">
+                        <div class="flex-back">
+                            <i class="ion-android-arrow-back ic-back" style="margin:0 !important;" data-ng-click="selectMethod(2)"></i>
+                        </div>
+                        <div class="flex-center">
+                            <div class="info-card">
+                                Please enter your Credit Card details:
+                            </div>
+                        </div>
+                        <div class="flex-back"></div>
+                    </div>
+                    <div class="info-contain">
+                        <input class="form-control form-control-solid input-info" type="text" placeholder="Cardholder's name *" name="pass"/>
+                    </div>
+                    <div class="info-contain">
+                        <input class="form-control form-control-solid input-info" type="text" placeholder="Cardholder's lastname *" name="pass"/>
+                    </div>
+                    <div class="info-contain">
+                        <input class="form-control form-control-solid input-info" type="text" placeholder="CVV *" name="pass"/>
+                        <img src="images/icon_tdc_back.png" style="margin-top: -27px; width: 30px; height: 20px; float: right; margin-right: 5px">
+                    </div>
+                    <div class="info-card" style="text-align: left; margin-bottom: 5px">
+                        Card expiration date:
+                    </div>
+                    <div class="info-contain rows">
+                        <div class="col-sm-5" style="margin-bottom: 15px">
+                            <select class="form-control" style="height: 33px !important; font-size: 13px">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-7">
+                            <select class="form-control" id="exampleFormControlSelect1" style="height: 33px !important; font-size: 13px">
+                                <option>2018</option>
+                                <option>2019</option>
+                                <option>2020</option>
+                                <option>2021</option>
+                                <option>2022</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div align="center">
+                        <button class="btn button-pay collapsed" aria-expanded="false" data-toggle="modal" data-target="#tdc">
+                            Ready
+                        </button>
+                    </div>
+                    <div class="message-card">
+                        * For your security, your payment method information will not be stored in the system. *
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
+    </div>
+
+    <!-- Modal WALLET-->
+    <div class="modal fade" id="wallet" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-title title-modal">
+                        Available: 800 USD
+                    </div>
+                    <div class="message-modal">
+                        Are you sure you want to do this?
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="" class="link-cancel" data-dismiss="modal">Cancel</a>
+                    <a href="" class="link-confirm">Confirm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal TDC-->
+    <div class="modal fade" id="tdc" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-title title-modal">
+                        Credit Card
+                    </div>
+                    <div class="message-modal">
+                        Are you sure you want to do this?
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="" class="link-cancel" data-dismiss="modal">Cancel</a>
+                    <a href="" class="link-confirm">Confirm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="ABdev_main_footer">
+    <div id="footer_copyright">
+        <div class="container">
+            <div class="row">
+                <div class="span4 footer_copyright left_aligned">
+                    BEET ©2017. All Rights Reserved
+                    <a href="../es/index.html">
+                        <img src="images/es.svg" width="20px"></a>
+                </div>
+                <div class="span6 right_aligned">
+
+
+                    <a href="#"><img src="images/google-play-badge.svg" width="135"></a>
+                    <a href="#"><img src="images/Download_on_the_App_Store_Badge_US-UK_135x40.svg"></a>
+                </div>
+                <div class="span2 center_aligned">
+                    <a href="#" id="back_to_top" title="Back to top">
+                        <i class="ci_icon-angle-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<!--<script type="text/javascript" src="../js/jquery.slim.min.js" ></script>-->
+<script type="text/javascript" src="../js/angular/angular.min.js"></script>
+<script type="text/javascript" src=//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-messages.js"></script>
+<script type="text/javascript" src="../js/ngMask.min.js"></script>
+<script type="text/javascript" src="../js/jquery.hoverdir.js"></script>
+<script type="text/javascript" src="../js/modernizr.custom.97074.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+
+<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
+
+<script src="../js/moment.js"></script>
+<script src="../js/fullcalendar.js"></script>
+<script src="../js/gcal.js"></script>
+<script src="../js/calendar.js"></script>
+<script src="../js/ng-flow-standalone.min.js"></script>
+<script src="../js/angular/app.js"></script>
+
+
+<script type="text/javascript" src="js/stickymenu.js"></script>
+<!--<script type="text/javascript" src="js/jquery-ui.min.js"></script>-->
+<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="../js/prettify.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="../js/portfolio-init.js"></script>
+<script type="text/javascript" src="../js/sweetalert2.min.js"></script>
+<script type="text/javascript" src="../js/alerts.js"></script>
+<script type="text/javascript" src="../js/functions.js"></script>
+
+<!--<script>-->
+<!--$('.ui.calendar')-->
+<!--.calendar({-->
+<!--popupOptions: {-->
+<!--observeChanges: false-->
+<!--}-->
+<!--}-->
+<!--);-->
+<!--</script>-->
+</body>
+</html>

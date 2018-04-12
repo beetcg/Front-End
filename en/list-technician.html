@@ -92,80 +92,82 @@
                         </div>
                     </div>
                 </div>
-                <!--<div ng-repeat="producto in productos | limitTo: limit">-->
+                <div ng-repeat="producto in productos | limitTo: limit">
                     <!--<a href="trynow.html">-->
-                    <!--<div class="tech-list-item rows animated fadeIn" style="cursor: pointer;" ng-click="">-->
-                            <!--<div class="col-sm-12 col-md-5 rows" style="margin-bottom: 10px;">-->
-                                <!--<img src="images/team1.jpg" class="item-img">-->
-                                <!--<div>-->
-                                    <!--<div class="item-text bold m-bottom">-->
-                                        <!--Technician's name-->
-                                    <!--</div>-->
-                                    <!--<div class="item-cat m-bottom">-->
-                                        <!--Category | Category | Category-->
-                                    <!--</div>-->
-                                    <!--<div class="link-item">-->
-                                        <!--View more-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="col-sm-12 col-md-7 rows">-->
-                                <!--<div class="col-sm-4" align="center">-->
-                                    <!--<p class="item-text bold">-->
-                                        <!--Rating-->
-                                    <!--</p>-->
-                                    <!--<p>-->
-                                        <!--<i class="ion-ios-star rating-icon"></i>-->
-                                        <!--<i class="ion-ios-star rating-icon"></i>-->
-                                        <!--<i class="ion-ios-star rating-icon"></i>-->
-                                        <!--<i class="ion-android-star-outline rating-icon"></i>-->
-                                        <!--<i class="ion-android-star-outline rating-icon"></i>-->
-                                    <!--</p>-->
-                                <!--</div>-->
-                                <!--<div class="col-sm-4" align="center">-->
-                                    <!--<p class="item-text bold">-->
-                                        <!--Completed services-->
-                                    <!--</p>-->
-                                    <!--<p class="item-services-completed">-->
-                                        <!--60-->
-                                    <!--</p>-->
-                                <!--</div>-->
-                                <!--<div class="col-sm-4" align="center">-->
-                                    <!--<p class="item-text bold">-->
-                                        <!--Available scheduleF-->
-                                    <!--</p>-->
-                                    <!--<p ng-click="renderCalender('myCalendar')" data-toggle="modal"-->
-                                       <!--data-target="#exampleModalCenter" class="link-item-schedule">-->
-                                        <!--View-->
-                                    <!--</p>-->
-                                <!--</div>-->
-                            <!--</div>-->
-
-                    <!--</div>-->
+                    <div class="tech-list-item rows animated fadeIn" ng-click="">
+                        <div class="col-sm-12 col-md-5 rows" style="margin-bottom: 10px;">
+                            <img src="images/team1.jpg" class="item-img">
+                            <div>
+                                <div class="item-text bold m-bottom">
+                                    Technician's name
+                                </div>
+                                <div class="item-cat m-bottom">
+                                    Category | Category | Category
+                                </div>
+                                <a href="" class="link-item">
+                                    View more
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-7 rows">
+                            <div class="col-sm-4" align="center">
+                                <p class="item-text bold">
+                                    Rating
+                                </p>
+                                <p>
+                                    <i class="ion-ios-star rating-icon"></i>
+                                    <i class="ion-ios-star rating-icon"></i>
+                                    <i class="ion-ios-star rating-icon"></i>
+                                    <i class="ion-android-star-outline rating-icon"></i>
+                                    <i class="ion-android-star-outline rating-icon"></i>
+                                </p>
+                            </div>
+                            <div class="col-sm-4" align="center">
+                                <p class="item-text bold">
+                                    Completed services
+                                </p>
+                                <p class="item-services-completed">
+                                    60
+                                </p>
+                            </div>
+                            <div class="col-sm-4" align="center">
+                                <p class="item-text bold">
+                                    Available scheduleF
+                                </p>
+                                <a href="" ng-click="renderCalender('myCalendar')" data-toggle="modal"
+                                   data-target="#exampleModalCenter" class="link-item-schedule">
+                                    View
+                                </a>
+                            </div>
+                        </div>
+                        <button class="btn-accept" id="btn-accept">
+                            <i class="ion-checkmark"></i>
+                        </button>
+                    </div>
                     <!--</a>-->
-                <!--</div>-->
-                <!--<i class="fa fa-spinner" ng-show="loading"></i>-->
-                <!--<div align="center">-->
-                    <!--<button class="btn-showmore" ng-click="showMore()">-->
-                        <!--<i class="ion-plus"></i>-->
-                    <!--</button>-->
-                    <!--&lt;!&ndash;<ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize"&ndash;&gt;-->
-                        <!--&lt;!&ndash;class="pagination-sm" boundary-links="true" force-ellipses="true"></ul>&ndash;&gt;-->
-                <!--</div>-->
+                </div>
+                <i class="fa fa-spinner" ng-show="loading"></i>
+                <div align="center">
+                    <button class="btn-showmore" ng-click="showMore()">
+                        <i class="ion-plus"></i>
+                    </button>
+                    <!--<ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize"-->
+                        <!--class="pagination-sm" boundary-links="true" force-ellipses="true"></ul>-->
+                </div>
 
                 <!--EMPTY STATE-->
-                <div class="request-empty">
-                    <i class="icon-ghost techlist-empty-icon"></i>
-                    <span class="request-empty-text">
-                        IT LOOKS LIKE THE TECHNICIAN
-                    </span>
-                    <span class="request-empty-text">
-                        FOR YOU HASN'T TURNED UP YET
-                    </span>
-                    <a class="btn btn-filter" style="margin-top: 40px">
-                        Try again
-                    </a>
-                </div>
+                <!--<div class="request-empty">-->
+                    <!--<i class="icon-ghost techlist-empty-icon"></i>-->
+                    <!--<span class="request-empty-text">-->
+                        <!--IT LOOKS LIKE THE TECHNICIAN-->
+                    <!--</span>-->
+                    <!--<span class="request-empty-text">-->
+                        <!--FOR YOU HASN'T TURNED UP YET-->
+                    <!--</span>-->
+                    <!--<a class="btn btn-filter" style="margin-top: 40px">-->
+                        <!--Try again-->
+                    <!--</a>-->
+                <!--</div>-->
             </div>
         </div>
 
@@ -240,20 +242,8 @@
 <script type="text/javascript" src="../js/portfolio-init.js"></script>
 <script type="text/javascript" src="../js/sweetalert2.min.js"></script>
 <script type="text/javascript" src="../js/alerts.js"></script>
-<!--<script>-->
-    <!--$(document).ready(function () {-->
-        <!--$(".filter-show").hover(-->
-            <!--function () {-->
-                <!--$('.dropdown-menu').addClass('drop-right').slideDown(300);-->
-                <!--$(this).toggleClass('open');-->
-            <!--},-->
-            <!--function () {-->
-                <!--$('.dropdown-menu').addClass('drop-right').slideUp(300);-->
-                <!--$(this).toggleClass('open');-->
-            <!--}-->
-        <!--);-->
-    <!--});-->
-<!--</script>-->
+<script type="text/javascript" src="../js/functions.js"></script>
+
 </body>
 </html>
 

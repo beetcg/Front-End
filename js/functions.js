@@ -20,10 +20,6 @@ function menuHide() {
     $("#sidebar-horizontal").css("background-color","#fff");
 }
 
-// function ocultar() {
-//     document.getElementById("sidebar").style.width = "0";
-// }
-
 function cascade() {
     $("#cascade li").css({
         left: -800,
@@ -49,3 +45,15 @@ function cascade() {
         }, i * 200);
     });
 }
+
+$(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover();
+
+    $('.tech-list-item').hover(function () {
+            $(this).find('#btn-accept').slideDown('fast').css("display", "block");
+        },
+        function () {
+            $(this).find('#btn-accept').slideUp('fast');
+        });
+});

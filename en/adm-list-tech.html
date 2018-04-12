@@ -40,15 +40,16 @@
 </head>
 
 <body class="page" data-ng-controller="TryNowController">
-<div>
+<div class="dash">
     <div ng-include="'menu-bar-dark.html'"></div>
+    <div ng-include="'sidebar.html'" style="background-color: #2f2f2e;box-shadow: 3px -5px 10px -2px rgba(125,121,125,1);"></div>
 
-    <div class="container-fluid" ng-init="initHoverdir()" style="margin-top: 80px;margin-bottom: 100px">
-        <!--<div class="title-trynow">-->
-            <!--<p class="title-trynow-text"> My Requests </p>-->
-        <!--</div>-->
+    <a href="javascript:void(0)" onclick="cascade();mostrar();" class="expand-menu">
+        <i class="ion-chevron-right"></i>
+    </a>
 
-        <div class="mt-150">
+    <div class="container-fluid" ng-init="initHoverdir()" style="margin-bottom: 100px; display: flex; flex-direction: column">
+        <div class="mt-120">
             <div class="categories-box1" style="padding:0">
                 <div class="title-cat-request">
                     <div class="col-sm-12 col-lg-5"
@@ -62,6 +63,7 @@
                                 <i class="ion-ios-settings-strong"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+                                <button class="dropdown-item" type="button">All</button>
                                 <button class="dropdown-item" type="button">Enabled</button>
                                 <button class="dropdown-item" type="button">Waiting Auth</button>
                                 <button class="dropdown-item" type="button">Disabled</button>
@@ -71,6 +73,9 @@
                     <div class="col-sm-12 col-lg-7 rows filter-tech">
                         <div class="filter-hide">
                             <a class="btn btn-filter">
+                                All
+                            </a>
+                            <a class="btn link-filter">
                                 Enabled
                             </a>
                             <a class="btn link-filter">
@@ -84,8 +89,69 @@
                 </div>
 
                 <div class="container-box">
+                    <!--<div class="text-waiting-approve">-->
+                        <!--Waiting Approve-->
+                    <!--</div>-->
+                    <div class="rows waiting-list">
+                        <div class="col-xs-12 col-md-6 col-lg-4" ng-repeat="waiting in waitings">
+                            <div class="card-user">
+                                <div class="card-user-info">
+                                    <div class="card-user-picture">
+                                        <img src="images/testim2.jpg">
+                                    </div>
+
+                                    <div class="card-info">
+                                        <span class="card-name">
+                                            Ana Sanchez
+                                        </span>
+                                        <span class="card-rating">
+                                            <i class="ion-ios-star"></i>
+                                            <i class="ion-ios-star"></i>
+                                            <i class="ion-ios-star"></i>
+                                            <i class="ion-ios-star"></i>
+                                            <i class="ion-ios-star"></i>
+                                        </span>
+
+                                        <span class="card-text">
+                                            <i class="icon-envelope card-icon"></i>
+                                            <span>
+                                                anasanchez@gmail.com
+                                            </span>
+                                        </span>
+                                        <span class="card-text" style="margin-bottom: 10px">
+                                            <i class="icon-phone card-icon"></i>
+                                            <span>
+                                                04246248691
+                                            </span>
+                                        </span>
+                                        <a href="" class="link-item">
+                                            View profile
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-user-options">
+                                    <div class="card-user-option">
+                                        <i class="icon-envelope card-user-option-icon" data-toggle="tooltip" data-placement="bottom" title="Send email"></i>
+                                    </div>
+                                    <div class="card-user-option ">
+                                        <i class="icon-speech card-user-option-icon" data-toggle="tooltip" data-placement="bottom" title="Send message"></i>
+                                    </div>
+                                    <div class="card-user-option">
+                                        <i class="ion-checkmark card-user-option-icon" data-toggle="tooltip" data-placement="bottom" title="Approve"></i>
+                                    </div>
+                                </div>
+                                <div class="badge-waiting-approve">
+                                    Pending
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <!--<div class="text-all">-->
+                        <!--All-->
+                    <!--</div>-->
                     <div class="rows" >
-                        <div class="col-xs-12 col-md-6 col-lg-3" ng-repeat="producto in productos">
+                        <div class="col-xs-12 col-md-6 col-lg-4" ng-repeat="producto in productos">
                             <div class="card-user">
                                 <div class="card-user-info">
                                     <div class="card-user-picture">
@@ -154,32 +220,32 @@
     </div>
 
 
-    <footer id="ABdev_main_footer">
-        <div id="footer_copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="span4 footer_copyright left_aligned">
-                        BEET ©2017. All Rights Reserved
-                        <a href="../es/index.html">
-                            <img src="images/es.svg" width="20px"></a>
-                    </div>
-                    <div class="span6 right_aligned">
+
+</div>
+<footer id="ABdev_main_footer">
+    <div id="footer_copyright">
+        <div class="container">
+            <div class="row">
+                <div class="span4 footer_copyright left_aligned">
+                    BEET ©2017. All Rights Reserved
+                    <a href="../es/index.html">
+                        <img src="images/es.svg" width="20px"></a>
+                </div>
+                <div class="span6 right_aligned">
 
 
-                        <a href="#"><img src="images/google-play-badge.svg" width="135"></a>
-                        <a href="#"><img src="images/Download_on_the_App_Store_Badge_US-UK_135x40.svg"></a>
-                    </div>
-                    <div class="span2 center_aligned">
-                        <a href="#" id="back_to_top" title="Back to top">
-                            <i class="ci_icon-angle-up"></i>
-                        </a>
-                    </div>
+                    <a href="#"><img src="images/google-play-badge.svg" width="135"></a>
+                    <a href="#"><img src="images/Download_on_the_App_Store_Badge_US-UK_135x40.svg"></a>
+                </div>
+                <div class="span2 center_aligned">
+                    <a href="#" id="back_to_top" title="Back to top">
+                        <i class="ci_icon-angle-up"></i>
+                    </a>
                 </div>
             </div>
         </div>
-    </footer>
-</div>
-
+    </div>
+</footer>
 <script type="text/javascript" src="../js/jquery.js"></script>
 <!--<script type="text/javascript" src="../js/jquery.slim.min.js" ></script>-->
 <script type="text/javascript" src="../js/angular/angular.min.js"></script>
@@ -216,15 +282,8 @@
 <script type="text/javascript" src="../js/portfolio-init.js"></script>
 <script type="text/javascript" src="../js/sweetalert2.min.js"></script>
 <script type="text/javascript" src="../js/alerts.js"></script>
-<script>
-    $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-        $('[data-toggle="popover"]').popover()
+<script type="text/javascript" src="../js/functions.js"></script>
 
-
-
-    });
-</script>
 </body>
 </html>
 

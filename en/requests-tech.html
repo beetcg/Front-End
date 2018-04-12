@@ -44,31 +44,12 @@
     <div ng-include="'menu-bar-dark.html'"></div>
 
     <div class="dash">
-        <a href="javascript:void(0)" onclick="cascade();mostrar();" style="position: absolute;top:200px">
-            <i class="icon-menu">MOSTRAR</i>
+        <div ng-include="'sidebar.html'" style="background-color: #2f2f2e;box-shadow: 3px -5px 10px -2px rgba(125,121,125,1);"></div>
+
+        <a href="javascript:void(0)" onclick="cascade();mostrar();" class="expand-menu">
+            <i class="ion-chevron-right"></i>
         </a>
-        <div id="sidebar" class="sidebar-beet">
-            <div class="boton-cerrar" onclick="ocultar()">
-                <i class="ion-chevron-left"></i>
-            </div>
-            <ul class="menu" id="cascade">
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">Users</a>
-                </li>
-                <li>
-                    <a href="">Request</a>
-                </li>
-                <li>
-                    <a href="">Categories</a>
-                </li>
-                <li>
-                    <a href="">Subcategories</a>
-                </li>
-            </ul>
-        </div>
+
         <div class="container-fluid" ng-init="initHoverdir()" style="margin-bottom: 100px; display: flex; flex-direction: column">
             <!--<div class="title-trynow">-->
             <!--<p class="title-trynow-text"> Incoming Requests </p>-->
@@ -302,14 +283,7 @@
 <script type="text/javascript" src="../js/sweetalert2.min.js"></script>
 <script type="text/javascript" src="../js/alerts.js"></script>
 <script type="text/javascript" src="../js/functions.js"></script>
-<script>
-    $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
 
-//        $(this).find('#collapse-info').$('.collapse').collapse();
-
-    });
-</script>
 </body>
 </html>
 

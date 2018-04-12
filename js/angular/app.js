@@ -138,6 +138,13 @@ beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCa
                 {name : 'OS (Operating System) Install or Re-Install'},
             ];
 
+        $scope.waitings =
+            [
+                {name : 'sadnsjakd'},
+                {name : 'sadnsjakd'},
+                {name : 'sadnsjakd'},
+            ];
+
         $scope.hours =
             [
                 {name : '08:00 AM'},
