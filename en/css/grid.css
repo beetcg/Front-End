@@ -10823,10 +10823,10 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     color: #5a5a5a;
     font-size: 13px
 }
-
+/*AQUI*/
 .item-cat {
     color: #5a5a5a;
-    font-size: 13px;
+    font-size: 12px;
 }
 /*AQUI*/
 .item-services-completed {
@@ -13708,11 +13708,18 @@ i{
     /*flex-direction: row;*/
     align-items: center;
 }
-
+/*AQUI*/
 @media (max-width: 575px) {
     .row-dash {
         flex-direction: column;
         align-items: center;
+    }
+    .row-mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+    .item-img {
+        margin-right: 0;
     }
     .item-img-dash {
         margin-right: 0;
@@ -13725,6 +13732,18 @@ i{
     .title-cat-text3 {
         font-size: 1rem !important;
         line-height: 1.5;
+    }
+}
+/*AQUI*/
+@media (max-width: 1199px) {
+    .row-mobile-list-tech {
+        flex-direction: column;
+        align-items: center;
+    }
+    .col-mobile-list-tech {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -13892,18 +13911,20 @@ i{
 .btn-accept {
     /*position: absolute;*/
     /*right: -7px;*/
-    background-color: #952244;
-    color: #fff;
-    border: none;
-    padding: 5px;
-    width: 80px;
+    background-color: #fff;
+    color: #952244;
+    border: 2px solid #952244;
+    padding: 8px;
+    width: 100px;
     border-radius: 40px;
+    font-weight: normal;
     /*display: none;*/
     /*bottom: 0;*/
 }
 
 .btn-accept:hover {
     color: #fff;
+    background-color: #952244;
 }
 
 /*12/04/2018*/
