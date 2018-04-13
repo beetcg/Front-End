@@ -95,7 +95,7 @@
                 <div ng-repeat="producto in productos | limitTo: limit">
                     <!--<a href="trynow.html">-->
                     <div class="tech-list-item rows animated fadeIn" ng-click="">
-                        <div class="col-sm-12 col-md-5 rows" style="margin-bottom: 10px;">
+                        <div class="col-sm-12 col-md-5 col-lg-4 rows" style="margin-bottom: 10px;">
                             <img src="images/team1.jpg" class="item-img">
                             <div>
                                 <div class="item-text bold m-bottom">
@@ -109,40 +109,45 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-7 rows">
-                            <div class="col-sm-4" align="center">
-                                <p class="item-text bold">
+                        <div class="col-sm-12 col-md-7 col-lg-8 rows">
+                            <div class="col-sm-3 column-box mb-2" align="center">
+                                <span class="item-text mb-2 bold">
                                     Rating
-                                </p>
-                                <p>
+                                </span>
+                                <span class="mb-2">
                                     <i class="ion-ios-star rating-icon"></i>
                                     <i class="ion-ios-star rating-icon"></i>
                                     <i class="ion-ios-star rating-icon"></i>
                                     <i class="ion-android-star-outline rating-icon"></i>
                                     <i class="ion-android-star-outline rating-icon"></i>
-                                </p>
+                                </span>
                             </div>
-                            <div class="col-sm-4" align="center">
-                                <p class="item-text bold">
+                            <div class="col-sm-3 column-box mb-2" align="center">
+                                <span class="item-text mb-2 bold">
                                     Completed services
-                                </p>
-                                <p class="item-services-completed">
+                                </span>
+                                <span class="item-services-completed mb-2">
                                     60
-                                </p>
+                                </span>
                             </div>
-                            <div class="col-sm-4" align="center">
-                                <p class="item-text bold">
-                                    Available scheduleF
-                                </p>
+                            <div class="col-sm-3 column-box mb-2" align="center">
+                                <span class="item-text mb-2 bold">
+                                    Available schedule
+                                </span>
                                 <a href="" ng-click="renderCalender('myCalendar')" data-toggle="modal"
                                    data-target="#exampleModalCenter" class="link-item-schedule">
                                     View
                                 </a>
                             </div>
+                            <div class="col-sm-3 column-box" align="center" style="justify-content: center; display: none;" id="btn-accept">
+                                <a href="" class="btn-accept">
+                                    <i class="ion-checkmark"></i> Accept
+                                </a>
+                            </div>
                         </div>
-                        <button class="btn-accept" id="btn-accept">
-                            <i class="ion-checkmark"></i>
-                        </button>
+                        <!--<button class="btn-accept" >-->
+                            <!--<i class="ion-checkmark"></i>-->
+                        <!--</button>-->
                     </div>
                     <!--</a>-->
                 </div>

@@ -10743,9 +10743,9 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     -o-transform: translate(0px, -1px);
     transform: translate(0px, -1px);
 }
-
+/*AQUI*/
 .rating-icon {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #9b2446;
     text-align: center;
 }
@@ -10811,26 +10811,27 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     /*background-color: rgba(142,142,142,0.06);*/
 /*}*/
 
+/*AQUI*/
 .item-img {
-    width: 6rem;
-    height: 6rem;
+    width: 5.4rem;
+    height: 5.4rem;
     margin-right: 20px;
     border-radius: 100%;
 }
 
 .item-text {
     color: #5a5a5a;
-    font-size: 15px
+    font-size: 13px
 }
 
 .item-cat {
     color: #5a5a5a;
     font-size: 13px;
 }
-
+/*AQUI*/
 .item-services-completed {
     color: #5a5a5a;
-    font-size: 2rem
+    font-size: 1.7rem
 }
 
 .link-item {
@@ -13887,17 +13888,22 @@ i{
     align-items: flex-end;
     justify-content: flex-end;
 }
-
+/*AQUI*/
 .btn-accept {
-    position: absolute;
-    right: -7px;
+    /*position: absolute;*/
+    /*right: -7px;*/
     background-color: #952244;
     color: #fff;
     border: none;
     padding: 5px;
     width: 80px;
-    display: none;
-    bottom: 0;
+    border-radius: 40px;
+    /*display: none;*/
+    /*bottom: 0;*/
+}
+
+.btn-accept:hover {
+    color: #fff;
 }
 
 /*12/04/2018*/

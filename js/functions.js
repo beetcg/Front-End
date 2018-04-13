@@ -51,9 +51,9 @@ $(document).ready(function () {
     $('[data-toggle="popover"]').popover();
 
     $('.tech-list-item').hover(function () {
-            $(this).find('#btn-accept').slideDown('fast').css("display", "block");
+            $(this).find('#btn-accept').fadeIn('fast').css("display", "flex");
         },
         function () {
-            $(this).find('#btn-accept').slideUp('fast');
+            $(this).find('#btn-accept').fadeOut('fast');
         });
 });
