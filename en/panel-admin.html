@@ -123,12 +123,16 @@
                         </div>
                         <div >
                             <!--EMPTY STATE-->
-                            <div class="request-empty">
-                                <i class="icon-ghost request-empty-icon-dash"></i>
-                                <span class="request-empty-text-dash">
-                                    NO NEWS REGISTERED
-                                </span>
-                            </div>
+                            <!--<div class="request-empty">-->
+                                <!--<i class="icon-ghost request-empty-icon-dash"></i>-->
+                                <!--<span class="request-empty-text-dash">-->
+                                    <!--NO NEWS REGISTERED-->
+                                <!--</span>-->
+                            <!--</div>-->
+
+                            <canvas id="bar" class="chart chart-bar"
+                                    chart-data="data" chart-labels="labels"> chart-series="series"
+                            </canvas>
                         </div>
                     </div>
                 </div>
@@ -375,6 +379,8 @@
 <script type="text/javascript" src="../js/jquery.js"></script>
 <!--<script type="text/javascript" src="../js/jquery.slim.min.js" ></script>-->
 <script type="text/javascript" src="../js/angular/angular.min.js"></script>
+<script type="text/javascript" src="../js/angular/Chart.min.js"></script>
+<script type="text/javascript" src="../js/angular/angular-chart.js"></script>
 <script type="text/javascript" src=//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-messages.js"></script>
 <script type="text/javascript" src="../js/ngMask.min.js"></script>
 <script type="text/javascript" src="../js/jquery.hoverdir.js"></script>

@@ -1,4 +1,4 @@
-var beetApp = angular.module('beetApp', ['ui.calendar', 'ui.bootstrap', 'flow','ngMask']);
+var beetApp = angular.module('beetApp', ['ui.calendar', 'ui.bootstrap', 'flow','ngMask','chart.js']);
 
 beetApp.controller('joinUsController', ['$scope', function ($scope) {
     $scope.greeting = 'Hola!';
@@ -120,6 +120,15 @@ beetApp.controller('categoriesController', ['$scope', function ($scope) {
 
 beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCalendarConfig', '$log',
     function($scope, $compile, $timeout, uiCalendarConfig, $log) {
+        $scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+        $scope.series = ['Series A', 'Series B'];
+
+        $scope.data = [
+            [65, 59, 80, 81, 56, 55, 40],
+            [28, 48, 40, 19, 86, 27, 90]
+        ];
+
+
         $scope.limit = 3;
         $scope.loading = false;
 
@@ -329,21 +338,6 @@ beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCa
             eventRender: $scope.eventRender
         }
     };
-
-    $scope.changeLang = function() {
-        if($scope.changeTo === 'Hungarian'){
-            $scope.uiConfig.calendar.dayNames = ["VasÃ¡rnap", "HÃ©tfÅ‘", "Kedd", "Szerda", "CsÃ¼tÃ¶rtÃ¶k", "PÃ©ntek", "Szombat"];
-            $scope.uiConfig.calendar.dayNamesShort = ["Vas", "HÃ©t", "Kedd", "Sze", "CsÃ¼t", "PÃ©n", "Szo"];
-            $scope.changeTo= 'English';
-        } else {
-            $scope.uiConfig.calendar.dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-            $scope.uiConfig.calendar.dayNamesShort = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-            $scope.changeTo = 'Hungarian';
-        }
-    };
-    /* event sources array*/
-    $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
-    $scope.eventSources2 = [$scope.calEventsExt, $scope.eventsF, $scope.events];
 
 }]);
 
