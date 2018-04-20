@@ -14066,6 +14066,7 @@ i{
 .row-simple {
     display: flex;
     align-items: center;
+
 }
 
 .icon-day {
@@ -14073,4 +14074,9 @@ i{
     font-size: 3rem;
     color: #ccc;
     margin-bottom: 30px;
+}
+
+.form-workschedule {
+    padding-left: 100px;
+    padding-right: 100px;
 }
