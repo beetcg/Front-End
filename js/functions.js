@@ -56,4 +56,19 @@ $(document).ready(function () {
         function () {
             $(this).find('#btn-accept').fadeOut('fast');
         });
+    $('.clockpicker').clockpicker({
+        twelvehour: true,
+        donetext: 'Done'
+    });
+
+    $('#demo-input').clockpicker({
+        autoclose: true,
+        twelvehour: true
+    });
+
+    if (something) {
+        // Manual operations (after clockpicker is initialized).
+        $('#demo-input').clockpicker('show') // Or hide, remove ...
+            .clockpicker('toggleView', 'minutes');
+    }
 });

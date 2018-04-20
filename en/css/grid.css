@@ -2097,7 +2097,7 @@ pre code {
 .form-control:focus {
     color: #495057;
     background-color: #fff;
-    border-color: #80bdff;
+    border-color: #9b2446;
     outline: 0;
     box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25);
 }
@@ -10479,7 +10479,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     display: flex;
     flex: 1;
 }
-/*AQUI*/
+
 .title-cat-text3 {
     color: #821e3b !important;
     margin-right: 20px;
@@ -10792,7 +10792,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
 .link-filter:hover {
     color: #9b2446 !important;
 }
-/*AQUI*/
+
 .tech-list-item {
     /*border-bottom: 1px dashed #e6e8ed;*/
     /*padding-bottom: 20px;*/
@@ -11006,11 +11006,12 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
         font-size: 0.7rem !important;
     }
 }
-
+/*AQUI*/
 .row-custom {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .categories-div {
@@ -11113,6 +11114,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
     margin-bottom: 15px;
     margin-left: 5px;
     margin-right: 5px;
+    position: relative;
 }
 
 .input-info {
@@ -12713,7 +12715,7 @@ i{
     padding-right: 30px;
     padding-left: 30px;
 }
-/*AQUI*/
+
 @media (max-width: 991px) {
     .bar-options {
         display: flex;
@@ -13200,7 +13202,6 @@ i{
     background-color: rgba(142,142,142,0.06);
 }
 
-/*AQUI*/
 .title-cat-request {
     border-bottom: 1px solid #e6e8ed;
     /*padding-bottom: 10px !important;*/
@@ -13289,7 +13290,6 @@ i{
     padding: 20px
 }
 
-/*04/04/2018*/
 .option-card-text {
     text-align: center;
 }
@@ -13337,7 +13337,7 @@ i{
     /*align-items: center;*/
     /*flex-wrap: wrap;*/
 }
-/*AQUI*/
+
 .card-user-info {
     display: flex;
     flex-direction: row;
@@ -13360,7 +13360,6 @@ i{
     background: #fff;
     margin-right: 20px;
 }
-
 
 .card-user-picture img {
     text-align: center;
@@ -13420,8 +13419,7 @@ i{
     font-size: 1.5rem;
     cursor: pointer;
 }
-/*AQUI*/
-/*10/04/2018*/
+
 .sidebar-beet {
     /*position: fixed;*/
     /*height: 100%;*/
@@ -13474,18 +13472,18 @@ i{
 .sidebar li {
     border-bottom: 1px solid rgba(63, 81, 181, 0.16);
 }
-/*AQUI*/
+
 .sidebar-beet li:hover {
     background-color: #242422;
     padding-left: 10px;
     color: #fff !important;
 
 }
-/*AQUI*/
+
 .sidebar-beet a {
     display: block;
     font-size: 0.9rem;
-    color: #333;
+    color: #fff;
     text-decoration: none;
     padding-bottom: 10px !important;
     padding-top: 10px !important;
@@ -13571,7 +13569,7 @@ i{
     /*font-weight: bold;*/
     font-size: 1.5rem;
 }
-/*AQUI*/
+
 .title-cant {
     color: #AAB5BC;
     font-size: 14px;
@@ -13587,7 +13585,7 @@ i{
     font-size: 2rem;
     color: #dcdee3;
 }
-/*AQUI*/
+
 .filter-dash {
     display: block;
     justify-content: flex-end;
@@ -13608,7 +13606,6 @@ i{
     /*padding-bottom: 20px;*/
 }
 
-/*11/04/2018*/
 .box-cont {
     padding-left: 20px;
     padding-right: 20px;
@@ -13927,7 +13924,6 @@ i{
     background-color: #952244;
 }
 
-/*12/04/2018*/
 .add-wallet {
     display: flex;
     flex: 1;
@@ -14006,5 +14002,75 @@ i{
 .separator {
     height: 1px;
     background-color: #e6e8ed;
+    margin-bottom: 30px;
+}
+
+/*20/04/18*/
+.form-edit {
+    padding-top: 30px;
+    position: relative;
+}
+
+.view-pass2 {
+    position: absolute;
+    right: 15px;
+    top: 6px;
+    cursor: pointer;
+}
+
+.title-edit {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #777;
+}
+
+.tab-edit {
+    display: flex;
+    margin-left: 25px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: lighter;
+}
+
+.tab-edit-selected {
+    display: flex;
+    margin-left: 25px;
+    border-bottom: 2px solid #9b2446;
+    padding-bottom: 10px;
+    color: #9b2446 !important;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.tab-edit:hover {
+    display: flex;
+    margin-left: 25px;
+    border-bottom: 2px solid #9b2446;
+    padding-bottom: 10px;
+    color: #9b2446 !important;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.col-form-label2 {
+    margin-bottom: 0;
+    color: #333;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.row-simple {
+    display: flex;
+    align-items: center;
+}
+
+.icon-day {
+    text-align: center;
+    font-size: 3rem;
+    color: #ccc;
     margin-bottom: 30px;
 }

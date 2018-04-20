@@ -7788,13 +7788,13 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
 .mt-radio > input:disabled ~ span:after {
     background: #888
 }
-
+/*AQUI*/
 .mt-checkbox > span:after {
     left: 6px;
     top: 2px;
     width: 5px;
     height: 10px;
-    border: solid #888;
+    border: solid #fff;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg)
 }

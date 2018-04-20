@@ -120,6 +120,19 @@ beetApp.controller('categoriesController', ['$scope', function ($scope) {
 
 beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCalendarConfig', '$log',
     function($scope, $compile, $timeout, uiCalendarConfig, $log) {
+
+        $scope.inputType = 'password';
+        $scope.hideShowPassword = function(){
+            $scope.activeEye = !$scope.activeEye;
+
+            if ($scope.inputType == 'password') {
+                $scope.inputType = 'text';
+            }
+            else
+                $scope.inputType = 'password';
+        };
+
+
         $scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
         $scope.series = ['Series A', 'Series B'];
 
