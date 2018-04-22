@@ -14061,11 +14061,13 @@ i{
     color: #333;
     font-size: 13px;
     font-weight: bold;
+    text-align: right !important;
 }
 
 .row-simple {
     display: flex;
     align-items: center;
+    position: relative;
 
 }
 
@@ -14079,4 +14081,46 @@ i{
 .form-workschedule {
     padding-left: 100px;
     padding-right: 100px;
+}
+
+.check-workschedule {
+    position: absolute !important;
+    left: 0;
+    top: 9px;
+}
+
+.label-show {
+    display: block;
+}
+
+.label-hide {
+    display: none;
+}
+
+
+@media (max-width: 1199px) {
+    .form-workschedule {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .row-simple {
+        flex-wrap: wrap;
+    }
+    .col-form-label2 {
+        text-align: left !important;
+    }
+    .label-show {
+        display: none;
+    }
+
+    .label-hide {
+        display: block;
+    }
+}
+
+@media (max-width: 575px) {
+    .col-form-label2 {
+        text-align: left !important;
+        margin-top: 11px;
+    }
 }
