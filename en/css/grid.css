@@ -10933,7 +10933,7 @@ td > .mt-checkbox.mt-checkbox-single, td > .mt-radio.mt-radio-single, th > .mt-c
 
 .item-tech {
     margin: 0px;
-    padding-top: 15px
+    /*padding-top: 15px*/
 }
 
 .tabs-comment {
@@ -14585,4 +14585,72 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+/*24/05/2018*/
+.row-info-tech {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info-tech-text {
+    color: #333;
+}
+
+.ic-info-tech {
+    color: #952244;
+    margin: 0;
+    margin-right: 15px !important;
+    font-size: 1.2rem;
+}
+
+.card-document {
+    width: 100%;
+    border: 2px solid #e6e8ed;
+    margin-bottom: 20px;
+}
+
+.img-document {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150px;
+    position: relative;
+}
+
+.document-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.document-option {
+    display: flex;
+    flex: 1;
+    color: #952244;
+    justify-content: center;
+}
+
+.document-option-icon {
+    color: #952244;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.status-doc {
+    position: absolute;
+    right: 10px;
+    background-color: #dec024;
+    color: #fff;
+    top: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    border-radius: 40px;
 }
