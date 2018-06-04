@@ -52,7 +52,7 @@
                     <div class="col-sm-12 col-lg-5"
                          style="display: flex; flex-direction: row; align-items: center; flex-wrap: nowrap">
                         <h3 class="title-cat-text2 bold">
-                            Clients
+                            Admins
                         </h3>
                         <div class="btn-group filter-show">
                             <button type="button" id="filter" class="btn-filter-tech dropdown-toggle dropdown-toggle2"
@@ -135,6 +135,9 @@
                                     <div class="card-user-option">
                                         <i class="ion-eye-disabled card-user-option-icon" data-toggle="tooltip" data-placement="bottom" title="Disable"></i>
                                     </div>
+                                    <div class="card-user-option" data-toggle="modal" data-target="#remove">
+                                        <i class="ion-locked card-user-option-icon" data-toggle="tooltip" data-placement="bottom" title="Remove permissions"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -153,10 +156,28 @@
                 <!--</div>-->
             </div>
         </div>
-
     </div>
 
-
+    <!-- Modal WALLET-->
+    <div class="modal fade" id="remove" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-title title-modal">
+                        Confirm
+                    </div>
+                    <div class="message-modal">
+                        Are you sure you want to do this?
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="" class="link-cancel" data-dismiss="modal">Cancel</a>
+                    <a href="" class="link-confirm">Confirm</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
 <footer id="ABdev_main_footer">

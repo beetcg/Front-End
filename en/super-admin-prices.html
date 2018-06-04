@@ -100,6 +100,9 @@
                                     <div class="card-user-option">
                                         <i class="icon-pencil card-user-option-icon m-0" data-toggle="tooltip" data-placement="bottom" title="Edit"></i>
                                     </div>
+                                    <div class="card-user-option" data-toggle="modal" data-target="#plus">
+                                        <i class="icon-plus card-user-option-icon m-0" data-toggle="tooltip" data-placement="bottom" title="Plus"></i>
+                                    </div>
                                     <div class="card-user-option">
                                         <label class="switch mt-1" data-toggle="tooltip" data-placement="bottom" title="Disable">
                                             <input type="checkbox" checked>
@@ -307,10 +310,10 @@
     <!-- Modal Edit Subcategory-->
     <div class="modal fade" id="edit-subcategory" tabindex="-1" role="dialog" aria-hidden="true"  style="padding-right: 0">
         <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <form class="modal-body">
+            <form class="modal-content">
+                <div class="modal-body">
                     <div class="modal-title title-modal">
-                        New Subcategory
+                        Edit Subcategory
                     </div>
                     <div class="form-subcat">
                         <div class="form-group">
@@ -320,12 +323,55 @@
                             <input class="form-control form-control-solid input-info" type="number" placeholder="Estimated price (USD) *" name="pass"/>
                         </div>
                     </div>
-                </form>
+                </div>
                 <div class="modal-footer">
                     <a href="" class="link-cancel" data-dismiss="modal">Cancel</a>
                     <a href="" class="link-confirm">Confirm</a>
                 </div>
-            </div>
+            </form>
+        </div>
+    </div>
+
+    <!--Plus-->
+    <div class="modal fade" id="plus" tabindex="-1" role="dialog" aria-hidden="true"  style="padding-right: 0">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <form class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-title title-modal pb-4">
+                        Plus
+                    </div>
+                    <div class="content-plus">
+                        <!--<div class="plus-row">-->
+                            <!--<div class="plus-left">-->
+                                <!--<span class="plus-name">Lorem ipsun lorem ipsun lorem ipsun</span>-->
+                            <!--</div>-->
+                            <!--<div class="plus-center">-->
+                                <!--<span class="plus-price">USD 80</span>-->
+                            <!--</div>-->
+                            <!--<div class="plus-right">-->
+                                <!--<button type="button" class="btn btn-plus">-->
+                                    <!--<i class="icon-pencil"></i>-->
+                                <!--</button>-->
+                                <!--<button type="button" class="btn btn-plus">-->
+                                    <!--<i class="ion-eye-disabled"></i>-->
+                                <!--</button>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <div class="form-subcat">
+                            <div class="form-group">
+                                <input class="form-control form-control-solid input-info" type="text" placeholder="Plus name *" name="pass"/>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control form-control-solid input-info" type="number" placeholder="Estimated price (USD) *" name="pass"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="" class="link-cancel" data-dismiss="modal">Close</a>
+                    <a href="" class="link-confirm">Add plus</a>
+                </div>
+            </form>
         </div>
     </div>
 </div>
