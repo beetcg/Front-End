@@ -14701,32 +14701,32 @@ input:checked + .slider:before {
 
 .plus-name {
     color: #333;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .plus-price {
     color: #333;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
 }
 
 .btn-plus {
     background-color: #fff;
-    color: #952244;
-    border: 1px solid #952244;
+    color: #ff6363;
+    border: 1px solid #ff6363;
     width: 25px;
     height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 100%;
-    font-size: 13px;
+    font-size: 11px;
     padding: 0;
     margin-left: 3px;
     margin-right: 3px;
 }
 
 .btn-plus:hover {
-    background-color: #952244;
+    background-color: #ff6363;
     color: #fff;
 }
