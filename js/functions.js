@@ -46,9 +46,24 @@ function cascade() {
     });
 }
 
+
+//     $(this).find('#adminMore').slideDown().css('display','flex');
+//
+//
+// function adminMoreHide() {
+//     $(el).find('#adminMore').slideUp();
+// }
+
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
-    $('[data-toggle="popover"]').popover();
+    $('#btnPopover').popover({
+        placement: 'right',
+        container: 'body',
+        html: true,
+        trigger: 'click',
+        title: 'Are you sure you want to do this?',
+        content: '<div align="center" class="p-3"><a href="" class="link-cancel" data-dismiss="modal">Cancel</a><a href="" class="link-confirm">Confirm</a></div>'
+    });
 
     $('.tech-list-item').hover(function () {
             $(this).find('#btn-accept').fadeIn('fast').css("display", "flex");

@@ -2205,7 +2205,7 @@ select.form-control:focus::-ms-value {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
     line-height: 1.5;
-    border-radius: 0.2rem;
+    border-radius: 0;
 }
 
 select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]),
@@ -2224,7 +2224,7 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
     line-height: 1.5;
-    border-radius: 0.3rem;
+    border-radius: 0;
 }
 
 select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]),
@@ -3653,7 +3653,7 @@ tbody.collapse.show {
     white-space: nowrap;
     background-color: #e9ecef;
     border: 1px solid #ced4da;
-    border-radius: 0.25rem;
+    border-radius: 0;
 }
 
 .input-group-text input[type="radio"],
@@ -13410,6 +13410,7 @@ i{
     flex-direction: row;
     align-items: center;
     margin-top: 15px;
+    position: relative;
 }
 /*AQUI*/
 .card-user-option {
@@ -13809,6 +13810,13 @@ i{
     flex-direction: column;
     border: 2px solid #e6e8ed;
     position: relative;
+    transition: 0.3s;
+}
+
+.dash-box-items:hover {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(138,138,138,0.27);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(138,138,138,0.27);
+    box-shadow: 0px 0px 5px 0px rgba(138,138,138,0.27);
 }
 
 .sidebar-beet-horizontal {
@@ -14711,8 +14719,8 @@ input:checked + .slider:before {
 }
 
 .btn-plus {
-    background-color: #fff;
-    color: #ff6363;
+    background-color: #ff6363;
+    color: #fff;
     border: 1px solid #ff6363;
     width: 25px;
     height: 25px;
@@ -14729,4 +14737,42 @@ input:checked + .slider:before {
 .btn-plus:hover {
     background-color: #ff6363;
     color: #fff;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.card-admin {
+    position: absolute;
+    background-color: #fff;
+    right: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+}
+
+.card-admin-text {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 15px
+}
+
+.admin-ic {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.animate-show-hide.ng-hide {
+    opacity: 0;
+}
+
+.animate-show-hide.ng-hide-add,
+.animate-show-hide.ng-hide-remove {
+    transition: all linear 0.3s;
 }
