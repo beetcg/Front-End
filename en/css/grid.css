@@ -12011,7 +12011,7 @@ i{
     align-items: center;
     justify-content: center;
     width: 280px;
-    height: 80px;
+    min-height: 120px;
     background: #fff;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -12019,17 +12019,22 @@ i{
     margin-bottom: 15px;
     margin-top: 15px;
     cursor: pointer;
+    flex-direction: column;
 }
 
 .icon-hidden {
-
     align-items: center;
     justify-content: center;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.82);
     width: 280px;
     /*padding: 30px;*/
-    height: 80px;
+    min-height: 120px;
+}
+
+.price-starts {
+    font-size: 13px;
+    color: #952244;
 }
 
 .icon-select-sub {

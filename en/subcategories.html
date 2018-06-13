@@ -58,7 +58,9 @@
         <div class="list-categories">
             <div ng-repeat="producto in productos">
                 <div class="subcategory-cont" align="center">
-                    <span>{{producto.name}}</span>
+                    <span class="pb-1">{{producto.name}}</span>
+                    <span class="price-starts">Starts at only</span>
+                    <span class="product-price">USD 80</span>
                     <div id="icon" style="display: none;" class="icon-hidden">
                         <i class="icon-check icon-select-sub"></i>
                     </div>
@@ -104,10 +106,14 @@
 <script type="text/javascript" src="../js/jquery.js"></script>
 <!--<script type="text/javascript" src="../js/jquery.slim.min.js" ></script>-->
 <script type="text/javascript" src="../js/angular/angular.min.js"></script>
+<script type="text/javascript" src="//code.angularjs.org/1.6.9/angular-animate.js"></script>
+<script type="text/javascript" src="../js/angular/Chart.min.js"></script>
+<script type="text/javascript" src="../js/angular/angular-chart.js"></script>
 <script type="text/javascript" src=//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-messages.js"></script>
 <script type="text/javascript" src="../js/ngMask.min.js"></script>
 <script type="text/javascript" src="../js/jquery.hoverdir.js"></script>
 <script type="text/javascript" src="../js/modernizr.custom.97074.js"></script>
+<script type="text/javascript" src="../js/timepicker.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -117,12 +123,13 @@
         integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
         crossorigin="anonymous"></script>
 
-<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
+<script src="../js/ui-bootstrap.js"></script>
 
 <script src="../js/moment.js"></script>
 <script src="../js/fullcalendar.js"></script>
 <script src="../js/gcal.js"></script>
 <script src="../js/calendar.js"></script>
+<script src="../js/clockpicker.js"></script>
 <script src="../js/ng-flow-standalone.min.js"></script>
 <script src="../js/angular/app.js"></script>
 
@@ -136,6 +143,7 @@
 <script type="text/javascript" src="../js/portfolio-init.js"></script>
 <script type="text/javascript" src="../js/sweetalert2.min.js"></script>
 <script type="text/javascript" src="../js/alerts.js"></script>
+<script type="text/javascript" src="../js/functions.js"></script>
 <script>
     $(document).ready(function () {
         $('.subcategory-cont').hover(function () {
