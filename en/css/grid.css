@@ -14776,3 +14776,85 @@ input:checked + .slider:before {
 .animate-show-hide.ng-hide-remove {
     transition: all linear 0.3s;
 }
+
+.search-row {
+    display: flex;
+    flex-direction: row;
+    background-color: #232322;
+    padding: 20px;
+    position: absolute;
+    top: 63px;
+    left: 0;
+    right: 0;
+}
+
+.search-col-lg {
+    display: flex;
+    flex-basis: 70%;
+}
+
+.search-col {
+    display: flex;
+    flex: 1;
+}
+
+.btn-search {
+    width: 100%;
+}
+
+.market-banner {
+    background: url("https://imgplaceholder.com/520x220") no-repeat center / cover;
+    height: 300px;
+    min-width: 100%;
+    margin-top: 140px;
+}
+
+.product-card {
+    border: 1px solid #dedede;
+}
+
+.product-img {
+    height: 200px;
+    background: url("https://imgplaceholder.com/520x220") no-repeat center / cover;
+    position: relative;
+}
+
+.product-content {
+    padding: 15px;
+    padding-top: 25px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-name {
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.product-rating {
+    color: #fcb551;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.product-price {
+    color: #952244;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.btn-car {
+    width: 47px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+    bottom: -23px;
+    border-radius: 100%;
+    color: #fff;
+    font-size: 1.1rem;
+}
