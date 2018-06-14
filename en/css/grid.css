@@ -14787,10 +14787,11 @@ input:checked + .slider:before {
     flex-direction: row;
     background-color: #232322;
     padding: 20px;
-    position: absolute;
+    position: fixed;
     top: 63px;
     left: 0;
     right: 0;
+    z-index: 1000;
 }
 
 .search-col-lg {
@@ -14808,20 +14809,22 @@ input:checked + .slider:before {
 }
 
 .market-banner {
-    background: url("https://imgplaceholder.com/520x220") no-repeat center / cover;
-    height: 300px;
+    background: url("../images/567.jpg") no-repeat center / cover;
+    height: 330px;
     min-width: 100%;
     margin-top: 140px;
+    position: relative;
 }
 
 .product-card {
     border: 1px solid #dedede;
+    margin-bottom: 30px;
 }
 
 .product-img {
     height: 200px;
-    background: url("https://imgplaceholder.com/520x220") no-repeat center / cover;
     position: relative;
+    border-bottom: 1px solid #dedede;
 }
 
 .product-content {
@@ -14830,6 +14833,7 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #fbfbfb;
 }
 
 .product-name {
@@ -14862,4 +14866,15 @@ input:checked + .slider:before {
     border-radius: 100%;
     color: #fff;
     font-size: 1.1rem;
+}
+
+.market-title {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    font-size: 1.5rem;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: rgba(0,0,0,0.5)
 }
