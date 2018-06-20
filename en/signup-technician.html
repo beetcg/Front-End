@@ -89,7 +89,7 @@
         <div class="rows">
             <div class="col-sm-12 col-md-6">
                 <input class="form-control form-control-solid placeholder-no-fix" type="text" placeholder="Email" maxlength="50"
-                       name="email" id="email" required ng-model="email" data-ng-pattern="/[^@]+@[^@]+\.[^@]+/"/>
+                       name="email" id="email" required ng-model="email" data-ng-pattern="^(?=.*?[A-Z])(?=.*?[a-zA-Z])(?=.*?[0-9])(?=.*?[^\w\s]).{7,}$"/>
                 <span class="errores" ng-show="signupForm.email.$touched && signupForm.email.$error.required">Required field *</span>
                 <span class="errores" ng-show="signupForm.email.$touched && signupForm.email.$error.pattern">Invalid field (e.g.: name@mail.com)</span>
             </div>

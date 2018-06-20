@@ -119,13 +119,19 @@
                         <div class="title-edit">
                             My Profile
                         </div>
-                        <div class="tabs-flex-comment">
+                        <div class="tabs-flex-comment" style="flex:3">
                             <div class="tab-edit-selected">
                                 Edit Basic Data
                             </div>
-                            <!--<div class="tab-edit">-->
-                                <!--Categories-->
-                            <!--</div>-->
+                            <div class="tab-edit">
+                                Change Password
+                            </div>
+                            <div class="tab-edit">
+                                Categories
+                            </div>
+                            <div class="tab-edit">
+                                Documents
+                            </div>
                             <div class="tab-edit">
                                 Edit Work Schedule
                             </div>
@@ -153,402 +159,504 @@
                                 <!--<span class="errores" ng-show="editForm.email.$touched && editForm.email.$error.pattern">Invalid field (e.g.: name@mail.com)</span>-->
                             <!--</div>-->
                             <!--<div class="info-contain">-->
-                                <!--<input class="form-control form-control-solid input-info" placeholder="Password" maxlength="20"-->
-                                       <!--name="pass" id="pass" type="{{inputType}}" ng-model="passwordCheckbox" required/>-->
-                                <!--<div class="view-pass2" ng-click="hideShowPassword()">-->
-                                    <!--<i ng-class="{'fa fa-eye view-pass-i' : activeEye, 'fa fa-eye view-pass-i-off' : !activeEye}"  >-->
-                                    <!--</i>-->
+                                <!--<select class="form-control" style="height: 33px !important; font-size: 13px">-->
+                                    <!--<option>Sexo</option>-->
+                                    <!--<option>Male</option>-->
+                                    <!--<option>Female</option>-->
+                                <!--</select>-->
+                            <!--</div>-->
+                            <!--<div class="info-contain">-->
+                                <!--<input class="form-control form-control-solid input-info" type="text" placeholder="04246248691" mask="(999) 999-9999"-->
+                                       <!--name="phone" required ng-model="tlf" id="phone"/>-->
+                                <!--<span class="errores" ng-show="editForm.phone.$touched && editForm.phone.$error.required">Required field *</span>-->
+                            <!--</div>-->
+                            <!--<div class="info-contain">-->
+                                <!--<input class="form-control form-control-solid input-info" type="text" placeholder="4001" maxlength="5"-->
+                                       <!--name="zip" id="zip" required ng-model="zip" data-ng-pattern="/^[0-9]*$/"/>-->
+                                <!--<span class="errores" ng-show="editForm.zip.$touched && editForm.zip.$error.required">Required field *</span>-->
+                                <!--<span class="errores" ng-show="editForm.zip.$touched && editForm.zip.$error.pattern">Invalid field (only numbers)</span>-->
+                            <!--</div>-->
+                            <!--<div class="info-contain rows">-->
+                                <!--<div class="col-sm-4">-->
+                                    <!--<select class="form-control" style="height: 33px !important; font-size: 13px">-->
+                                        <!--<option>Country</option>-->
+                                    <!--</select>-->
                                 <!--</div>-->
-                                <!--<span class="errores" ng-show="editForm.pass.$touched && editForm.pass.$error.required">Required field *</span>-->
+                                <!--<div class="col-sm-4">-->
+                                    <!--<select class="form-control" style="height: 33px !important; font-size: 13px">-->
+                                        <!--<option>State</option>-->
+                                    <!--</select>-->
+                                <!--</div>-->
+                                <!--<div class="col-sm-4">-->
+                                    <!--<select class="form-control" style="height: 33px !important; font-size: 13px">-->
+                                        <!--<option>City</option>-->
+                                    <!--</select>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div align="center">-->
+                                <!--<button class="btn button-pay collapsed" aria-expanded="false" data-toggle="modal" data-target="#tdc">-->
+                                    <!--Save-->
+                                <!--</button>-->
                             <!--</div>-->
                         <!--</div>-->
                     <!--</form>-->
 
-                    <form class="form-group form-workschedule" id="workSchedule">
-                        <div class="rows mb-3">
-                            <div class="col-sm-12 col-md-12 col-lg-6 " align="center">
-                                <i class="ion-ios-sunny icon-day"></i>
-                                <div class="rows pl-20">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="check mt-checkbox mt-checkbox-outline check-workschedule">
-                                            <input type="checkbox" name="remember" value="1"/>
-                                            <span></span>
-                                        </label>
-                                        <label class="col-sm-3 col-form-label2">Mon</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2">To:</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rows pl-20">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="check mt-checkbox mt-checkbox-outline check-workschedule">
-                                            <input type="checkbox" name="remember" value="1"/>
-                                            <span></span>
-                                        </label>
-                                        <label class="col-sm-3 col-form-label2">Tue</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2">To:</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rows pl-20">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="check mt-checkbox mt-checkbox-outline check-workschedule">
-                                            <input type="checkbox" name="remember" value="1"/>
-                                            <span></span>
-                                        </label>
-                                        <label class="col-sm-3 col-form-label2">Wed</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2">To:</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rows pl-20">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="check mt-checkbox mt-checkbox-outline check-workschedule">
-                                            <input type="checkbox" name="remember" value="1"/>
-                                            <span></span>
-                                        </label>
-                                        <label class="col-sm-3 col-form-label2">Thu</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2">To:</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rows pl-20">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="check mt-checkbox mt-checkbox-outline check-workschedule">
-                                            <input type="checkbox" name="remember" value="1"/>
-                                            <span></span>
-                                        </label>
-                                        <label class="col-sm-3 col-form-label2">Fri</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2">To:</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rows pl-20">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="check mt-checkbox mt-checkbox-outline check-workschedule">
-                                            <input type="checkbox" name="remember" value="1"/>
-                                            <span></span>
-                                        </label>
-                                        <label class="col-sm-3 col-form-label2">Sat</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2">To:</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rows pl-20">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="check mt-checkbox mt-checkbox-outline check-workschedule">
-                                            <input type="checkbox" name="remember" value="1"/>
-                                            <span></span>
-                                        </label>
-                                        <label class="col-sm-3 col-form-label2">Sun</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2">To:</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <!--<form name="changePassword" id="changePassword">-->
+                        <!--<div class="form-edit">-->
+                            <!--<div class="info-contain">-->
+                                <!--<input class="form-control form-control-solid input-info" type="password" placeholder="Actual password" maxlength="20"-->
+                                       <!--name="actualPass" id="actualPass" required ng-model="actualPass"/>-->
+                                <!--<span class="errores" ng-show="changePassword.actualPass.$touched && changePassword.actualPass.$error.required">Required field *</span>-->
+                            <!--</div>-->
+                            <!--<div class="info-contain">-->
+                                <!--<input class="form-control form-control-solid input-info" placeholder="Password" maxlength="20"-->
+                                       <!--name="pass" id="pass" type="{{inputType}}" ng-model="passwordCheckbox" required data-ng-pattern="/^(?=.*?[A-Z])(?=.*?[a-zA-Z])(?=.*?[0-9])(?=.*?[^\w\s]).{7,}$/"/>-->
+                                <!--<div class="view-pass2" ng-click="hideShowPassword()">-->
+                                    <!--<i ng-class="{'fa fa-eye view-pass-i' : activeEye, 'fa fa-eye view-pass-i-off' : !activeEye}"  >-->
+                                    <!--</i>-->
+                                <!--</div>-->
+                                <!--<span class="errores" ng-show="changePassword.pass.$touched && changePassword.pass.$error.required">Required field *</span>-->
+                                <!--<span class="errores" ng-show="changePassword.pass.$touched && changePassword.pass.$error.pattern">The password must be at least 7 characters and contain at least an Uppercase & Lowercase letter(A-z), a digit(0-9)</span>-->
+                            <!--</div>-->
+                            <!--<div align="center">-->
+                                <!--<button class="btn button-pay collapsed" aria-expanded="false" data-toggle="modal" data-target="#tdc">-->
+                                    <!--Save-->
+                                <!--</button>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</form>-->
 
-                            </div>
-                            <div class="col-sm-12 col-md-12 col-lg-6 " align="center">
-                                <i class="ion-ios-partlysunny icon-day"></i>
-                                <div class="rows">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2 label-show"></label>
-                                        <label class="col-sm-3 col-form-label2 label-hide">Mon</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2">To:</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rows">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2 label-show"></label>
-                                        <label class="col-sm-3 col-form-label2 label-hide">Tue</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2">To:</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rows">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2 label-show"></label>
-                                        <label class="col-sm-3 col-form-label2 label-hide">Wed</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2">To:</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rows">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2 label-show"></label>
-                                        <label class="col-sm-3 col-form-label2 label-hide">Thu</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2">To:</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rows">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2 label-show"></label>
-                                        <label class="col-sm-3 col-form-label2 label-hide">Fri</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2">To:</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rows">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2 label-show"></label>
-                                        <label class="col-sm-3 col-form-label2 label-hide">Sat</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2">To:</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rows">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2 label-show"></label>
-                                        <label class="col-sm-3 col-form-label2 label-hide">Sun</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">
-                                        <label class="col-sm-3 col-form-label2">To:</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                                <input type="text" class="form-control fs-11" value="06:00 AM">
-                                                <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <!--<div id="documents">-->
+                        <!--<div class="form-edit">-->
+                            <!--<div class="rows">-->
+                                <!--<div class="col-sm-6 col-md-3">-->
+                                    <!--<div class="card-document">-->
+                                        <!--<a class="iframe" href="https://www.modelica.org/events/modelica2012/authors-guide/example-abstract.pdf">-->
+                                            <!--<div class="img-document" style="background-image: url('images/pdf-placeholder.jpg')">-->
+                                                <!--<div class="status-doc">Pending</div>-->
+                                            <!--</div>-->
+                                        <!--</a>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="col-sm-6 col-md-3">-->
+                                    <!--<div class="card-document">-->
+                                        <!--<a class="iframe" href="https://www.modelica.org/events/modelica2012/authors-guide/example-abstract.pdf">-->
+                                            <!--<div class="img-document" style="background-image: url('images/pdf-placeholder.jpg')">-->
+                                                <!--<div class="status-doc">Pending</div>-->
+                                            <!--</div>-->
+                                        <!--</a>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="col-sm-6 col-md-3">-->
+                                    <!--<div class="card-document">-->
+                                        <!--<a class="iframe" href="https://www.modelica.org/events/modelica2012/authors-guide/example-abstract.pdf">-->
+                                            <!--<div class="img-document" style="background-image: url('images/pdf-placeholder.jpg')">-->
+                                                <!--<div class="status-doc">Pending</div>-->
+                                            <!--</div>-->
+                                        <!--</a>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="col-sm-6 col-md-3">-->
+                                    <!--<div class="card-document">-->
+                                        <!--<a class="iframe" href="https://www.modelica.org/events/modelica2012/authors-guide/example-abstract.pdf">-->
+                                            <!--<div class="img-document" style="background-image: url('images/pdf-placeholder.jpg')">-->
+                                                <!--<div class="status-doc">Pending</div>-->
+                                            <!--</div>-->
+                                        <!--</a>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div align="center">-->
+                            <!--<button class="btn button-pay collapsed" aria-expanded="false" data-toggle="modal" data-target="#tdc">-->
+                                <!--Save-->
+                            <!--</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
 
-                            </div>
-                        </div>
+                    <!--<form class="form-group form-workschedule" id="workSchedule">-->
+                        <!--<div class="rows mb-3">-->
+                            <!--<div class="col-sm-12 col-md-12 col-lg-6 " align="center">-->
+                                <!--<i class="ion-ios-sunny icon-day"></i>-->
+                                <!--<div class="rows pl-20">-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="check mt-checkbox mt-checkbox-outline check-workschedule">-->
+                                            <!--<input type="checkbox" name="remember" value="1"/>-->
+                                            <!--<span></span>-->
+                                        <!--</label>-->
+                                        <!--<label class="col-sm-3 col-form-label2">Mon</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2">To:</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="rows pl-20">-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="check mt-checkbox mt-checkbox-outline check-workschedule">-->
+                                            <!--<input type="checkbox" name="remember" value="1"/>-->
+                                            <!--<span></span>-->
+                                        <!--</label>-->
+                                        <!--<label class="col-sm-3 col-form-label2">Tue</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2">To:</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="rows pl-20">-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="check mt-checkbox mt-checkbox-outline check-workschedule">-->
+                                            <!--<input type="checkbox" name="remember" value="1"/>-->
+                                            <!--<span></span>-->
+                                        <!--</label>-->
+                                        <!--<label class="col-sm-3 col-form-label2">Wed</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2">To:</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="rows pl-20">-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="check mt-checkbox mt-checkbox-outline check-workschedule">-->
+                                            <!--<input type="checkbox" name="remember" value="1"/>-->
+                                            <!--<span></span>-->
+                                        <!--</label>-->
+                                        <!--<label class="col-sm-3 col-form-label2">Thu</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2">To:</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="rows pl-20">-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="check mt-checkbox mt-checkbox-outline check-workschedule">-->
+                                            <!--<input type="checkbox" name="remember" value="1"/>-->
+                                            <!--<span></span>-->
+                                        <!--</label>-->
+                                        <!--<label class="col-sm-3 col-form-label2">Fri</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2">To:</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="rows pl-20">-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="check mt-checkbox mt-checkbox-outline check-workschedule">-->
+                                            <!--<input type="checkbox" name="remember" value="1"/>-->
+                                            <!--<span></span>-->
+                                        <!--</label>-->
+                                        <!--<label class="col-sm-3 col-form-label2">Sat</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2">To:</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="rows pl-20">-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="check mt-checkbox mt-checkbox-outline check-workschedule">-->
+                                            <!--<input type="checkbox" name="remember" value="1"/>-->
+                                            <!--<span></span>-->
+                                        <!--</label>-->
+                                        <!--<label class="col-sm-3 col-form-label2">Sun</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2">To:</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
 
+                            <!--</div>-->
+                            <!--<div class="col-sm-12 col-md-12 col-lg-6 " align="center">-->
+                                <!--<i class="ion-ios-partlysunny icon-day"></i>-->
+                                <!--<div class="rows">-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2 label-show"></label>-->
+                                        <!--<label class="col-sm-3 col-form-label2 label-hide">Mon</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2">To:</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="rows">-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2 label-show"></label>-->
+                                        <!--<label class="col-sm-3 col-form-label2 label-hide">Tue</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2">To:</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="rows">-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2 label-show"></label>-->
+                                        <!--<label class="col-sm-3 col-form-label2 label-hide">Wed</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2">To:</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="rows">-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2 label-show"></label>-->
+                                        <!--<label class="col-sm-3 col-form-label2 label-hide">Thu</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2">To:</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="rows">-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2 label-show"></label>-->
+                                        <!--<label class="col-sm-3 col-form-label2 label-hide">Fri</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2">To:</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="rows">-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2 label-show"></label>-->
+                                        <!--<label class="col-sm-3 col-form-label2 label-hide">Sat</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2">To:</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="rows">-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2 label-show"></label>-->
+                                        <!--<label class="col-sm-3 col-form-label2 label-hide">Sun</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-3 row-simple">-->
+                                        <!--<label class="col-sm-3 col-form-label2">To:</label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">-->
+                                                <!--<input type="text" class="form-control fs-11" value="06:00 AM">-->
+                                                <!--<span class="input-group-addon">-->
+                                                <!--<span class="glyphicon glyphicon-time"></span>-->
+                                            <!--</span>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
 
-                    </form>
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</form>-->
                 </div>
             </div>
         </div>
@@ -584,6 +692,7 @@
 <script type="text/javascript" src="../js/jquery.js"></script>
 <!--<script type="text/javascript" src="../js/jquery.slim.min.js" ></script>-->
 <script type="text/javascript" src="../js/angular/angular.min.js"></script>
+<script type="text/javascript" src="//code.angularjs.org/1.6.9/angular-animate.js"></script>
 <script type="text/javascript" src="../js/angular/Chart.min.js"></script>
 <script type="text/javascript" src="../js/angular/angular-chart.js"></script>
 <script type="text/javascript" src=//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-messages.js"></script>
