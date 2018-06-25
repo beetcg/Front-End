@@ -13431,7 +13431,7 @@ i{
     font-size: 1.5rem;
     cursor: pointer;
 }
-
+/*AQUI*/
 .sidebar-beet {
     /*position: fixed;*/
     /*height: 100%;*/
@@ -13451,6 +13451,7 @@ i{
     flex-direction: column;
     padding-top: 100px !important;
     position: relative;
+    min-height: 100vh !important;
 }
 
 .sidebar-beet .boton-cerrar {
@@ -14878,3 +14879,51 @@ input:checked + .slider:before {
     padding-right: 30px;
     background-color: rgba(0,0,0,0.5)
 }
+
+/*21/06/2018*/
+.card-faq {
+    border: 1px solid #dedede;
+    border-bottom: none !important;
+}
+
+.bb-1 {
+    border-bottom: 1px solid #dedede !important;
+}
+
+.card-faq-header {
+    padding: 0 !important;
+    background-color: #fff;
+}
+
+.card-faq-header:hover {
+    background-color: #f7f7f7;
+}
+
+.fc-grey {
+    color: #952244 !important;
+    font-size: 0.9rem !important;
+}
+
+.card-bpdy-faq {
+    font-size: 0.9rem;
+    color: #333;
+    /*background-color: #f7f7f7;*/
+    padding: 10px;
+}
+
+/*24/06/18*/
+
+.terms-text {
+    font-size: 13px;
+    color: #333;
+    text-align: justify;
+}
+
+.add-faq {
+    margin: 0;
+    color: #952244;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
