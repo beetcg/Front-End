@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-US" data-ng-app="beetApp" data-ng-cloak>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Try Now | BEET</title>
+    <meta name="description" content="Spiral HTML5 premium template">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet"
+          href="http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400italic%2C300%2C700%7CRaleway%3A400%2C200%2C600%2C700&amp;ver=4.2.6"
+          type="text/css" media="all">
+    <link rel="stylesheet" href="rs-plugin/css/settings.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/icons/icons.css" type="text/css" media="all">
+    <!--<link rel="stylesheet" href="css/core-icons/core_style.css" type="text/css" media="all">-->
+    <!--<link rel="stylesheet" href="css/scripts.css" type="text/css" media="all">-->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <!--<link rel="stylesheet" href="css/style2.css">-->
+    <!--<link rel="stylesheet" href="css/components.css" type="text/css" media="all">-->
+    <link rel="stylesheet" href="css/animate.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/ionicons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/fullcalendar.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
+
+    <!--<link rel="stylesheet" href="css/demo.css" type="text/css" media="all">-->
+    <!-- Latest compiled and minified CSS Bootstrap
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+
+    <link href="css/style2.css" rel="stylesheet" media="screen">
+    <!-- Jquery -->
+    <!--<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+
+</head>
+
+<body class="page" data-ng-controller="TryNowController">
+<div>
+    <div ng-include="'menu-bar-dark.html'"></div>
+
+    <div class="container-fluid" ng-init="initHoverdir()" style="margin-top: 80px;margin-bottom: 100px">
+        <div class="title-trynow animated tada">
+            <p class="title-trynow-text"><span class="bold">Hey! </span> Check this awesome plus to your service</p>
+        </div>
+        <div class="steps">
+            <p class="step-circle-try">
+                3
+            </p>
+            <p class="step-text-try">
+                Choose any plus on
+            </p>
+            <p class="step-text-try bold">CATEGORY SELECTED</p>
+            <p class="step-text-try bold">USD 850</p>
+            <i class="ion-chevron-down animated infinite slideInDown step-text-try-i"></i>
+        </div>
+
+        <div class="list-categories">
+            <div ng-repeat="extra in extras">
+                <div class="subcategory-cont" align="center">
+                    <span class="pb-1">{{extra.name}}</span>
+                    <span class="product-price">+ 15%</span>
+                    <div id="icon" style="display: none;" class="icon-hidden">
+                        <i class="icon-check icon-select-sub"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div align="center">
+            <a href="javascript:;" class="back-button btn-submit" data-ng-click="selectOption(1)">
+                <i class="ion-ios-undo"></i>
+                Back
+            </a>
+        </div>
+    </div>
+
+
+    <footer id="ABdev_main_footer">
+        <div id="footer_copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="span4 footer_copyright left_aligned">
+                        BEET ©2017. All Rights Reserved
+                        <a href="../es/index.html">
+                            <img src="images/es.svg" width="20px"></a>
+                    </div>
+                    <div class="span6 right_aligned">
+
+
+                        <a href="#"><img src="images/google-play-badge.svg" width="135"></a>
+                        <a href="#"><img src="images/Download_on_the_App_Store_Badge_US-UK_135x40.svg"></a>
+                    </div>
+                    <div class="span2 center_aligned">
+                        <a href="#" id="back_to_top" title="Back to top">
+                            <i class="ci_icon-angle-up"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<!--<script type="text/javascript" src="../js/jquery.slim.min.js" ></script>-->
+<script type="text/javascript" src="../js/angular/angular.min.js"></script>
+<script type="text/javascript" src="//code.angularjs.org/1.6.9/angular-animate.js"></script>
+<script type="text/javascript" src="../js/angular/Chart.min.js"></script>
+<script type="text/javascript" src="../js/angular/angular-chart.js"></script>
+<script type="text/javascript" src=//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-messages.js"></script>
+<script type="text/javascript" src="../js/ngMask.min.js"></script>
+<script type="text/javascript" src="../js/jquery.hoverdir.js"></script>
+<script type="text/javascript" src="../js/modernizr.custom.97074.js"></script>
+<script type="text/javascript" src="../js/timepicker.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+
+<script src="../js/ui-bootstrap.js"></script>
+
+<script src="../js/moment.js"></script>
+<script src="../js/fullcalendar.js"></script>
+<script src="../js/gcal.js"></script>
+<script src="../js/calendar.js"></script>
+<script src="../js/clockpicker.js"></script>
+<script src="../js/ng-flow-standalone.min.js"></script>
+<script src="../js/angular/app.js"></script>
+
+
+<script type="text/javascript" src="js/stickymenu.js"></script>
+<!--<script type="text/javascript" src="js/jquery-ui.min.js"></script>-->
+<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="../js/prettify.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="../js/portfolio-init.js"></script>
+<script type="text/javascript" src="../js/sweetalert2.min.js"></script>
+<script type="text/javascript" src="../js/alerts.js"></script>
+<script type="text/javascript" src="../js/functions.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.subcategory-cont').hover(function () {
+                $(this).find('#icon').fadeIn().css("display", "flex");
+            },
+            function () {
+                $(this).find('#icon').fadeOut();
+            });
+    });
+</script>
+</body>
+</html>

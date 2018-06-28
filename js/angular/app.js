@@ -160,6 +160,17 @@ beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCa
                 {name : 'OS (Operating System) Install or Re-Install'},
             ];
 
+        $scope.extras =
+            [
+                {name : 'Plus name'},
+                {name : 'Plus name'},
+                {name : 'Plus name'},
+                {name : 'Plus name'},
+                {name : 'Plus name'},
+                {name : 'Plus name'},
+                {name : 'Plus name'},
+            ];
+
         $scope.waitings =
             [
                 {name : 'sadnsjakd'},
