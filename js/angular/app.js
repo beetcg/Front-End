@@ -192,6 +192,13 @@ beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCa
                 {name : '05:00 PM'}
             ];
 
+        $scope.imgDetails =
+            [
+                {id : '1', url: 'https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201606/20/00115216114155____1__640x640.jpg'},
+                {id : '2', url: 'https://tubby.scene7.com/is/image/tubby/PHILIPSE27?$fullsize$'},
+                {id : '3', url: 'https://i.blogs.es/542146/278e8qjab/450_1000.jpeg'}
+            ];
+
         $scope.initHoverdir = function(){
             $timeout(function () {
                 $(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );

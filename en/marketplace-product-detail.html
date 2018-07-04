@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-US" data-ng-app="beetApp" data-ng-cloak>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Marketplace | BEET</title>
+    <meta name="description" content="Spiral HTML5 premium template">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet"
+          href="http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400italic%2C300%2C700%7CRaleway%3A400%2C200%2C600%2C700&amp;ver=4.2.6"
+          type="text/css" media="all">
+    <link rel="stylesheet" href="rs-plugin/css/settings.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/icons/icons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/core-icons/core_style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/scripts.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/animate.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/ionicons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/sweetalert2.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/clockpicker.css" type="text/css" media="all">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--<link rel="stylesheet" href="css/demo.css" type="text/css" media="all">-->
+    <!-- Latest compiled and minified CSS Bootstrap
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+
+    <link href="css/style2.css" rel="stylesheet" media="screen">
+    <!-- Jquery -->
+    <!--<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+</head>
+
+<body class="page" data-ng-controller="TryNowController">
+<div>
+    <div ng-include="'menu-bar-dark.html'"></div>
+    <!--LLEVAR A MENU BAR-->
+    <div class="search-row">
+        <div class="search-col">
+            <select class="form-control" style="font-size: 13px">
+                <option>All categories</option>
+                <option>Computer Support</option>
+                <option>Smart Home</option>
+                <option>Television</option>
+                <option>Audio & Video</option>
+                <option>Wifi & Network</option>
+                <option>Malware / Virus</option>
+            </select>
+        </div>
+        <div class="search-col-lg">
+            <div class="input-group">
+                <input type="text" class="form-control form-control-solid input-info" placeholder="You can search by: keyword, product name, price.">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="icon-magnifier"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="search-col">
+            <button type="button" class="btn btn-search">Search</button>
+        </div>
+    </div>
+
+    <form class="container-fluid mt-180 mb-5">
+        <div class="rows mb-3">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="img-detail">
+                    <div class="img-detail-items">
+                        <div data-ng-repeat="imgDetail in imgDetails" class="item-detail mb-3" data-ng-click="current=imgDetail.id"
+                             style="background: url({{imgDetail.url}}) no-repeat center / contain;">
+
+                        </div>
+                    </div>
+                    <div class="img-detail-big">
+                        <div class="img-big"
+                             style="background: url('https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201606/20/00115216114155____1__640x640.jpg') no-repeat center / contain;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="description-product">
+                    <div class="rows mb-3">
+                        <div class="col-sm-6">
+                            <span class="brand-name">Marca</span>
+                        </div>
+                        <div class="col-sm-6 just-end">
+                            <span class="brand-name">Categoria - Electronica - TV</span>
+                        </div>
+                    </div>
+                    <div class="brand-name mb-3">Descripcion corta del producto</div>
+                    <a href="" class="product-rating mb-3">
+                        <i class="ion-ios-star rating-icon"></i>
+                        <i class="ion-ios-star rating-icon"></i>
+                        <i class="ion-ios-star rating-icon"></i>
+                        <i class="ion-android-star-outline rating-icon"></i>
+                        <i class="ion-android-star-outline rating-icon"></i>
+                        <div class="brand-rating">Detalles de calificacion</div>
+                    </a>
+                    <div class="brand-name mb-3">USD 900</div>
+                    <div class="rows mb-3">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="brand-name mb-3">Metodo de envio:</div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <label class="form-check-label brand-rating" for="exampleRadios1">
+                                    Empresas locales
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                <label class="form-check-label brand-rating" for="exampleRadios2">
+                                    Acordar con el vendedor
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rows mb-3 align-center">
+                        <div class="col-sm-2">
+                            <div class="brand-name mb-1">Cantidad:</div>
+                            <input class="form-control form-control-solid input-info" type="number" placeholder="0" name="cant"/>
+                        </div>
+                        <div class="col-sm-10">
+                            <button class="btn button-shop collapsed mt-3 mb-0" aria-expanded="false" data-toggle="modal" data-target="#tdc">
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="description-product">
+            <div class="brand-name mb-3">Incluye nuestros servicios y ahorra ya!</div>
+            <div class="include-services">
+                <div class="include-img"
+                     style="background: url('https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201606/20/00115216114155____1__640x640.jpg') no-repeat center / contain;">
+                </div>
+                <i class="fa fa-plus include-ic"></i>
+                <div class="subcategory-cont mr-5" align="center">
+                    <span class="pb-1">TV Wall Mount Installation</span>
+                    <span class="price-starts">Starts at only</span>
+                    <span class="product-price">USD 80</span>
+                    <div id="icon" style="display: none;" class="icon-hidden">
+                        <i class="icon-check icon-select-sub"></i>
+                    </div>
+                </div>
+                <div>
+                    <div class="brand-name mb-3">Precio final: <span class="font-weight-normal">USD 1300</span> </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label brand-name" for="inlineCheckbox1">
+                            Samsung TV 50” + Instalación
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Modal New Subcategory-->
+    <div class="modal fade" id="new-subcategory" tabindex="-1" role="dialog" aria-hidden="true"  style="padding-right: 0">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form class="modal-body">
+                    <div class="modal-title title-modal">
+                        New Subcategory
+                    </div>
+                    <div class="form-subcat">
+                        <div class="form-group">
+                            <input class="form-control form-control-solid input-info" type="text" placeholder="Subcategory name *" name="pass"/>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control form-control-solid input-info" type="number" placeholder="Estimated price (USD) *" name="pass"/>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <a href="" class="link-cancel" data-dismiss="modal">Cancel</a>
+                    <a href="" class="link-confirm">Confirm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<footer id="ABdev_main_footer">-->
+    <!--<div id="footer_copyright">-->
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="span4 footer_copyright left_aligned">-->
+                    <!--BEET ©2017. All Rights Reserved-->
+                    <!--<a href="../es/index.html">-->
+                        <!--<img src="images/es.svg" width="20px"></a>-->
+                <!--</div>-->
+                <!--<div class="span6 right_aligned">-->
+
+
+                    <!--<a href="#"><img src="images/google-play-badge.svg" width="135"></a>-->
+                    <!--<a href="#"><img src="images/Download_on_the_App_Store_Badge_US-UK_135x40.svg"></a>-->
+                <!--</div>-->
+                <!--<div class="span2 center_aligned">-->
+                    <!--<a href="#" id="back_to_top" title="Back to top">-->
+                        <!--<i class="ci_icon-angle-up"></i>-->
+                    <!--</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</footer>-->
+<script type="text/javascript" src="../js/jquery.js"></script>
+<!--<script type="text/javascript" src="../js/jquery.slim.min.js" ></script>-->
+<script type="text/javascript" src="../js/angular/angular.min.js"></script>
+<script type="text/javascript" src="//code.angularjs.org/1.6.9/angular-animate.js"></script>
+<script type="text/javascript" src="../js/angular/Chart.min.js"></script>
+<script type="text/javascript" src="../js/angular/angular-chart.js"></script>
+<script type="text/javascript" src=//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-messages.js"></script>
+<script type="text/javascript" src="../js/ngMask.min.js"></script>
+<script type="text/javascript" src="../js/jquery.hoverdir.js"></script>
+<script type="text/javascript" src="../js/modernizr.custom.97074.js"></script>
+<script type="text/javascript" src="../js/timepicker.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+
+<script src="../js/ui-bootstrap.js"></script>
+
+<script src="../js/moment.js"></script>
+<script src="../js/fullcalendar.js"></script>
+<script src="../js/gcal.js"></script>
+<script src="../js/calendar.js"></script>
+<script src="../js/clockpicker.js"></script>
+<script src="../js/ng-flow-standalone.min.js"></script>
+<script src="../js/angular/app.js"></script>
+
+
+<script type="text/javascript" src="js/stickymenu.js"></script>
+<!--<script type="text/javascript" src="js/jquery-ui.min.js"></script>-->
+<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="../js/prettify.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="../js/portfolio-init.js"></script>
+<script type="text/javascript" src="../js/sweetalert2.min.js"></script>
+<script type="text/javascript" src="../js/alerts.js"></script>
+<script type="text/javascript" src="../js/functions.js"></script>
+
+</body>
+</html>
+
