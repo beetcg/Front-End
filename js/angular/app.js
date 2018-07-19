@@ -160,6 +160,17 @@ beetApp.controller('TryNowController', [ '$scope', '$compile', '$timeout', 'uiCa
                 {name : 'OS (Operating System) Install or Re-Install'},
             ];
 
+        $scope.categoriesAdd =
+            [
+                {name : 'Cell Phones & Accesories'},
+                {name : 'Computers'},
+                {name : 'Smart Home'},
+                {name : 'TV, Audio & Home Theater'},
+                {name : 'Business & Office Electronics'},
+                {name : 'Car Electronics & GPS'},
+                {name : 'Video Games'},
+            ];
+
         $scope.extras =
             [
                 {name : 'Plus name'},

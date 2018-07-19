@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en-US" data-ng-app="beetApp" data-ng-cloak>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Marketplace | BEET</title>
+    <meta name="description" content="Spiral HTML5 premium template">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet"
+          href="http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400italic%2C300%2C700%7CRaleway%3A400%2C200%2C600%2C700&amp;ver=4.2.6"
+          type="text/css" media="all">
+    <link rel="stylesheet" href="rs-plugin/css/settings.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/icons/icons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/core-icons/core_style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/scripts.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/animate.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/ionicons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/sweetalert2.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/clockpicker.css" type="text/css" media="all">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--<link rel="stylesheet" href="css/demo.css" type="text/css" media="all">-->
+    <!-- Latest compiled and minified CSS Bootstrap
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+
+    <link href="css/style2.css" rel="stylesheet" media="screen">
+    <!-- Jquery -->
+    <!--<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+</head>
+
+<body class="page" data-ng-controller="TryNowController">
+<div>
+    <div ng-include="'menu-bar-dark.html'"></div>
+
+    <form class="container mt-120 mb-5">
+        <div class="description-product" style="padding: 0;">
+            <div class="add-steps">
+                <div class="add-step">
+                    <div class="step-number">1</div>
+                    Category
+                </div>
+                <div class="add-step">
+                    <div class="step-number">2</div>
+                    Describe your product
+                </div>
+                <div class="add-step-selected">
+                    <div class="step-number">3</div>
+                    Payment details
+                </div>
+            </div>
+            <!--<div class="list-categories" style="margin: 40px 0;">-->
+                <!--<div ng-repeat="categoryAdd in categoriesAdd">-->
+                    <!--<div class="subcategory-cont" align="center">-->
+                        <!--<span class="pb-1">{{categoryAdd.name}}</span>-->
+                        <!--&lt;!&ndash;<span class="price-starts">Starts at only</span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="product-price">USD 80</span>&ndash;&gt;-->
+                        <!--<div id="icon" style="display: none;" class="icon-hidden">-->
+                            <!--<i class="icon-check icon-select-sub"></i>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="describe-product">-->
+                <!--<div class="info-contain">-->
+                    <!--<div class="mb-2 bold">Title:</div>-->
+                    <!--<input class="form-control form-control-solid input-info" type="text" placeholder="(max. 60 characters) *" name="pass" maxlength="60"/>-->
+                <!--</div>-->
+                <!--<div class="info-contain">-->
+                    <!--<div class="mb-2 bold">Description:</div>-->
+                    <!--<textarea class="form-control form-control-solid input-info" rows="3" placeholder="(min. 50 characters - max. 3000 characters) *" maxlength="3000" minlength="50"></textarea>-->
+                <!--</div>-->
+                <!--<div class="mb-2 bold">Photos:</div>-->
+                <!--<div class="rows">-->
+                    <!--<div class="col-sm-12 col-md-4 col-lg-2">-->
+                        <!--<div align="center">-->
+                            <!--<div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"-->
+                                 <!--flow-init="{target:'/retrieve/1',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"-->
+                                 <!--flow-files-submitted="$flow.upload()"-->
+                                 <!--flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"-->
+                                 <!--flow-attrs="{accept:'image/*'}"-->
+                                 <!--flow-name="vehimagv.flowa"-->
+                                 <!--flow-files-added="added($file,$event,$flow)">-->
+                                <!--<div class="full-size middle-valigner"  flow-btn>-->
+                                    <!--<i class="fa fa-picture-o fa-3x"></i>-->
+                                <!--</div>-->
+                                <!--<div ng-show="$flow.files.length" ng-cloak>-->
+                                    <!--<div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">-->
+                                        <!--<i class="fa  fa-times"></i>-->
+                                    <!--</div>-->
+                                    <!--<span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">-->
+                                            <!--<i class="fa fa-spinner fa-spin"></i>-->
+                                        <!--</span>-->
+                                    <!--<img class="imagenes-subiendo" flow-img="$flow.files[0]" />-->
+                                <!--</div>-->
+                                <!--<input type="hidden" ng-model="fotoveh1" ng-required="$flow.files[0].isUploading()" />-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-12 col-md-4 col-lg-2">-->
+                        <!--<div align="center">-->
+                            <!--<div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"-->
+                                 <!--flow-init="{target:'/retrieve/2',singleFile:true}"-->
+                                 <!--flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"-->
+                                 <!--flow-files-submitted="$flow.upload()"-->
+                                 <!--flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"-->
+                                 <!--flow-attrs="{accept:'image/*'}"-->
+                                 <!--flow-name="vehimagv.flowb"-->
+                                 <!--flow-files-added="added($file,$event,$flow)">-->
+                                <!--<div class="full-size middle-valigner" ng-show="!$flow.files.length" flow-btn>-->
+                                    <!--<i class="fa fa-picture-o fa-3x"></i>-->
+                                <!--</div>-->
+                                <!--<div ng-show="$flow.files.length" ng-cloak>-->
+                                    <!--<div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">-->
+                                        <!--<i class="fa fa-times"></i>-->
+                                    <!--</div>-->
+                                    <!--<span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">-->
+                                            <!--<i class="fa fa-spinner fa-spin"></i>-->
+                                        <!--</span>-->
+                                    <!--<img class="imagenes-subiendo" flow-img="$flow.files[0]" />-->
+                                <!--</div>-->
+                                <!--<input type="hidden" ng-model="fotoveh2" ng-required="$flow.files[0].isUploading()" />-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-12 col-md-4 col-lg-2">-->
+                        <!--<div align="center">-->
+                            <!--<div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"-->
+                                 <!--flow-init="{target:'/retrieve/3',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"-->
+                                 <!--flow-files-submitted="$flow.upload()"-->
+                                 <!--flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"-->
+                                 <!--flow-attrs="{accept:'image/*'}"-->
+                                 <!--flow-name="vehimagv.flowc"-->
+                                 <!--flow-files-added="added($file,$event,$flow)">-->
+                                <!--<div class="full-size middle-valigner" ng-show="!$flow.files.length" flow-btn>-->
+                                    <!--<i class="fa fa-picture-o fa-3x"></i>-->
+                                <!--</div>-->
+                                <!--<div ng-show="$flow.files.length" ng-cloak>-->
+                                    <!--<div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">-->
+                                        <!--<i class="fa fa-times"></i>-->
+                                    <!--</div>-->
+                                    <!--<span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">-->
+                                            <!--<i class="fa fa-spinner fa-spin"></i>-->
+                                        <!--</span>-->
+                                    <!--<img class="imagenes-subiendo" flow-img="$flow.files[0]" />-->
+                                <!--</div>-->
+                                <!--<input type="hidden" ng-model="fotoveh3" ng-required="$flow.files[0].isUploading()" />-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-12 col-md-4 col-lg-2">-->
+                        <!--<div align="center">-->
+                            <!--<div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"-->
+                                 <!--flow-init="{target:'/retrieve/4',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"-->
+                                 <!--flow-files-submitted="$flow.upload()"-->
+                                 <!--flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"-->
+                                 <!--flow-attrs="{accept:'image/*'}"-->
+                                 <!--flow-name="vehimagv.flowd"-->
+                                 <!--flow-files-added="added($file,$event,$flow)">-->
+
+                                <!--<div class="full-size middle-valigner" ng-show="!$flow.files.length" flow-btn>-->
+                                    <!--<i class="fa fa-picture-o fa-3x"></i>-->
+                                <!--</div>-->
+                                <!--<div ng-show="$flow.files.length" ng-cloak>-->
+                                    <!--<div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">-->
+                                        <!--<i class="fa fa-times"></i>-->
+                                    <!--</div>-->
+                                    <!--<span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">-->
+                                            <!--<i class="fa fa-spinner fa-spin"></i>-->
+                                        <!--</span>-->
+                                    <!--<img class="imagenes-subiendo" flow-img="$flow.files[0]" />-->
+                                <!--</div>-->
+                                <!--<input type="hidden" ng-model="fotoveh4" ng-required="$flow.files[0].isUploading()" />-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-12 col-md-4 col-lg-2">-->
+                        <!--<div align="center">-->
+                            <!--<div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"-->
+                                 <!--flow-init="{target:'/retrieve/4',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"-->
+                                 <!--flow-files-submitted="$flow.upload()"-->
+                                 <!--flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"-->
+                                 <!--flow-attrs="{accept:'image/*'}"-->
+                                 <!--flow-name="vehimagv.flowd"-->
+                                 <!--flow-files-added="added($file,$event,$flow)">-->
+
+                                <!--<div class="full-size middle-valigner" ng-show="!$flow.files.length" flow-btn>-->
+                                    <!--<i class="fa fa-picture-o fa-3x"></i>-->
+                                <!--</div>-->
+                                <!--<div ng-show="$flow.files.length" ng-cloak>-->
+                                    <!--<div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">-->
+                                        <!--<i class="fa fa-times"></i>-->
+                                    <!--</div>-->
+                                    <!--<span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">-->
+                                            <!--<i class="fa fa-spinner fa-spin"></i>-->
+                                        <!--</span>-->
+                                    <!--<img class="imagenes-subiendo" flow-img="$flow.files[0]" />-->
+                                <!--</div>-->
+                                <!--<input type="hidden" ng-model="fotoveh4" ng-required="$flow.files[0].isUploading()" />-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-12 col-md-4 col-lg-2">-->
+                        <!--<div align="center">-->
+                            <!--<div class="mini-imagen" data-toggle="tooltip" title="Haga clic para subir una imagen"-->
+                                 <!--flow-init="{target:'/retrieve/4',singleFile:true}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"-->
+                                 <!--flow-files-submitted="$flow.upload()"-->
+                                 <!--flow-file-success="someHandlerMethod( $file, $message, $flow, '#formNuevoVehiculo','fotoVehiculo[]' )"-->
+                                 <!--flow-attrs="{accept:'image/*'}"-->
+                                 <!--flow-name="vehimagv.flowd"-->
+                                 <!--flow-files-added="added($file,$event,$flow)">-->
+
+                                <!--<div class="full-size middle-valigner" ng-show="!$flow.files.length" flow-btn>-->
+                                    <!--<i class="fa fa-picture-o fa-3x"></i>-->
+                                <!--</div>-->
+                                <!--<div ng-show="$flow.files.length" ng-cloak>-->
+                                    <!--<div class="middle-valigner descartar-obj" ng-show="$flow.files.length" ng-click="removeImage($flow.files[0])">-->
+                                        <!--<i class="fa fa-times"></i>-->
+                                    <!--</div>-->
+                                    <!--<span class="spin-subiendo" ng-show="$flow.files[0].isUploading()">-->
+                                            <!--<i class="fa fa-spinner fa-spin"></i>-->
+                                        <!--</span>-->
+                                    <!--<img class="imagenes-subiendo" flow-img="$flow.files[0]" />-->
+                                <!--</div>-->
+                                <!--<input type="hidden" ng-model="fotoveh4" ng-required="$flow.files[0].isUploading()" />-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div align="center" class="mt-4">-->
+                    <!--<button class="btn button-shop collapsed mt-3 mb-0" aria-expanded="false" data-toggle="modal" data-target="#tdc">-->
+                        <!--Next-->
+                    <!--</button>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <div class="describe-product">
+                <div class="info-contain">
+                    <div class="mb-2 bold">Price:</div>
+                    <input class="form-control form-control-solid input-info w-25" type="text" placeholder="USD (tax included)" name="pass"/>
+                </div>
+                <div class="info-contain">
+                    <div class="mb-2 bold">Payment method:</div>
+                    <div class="rows w-50 ml-0">
+                        <div class="option-tdc" data-ng-click="selectMethod(1)">
+                            <i class="material-icons option-icon">how_to_reg</i>
+                            <span class="option-text">Contact the seller</span>
+                        </div>
+                        <div class="option-tdc" data-ng-click="selectMethod(1)">
+                            <i class="material-icons option-icon">account_balance_wallet</i>
+                            <span class="option-text">Beet wallet</span>
+                        </div>
+                    </div>
+                </div>
+                <div align="center" class="mt-4">
+                    <button class="btn button-shop collapsed mt-3 mb-0" aria-expanded="false" data-toggle="modal" data-target="#tdc">
+                        Publish
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Modal New Subcategory-->
+    <div class="modal fade" id="new-subcategory" tabindex="-1" role="dialog" aria-hidden="true"  style="padding-right: 0">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form class="modal-body">
+                    <div class="modal-title title-modal">
+                        New Subcategory
+                    </div>
+                    <div class="form-subcat">
+                        <div class="form-group">
+                            <input class="form-control form-control-solid input-info" type="text" placeholder="Subcategory name *" name="pass"/>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control form-control-solid input-info" type="number" placeholder="Estimated price (USD) *" name="pass"/>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <a href="" class="link-cancel" data-dismiss="modal">Cancel</a>
+                    <a href="" class="link-confirm">Confirm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<footer id="ABdev_main_footer">-->
+<!--<div id="footer_copyright">-->
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--<div class="span4 footer_copyright left_aligned">-->
+<!--BEET ©2017. All Rights Reserved-->
+<!--<a href="../es/index.html">-->
+<!--<img src="images/es.svg" width="20px"></a>-->
+<!--</div>-->
+<!--<div class="span6 right_aligned">-->
+
+
+<!--<a href="#"><img src="images/google-play-badge.svg" width="135"></a>-->
+<!--<a href="#"><img src="images/Download_on_the_App_Store_Badge_US-UK_135x40.svg"></a>-->
+<!--</div>-->
+<!--<div class="span2 center_aligned">-->
+<!--<a href="#" id="back_to_top" title="Back to top">-->
+<!--<i class="ci_icon-angle-up"></i>-->
+<!--</a>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</footer>-->
+<script type="text/javascript" src="../js/jquery.js"></script>
+<!--<script type="text/javascript" src="../js/jquery.slim.min.js" ></script>-->
+<script type="text/javascript" src="../js/angular/angular.min.js"></script>
+<script type="text/javascript" src="//code.angularjs.org/1.6.9/angular-animate.js"></script>
+<script type="text/javascript" src="../js/angular/Chart.min.js"></script>
+<script type="text/javascript" src="../js/angular/angular-chart.js"></script>
+<script type="text/javascript" src=//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-messages.js"></script>
+<script type="text/javascript" src="../js/ngMask.min.js"></script>
+<script type="text/javascript" src="../js/jquery.hoverdir.js"></script>
+<script type="text/javascript" src="../js/modernizr.custom.97074.js"></script>
+<script type="text/javascript" src="../js/timepicker.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+
+<script src="../js/ui-bootstrap.js"></script>
+
+<script src="../js/moment.js"></script>
+<script src="../js/fullcalendar.js"></script>
+<script src="../js/gcal.js"></script>
+<script src="../js/calendar.js"></script>
+<script src="../js/clockpicker.js"></script>
+<script src="../js/ng-flow-standalone.min.js"></script>
+<script src="../js/angular/app.js"></script>
+
+
+<script type="text/javascript" src="js/stickymenu.js"></script>
+<!--<script type="text/javascript" src="js/jquery-ui.min.js"></script>-->
+<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="../js/prettify.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="../js/portfolio-init.js"></script>
+<script type="text/javascript" src="../js/sweetalert2.min.js"></script>
+<script type="text/javascript" src="../js/alerts.js"></script>
+<script type="text/javascript" src="../js/functions.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.subcategory-cont').hover(function () {
+                $(this).find('#icon').fadeIn().css("display", "flex");
+            },
+            function () {
+                $(this).find('#icon').fadeOut();
+            });
+    });
+</script>
+</body>
+</html>
+

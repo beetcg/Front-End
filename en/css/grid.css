@@ -15075,3 +15075,55 @@ input:checked + .slider:before {
 .ic-ask {
     padding-right: 10px;
 }
+
+/*18/07/2018*/
+
+.add-steps {
+    display: flex;
+    flex-direction: row;
+}
+
+.add-step {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #f5f5f5;
+    flex-direction: column;
+    color: #a6264c;
+    font-weight: bold;
+    max-height: 102px;
+}
+
+.add-step-selected {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    flex-direction: column;
+    color: #a6264c;
+    font-weight: bold;
+    background-color: rgba(166, 38, 76, 0.02);
+    border: 1px solid #f5f5f5;
+    max-height: 102px;
+}
+
+.step-number {
+    font-size: 1.3rem;
+    color: #a6264c;
+    font-weight: bold;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #a6264c;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.describe-product {
+    margin: 40px;
+}
